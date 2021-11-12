@@ -2,13 +2,13 @@
 title: Development Environment Set-Up
 description: 
 published: true
-date: 2021-11-12T18:00:42.910Z
+date: 2021-11-12T18:28:39.138Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-11-12T18:00:42.910Z
 -->
 
-<h3>Target Audience</h3>
+<h3>Target audience</h3>
 <p>This guide is targeted towards developers and contributors who want to create areas, creatures, items, write code, add models, and so on. If you want to contribute to the development of the server, you're in the right place!</p>
 <p>&nbsp;</p>
 <h3>Prerequisites</h3>
@@ -19,7 +19,7 @@ dateCreated: 2021-11-12T18:00:42.910Z
   <li><a href="https://visualstudio.microsoft.com/">Visual Studio Community</a> (You do NOT want Visual Studio Code. It should work, but we do not officially support it.)</li>
 </ul>
 <p>&nbsp;</p>
-<h3>Development Environment Set-Up</h3>
+<h3>Development environment set-up</h3>
 <p>This guide will walk you through setting up your development environment.</p>
 <ol>
   <li>Make a <a href="https://github.com/">GitHub</a> account if you do not already have one.</li>
@@ -33,5 +33,55 @@ dateCreated: 2021-11-12T18:00:42.910Z
   <li>At command line, enter <code>git clone &lt;SWLOR_NWN url&gt; </code>replacing <code>&lt;SWLOR_NWN url&gt;</code> with the URL to your SWLOR_NWN project on GitHub. For example: <code>git clone https://github.com/myusername/SWLOR_NWN.git</code></li>
   <li>At command line, enter <code>git clone &lt;SWLOR_Haks url&gt;</code> replacing <code>&lt;SWLOR_Haks url&gt;</code> with the URL to your SWLOR_Haks project on GitHub. For example: <code>git clone https://github.com/myusername/SWLOR_Haks.git</code></li>
   <li>Both of these projects may take a while to clone due to their size. Please be patient and let it run to completion.</li>
-  <li>&nbsp;</li>
+  <li>At command line, enter <code>cd C:/Projects/SWLOR_NWN/</code> to change your directory to the code base repository.</li>
+  <li>At command line, enter <code>git checkout feature/ffo-rewrite </code>to change your branch to the Revamp branch.</li>
+  <li>At command line, enter <code>cd C:/Projects/SWLOR_Haks/ </code>to change your directory to the hakpak content repository.</li>
+  <li>At command line, enter <code>git checkout feature/ffo-rewrite</code> to change your branch to the Revamp branch.</li>
 </ol>
+<p>At this point you should have your Git repositories set up and are able to start working on features.</p>
+<p>&nbsp;</p>
+<h3>Keeping your fork in sync</h3>
+<p>You will want to keep your fork of both repositories in sync with the master copies to avoid merge conflicts. To do so, please refer to <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork">this guide.</a></p>
+<p>&nbsp;</p>
+<h3>Creating a feature branch</h3>
+<p>Every feature you work on should have its own feature branch. This ensures that you can organize your changes and eventually submit them as part of a Pull Request. Follow the steps below to do this.</p>
+<ol>
+  <li>Ensure your fork is in sync and your local copy is updated. Refer to Git documentation on Google if you need help on this.</li>
+  <li>Open command prompt</li>
+  <li>At command line, enter <code>cd C:/Projects/SWLOR_NWN/</code> to change your directory to the code base repository.</li>
+  <li>At command line, enter <code>git branch feature/&lt;feature name&gt;</code> replacing <code>&lt;feature name&gt; </code>with a dash-delimited name of the feature. For example: <code>git branch feature/my-awesome-new-feature</code></li>
+  <li>At command line, enter <code>cd C:/Projects/SWLOR_Haks/</code> to change your directory to the hakpak content repository.</li>
+  <li>At command line, enter <code>git branch feature/&lt;feature name&gt;</code> replacing <code>&lt;feature name&gt; </code>with the same name you used in step 3.</li>
+  <li>At this point you have a feature branch in both the code repository and the hakpak content repository. You should be ready to make changes.</li>
+</ol>
+<p>&nbsp;</p>
+<h3>Committing and pushing your changes</h3>
+<p>When you are finished making changes or simply want to save your progress use the following steps to commit and then push them to GitHub.</p>
+<p>To be clear: When you <code>commit </code>changes, they are only being stored on your local repository. They will not show up until you <code>push </code>them to the remote repository located on GitHub. Follow the steps below to do this.</p>
+<p>Also note: If you've only made changes in one repository, it is not necessary to commit and push in both. Only commit/push in the repositories which have changed files. We are assuming you have changes in both. Skip steps as necessary.</p>
+<ol>
+  <li>Open command prompt</li>
+  <li>At command line, enter <code>cd C:/Projects/SWLOR_NWN/</code> to change your directory to the code base repository.</li>
+  <li>At command line, enter <code>git commit</code> and, when prompted, enter a message explaining your changes. Realize that this information can be read by all contributors so it should be as clear and descriptive as possible. Focus on the WHY for the change, rather than the WHAT.&nbsp;</li>
+  <li>At command line, enter <code>git push</code> to push the changes to <i>your </i>repository on GitHub.&nbsp;</li>
+  <li>At command line, enter <code>cd C:/Projects/SWLOR_Haks/ </code>to change your directory to the hakpak content repository.</li>
+  <li>Repeat steps 3 and 4.</li>
+</ol>
+<p>&nbsp;</p>
+<h3>Submitting a pull request</h3>
+<p>At this point you should have changes which are committed and pushed to your repository in GitHub. We now need to get your changes merged into the master copy. This is performed by doing a Pull Request. Follow the steps below to do this.</p>
+<ol>
+  <li>Log into <a href="https://github.com">GitHub</a>.</li>
+  <li>Go to your code repository. This will more than likely be located at a URL such as: <code>https://github.com/myusername/SWLOR_NWN.git</code></li>
+  <li>Click on the Pull Requests button.</li>
+  <li>Click on the New Pull Request button.</li>
+  <li>You need to change the target (where the arrow is pointing) from <code>master </code>to <code>feature/ffo-rewrite</code></li>
+  <li>Ensure your source is the feature branch you previously pushed up. For example, <code>feature/my-awesome-new-feature</code></li>
+  <li>Enter a description for the pull request. Please be as detailed as possible.</li>
+  <li>A maintainer will review your pull request. They will ask you to change things via comments if needed.</li>
+  <li>When the code review is completed, your pull request will be merged into the master repository. You're free to start over with a new feature.</li>
+</ol>
+<p>&nbsp;</p>
+<h3>Questions?</h3>
+<p>If you get stuck on the Git or GitHub workflow, your best bet is to try Googling first. If you get stuck on something specific to SWLOR please reach out in the Development channel of our <a href="https://discord.gg/MyQAM6m">Discord</a>.</p>
+<p>&nbsp;</p>
