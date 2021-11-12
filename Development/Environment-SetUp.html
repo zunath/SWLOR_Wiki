@@ -1,0 +1,37 @@
+<!--
+title: Development Environment Set-Up
+description: 
+published: true
+date: 2021-11-12T18:00:42.910Z
+tags: 
+editor: ckeditor
+dateCreated: 2021-11-12T18:00:42.910Z
+-->
+
+<h3>Target Audience</h3>
+<p>This guide is targeted towards developers and contributors who want to create areas, creatures, items, write code, add models, and so on. If you want to contribute to the development of the server, you're in the right place!</p>
+<p>&nbsp;</p>
+<h3>Prerequisites</h3>
+<ul>
+  <li>A Git client. There are many but the most popular ones on SWLOR are <a href="https://desktop.github.com/">GitHub Desktop</a> and <a href="https://git-scm.com/downloads">Git GUI</a>. You're welcome to use these UIs to perform the steps below but I will assume you're doing it from command line.</li>
+  <li>Neverwinter Night: Enhanced Edition (earlier versions, such as 1.69 will NOT work)</li>
+  <li>The “<a href="https://starwarsnwn.com/downloads">SWLOR In a Box</a>” package. For the purposes of this guide, we will assume you have already extracted this to your NWN directory.</li>
+  <li><a href="https://visualstudio.microsoft.com/">Visual Studio Community</a> (You do NOT want Visual Studio Code. It should work, but we do not officially support it.)</li>
+</ul>
+<p>&nbsp;</p>
+<h3>Development Environment Set-Up</h3>
+<p>This guide will walk you through setting up your development environment.</p>
+<ol>
+  <li>Make a <a href="https://github.com/">GitHub</a> account if you do not already have one.</li>
+  <li>Go to the SWLOR_NWN repository here: <a href="https://github.com/zunath/SWLOR_NWN">https://github.com/zunath/SWLOR_NWN</a></li>
+  <li>Click on the Fork button. This will create a copy of the code base tied to your GitHub account. You will be able to create branches, submit pull requests, and more. All of this will be required to submit your changes to the master SWLOR code base.</li>
+  <li>Go to the SWLOR_Haks repository here: <a href="https://github.com/zunath/SWLOR_Haks">https://github.com/zunath/SWLOR_Haks</a></li>
+  <li>Click on the Fork button. This will create a copy of the hakpak content (models, textures, sounds, etc.) tied to your GitHub account.</li>
+  <li>Create a folder on your PC to store your projects. My recommendation is <code>C:/Projects/</code> but anywhere will work, really. Adjust the following commands as necessary if you pick a different location.</li>
+  <li>Open command prompt</li>
+  <li>At command line, enter <code>cd C:/Projects/</code> to change your directory to your projects folder.</li>
+  <li>At command line, enter <code>git clone &lt;SWLOR_NWN url&gt; </code>replacing <code>&lt;SWLOR_NWN url&gt;</code> with the URL to your SWLOR_NWN project on GitHub. For example: <code>git clone https://github.com/myusername/SWLOR_NWN.git</code></li>
+  <li>At command line, enter <code>git clone &lt;SWLOR_Haks url&gt;</code> replacing <code>&lt;SWLOR_Haks url&gt;</code> with the URL to your SWLOR_Haks project on GitHub. For example: <code>git clone https://github.com/myusername/SWLOR_Haks.git</code></li>
+  <li>Both of these projects may take a while to clone due to their size. Please be patient and let it run to completion.</li>
+  <li>&nbsp;</li>
+</ol>
