@@ -1,0 +1,175 @@
+<!--
+title: Snippets
+description: 
+published: true
+date: 2021-11-13T14:28:15.834Z
+tags: 
+editor: ckeditor
+dateCreated: 2021-11-13T14:28:15.834Z
+-->
+
+<h3>Snippets Overview</h3>
+<p>Snippets are pieces of logic which are executed based on a conversation's script parameters. There are two different types of scripts: 'appears' and 'action' which go on a conversation node's 'Text Appears When' and 'Actions Taken' script events respectively. These scripts MUST be set, otherwise snippets will not function correctly.</p>
+<p>Once the scripts are set, you can add as many snippets as you like as parameter values. The name of the parameter must match the snippet name and the value must match the expected arguments. Refer to the tables below for what to put into these.</p>
+<p>Here is an example of a configured snippet on the 'Appears When' event.</p>
+<figure class="image"><img src="/snippets_1.png"></figure>
+<p>&nbsp;</p>
+<p>Here is an example of a configured snippet on the 'Actions Taken' event.</p>
+<figure class="image"><img src="/snippets_2.png"></figure>
+<p>&nbsp;</p>
+<h3>Snippet Condition List</h3>
+<p>These commands will show or a hide a node based on the outcome of the snippet. For example, if you use condition-has-quest and the player does NOT have that quest, the node will be hidden.</p>
+<p>&nbsp;</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Value</th>
+        <th>Description</th>
+        <th>Value Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>condition-has-quest</td>
+        <td>QuestId</td>
+        <td>Displays the node if player has a quest.</td>
+        <td>myQuestId</td>
+      </tr>
+      <tr>
+        <td>condition-on-quest-state</td>
+        <td>QuestId, StateNumber</td>
+        <td>Displays the node if player is on any of the specified state numbers. At least one one state number must be specified.</td>
+        <td>myQuestId 1 3 4 5</td>
+      </tr>
+      <tr>
+        <td>condition-completed-quest</td>
+        <td>QuestId</td>
+        <td>Displays the node if player has completed a quest.</td>
+        <td>myQuestId</td>
+      </tr>
+      <tr>
+        <td>condition-all-key-items</td>
+        <td>KeyItemId</td>
+        <td>Displays the node if player has all of the specified key item Ids</td>
+        <td>3 43 123</td>
+      </tr>
+      <tr>
+        <td>condition-has-completed-tutorial</td>
+        <td>&nbsp;</td>
+        <td>Displays the node if player has completed Selan's Request quest in CZ-220.</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>condition-all-skills</td>
+        <td>skillId requiredRank</td>
+        <td>Displays the node if player has the minimum rank in all of the specified skills.</td>
+        <td>OneHanded 20 Force 10 FirstAid 40</td>
+      </tr>
+      <tr>
+        <td>condition-any-skill</td>
+        <td>skillId requiredRank</td>
+        <td>Displays the node if player has the minimum rank in ANY of the specified skills.</td>
+        <td>OneHanded 20 Force 10 FirstAid 40</td>
+      </tr>
+      <tr>
+        <td>condition-has-faction-standing</td>
+        <td>factionId amount</td>
+        <td>Displays the node if player has standing greater than or equal to an amount with a particular faction.</td>
+        <td>4 100</td>
+      </tr>
+      <tr>
+        <td>condition-has-faction-points</td>
+        <td>factionId amount</td>
+        <td>Displays the node if a player has faction points greater than or equal with a particular faction.</td>
+        <td>2 2000</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<h3>Snippet Action List</h3>
+<p>These commands will be run when a player clicks on a conversation node. For example, if you use action-accept-quest, the player will receive the specified quest.</p>
+<p>&nbsp;</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td>Value</td>
+        <td>Description</td>
+        <td>Value Example</td>
+      </tr>
+      <tr>
+        <td>action-accept-quest</td>
+        <td>QuestId</td>
+        <td>Accepts the specified quest for a player.</td>
+        <td>myQuestId</td>
+      </tr>
+      <tr>
+        <td>action-advance-quest</td>
+        <td>QuestId</td>
+        <td>Advances the specified quest to the next state for a player.</td>
+        <td>myQuestId</td>
+      </tr>
+      <tr>
+        <td>action-request-quest-items</td>
+        <td>QuestId</td>
+        <td>Forces player to open a container in which they can place required quest items.</td>
+        <td>myQuestId</td>
+      </tr>
+      <tr>
+        <td>action-card-game</td>
+        <td>DeckLevels</td>
+        <td>Starts the Triple Triad dialog. Arguments must be numbers between 1 and 10. At least one number must be defined.</td>
+        <td>1 5 10 8</td>
+      </tr>
+      <tr>
+        <td>action-open-store</td>
+        <td>StoreTag</td>
+        <td>Opens the nearest store matching the specified StoreTag. If StoreTag is not provided, the nearest store will be opened.</td>
+        <td>myStoreTag</td>
+      </tr>
+      <tr>
+        <td>action-give-key-items</td>
+        <td>KeyItemId</td>
+        <td>Gives one or more key items to the player.</td>
+        <td>32 123 955</td>
+      </tr>
+      <tr>
+        <td>action-teleport</td>
+        <td>WaypointTag</td>
+        <td>Teleports the player to a waypoint with the specified tag.</td>
+        <td>myWaypointTag</td>
+      </tr>
+      <tr>
+        <td>action-give-faction-points</td>
+        <td>factionId amount</td>
+        <td>Gives faction points toward a particular faction to a player.</td>
+        <td>2 30</td>
+      </tr>
+      <tr>
+        <td>action-take-faction-points</td>
+        <td>factionId amount</td>
+        <td>Takes faction points toward a particular faction from a player.</td>
+        <td>5 3</td>
+      </tr>
+      <tr>
+        <td>action-give-faction-standing</td>
+        <td>factionId amount</td>
+        <td>Gives faction standing toward a particular faction to a player.</td>
+        <td>1 15</td>
+      </tr>
+      <tr>
+        <td>action-take-faction-standing</td>
+        <td>factionId amount</td>
+        <td>Takes faction standing toward a particular faction from a player.</td>
+        <td>6 300</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
