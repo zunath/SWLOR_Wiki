@@ -2,7 +2,7 @@
 title: Creating Player Races
 description: 
 published: true
-date: 2021-11-13T01:16:35.683Z
+date: 2021-11-13T01:41:28.872Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-11-13T00:12:48.598Z
@@ -26,16 +26,21 @@ dateCreated: 2021-11-13T00:12:48.598Z
   <li>Completed models for the race. These must be dynamic (i.e armor will display on them). There must be at least three heads for male and at least three heads for female.</li>
   <li>An icon for use during character creation to signify the race.</li>
   <li>Portrait textures for both male and female</li>
-  <li>A TLK editor. <a href="https://neverwintervault.org/project/nwn1/other/tool/axe-murderers-killer-tlk-editor">Axe Murderer's Killer TLK Editor</a> is my preferred choice but there are plenty others out there. As long as it can edit the TLK, you're good!</li>
+  <li>A TLK editor. <a href="https://neverwintervault.org/project/nwn1/other/tool/axe-murderers-killer-tlk-editor">Axe Murderer's Killer TLK Editor</a> is the preferred choice but there are plenty others out there. As long as it can edit the TLK, you're good!</li>
 </ul>
 <p>&nbsp;</p>
 <h3>Add the Content</h3>
 <p>Your models, textures, and any other files need to go into their respective folders within our Hakpak content repository. Refer to the development environment guide above for more detail.</p>
 <p>&nbsp;</p>
-<h3>Edit the 2DA</h3>
+<h3>Edit the RacialTypes 2DA</h3>
 <p>An entry must be added to the <code>racialtypes.2da </code>file for the new race. This will require adding entries into the tlk as well.&nbsp;</p>
 <p>Please refer to <a href="https://nwn.wiki/display/NWN1/racialtypes.2da">this guide </a>on editing this 2da file.</p>
 <p>Once the file has been edited, add it to the <code>swlor2_2da </code>hakpak repository folder.</p>
+<p>&nbsp;</p>
+<h3>Edit the Portraits 2DA</h3>
+<p>Your portraits must be added to the portraits.2da file in order for players to select them during character creation.</p>
+<p>Please refer to <a href="https://nwn.wiki/display/NWN1/portraits.2da">this guide</a> on editing this 2da file.</p>
+<p>Once the file has been edited, add it to the <code>swlor2_2da</code> hakpak repository folder</p>
 <p>&nbsp;</p>
 <h3>Integrating the Parts Into Code</h3>
 <p>Add a new entry to the <code>Core/NWScript/Enum/RacialType.cs</code> file. This should match the ID of the racial type you previously added to the 2da file.</p>
