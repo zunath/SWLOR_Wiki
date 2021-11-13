@@ -2,7 +2,7 @@
 title: Creating Player Races
 description: 
 published: true
-date: 2021-11-13T00:12:48.598Z
+date: 2021-11-13T00:16:29.982Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-11-13T00:12:48.598Z
@@ -24,7 +24,7 @@ dateCreated: 2021-11-13T00:12:48.598Z
   <li>A working <a href="https://wiki.starwarsnwn.com/en/Development/Environment-SetUp">development environment</a></li>
   <li>Completed models for the race. These must be dynamic (i.e armor will display on them). There must be at least three heads for male and at least three heads for female.</li>
   <li>An icon for use during character creation to signify the race.</li>
-  <li>Portrait textures for both male and female&nbsp;</li>
+  <li>Portrait textures for both male and female</li>
 </ul>
 <p>&nbsp;</p>
 <h3>Add the Content</h3>
@@ -32,25 +32,26 @@ dateCreated: 2021-11-13T00:12:48.598Z
 <p>&nbsp;</p>
 <h3>Integrating the Parts Into Code</h3>
 <p>A new class must be added to the <code>Feature/AppearanceDefinition/RacialAppearance/</code> folder. By default, Human parts are used for the new race. The following example overrides all of the parts but you don't need to do so - it just depends on what race you're doing.</p>
-<p><code>namespace SWLOR.Game.Server.Feature.AppearanceDefinition.RacialAppearance</code></p>
-<p><code>{</code></p>
-<p><code>&nbsp; &nbsp;public class MonCalamariRacialAppearanceDefinition: RacialAppearanceBaseDefinition</code></p>
-<p><code>&nbsp; &nbsp;{</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;public override int[] MaleHeads { get; } = { 6, 44, 48, 49, 104, 105, 106, 107, 108, 112, 113, 114, 117, 119, 120, 127 };</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;public override int[] FemaleHeads { get; } = { 3, 6, 16, 17, 21, 26, 29, 41, 43, 47, 109, 110, 115, 119, 122 };</code></p>
 <p>&nbsp;</p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;public override int[] Torsos { get; } = { 204 };</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;public override int[] Pelvis { get; } = { 204 };</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;public override int[] RightBicep { get; } = { 204 };</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;public override int[] RightForearm { get; } = { 204 };</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;public override int[] RightHand { get; } = { 204 };</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;public override int[] RightThigh { get; } = { 204 };</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;public override int[] RightShin { get; } = { 204 };</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;public override int[] LeftBicep { get; } = { 204 };</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;public override int[] LeftForearm { get; } = { 204 };</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;public override int[] LeftHand { get; } = { 204 };</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;public override int[] LeftThigh { get; } = { 204 };</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;public override int[] LeftShin { get; } = { 204 };</code></p>
-<p><code>&nbsp; &nbsp;}</code></p>
-<p><code>}</code></p>
+<pre><code class="language-plaintext">namespace SWLOR.Game.Server.Feature.AppearanceDefinition.RacialAppearance
+{
+   public class MonCalamariRacialAppearanceDefinition: RacialAppearanceBaseDefinition
+   {
+       public override int[] MaleHeads { get; } = { 6, 44, 48, 49, 104, 105, 106, 107, 108, 112, 113, 114, 117, 119, 120, 127 };
+       public override int[] FemaleHeads { get; } = { 3, 6, 16, 17, 21, 26, 29, 41, 43, 47, 109, 110, 115, 119, 122 };
+
+       public override int[] Torsos { get; } = { 204 };
+       public override int[] Pelvis { get; } = { 204 };
+       public override int[] RightBicep { get; } = { 204 };
+       public override int[] RightForearm { get; } = { 204 };
+       public override int[] RightHand { get; } = { 204 };
+       public override int[] RightThigh { get; } = { 204 };
+       public override int[] RightShin { get; } = { 204 };
+       public override int[] LeftBicep { get; } = { 204 };
+       public override int[] LeftForearm { get; } = { 204 };
+       public override int[] LeftHand { get; } = { 204 };
+       public override int[] LeftThigh { get; } = { 204 };
+       public override int[] LeftShin { get; } = { 204 };
+   }
+}</code></pre>
 <p>&nbsp;</p>
