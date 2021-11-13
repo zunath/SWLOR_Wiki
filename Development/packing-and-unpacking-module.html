@@ -1,0 +1,27 @@
+<!--
+title: Packing & Unpacking the Module
+description: 
+published: true
+date: 2021-11-13T14:18:24.223Z
+tags: 
+editor: ckeditor
+dateCreated: 2021-11-13T14:18:24.223Z
+-->
+
+<h3>Overview</h3>
+<p>We store the module in two forms in the repository. The first is the typical NWN ".mod" file which is used by the toolset, the game, and server. We refer to this as the "packed" version of the module. This contains all of the creatures, items, areas, scripts, etc stored into a single file.</p>
+<p>The SWLOR module is also stored in its "unpacked" form. In this form, the files are stored in individual folders based on file extension. Each file has been converted from the standard NWN "gff" file format to a standard JSON format. Keeping these files in JSON enables us to track changes more easily.</p>
+<p>&nbsp;</p>
+<h3>Where are the files stored?</h3>
+<p>All module files - both unpacked and packed - are stored in the "Module" directory of the code base.</p>
+<p>&nbsp;</p>
+<h3>Unpacking the Module</h3>
+<p>Reminder: Unpacking a module means taking a single ".mod" file and expanding it to individual JSON files stored in files named by file extension.</p>
+<p>The first step is to place the module in the "Module" directory. Overwrite the existing file if prompted.</p>
+<p>The next step is to run the "UnpackModule.cmd" script. (Note: Windows only.) This can take a while to run - please be patient.</p>
+<p>The final step is to review the changed files and commit them to git.</p>
+<p>&nbsp;</p>
+<h3>Packing the Module</h3>
+<p>Reminder: Packing a module means taking the individual JSON files and combining them into a single ".mod" file.</p>
+<p>The first step is to run the "PackModule.cmd" script. (Note: Windows only.) This will grab all of the files in the are, gic, git, utc, etc folder and pump them into a new "Star Wars LOR.mod" file in the same directory. This can take a while to run so please be patient.</p>
+<p>The final step is to review the module file by opening it up in the toolset. As long as it loads without errors you can commit them to git.</p>
