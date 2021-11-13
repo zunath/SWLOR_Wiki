@@ -2,7 +2,7 @@
 title: Creating Player Races
 description: 
 published: true
-date: 2021-11-13T01:07:18.873Z
+date: 2021-11-13T01:16:35.683Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-11-13T00:12:48.598Z
@@ -230,5 +230,80 @@ namespace SWLOR.Game.Server.Service.LanguageService
 }
 </code></pre>
 <p>&nbsp;</p>
+<p>Next, add this new translator to <code>Service/Language.cs</code> in the <code>LoadTranslators()</code> method.</p>
+<pre><code class="language-plaintext">
+        [NWNEventHandler("mod_load")]
+        public static void LoadTranslators()
+        {
+            _translators = new Dictionary&lt;SkillType, ITranslator&gt;
+            {
+                { SkillType.Bothese, new TranslatorBothese() },
+                { SkillType.Catharese, new TranslatorCatharese() },
+                { SkillType.Cheunh, new TranslatorCheunh() },
+                { SkillType.Dosh, new TranslatorDosh() },
+                { SkillType.Droidspeak, new TranslatorDroidspeak() },
+                { SkillType.Huttese, new TranslatorHuttese() },
+                { SkillType.Mandoa,  new TranslatorMandoa() },
+                { SkillType.Shyriiwook, new TranslatorShyriiwook() },
+                { SkillType.Twileki, new TranslatorTwileki() },
+                { SkillType.Zabraki, new TranslatorZabraki() },
+                { SkillType.Mirialan, new TranslatorMirialan() },
+                { SkillType.MonCalamarian, new TranslatorMonCalamarian() },
+                { SkillType.Ugnaught, new TranslatorUgnaught() },
+                { SkillType.MyNewRace, new TranslatorMyNewRace() }, // Your new translator entry
+            };
+        }</code></pre>
+<p>&nbsp;</p>
+<p>Now the language needs to be added as a skill. Add a new entry to the <code>Service/SkillService/SkillType.cs</code> file.</p>
+<pre><code class="language-plaintext">
+        [Skill(SkillCategoryType.Languages, 
+            "My New Race",  // The viewable name of the skill
+            20, // Max rank, this should always be 20
+            true, // Active or not, always true
+            "Ability to speak the MyNewRace language.", // The viewable description of the skill
+            false)] // Determines whether the skill counts towards your skill cap. Always false for language skills.
+        MyNewRace = 27,</code></pre>
+<p>&nbsp;</p>
+<p>Next, the language needs to be given to all players who create a character of this race. Add a new entry to the <code>Feature/PlayerInitialization.cs</code> file in the <code>InitializeLanguages()</code> method.</p>
+<pre><code class="language-plaintext">
+            switch (race)
+            {
+                case RacialType.Bothan:
+                    languages.Add(SkillType.Bothese);
+                    break;
+                case RacialType.Chiss:
+                    languages.Add(SkillType.Cheunh);
+                    break;
+                case RacialType.Zabrak:
+                    languages.Add(SkillType.Zabraki);
+                    break;
+                case RacialType.Wookiee:
+                    languages.Add(SkillType.Shyriiwook);
+                    break;
+                case RacialType.Twilek:
+                    languages.Add(SkillType.Twileki);
+                    break;
+                case RacialType.Cathar:
+                    languages.Add(SkillType.Catharese);
+                    break;
+                case RacialType.Trandoshan:
+                    languages.Add(SkillType.Dosh);
+                    break;
+                case RacialType.Cyborg:
+                    languages.Add(SkillType.Droidspeak);
+                    break;
+                case RacialType.Mirialan:
+                    languages.Add(SkillType.Mirialan);
+                    break;
+                case RacialType.MonCalamari:
+                    languages.Add(SkillType.MonCalamarian);
+                    break;
+                case RacialType.Ugnaught:
+                    languages.Add(SkillType.Ugnaught);
+                    break;
+                case RacialType.MyNewRace: // Add this new entry
+                    languages.Add(SkillType.MyNewRace);
+                    break;
+            }</code></pre>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
