@@ -2,7 +2,7 @@
 title: Creating Player Races
 description: 
 published: true
-date: 2021-11-13T00:16:29.982Z
+date: 2021-11-13T01:07:18.873Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-11-13T00:12:48.598Z
@@ -11,6 +11,7 @@ dateCreated: 2021-11-13T00:12:48.598Z
 <h3>Target Audience</h3>
 <p>This guide is targeted towards developers and contributors who want to create new playable races.&nbsp;</p>
 <p>This will not cover the intricacies of ripping models, modifying them, or creating them from scratch. You will need to refer to other guides on Google for help on that.&nbsp;</p>
+<p>Additionally, this guide is not comprehensive. Every race is a little different and may be implemented in various ways. Depending on your use case additional work may be necessary.</p>
 <p>&nbsp;</p>
 <h3>External Resources</h3>
 <p>One of the most difficult parts of creating a new race is putting the models and textures together. Again, this is outside the scope of this guide but you can find more information at the links below. If you get stuck, reach out in our <a href="https://discord.gg/MyQAM6m">Discord </a>for assistance.</p>
@@ -25,22 +26,40 @@ dateCreated: 2021-11-13T00:12:48.598Z
   <li>Completed models for the race. These must be dynamic (i.e armor will display on them). There must be at least three heads for male and at least three heads for female.</li>
   <li>An icon for use during character creation to signify the race.</li>
   <li>Portrait textures for both male and female</li>
+  <li>A TLK editor. <a href="https://neverwintervault.org/project/nwn1/other/tool/axe-murderers-killer-tlk-editor">Axe Murderer's Killer TLK Editor</a> is my preferred choice but there are plenty others out there. As long as it can edit the TLK, you're good!</li>
 </ul>
 <p>&nbsp;</p>
 <h3>Add the Content</h3>
 <p>Your models, textures, and any other files need to go into their respective folders within our Hakpak content repository. Refer to the development environment guide above for more detail.</p>
 <p>&nbsp;</p>
-<h3>Integrating the Parts Into Code</h3>
-<p>A new class must be added to the <code>Feature/AppearanceDefinition/RacialAppearance/</code> folder. By default, Human parts are used for the new race. The following example overrides all of the parts but you don't need to do so - it just depends on what race you're doing.</p>
+<h3>Edit the 2DA</h3>
+<p>An entry must be added to the <code>racialtypes.2da </code>file for the new race. This will require adding entries into the tlk as well.&nbsp;</p>
+<p>Please refer to <a href="https://nwn.wiki/display/NWN1/racialtypes.2da">this guide </a>on editing this 2da file.</p>
+<p>Once the file has been edited, add it to the <code>swlor2_2da </code>hakpak repository folder.</p>
 <p>&nbsp;</p>
+<h3>Integrating the Parts Into Code</h3>
+<p>Add a new entry to the <code>Core/NWScript/Enum/RacialType.cs</code> file. This should match the ID of the racial type you previously added to the 2da file.</p>
+<pre><code class="language-plaintext">namespace SWLOR.Game.Server.Core.NWScript.Enum
+{
+    public enum RacialType
+    {
+    	&lt;Other entries omitted for brevity&gt;
+    	
+        MonCalamari = 162,
+        Ugnaught = 163,
+        MyNewRace = 164 // 164 is the line number of the 2DA file in this example
+    }
+}</code></pre>
+<p>&nbsp;</p>
+<p>A new class must be added to the <code>Feature/AppearanceDefinition/RacialAppearance/</code> folder. By default, Human parts are used for the new race. The following example overrides all of the parts but you don't need to do so - it just depends on what race you're doing. The numbers you're entering here must relate back to the IDs of the parts you've imported.</p>
 <pre><code class="language-plaintext">namespace SWLOR.Game.Server.Feature.AppearanceDefinition.RacialAppearance
 {
-   public class MonCalamariRacialAppearanceDefinition: RacialAppearanceBaseDefinition
+   public class MyNewRaceRacialAppearanceDefinition: RacialAppearanceBaseDefinition
    {
        public override int[] MaleHeads { get; } = { 6, 44, 48, 49, 104, 105, 106, 107, 108, 112, 113, 114, 117, 119, 120, 127 };
        public override int[] FemaleHeads { get; } = { 3, 6, 16, 17, 21, 26, 29, 41, 43, 47, 109, 110, 115, 119, 122 };
 
-       public override int[] Torsos { get; } = { 204 };
+       public override int[] Torsos { get; } = { 204 }; // If this race should use Human parts, you can delete this line (and any subsequent ones)
        public override int[] Pelvis { get; } = { 204 };
        public override int[] RightBicep { get; } = { 204 };
        public override int[] RightForearm { get; } = { 204 };
@@ -54,4 +73,162 @@ dateCreated: 2021-11-13T00:12:48.598Z
        public override int[] LeftShin { get; } = { 204 };
    }
 }</code></pre>
+<p>&nbsp;</p>
+<p>Next, update the file <code>Feature/GuiDefinition/ViewModel/AppearanceEditorViewModel.cs</code> to include a connection to your appearance definition within the <code>LoadAppearances() </code>method. This determines the set of options that are available within the UI window used for character appearance customization.</p>
+<pre><code class="language-plaintext">
+        [NWNEventHandler("mod_load")]
+        public static void LoadAppearances()
+        {
+            _racialAppearances[RacialType.Human] = new HumanRacialAppearanceDefinition();
+            _racialAppearances[RacialType.Bothan] = new BothanRacialAppearanceDefinition();
+            _racialAppearances[RacialType.Chiss] = new ChissRacialAppearanceDefinition();
+            _racialAppearances[RacialType.Zabrak] = new ZabrakRacialAppearanceDefinition();
+            _racialAppearances[RacialType.Twilek] = new TwilekRacialAppearanceDefinition();
+            _racialAppearances[RacialType.Mirialan] = new MirialanRacialAppearanceDefinition();
+            _racialAppearances[RacialType.Echani] = new EchaniRacialAppearanceDefinition();
+            _racialAppearances[RacialType.Cyborg] = new CyborgRacialAppearanceDefinition();
+            _racialAppearances[RacialType.Cathar] = new CatharRacialAppearanceDefinition();
+            _racialAppearances[RacialType.Trandoshan] = new TrandoshanRacialAppearanceDefinition();
+            _racialAppearances[RacialType.Wookiee] = new WookieeRacialAppearanceDefinition();
+            _racialAppearances[RacialType.MonCalamari] = new MonCalamariRacialAppearanceDefinition();
+            _racialAppearances[RacialType.Ugnaught] = new UgnaughtRacialAppearanceDefinition();
+            _racialAppearances[RacialType.Ugnaught] = new UgnaughtRacialAppearanceDefinition();
+            _racialAppearances[RacialType.MyNewRace] = new MyNewRaceRacialAppearanceDefinition(); // Your new race goes here.
+        }</code></pre>
+<p>&nbsp;</p>
+<p>Next, update the file <code>Service/Race.cs</code> to include the default values for your new race. There should be an entry for both the male and female versions of the race. This is done within the <code>LoadRaces()</code> method. This determines what a brand new character's appearance will be set to on login.&nbsp;</p>
+<pre><code class="language-plaintext">
+       [NWNEventHandler("mod_load")]
+       public static void LoadRaces()
+       {
+           // Male appearances
+            _defaultRaceAppearancesMale[RacialType.MyNewRace] = new RacialAppearance
+            {
+                SkinColorId = 6,
+                HairColorId = 1,
+                AppearanceType = AppearanceType.Elf,
+                HeadId = 40
+            };
+           
+           &lt;other entries omitted for brevity&gt;
+           
+           // Female appearances
+            _defaultRaceAppearancesFemale[RacialType.MyNewRace] = new RacialAppearance
+            {
+                SkinColorId = 6,
+                HairColorId = 1,
+                AppearanceType = AppearanceType.Elf,
+                HeadId = 109
+            };
+       }</code></pre>
+<p>&nbsp;</p>
+<h3>Languages</h3>
+<p>If the race you're adding thematically speaks another language, you must also incorporate that language into the code base.</p>
+<p>To generate a new language, run the <code>SWLOR.CLI </code>application with the <code>-l </code>argument (lower case L). &nbsp;This will spit out code into a console window like below.</p>
+<figure class="image image_resized" style="width:38.97%;"><img src="/languageexample.png"></figure>
+<p>This code should be copy/pasted to a new Translator class file in the <code>Service/LanguageService/</code> folder. For example, you can call this file <code>TranslatorMyNewLanguage.cs</code></p>
+<p>An example of how this file could look is below.</p>
+<pre><code class="language-plaintext">using System.Text;
+
+namespace SWLOR.Game.Server.Service.LanguageService
+{
+    public class TranslatorMyNewLanguage : ITranslator
+    {
+        public string Translate(string message)
+        {
+            var sb = new StringBuilder();
+
+            foreach (var ch in message)
+            {
+                switch (ch)
+                {
+                    case 'a': sb.Append("h"); break;
+					case 'A': sb.Append("H"); break;
+
+					case 'b': sb.Append("c"); break;
+					case 'B': sb.Append("C"); break;
+
+					case 'c': sb.Append("l"); break;
+					case 'C': sb.Append("L"); break;
+
+					case 'd': sb.Append("gf"); break;
+					case 'D': sb.Append("G"); break;
+
+					case 'e': sb.Append("c"); break;
+					case 'E': sb.Append("C"); break;
+
+					case 'f': sb.Append("k"); break;
+					case 'F': sb.Append("K"); break;
+
+					case 'g': sb.Append("is"); break;
+					case 'G': sb.Append("I"); break;
+
+					case 'h': sb.Append("w"); break;
+					case 'H': sb.Append("W"); break;
+
+					case 'i': sb.Append("v"); break;
+					case 'I': sb.Append("V"); break;
+
+					case 'j': sb.Append("n"); break;
+					case 'J': sb.Append("N"); break;
+
+					case 'k': sb.Append("x"); break;
+					case 'K': sb.Append("X"); break;
+
+					case 'l': sb.Append("j"); break;
+					case 'L': sb.Append("J"); break;
+
+					case 'm': sb.Append("g"); break;
+					case 'M': sb.Append("G"); break;
+
+					case 'n': sb.Append("'"); break;
+					case 'N': sb.Append("'"); break;
+
+					case 'o': sb.Append("e"); break;
+					case 'O': sb.Append("E"); break;
+
+					case 'p': sb.Append("y"); break;
+					case 'P': sb.Append("Y"); break;
+
+					case 'q': sb.Append("t"); break;
+					case 'Q': sb.Append("T"); break;
+
+					case 'r': sb.Append("q"); break;
+					case 'R': sb.Append("Q"); break;
+
+					case 's': sb.Append("r"); break;
+					case 'S': sb.Append("R"); break;
+
+					case 't': sb.Append("m"); break;
+					case 'T': sb.Append("M"); break;
+
+					case 'u': sb.Append("u"); break;
+					case 'U': sb.Append("U"); break;
+
+					case 'v': sb.Append("d"); break;
+					case 'V': sb.Append("D"); break;
+
+					case 'w': sb.Append("p"); break;
+					case 'W': sb.Append("P"); break;
+
+					case 'x': sb.Append("b"); break;
+					case 'X': sb.Append("B"); break;
+
+					case 'y': sb.Append("z"); break;
+					case 'Y': sb.Append("Z"); break;
+
+					case 'z': sb.Append("a"); break;
+					case 'Z': sb.Append("A"); break;
+
+                    default: sb.Append(ch); break;
+                }
+            }
+
+            return sb.ToString();
+        }
+    }
+}
+</code></pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
