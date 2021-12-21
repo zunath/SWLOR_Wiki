@@ -2,7 +2,7 @@
 title: Combat Guide
 description: How combat works in SWLOR
 published: true
-date: 2021-12-20T23:52:11.721Z
+date: 2021-12-21T00:40:33.298Z
 tags: guides combat mechanics
 editor: markdown
 dateCreated: 2021-12-20T23:52:11.721Z
@@ -75,9 +75,9 @@ The damage roll on SWLOR is also highly customised.  Damage is based on four thi
 * The defender's attribute used to resist the attack.
 
 The base equation is 
->damage = (75%-100% of) 25 * DMG/defense * (AttackAttr+5)/(DefendAttr+5).
+>damage = (75%-100% of) 100 * DMG/defense * (AttackAttr+5)/(DefendAttr+5).
 
-So, a weapon with base Damage rating 1.5 against a target with Defense 5, where both sides have equal attributes, does 25 * 1.5/5 = (75%-100% of) 7.5 damage per hit. 
+So, a weapon with base Damage rating 1.5 against a target with Defense 5, where both sides have equal attributes, does 100 * 1.5/5 = (75%-100% of) 30 damage per hit. 
 
 ### Attributes
 In regular combat, the following attributes are used.
