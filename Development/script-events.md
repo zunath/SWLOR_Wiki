@@ -2,7 +2,7 @@
 title: Script Events
 description: 
 published: true
-date: 2021-11-13T02:16:37.442Z
+date: 2022-01-06T17:59:32.172Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-13T02:16:37.442Z
@@ -59,19 +59,45 @@ Todo: A brief explanation of how to hook up events and create a script method.
 ## Creature Events
 | Script | Description | Notes |
 | --- | --- | --- |
-| crea_heartbeat | Runs when a creature's OnHeartbeat event fires. | |
-| crea_perception | Runs when a creature's OnPerception event fires. | |
-| crea_roundend | Runs when a creature's OnCombatRound event fires. | |
-| crea_convo | Runs when a creature's OnConversation event fires. | |
-| crea_attacked | Runs when a creature's OnAttacked event fires. | |
-| crea_damaged | Runs when a creature's OnDamaged event fires. | |
-| crea_death | Runs when a creature's OnDeath event fires. | |
-| crea_disturb | Runs when a creature's OnDisturbed event fires. | |
-| crea_spawn | Runs when a creature's OnSpawn event fires. | |
-| crea_rested | Runs when a creature's OnRested event fires. | |
-| crea_spellcastat | Runs when a creature's OnSpellCastAt event fires. | Generally not used since we have a custom spell system. |
-| crea_userdef | Runs when a creature's OnUserDefined event fires. | |
-| crea_blocked | Runs when a creature's OnBlocked event fires. | |
+| crea_heartbeat | Runs when a creature's OnHeartbeat event fires. | Use crea_hb_bef and crea_hb_aft in favor of this event. |
+| crea_hb_bef | Runs at the start of the crea_heartbeat event. | |
+| crea_hb_aft | Runs at the end of the crea_heartbeat event. | Useful for final cleanup of temporary data. |
+| crea_perception | Runs when a creature's OnPerception event fires. | Use crea_perc_bef and crea_perc_aft in favor of this event. |
+| crea_perc_bef | Runs at the start of the crea_perception event. | |
+| crea_perc_aft | Runs at the end of the crea_perception event. | Useful for final cleanup of temporary data. |
+| crea_roundend | Runs when a creature's OnCombatRound event fires. | Use crea_rndend_bef and crea_rndend_aft in favor of this event. |
+| crea_rndend_bef | Runs at the start of the crea_roundend event. | |
+| crea_rndend_aft | Runs at the end of the crea_roundend event. | Useful for final cleanup of temporary data. |
+| crea_convo | Runs when a creature's OnConversation event fires. | Use crea_convo_bef and crea_convo_aft in favor of this event. |
+| crea_convo_bef | Runs at the start of the crea_convo event. | |
+| crea_convo_aft | Runs at the end of the crea_convo event. | Useful for final cleanup of temporary data. |
+| crea_attacked | Runs when a creature's OnAttacked event fires. | Use crea_attack_bef and crea_attack_aft in favor of this event. |
+| crea_attack_bef | Runs at the start of the crea_attacked event. | |
+| crea_attack_aft | Runs at the end of the crea_attacked event. | Useful for final cleanup of temporary data. |
+| crea_damaged | Runs when a creature's OnDamaged event fires. | Use crea_damaged_bef and crea_damaged_aft in favor of this event. |
+| crea_damaged_bef | Runs at the start of the crea_damaged event. | |
+| crea_damaged_aft | Runs at the end of the crea_damaged event. | Useful for final cleanup of temporary data. |
+| crea_death | Runs when a creature's OnDeath event fires. | Use crea_death_bef and crea_death_aft in favor of this event. |
+| crea_death_bef | Runs at the start of the crea_death event. | |
+| crea_death_aft | Runs at the end of the crea_death event. | Useful for final cleanup of temporary data. |
+| crea_disturb | Runs when a creature's OnDisturbed event fires. | Use crea_disturb_bef and crea_disturb_aft in favor of this event. |
+| crea_disturb_bef | Runs at the start of the crea_disturb event. | |
+| crea_disturb_aft | Runs at the end of the crea_disturb event. | Useful for final cleanup of temporary data. |
+| crea_spawn | Runs when a creature's OnSpawn event fires. | Use crea_spawn_bef and crea_spawn_aft in favor of this event. |
+| crea_spawn_bef | Runs at the start of the crea_spawn event. | |
+| crea_spawn_aft | Runs at the end of the crea_spawn event. | Useful for final cleanup of temporary data. |
+| crea_rested | Runs when a creature's OnRested event fires. | Use crea_rested_bef and crea_rested_aft in favor of this event. |
+| crea_rested_bef | Runs at the start of the crea_rested event. | |
+| crea_rested_aft | Runs at the end of the crea_rested event. | Useful for final cleanup of temporary data. |
+| crea_spellcastat | Runs when a creature's OnSpellCastAt event fires. | Generally not used since we have a custom spell system. Use crea_splcast_bef and crea_splcast_aft in favor of this event. |
+| crea_splcast_bef | Runs at the start of the crea_spellcastat event. | |
+| crea_splcast_aft | Runs at the end of the crea_spellcastat event. | Useful for final cleanup of temporary data. |
+| crea_userdef | Runs when a creature's OnUserDefined event fires. | Use crea_userdef_bef and crea_userdef_aft in favor of this event. |
+| crea_userdef_bef | Runs at the start of the crea_userdef event. | |
+| crea_userdef_aft | Runs at the end of the crea_userdef event. | Useful for final cleanup of temporary data. |
+| crea_blocked | Runs when a creature's OnBlocked event fires. | Use crea_block_bef and crea_block_aft in favor of this event. |
+| crea_block_bef | Runs at the start of the crea_blocked event. | |
+| crea_block_aft | Runs at the end of the crea_blocked event. | Useful for final cleanup of temporary data. |
 
 ## Server Events
 | Script | Description | Notes |
