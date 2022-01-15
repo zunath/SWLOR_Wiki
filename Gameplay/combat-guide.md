@@ -2,7 +2,7 @@
 title: Combat Guide
 description: How combat works in SWLOR
 published: true
-date: 2021-12-21T00:40:33.298Z
+date: 2022-01-15T12:12:29.273Z
 tags: guides combat mechanics
 editor: markdown
 dateCreated: 2021-12-20T23:52:11.721Z
@@ -100,3 +100,7 @@ A critical hit increases damage as follows.
 * THe maximum damage is increased by 25% for each point of critical multiplier over x1.
 Therefore, a critical hit from a x3 weapon such as an axe, does 100%-150% of damage. With feats to improve your critical multiplier to x4, this rises to 100%-175%. Ouch.
 
+### Damage from Abilities
+Abilities, like Double Shot for pistols or Throw Lightsaber for Force, also have DMG ratings and do DMG in a very similar way to weapons.  There are two ways in which ability damage differs slightly from regular attacks.
+* Abilities do not normally have a to-hit roll.  Some Force abilities have a resistance check, which works similarly to an attack roll (opposed WIL). 
+* Abilities get a DMG bonus equal to 0.15 * the skill level of the user. So if you have 10 Force and use Throw Lightsaber, you will add 1.5 DMG to your Throw Lightsaber's damage rating. 
