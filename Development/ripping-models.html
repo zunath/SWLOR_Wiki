@@ -2,7 +2,7 @@
 title: Ripping Models
 description: A guide to ripping models from Star Wars: The Old Republic MMO
 published: true
-date: 2022-02-23T04:16:17.271Z
+date: 2022-02-23T04:32:18.425Z
 tags: development graphics swtor tor mmo
 editor: ckeditor
 dateCreated: 2022-02-23T04:16:17.271Z
@@ -62,7 +62,7 @@ dateCreated: 2022-02-23T04:16:17.271Z
   <li>Select Play/Launch to actually launch the game.</li>
   <li>For this example, we're going to be ripping a helmet. <i>Technically</i>, the helmet models in SWTOR are slightly different for Male and Female models, but with the low detail of NWN / SWLOR's graphics, the difference is subtle enough that it's hard to tell the difference. However, the different Body Types in the game do change the proportions and scaling of the helmets, so you'll want to select a character with the default body, Body 2.</li>
   <li>Once you're in the game, press <code>CTRL+C</code> to open the Collections window.</li>
-  <li>Today, we want to rip the Arctic Trooper's helmet. So, we're going to put <code>arctic</code> up in the filter search bar.&nbsp;<ol>
+  <li>Today, we want to rip the Arctic Trooper's helmet. So, we're going to put <code>arctic</code> up in the filter search bar.<ol>
       <li>Click on the Arctic Trooper's Armor Set, then <code>CTRL+[LeftClick]</code> on the icon of the helmet. This opens the Preview window to show how it looks on your character.</li>
       <li>The way NinjaRipper works is it captures every 3D model visible on the screen and in the nearby area. This includes both the actual character in the game world, as well as the separate 3D model of the character shown in the Preview window. That last part is what we're interested in.</li>
     </ol>
@@ -71,7 +71,7 @@ dateCreated: 2022-02-23T04:16:17.271Z
 <figure class="image"><img src="/modelrip1.jpg"></figure>
 <p>7. Press <code>F10</code>. If NinjaRipper was hooked in correctly, the game will freeze for about 5-20 seconds, depending on the size and complexity of the surrounding area (for example, being out on a planet vs being inside your character's starship).&nbsp;</p>
 <p>8. Once the game unfreezes, the rip is complete.</p>
-<h2>Finding the Desired Model</h2>
+<h2>Finding and Extracting the Desired Model</h2>
 <ol>
   <li>Open Noesis.</li>
   <li>On the left side file tree, navigate to <code>C:\Users\Owner\NinjaRipper\_NinjaRipper</code>.</li>
@@ -97,4 +97,16 @@ dateCreated: 2022-02-23T04:16:17.271Z
 <p>11. Right-click the texture file and select <code>Export</code>.</p>
 <p>12. The default export for textures is <code>.tga</code>. For SWTOR, we don't want to change this. Photoshop and many other image programs can open this. Many SWTOR textures have transparency baked into them, which sometimes can be useful (for example, when ripping UI elements for icons).</p>
 <p>13. Export the file and close the window.</p>
-<p>14. Right-click on any file and select <code>Open in Explorer</code>. In the new window, it can be easiest to find your new files by sorting by <code>Date Modified</code>.</p>
+<p>14. Right-click on any file and select <code>Open in Explorer</code>. In the new window, it can be easiest to find your new files by sorting by <code>Date Modified</code>. Copy your new files.</p>
+<p>15. Open a new Explorer window and navigate to <code>C:\Users\Owner\Documents\Neverwinter Nights\development</code>. If the <code>development</code> folder does not exist, create it with <code>rightClick &gt; New &gt; New Folder</code>.</p>
+<p>16. Place your SWTOR files into the <code>development</code> folder.</p>
+<h2>Importing into Blender</h2>
+<ol>
+  <li>Launch Blender.</li>
+  <li>Create a new file.</li>
+  <li>A new file comes with three objects in it: A Camera, a Cube, and a Light. Delete these.</li>
+</ol>
+<figure class="image"><img src="/blendermodel1.jpg"></figure>
+<p>4. Select <code>File &gt; Import &gt; FBX</code>.</p>
+<p>5. Navigate to <code>C:\Users\Owner\Documents\Neverwinter Nights\development</code>. Import your <code>ArcticTrooper.fbx</code> file.</p>
+<p>6. Ta-dah, you have a SWTOR model ripped into Blender!</p>
