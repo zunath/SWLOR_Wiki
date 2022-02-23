@@ -1,0 +1,100 @@
+<!--
+title: Ripping Models
+description: A guide to ripping models from Star Wars: The Old Republic MMO
+published: true
+date: 2022-02-23T04:16:17.271Z
+tags: development graphics swtor tor mmo
+editor: ckeditor
+dateCreated: 2022-02-23T04:16:17.271Z
+-->
+
+<h1 style="text-align:center;">Ripping Models</h1>
+<p style="text-align:center;"><i>A step-by-step guide by Xisifer</i></p>
+<p>By popular request, I'm writing up a step by step guide to ripping models and getting them into game in SWLOR / NWN. This method works with almost any game on PC, but for purposes of this guide, I'll be writing it targeting the MMO <i>Star Wars: The Old Republic</i> since it has the largest amount of assets that fit the setting and timeline of SWLOR.</p>
+<p>All questions and issues you run into can be directed to me on Discord: <code>Xisifer#7946</code>.</p>
+<p>I won't be covering the process for setting up a local server for SWLOR, since that can be found here: <a href="/Development/Environment-SetUp">/Development/Environment-SetUp</a></p>
+<h2><br>Required Programs</h2>
+<ul>
+  <li>NinjaRipper 1.7.1 : <a href="https://www.mediafire.com/file/z1w91t5keytvq3r/ninjaripper1.7.1_with_new_script.7z/file">https://www.mediafire.com/file/z1w91t5keytvq3r/ninjaripper1.7.1_with_new_script.7z/file</a>
+    <ul>
+      <li>The main ripper program. A newer version is out, but it doesn't play well with older games like SWTOR.</li>
+    </ul>
+  </li>
+  <li>Noesis: <a href="https://richwhitehouse.com/index.php?content=inc_projects.php&amp;filemirror=noesisv4464.zip">https://richwhitehouse.com/index.php?content=inc_projects.php&amp;filemirror=noesisv4464.zip</a>
+    <ul>
+      <li>A program for viewing and exporting 3D models from a wide variety of sources.</li>
+      <li>Plugin for viewing the <code>.rip</code> file that NinjaRipper exports: https://www.dropbox.com/s/78dmlurg2ew2o66/fmt_ninjaripper_rip.py<ul>
+          <li>(Place this file in the install directory for Noesis, inside: <code>plugins/python</code>.)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Blender: <a href="https://www.blender.org/download/">https://www.blender.org/download/</a>
+    <ul>
+      <li>The 3D modelling program used to export models for NWN</li>
+      <li>Plugin for Neverwinter Nights models: <a href="https://neverwintervault.org/project/nwn1/other/tool/neverblender-28">https://neverwintervault.org/project/nwn1/other/tool/neverblender-28</a>
+        <ul>
+          <li>Plugin Installation: <a href="https://nwn.wiki/display/NWN1/NeverBlender#NeverBlender-Installation">https://nwn.wiki/display/NWN1/NeverBlender#NeverBlender-Installation</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Setup Process</h2>
+<ol>
+  <li>Extract the NinjaRipper archive to a location on your computer (for example, making a new folder on Desktop called <code>SWLOR Modding</code>)</li>
+  <li>Extract the Noesis archive to a location on your computer (for example, making a new folder on Desktop called <code>SWLOR Modding</code>)</li>
+  <li>Run <code>NinjaRipper.exe</code></li>
+  <li>Select the <code>…</code> button next to the <code>Run</code> button.</li>
+</ol>
+<figure class="image image_resized" style="width:29.9%;"><img src="/ninjarippersetup.png"></figure>
+<p>5. Navigate to <code>C:\Program Files (x86)\Steam\steamapps\common\Star Wars - The Old Republic\swtor\retailclient</code></p>
+<p>6. Select <code>swtor.exe</code>.</p>
+<p>7. In the NinjaRIpper settings, under the drop-down menu that says <code>Intruder inject</code>, instead select <code>D3D9 wrapper</code>. This is because SWTOR uses DirectX 9.</p>
+<p>8. Select <code>Run</code>. Nothing will seem to happen, but a file will be placed in the <code>swtor.exe</code> 's directory. This is because SWTOR is not launched directly from the <code>.exe</code> file, and instead you must log in to the game through their launcher.</p>
+<p>&nbsp;</p>
+<h2>Ripping the Model</h2>
+<ol>
+  <li>Launch SWTOR on Steam to open the SWTOR Launcher.</li>
+  <li>Log in.</li>
+  <li>Select Play/Launch to actually launch the game.</li>
+  <li>For this example, we're going to be ripping a helmet. <i>Technically</i>, the helmet models in SWTOR are slightly different for Male and Female models, but with the low detail of NWN / SWLOR's graphics, the difference is subtle enough that it's hard to tell the difference. However, the different Body Types in the game do change the proportions and scaling of the helmets, so you'll want to select a character with the default body, Body 2.</li>
+  <li>Once you're in the game, press <code>CTRL+C</code> to open the Collections window.</li>
+  <li>Today, we want to rip the Arctic Trooper's helmet. So, we're going to put <code>arctic</code> up in the filter search bar.&nbsp;<ol>
+      <li>Click on the Arctic Trooper's Armor Set, then <code>CTRL+[LeftClick]</code> on the icon of the helmet. This opens the Preview window to show how it looks on your character.</li>
+      <li>The way NinjaRipper works is it captures every 3D model visible on the screen and in the nearby area. This includes both the actual character in the game world, as well as the separate 3D model of the character shown in the Preview window. That last part is what we're interested in.</li>
+    </ol>
+  </li>
+</ol>
+<figure class="image"><img src="/modelrip1.jpg"></figure>
+<p>7. Press <code>F10</code>. If NinjaRipper was hooked in correctly, the game will freeze for about 5-20 seconds, depending on the size and complexity of the surrounding area (for example, being out on a planet vs being inside your character's starship).&nbsp;</p>
+<p>8. Once the game unfreezes, the rip is complete.</p>
+<h2>Finding the Desired Model</h2>
+<ol>
+  <li>Open Noesis.</li>
+  <li>On the left side file tree, navigate to <code>C:\Users\Owner\NinjaRipper\_NinjaRipper</code>.</li>
+  <li>All rips you make are automatically stamped with the date and time of the rip. Find the timestamp of the rip you just made. Open the folder inside.</li>
+  <li>A list of files should appear. A lot of <code>.rip</code> and <code>.dds</code> files. Double-clicking the file will preview it and show either the 3D model or the texture on the right side. Models are not shown with textures, and if you go through all the models, some textures will begin displaying themselves on top of some models, making everything look extremely strange. Ignore this. Noesis just has a hard time with <code>.rip</code> files.</li>
+  <li>From here, there's no easy way to find the correct model we want. For SWTOR in particular, however, the way files are dumped out seem to be organized in loose groups. The character in the Preview window always appears first in the list. On top of that, using the Size of the file is a good way to make an educated guess about the size and complexity of the model. For example, a 7kb file is a small cylinder of some sort…</li>
+</ol>
+<figure class="image"><img src="/modelrip2.jpg"></figure>
+<p>...while a larger 294kb file is the character's chest armor:</p>
+<figure class="image"><img src="/modelrip3.jpg"></figure>
+<p>…But what we're looking for is the helmet:</p>
+<figure class="image"><img src="/modelrip4.jpg"></figure>
+<p>In this case, it's <code>Mesh_0021</code>.</p>
+<p>&nbsp;</p>
+<p>6. Right-click the file and select <code>Export</code>.</p>
+<p>7. Under “Main output type”, select <code>.fbx - Autodesk FBX</code>. This is a file format that Blender supports by default, and avoids issues that some other file formats have (for example, <code>.obj</code> exports from SWTOR have their textures flipped upside down for some reason).</p>
+<p>7a. Also, make sure to name the output file to something you can remember. Keeping default filenames gets out of hand quickly if you work with multiple files.</p>
+<figure class="image"><img src="/modelrip5.jpg"></figure>
+<p>8. Select <code>Export</code>, then close the window.</p>
+<p>9. Next, scroll down the list of files until you find a lot of <code>.dds</code> files.&nbsp;</p>
+<p>10. Start previewing texture files to search for our helmet. Again, there's no easy way to find what you want, except by eyeballing the file size. On top of that, textures can look bizarre and strange, often seeming to have little resemblance to the shape of the 3D model. Finding the texture you want involves searching for certain “landmarks” that you might recognize. In this case, we can recognize the helmet's visor in the corner of this texture:</p>
+<figure class="image"><img src="/modelrip6.jpg"></figure>
+<p>11. Right-click the texture file and select <code>Export</code>.</p>
+<p>12. The default export for textures is <code>.tga</code>. For SWTOR, we don't want to change this. Photoshop and many other image programs can open this. Many SWTOR textures have transparency baked into them, which sometimes can be useful (for example, when ripping UI elements for icons).</p>
+<p>13. Export the file and close the window.</p>
+<p>14. Right-click on any file and select <code>Open in Explorer</code>. In the new window, it can be easiest to find your new files by sorting by <code>Date Modified</code>.</p>
