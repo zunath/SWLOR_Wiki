@@ -2,7 +2,7 @@
 title: Script Events
 description: 
 published: true
-date: 2022-05-02T21:46:30.434Z
+date: 2022-05-13T01:45:54.552Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-13T02:16:37.442Z
@@ -107,6 +107,7 @@ Todo: A brief explanation of how to hook up events and create a script method.
 | cache_data | Runs after events are hooked but before module load. | Any time data is being loaded into memory dictionaries, this event should be used. In many cases, calls during module load will reference this data.
 | space_enter | Runs after a player enters space mode
 | space_exit | Runs after a player exits space mode
+| spawn_despawn | Runs after a spawn is automatically cleaned up and despawned.
 
 ## NWNX Events
 
