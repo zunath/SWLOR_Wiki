@@ -2,7 +2,7 @@
 title: Creating Player Races
 description: 
 published: true
-date: 2021-11-13T01:41:28.872Z
+date: 2022-08-06T17:39:48.224Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-11-13T00:12:48.598Z
@@ -81,24 +81,25 @@ dateCreated: 2021-11-13T00:12:48.598Z
 <p>&nbsp;</p>
 <p>Next, update the file <code>Feature/GuiDefinition/ViewModel/AppearanceEditorViewModel.cs</code> to include a connection to your appearance definition within the <code>LoadAppearances() </code>method. This determines the set of options that are available within the UI window used for character appearance customization.</p>
 <pre><code class="language-plaintext">
-        [NWNEventHandler("mod_load")]
-        public static void LoadAppearances()
+        private static void LoadRacialAppearances()
         {
-            _racialAppearances[RacialType.Human] = new HumanRacialAppearanceDefinition();
-            _racialAppearances[RacialType.Bothan] = new BothanRacialAppearanceDefinition();
-            _racialAppearances[RacialType.Chiss] = new ChissRacialAppearanceDefinition();
-            _racialAppearances[RacialType.Zabrak] = new ZabrakRacialAppearanceDefinition();
-            _racialAppearances[RacialType.Twilek] = new TwilekRacialAppearanceDefinition();
-            _racialAppearances[RacialType.Mirialan] = new MirialanRacialAppearanceDefinition();
-            _racialAppearances[RacialType.Echani] = new EchaniRacialAppearanceDefinition();
-            _racialAppearances[RacialType.Cyborg] = new CyborgRacialAppearanceDefinition();
-            _racialAppearances[RacialType.Cathar] = new CatharRacialAppearanceDefinition();
-            _racialAppearances[RacialType.Trandoshan] = new TrandoshanRacialAppearanceDefinition();
-            _racialAppearances[RacialType.Wookiee] = new WookieeRacialAppearanceDefinition();
-            _racialAppearances[RacialType.MonCalamari] = new MonCalamariRacialAppearanceDefinition();
-            _racialAppearances[RacialType.Ugnaught] = new UgnaughtRacialAppearanceDefinition();
-            _racialAppearances[RacialType.Ugnaught] = new UgnaughtRacialAppearanceDefinition();
-            _racialAppearances[RacialType.MyNewRace] = new MyNewRaceRacialAppearanceDefinition(); // Your new race goes here.
+            _racialAppearances[AppearanceType.Human] = new HumanRacialAppearanceDefinition();
+            _racialAppearances[AppearanceType.Bothan] = new BothanRacialAppearanceDefinition();
+            _racialAppearances[AppearanceType.Chiss] = new ChissRacialAppearanceDefinition();
+            _racialAppearances[AppearanceType.Zabrak] = new ZabrakRacialAppearanceDefinition();
+            _racialAppearances[AppearanceType.Twilek] = new TwilekRacialAppearanceDefinition();
+            _racialAppearances[AppearanceType.Mirialan] = new MirialanRacialAppearanceDefinition();
+            _racialAppearances[AppearanceType.Echani] = new EchaniRacialAppearanceDefinition();
+            _racialAppearances[AppearanceType.KelDor] = new KelDorRacialAppearanceDefinition();
+            _racialAppearances[AppearanceType.Cyborg] = new CyborgRacialAppearanceDefinition();
+            _racialAppearances[AppearanceType.Cathar] = new CatharRacialAppearanceDefinition();
+            _racialAppearances[AppearanceType.Rodian] = new RodianRacialAppearanceDefinition();
+            _racialAppearances[AppearanceType.Trandoshan] = new TrandoshanRacialAppearanceDefinition();
+            _racialAppearances[AppearanceType.Togruta] = new TogrutaRacialAppearanceDefinition();
+            _racialAppearances[AppearanceType.Wookiee] = new WookieeRacialAppearanceDefinition();
+            _racialAppearances[AppearanceType.MonCalamari] = new MonCalamariRacialAppearanceDefinition();
+            _racialAppearances[AppearanceType.Ugnaught] = new UgnaughtRacialAppearanceDefinition();
+            _racialAppearances[AppearanceType.Droid] = new DroidRacialAppearanceDefinition();
         }</code></pre>
 <p>&nbsp;</p>
 <p>Next, update the file <code>Service/Race.cs</code> to include the default values for your new race. There should be an entry for both the male and female versions of the race. This is done within the <code>LoadRaces()</code> method. This determines what a brand new character's appearance will be set to on login.&nbsp;</p>
