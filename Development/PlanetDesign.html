@@ -1,0 +1,117 @@
+<!--
+title: Planet Design
+description: A guide to creating and planning new planets for creation in SWLOR
+published: true
+date: 2022-08-18T03:01:56.664Z
+tags: areas
+editor: ckeditor
+dateCreated: 2022-08-18T03:01:56.664Z
+-->
+
+<h1 style="text-align:center;">SWLOR Planet Design Checklist</h1>
+<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>
+<p>To be implemented in SWLOR, a new playable planet needs to have a lot of different components to it. This is a process typically undertaken by multiple people over a long period of time, since SWLOR is a volunteer project, not a professional game design studio.</p>
+<p>That said, we still want new content to adhere to a certain level of quality to match the level of gameplay and engagement that players have come to expect from SWLOR. The following list below should be taken as a bare minimum requirement for new planets being added to the module. Creators are encouraged to add much, much more than this, but any new planet will not be accepted for use in SWLOR until it meets these minimum criteria. Take your time, don’t rush things. Pay attention to the little details. Go the extra mile and be willing to put in a little extra work to make your new planets and content really shine!</p>
+<p>Currently, in SWLOR v2, our content roughly follows a Tier system where a given Tier of equipment purchased from a shop vendor will allow a character to have a reasonable expectation of fighting the enemies in the zones.</p>
+<ul>
+  <li>Tier 1 and 2: CZ-220, Viscara</li>
+  <li>Tier 2 and 3: Mon Calamari, Korriban</li>
+  <li>Tier 3: Hutlar</li>
+  <li>Tier 4: Tatooine</li>
+  <li>Tier 5: Dathomir</li>
+</ul>
+<p>At minimum, a planet must have…</p>
+<ul>
+  <li>Shuttle access<ul>
+      <li>Not all planets need to be accessible by shuttle. This is to retain an amount of difficulty/exploration to the galaxy, and to allow for some mystery to the more remote planets.</li>
+      <li>IF a planet is going to have shuttle access:<ul>
+          <li>All shuttle terminals on other planets must connect to the new planet</li>
+          <li>Shuttle terminals must connect to every other existing planet</li>
+          <li>Shuttle access fee should reasonably scale with the Difficulty Tier of the planet.<ul>
+              <li>Tier 1: xxx</li>
+              <li>Tier 2: xxx</li>
+              <li>Tier 3: xxx</li>
+              <li>Tier 4: xxx</li>
+              <li>Tier 5: xxx</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Vendor(s)<ul>
+      <li>At least one vendor must be present, that sells the appropriate Tier of gear for that planet</li>
+      <li>Multiple vendors are allowed, for example specialty vendors (such as Food).</li>
+      <li>Generally we don’t want different types of items split among multiple vendors. While it might make in-universe sense for there to be a Weapons Shop, an Armor Shop, a Bags Shop, etc….making players walk between multiple vendors could be tedious.</li>
+    </ul>
+  </li>
+  <li>Enemies<ul>
+      <li>At least 4-5 different types of enemy for the planet. Generally, around 2 - 3 different enemy types per each individual area</li>
+      <li>Loot<ul>
+          <li>Enemies should drop loot relating to crafting recipes</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Itemization / Loot<ul>
+      <li>Enemies should drop loot relating to crafting recipes somehow. Either items should be useful for existing crafting recipes, or any new items created must also have new crafting recipes associated with them.&nbsp;</li>
+      <li>Bottom Line: All items dropped by creatures must have some sort of usefulness or functionality in crafting. There are no “sell this for money” items.</li>
+    </ul>
+  </li>
+  <li>Points of Interest<ul>
+      <li>These are where your creativity as a map creator gets to shine. Restaurants or parks, little bandit camps, out of the way ruins…Do your best to do research on Wookieepedia about the planet you’re implementing, and think what parts of it you might want to try to recreate in Neverwinter Nights.</li>
+    </ul>
+  </li>
+  <li>Player Housing<ul>
+      <li>Housing comes in three different forms on SWLOR:<ul>
+          <li>Apartments<ul>
+              <li>Apartments can be implemented by placing an [Apartment Terminal] somewhere on the planet, near a teleporter that will take the player into their apartment.</li>
+              <li>Apartments are recommended to be placed in large cities and metropolises, large buildings, etc</li>
+            </ul>
+          </li>
+          <li>Player Buildings &amp; Cities<ul>
+              <li>Player builds must be in a 32x32 square zone.</li>
+              <li>Buildings occupy a minimum of X squares.</li>
+              <li>For an area to be buildable, it must have the <code>IS_BUILDABLE</code> variable set to <code>1</code> in the <code>Area Properties &gt; Advanced</code> window:</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<figure class="image image_resized" style="width:64.29%;"><img src="/buikldable.png"></figure>
+<ul>
+  <li>Quests<ul>
+      <li>Each planet should come with a number of quests associated with it. Quests come in two types:</li>
+      <li>NPC Quests<ul>
+          <li>These are your classic “NPC has a problem, they offer a reward if the player does a task” setup</li>
+        </ul>
+      </li>
+      <li>Hunter’s Guild<ul>
+          <li>The Hunter’s Guild should have “Kill X &lt;Enemy&gt;” or “Gather X &lt;Material&gt;” quests relating to the planet and its enemies.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Facilities<ul>
+      <li>Guildmasters<ul>
+          <li>Hunter’s Guild</li>
+          <li>Agriculture Guild</li>
+          <li>Smithery Guild</li>
+          <li>Engineering Guild</li>
+          <li>Fabrication Guild</li>
+        </ul>
+      </li>
+      <li>Crafting Stations<ul>
+          <li>Workbench</li>
+          <li>???</li>
+          <li>???</li>
+          <li>???</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
