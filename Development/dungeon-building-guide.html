@@ -1,0 +1,145 @@
+<!--
+title: Dungeon Building Guide
+description: Dungeon Example - Coxxion Base Dungeon
+published: false
+date: 2022-08-26T01:23:56.364Z
+tags: dungeon, area, npc, quest, puzzle, spawns, loot
+editor: ckeditor
+dateCreated: 2022-08-26T01:23:56.364Z
+-->
+
+<p>&nbsp;</p>
+<h1>NWToolset - Areas and Object Blueprints</h1>
+<p>Outside the scope of this topic. See this topic: <a href="/Development/Area-Building-Guide">/Development/Area-Building-Guide</a></p>
+<h1>Quest Setup</h1>
+<p><a href="https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Feature/DialogDefinition/CoxxionTerminalDialog.cs">https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Feature/DialogDefinition/CoxxionTerminalDialog.cs</a></p>
+<pre><code class="language-plaintext">       private void VanquishTheVellenRaiders()
+       {
+           _builder.Create("vanquish_vellen", "Vanquish the Vellen Raiders")
+               .PrerequisiteQuest("help_talyron_family")
+               .AddState()
+               .AddKillObjective(NPCGroupType.Viscara_VellenFleshleader, 1)
+               .SetStateJournalText("Infiltrate the Coxxion base and drive the raiders out of it. Return to Reid Coxxion when the work is done.")
+               .AddState()
+               .SetStateJournalText("You defeated the Coxxion Fleshleader. Return to Reid Coxxion to finish the job.")
+               .AddGoldReward(750)
+               .AddXPReward(1200)
+               .OnAcceptAction((player, sourceObject) =&gt;
+               {
+                   KeyItem.GiveKeyItem(player, KeyItemType.CoxxionBaseKey);
+               })
+               
+               .OnAbandonAction(player =&gt;
+               {
+                   KeyItem.RemoveKeyItem(player, KeyItemType.CoxxionBaseKey);
+               });
+       }</code></pre>
+<p>&nbsp;</p>
+<h1>Entrance/Exit - Doors or Waypoints</h1>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1>Quest Dialogs and Door Puzzles</h1>
+<p>Quest activity and scripted actions via “dialogs” is a very easy way to implement!</p>
+<p>Note: This example uses Local Variables on the Door Objects, these then get used by the Dialog.</p>
+<p><a href="https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Feature/DialogDefinition/CoxxionTerminalDialog.cs">https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Feature/DialogDefinition/CoxxionTerminalDialog.cs</a></p>
+<pre><code class="language-plaintext">       [NWNEventHandler("mod_load")]
+       public static void LoadDoors()
+       {
+           var area = Area.GetAreaByResref("v_cox_base");
+           if (!GetIsObjectValid(area)) return;
+           for (var obj = GetFirstObjectInArea(area); GetIsObjectValid(obj); obj = GetNextObjectInArea(area))
+           {
+               var colorId = GetLocalInt(obj, "DOOR_COLOR");
+               if (colorId &gt; 0)
+               {
+                   _areaDoors.Add(obj);
+               }
+           }
+       }</code></pre>
+<pre><code class="language-plaintext">private void MainPageInit(DialogPage page)
+{
+...
+  page.Header = $"Currently, {openColor} doors are unlocked.\n\n" +
+      $"This terminal can unlock {terminalColor} doors";
+  page.AddResponse($"Open {terminalColor} doors", () =&gt;
+  {
+   SetLocalInt(area, "DOOR_STATUS", terminalColorId);
+   foreach (var door in _areaDoors)
+   {
+    if (GetLocalInt(door, "DOOR_COLOR") == terminalColorId)
+    {
+     SetLocked(door, false);
+     AssignCommand(door, () =&gt; ActionOpenDoor(door));
+    }
+    else
+    {
+     AssignCommand(door, () =&gt; ActionCloseDoor(door));
+     SetLocked(door, true);
+    }
+   }
+...</code></pre>
+<p>&nbsp;</p>
+<h1>NPC Spawns</h1>
+<p><a href="https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Feature/SpawnDefinition/ViscaraSpawnDefinition.cs">https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Feature/SpawnDefinition/ViscaraSpawnDefinition.cs</a></p>
+<pre><code class="language-plaintext"> private void CoxxionFlesheaters()
+ {
+  _builder.Create("VISCARA_COXXION_FLESHEATERS", "Coxxion Flesheaters")
+   .AddSpawn(ObjectType.Creature, "v_flesheater")
+   .WithFrequency(10)
+   .RandomlyWalks()
+   .ReturnsHome()
+   .AddSpawn(ObjectType.Creature, "v_flesheater2")
+   .WithFrequency(10)
+   .RandomlyWalks()
+   .ReturnsHome();
+ }
+ private void CoxxionFleshleader()
+ {
+  _builder.Create("VISCARA_COXXION_FLESHLEADER", "Coxxion Fleshleader")
+   .AddSpawn(ObjectType.Creature, "v_fleshleader")
+   .WithFrequency(100)
+   .RandomlyWalks()
+   .ReturnsHome();
+ }</code></pre>
+<p>&nbsp;</p>
+<h1>Loot Tables</h1>
+<p><a href="https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Feature/LootTableDefinition/ViscaraLootTableDefinition.cs">https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Feature/LootTableDefinition/ViscaraLootTableDefinition.cs</a></p>
+<pre><code class="language-plaintext">private void VellenFleshleader()
+{
+   _builder.Create("VISCARA_VELLEN_FLESHLEADER")
+	   .AddItem("babonsch", 5, 1, true)
+	   .AddItem("cox_metal", 5)
+	   .AddItem("lth_flawed", 5)
+	   .AddItem("elec_flawed", 5)
+	   .AddItem("flesh_cloak", 5)
+	   .AddItem("flesh_belt", 5)
+	   .AddItem("flesh_ring", 5)
+	   .AddItem("flesh_necklace", 5)
+	   .AddItem("flesh_tunic", 5)
+	   .AddItem("flesh_cap", 5)
+	   .AddItem("flesh_gloves", 5)
+	   .AddItem("flesh_boots", 5);
+   _builder.Create("VISCARA_VELLEN_FLESHLEADER_RARES")
+	   .IsRare()
+	   .AddItem("map_041", 20, 1, true)
+	   .AddItem("map_045", 5, 1, true);
+}
+private void VellenFlesheater()
+{
+   _builder.Create("VISCARA_VELLEN_FLESHEATER")
+	   .AddItem("cox_metal", 5)
+	   .AddItem("lth_flawed", 15)
+	   .AddItem("lth_ruined", 5)
+	   .AddItem("fiberp_ruined", 15)
+	   .AddItem("elec_flawed", 5)
+	   .AddItem("bubble_choc", 10)
+	   .AddItem("sweet_butter", 8)
+	   .AddItem("b_flour", 10)
+	   .AddGold(30, 20);
+   _builder.Create("VISCARA_VELLEN_FLESHEATER_RARES")
+	   .IsRare()
+	   .AddItem("map_041", 20, 1, true)
+	   .AddItem("map_045", 5, 1, true)
+	   .AddItem("babonsch", 5, 1, true);
+}</code></pre>
+<p>&nbsp;</p>
