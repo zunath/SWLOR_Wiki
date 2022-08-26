@@ -2,15 +2,21 @@
 title: Dungeon Building Guide
 description: Dungeon Example - Coxxion Base Dungeon
 published: false
-date: 2022-08-26T01:23:56.364Z
+date: 2022-08-26T01:39:48.158Z
 tags: dungeon, area, npc, quest, puzzle, spawns, loot
 editor: ckeditor
 dateCreated: 2022-08-26T01:23:56.364Z
 -->
 
 <p>&nbsp;</p>
+<p>&nbsp;</p>
 <h1>NWToolset - Areas and Object Blueprints</h1>
 <p>Outside the scope of this topic. See this topic: <a href="/Development/Area-Building-Guide">/Development/Area-Building-Guide</a></p>
+<h1>Rest area</h1>
+<p>Restable areas in dungeons are drawn with a generic trigger.&nbsp;</p>
+<p>Set scripts as follows:&nbsp;</p>
+<p>OnEnter = rest_<i>trg_</i>enter<br>OnExit = rest_<i>trg_</i>exit</p>
+<figure class="image"><img src="/dev-dungeonguide/rest_trigger1.jpg"></figure>
 <h1>Quest Setup</h1>
 <p><a href="https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Feature/DialogDefinition/CoxxionTerminalDialog.cs">https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Feature/DialogDefinition/CoxxionTerminalDialog.cs</a></p>
 <pre><code class="language-plaintext">       private void VanquishTheVellenRaiders()
@@ -35,12 +41,24 @@ dateCreated: 2022-08-26T01:23:56.364Z
                });
        }</code></pre>
 <p>&nbsp;</p>
-<h1>Entrance/Exit - Doors or Waypoints</h1>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 <h1>Quest Dialogs and Door Puzzles</h1>
 <p>Quest activity and scripted actions via “dialogs” is a very easy way to implement!</p>
 <p>Note: This example uses Local Variables on the Door Objects, these then get used by the Dialog.</p>
+<figure class="image"><img src="/dev-dungeonguide/placeable_w_dialog1.jpg"></figure>
+<figure class="image"><img src="/dev-dungeonguide/placeable_w_dialog2.jpg"></figure>
+<p>&nbsp;</p>
+<figure class="image image-style-align-left image_resized" style="width:55.81%;"><img src="/dev-dungeonguide/doors1.jpg"></figure>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<figure class="image"><img src="/dev-dungeonguide/doors2.jpg"></figure>
+<figure class="image"><img src="/dev-dungeonguide/doors3.jpg"></figure>
 <p><a href="https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Feature/DialogDefinition/CoxxionTerminalDialog.cs">https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Feature/DialogDefinition/CoxxionTerminalDialog.cs</a></p>
 <pre><code class="language-plaintext">       [NWNEventHandler("mod_load")]
        public static void LoadDoors()
@@ -56,6 +74,7 @@ dateCreated: 2022-08-26T01:23:56.364Z
                }
            }
        }</code></pre>
+<p>&nbsp;</p>
 <pre><code class="language-plaintext">private void MainPageInit(DialogPage page)
 {
 ...
@@ -80,6 +99,7 @@ dateCreated: 2022-08-26T01:23:56.364Z
 ...</code></pre>
 <p>&nbsp;</p>
 <h1>NPC Spawns</h1>
+<figure class="image"><img src="/dev-dungeonguide/spawn_creature1.jpg"></figure>
 <p><a href="https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Feature/SpawnDefinition/ViscaraSpawnDefinition.cs">https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Feature/SpawnDefinition/ViscaraSpawnDefinition.cs</a></p>
 <pre><code class="language-plaintext"> private void CoxxionFlesheaters()
  {
@@ -103,6 +123,7 @@ dateCreated: 2022-08-26T01:23:56.364Z
  }</code></pre>
 <p>&nbsp;</p>
 <h1>Loot Tables</h1>
+<p>&nbsp;</p>
 <p><a href="https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Feature/LootTableDefinition/ViscaraLootTableDefinition.cs">https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Feature/LootTableDefinition/ViscaraLootTableDefinition.cs</a></p>
 <pre><code class="language-plaintext">private void VellenFleshleader()
 {
