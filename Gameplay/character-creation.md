@@ -2,7 +2,7 @@
 title: Character Creation
 description: Brief explanation of character creation
 published: true
-date: 2021-12-21T00:53:36.316Z
+date: 2022-12-05T01:51:25.992Z
 tags: mechanics guides starting
 editor: markdown
 dateCreated: 2021-12-21T00:53:36.316Z
@@ -12,62 +12,40 @@ dateCreated: 2021-12-21T00:53:36.316Z
 With many custom mechanics, character creation on SWLOR is quite different from normal NWN.
 
 In summary:
-* There are a wide range of different races to choose from
-* You have many fewer attribute points to spend (and only 5 attributes rather than the usual 6)
+* There are a wide range of different races to choose from.
+* Attributes are different, and their growth is tied to raising skills instead of levels.
 * You don't select skills at creation.  All skills are acquired by doing activities during gameplay.
 * You select "perks" rather than feats, and you do this from the character menu in game.  You'll need to do this as soon as you've created your character to be able to do anything!
 
 ## Force Sensitive vs Standard
 The most important decision you make during creation is whether your character is Force Sensitive or not. 	
 
-This decision will determine what Perks your character can buy.  For example, all Force powers are only available to Force Sensitive characters.  The ability to use stims is only available to Standard characters.  
+This decision will determine what Perks your character can buy.  For example, all Force powers are only available to Force Sensitive characters.  The ability to use stims, as well as the top end of other skill trees, are only available to Standard characters.  
 
 Of course, many perks are available to both - so both Force Sensitive and Standard characters can use med kits and vibroblades, for example. 
 
 ## Races
 SWLOR supports a wide range of species from the Star Wars universe. 
 
-All species get visual updates.  Additionally, they get attribute bonuses and penalties based on the following list.  Note that these initial bonuses and penalties do NOT affect the maximum attribute value your character can later attain - so while you might find your path easier or harder to start with, you don't affect your character's ultimate potential by your choice of race.
+All species come with a number of appearance options.  Use of the in-game Appearance editor (accessed from your character sheet) will allow you to tweak and customize to your heart's content, so don't feel the need to get your look perfect in the first hour of play.  
 
-Human: +1 Vitality, -1 Perception
-Bothan: +1 Perception, -1 Might
-Chiss: +1 Will, -1 Vitality
-Zabrak: +1 Might, -1 Will
-Wookie: +1 Might, -2 Social
-Twi'lek: +2 Social, -1 Will
-Cathar: +1 Vitality, -1 Will
-Trandoshan: +1 Vitality, -2 Social
-Mirialan: +1 Perception, -1 Vitality
-Echani: +1 Perception, -1 Will
-Mon Calamari: +1 Will, -1 Perception
-Ugnaught: +1 Might, -1 Perception
-Togruta: +1 Will, -1 Might
-Rodian: +1 Perception, -2 Social
+As of the rebuild during the summer of 2022, there are no more built-in racial advantages when it comes to attributes.  Instead, every character gets a +1 to put into an attribute of their choice.  
+* Important Note: Whichever attribute you try to raise first will be the candidate for your racial advantage.  Once chosen, it is PERMANENT and cannot be redone even with a rebuild token.  Consult the Character Builds section for recommendations on where to put it (you can never go wrong with Vitality though).  
 
 ## Attributes
-SWLOR has 5 attributes.
-* Might, a measure of how physically strong a character is
-* Perception, a measure of the character's situational awareness
-* Willpower, a measure of the character's strength of will
-* Vitality, a measure of the character's physical toughness
-* Diplomacy, a measure of the character's social grace
+SWLOR has 6 attributes.
+* Might, a measure of how physically strong a character is.  This is used for carrying weight, as well as inflicting damage to certain weapons.  
+* Perception, a measure of the character's situational awareness.  This can be used for accuracy or damage, depending on your build.  
+* Willpower, a measure of the character's strength of will.  This is the primary attribute for using Force powers, but some standard skills (like First Aid) also use it.  It's also the primary attribute for Force Points, making it valuable to Force Sensitive characters.
+* Vitality, a measure of the character's physical toughness.  This determines how many hit points you have, as well as reducing damage taken in combat.  It also determines how quickly you regenerate hit points, stamina and force points.  Never start with less than 13 Vitality and never end with less than 18.  
+* Agility, a measure of the character's quickness and nimbleness.  This can be used for accuracy (particularly for ranged combat).  It also governs evasion, how well you avoid being hit.  It's also the primary attirbute for Stamina, making it valuable to Standard characters.  
+* Social, a measure of the character's social grace.  This affects how much xp you earn and powers the Leadership skill tree.  Every 5 points over 10 allow you to use an additional Leadership aura power.
 
-The first four attributes are all relevant to combat, and all 5 attributes affect various abilities and game events.  For your first character, it's probably a good idea to read the [Combat Guide](/Gameplay/combat-guide) to get a feel for which attributes you want to prioritise.
+All six attributes affect various abilities and game events.  For your first character, it's probably a good idea to read the [Combat Guide](/Gameplay/combat-guide) to get a feel for which attributes you want to prioritise.  You can also read the SWLOR Design Bible for details on how the mechanics of the server are setup.  
 
-All attributes start at 8, plus racial modifiers (so e.g. a Human starts with 9 VIT and 7 PER).
+All attributes start at 10.
 
-You have the usual 30 points to spend on increasing your attributes, but increases are more expensive than in base NWN.
-* +1 = 1 point
-* +2 = 2 points (so 3 total)
-* +3 = 3 points (so 6 total)
-* +4-6 = 4 points (so 10-18 points total)
-The highest you can raise any single attribute to on creation is 14 (before racial adjustments).  
-
-For example you could be 14/10/10/10/10 to start with (before racial stats).
-
-For your first character, it's recommended to take at least 12 Vitality.
-
-(You will get the ability to raise your attributes further later in the game.  The highest 'hard' value you will be able to increase any of your attributes to in gameplay is 26). 
+You have the usual 30 points to spend on increasing your attributes.  Each point of raised attribute costs 2 points.  Most people choose a 16/16/13/10/10/10 distribution for their build, depending on what they want to do.  Consult the Build Guide [character-creation](/Gameplay/Builds/character-creation) for specifics.
 
 ### Abilities and Hit points, Stamina points, and Force points
 Characters have 40 HP plus 40 HP for each positive point of VIT modifier, plus equipment bonuses and temporary bonuses from abilities.  So VIT makes a significant difference to your overall HP pool.  VIT also improves the regen rate of HP when resting - 1 + VIT mod HP recovered per round.
@@ -83,6 +61,6 @@ One of the very first things you'll want to do when you roll up a new character 
 > If you can't see the Character or Perks window when you do this, you probably need to upgrade your version of NWN.  The ability to make custom windows was added in a patch during 2021.
 {.is-info}
 
-You can sort Perks by category.  It's a good idea to give yourself proficiency in at least one type of weapon, tunics or breastplates and maybe some other armour types, the Med Kit ability under First Aid and, if you're a Force Sensitive character, the Force Push perk.  
+You can sort Perks by category.  It's a good idea to give yourself proficiency in at least one type of weapon, tunics or breastplates and maybe some other armour types, the Med Kit ability under First Aid and, if you're a Force Sensitive character, the Force Push perk.  Almost everyone also takes the first level of Dedication under the Leadership tree, for faster XP gain.
 
 Every time you gain a rank in a skill, you gain an additional perk point (up to a maximimum of 300 additional Perk points).  There are ways to reset perks in game later if you take something you later regret.  
