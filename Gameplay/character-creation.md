@@ -2,14 +2,14 @@
 title: Character Creation
 description: Brief explanation of character creation
 published: true
-date: 2022-12-05T01:51:25.992Z
+date: 2022-12-05T01:54:15.500Z
 tags: mechanics guides starting
 editor: markdown
 dateCreated: 2021-12-21T00:53:36.316Z
 ---
 
 # Character Creation
-With many custom mechanics, character creation on SWLOR is quite different from normal NWN.
+With many custom mechanics, character creation on SWLOR is quite different from normal NWN.  As of the summer of 2022, it's also been substantially overhauled, so older players coming back will find things aren't quite the same as they used to be.
 
 In summary:
 * There are a wide range of different races to choose from.
