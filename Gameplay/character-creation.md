@@ -2,7 +2,7 @@
 title: Character Creation
 description: Brief explanation of character creation
 published: true
-date: 2022-12-05T01:54:15.500Z
+date: 2022-12-07T14:09:10.811Z
 tags: mechanics guides starting
 editor: markdown
 dateCreated: 2021-12-21T00:53:36.316Z
@@ -58,8 +58,6 @@ Perks define your character's abilities.  There are two types of perk.
 * Active perks grant abilities that can be used in or out of combat.
 
 One of the very first things you'll want to do when you roll up a new character is assign some or all of your 10 initial Perk points.  Hit C to access the character sheet and hit the Perks button to pull up the Perks window.
-> If you can't see the Character or Perks window when you do this, you probably need to upgrade your version of NWN.  The ability to make custom windows was added in a patch during 2021.
-{.is-info}
 
 You can sort Perks by category.  It's a good idea to give yourself proficiency in at least one type of weapon, tunics or breastplates and maybe some other armour types, the Med Kit ability under First Aid and, if you're a Force Sensitive character, the Force Push perk.  Almost everyone also takes the first level of Dedication under the Leadership tree, for faster XP gain.
 
