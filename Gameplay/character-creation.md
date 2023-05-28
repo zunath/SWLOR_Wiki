@@ -2,7 +2,7 @@
 title: Character Creation
 description: Brief explanation of character creation
 published: true
-date: 2022-12-07T14:09:10.811Z
+date: 2023-05-28T02:33:05.221Z
 tags: mechanics guides starting
 editor: markdown
 dateCreated: 2021-12-21T00:53:36.316Z
@@ -30,7 +30,7 @@ SWLOR supports a wide range of species from the Star Wars universe.
 All species come with a number of appearance options.  Use of the in-game Appearance editor (accessed from your character sheet) will allow you to tweak and customize to your heart's content, so don't feel the need to get your look perfect in the first hour of play.  
 
 As of the rebuild during the summer of 2022, there are no more built-in racial advantages when it comes to attributes.  Instead, every character gets a +1 to put into an attribute of their choice.  
-* Important Note: Whichever attribute you try to raise first will be the candidate for your racial advantage.  Once chosen, it is PERMANENT and cannot be redone even with a rebuild token.  Consult the Character Builds section for recommendations on where to put it (you can never go wrong with Vitality though).  
+* Important Note: Whichever attribute you try to raise first will be the candidate for your racial advantage.  ~~Once chosen, it is PERMANENT and cannot be redone even with a rebuild token.~~  Consult the Character Builds section for recommendations on where to put it (you can never go wrong with Vitality though).  
 
 ## Attributes
 SWLOR has 6 attributes.
