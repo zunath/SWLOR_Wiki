@@ -2,7 +2,7 @@
 title: City Buildings
 description: Visual Guide to City Buildings
 published: true
-date: 2023-07-17T19:39:00.569Z
+date: 2023-07-17T20:14:10.151Z
 tags: furniture, structures, player properties, fabrication, crafting, fixtures, player property
 editor: markdown
 dateCreated: 2023-07-17T19:38:09.896Z
