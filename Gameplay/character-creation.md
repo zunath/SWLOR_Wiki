@@ -2,7 +2,7 @@
 title: Character Creation
 description: Brief explanation of character creation
 published: true
-date: 2023-07-07T18:07:55.629Z
+date: 2023-07-24T13:05:09.582Z
 tags: mechanics guides starting
 editor: markdown
 dateCreated: 2021-12-21T00:53:36.316Z
@@ -77,7 +77,7 @@ Characters have 40 HP plus 40 HP for each positive point of VIT modifier, plus e
 Vitality also increases your max STM (stamina) and FP (force points). However, regeneration of STM during resting is influenced by PER, and regeneration of FP during resting is influences by WIL. In both cases, 1 + half your modifier per round. 
 
 ## Perks
-Perks define your character's abilities.  There are two types of perk.
+[Perks](https://wiki.starwarsnwn.com/en/Gameplay/character-creation/Perks) define your character's abilities.  There are two types of perk.
 * Passive perks include things like weapon proficiencies, that allow you to equip different gear and use it more effectively.
 * Active perks grant abilities that can be used in or out of combat.
 
