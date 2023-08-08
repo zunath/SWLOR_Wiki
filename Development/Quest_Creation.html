@@ -2,7 +2,7 @@
 title: Quest Creation
 description: The process for creation of quests using Aurora toolset and Microsoft Visual Studio.
 published: false
-date: 2023-08-08T15:06:04.937Z
+date: 2023-08-08T15:09:47.924Z
 tags: development, quests, toolset, aurora, toolkit, contribution, contributor
 editor: ckeditor
 dateCreated: 2023-08-08T14:38:21.322Z
@@ -91,4 +91,35 @@ dateCreated: 2023-08-08T14:38:21.322Z
 <p>This window can be accessed by right clicking the NPC, selecting properties, then selecting variables. In this example, there are four variables assigned: the first three are for loot tables, while the last one is to identify the group the NPC is associated with. For quest generation, the loot table variables will generally be ignored. The last one, <code>QUEST_NPC_GROUP_ID</code> is the one we care about and needs to be set/added. The type should be <code>int</code> and the value should be the number assigned in NPCGroupType.cs. In the example above, Mynocks are assigned to ID 1.</p>
 <p>As a result, anytime this creature dies, the quest system will automatically check to see if the player is on any quests which require them to kill said creature. As soon as the required amount hit zero, the player is progressed to the next stage of the quest. All other processes for quest creation is the same as a fetch item quest. The quest can immediately be finished from that point, or the player can be made to go talk to the NPC quest giver.</p>
 <p>The final type of quest involves exploration. This can involve traveling to an area or clicking an object, so it will either be a trigger or a placeable you're interacting with.</p>
-<p>There are currently two prefabs which are already made. These can be placed in the module and the instance can be edited.</p>
+<p>There are currently two prefabs which are already made. These can be placed in the module and the instance can be edited:</p>
+<figure class="image"><img src="https://cdn.discordapp.com/attachments/1131640314386452662/1138249622767288371/image.png">
+  <figcaption>Placeable</figcaption>
+</figure>
+<figure class="image"><img src="https://cdn.discordapp.com/attachments/1131640314386452662/1138249699439169557/image.png">
+  <figcaption>Trigger</figcaption>
+</figure>
+<p>On both of these, you'll see three variables:<br>&nbsp;</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td><code>QUEST_MESSAGE</code></td>
+        <td>This is the message displayed when the object is clicked and the quest advances. Leave it blank and only the quest &amp; journal update will show.&nbsp;</td>
+      </tr>
+      <tr>
+        <td><code>QUEST_ID</code></td>
+        <td>This is the Id assigned earlier in the quest definition.&nbsp;</td>
+      </tr>
+      <tr>
+        <td><code>QUEST_STATE</code>&nbsp;</td>
+        <td>This is the state the player must be on for this object to be active.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<ul>
+  <li>In summary,</li>
+  <li>Build your quest definition in Microsoft Visual Studio</li>
+  <li>Add your NPC dialogue, NPC group IDs, quest items, etc. to the module</li>
+  <li>Use snippets and local variables to progress quest state</li>
+</ul>
