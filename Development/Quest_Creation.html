@@ -2,7 +2,7 @@
 title: Quest Creation
 description: The process for creation of quests using Aurora toolset and Microsoft Visual Studio.
 published: false
-date: 2023-08-08T14:50:53.461Z
+date: 2023-08-08T14:55:12.311Z
 tags: development, quests, toolset, aurora, toolkit, contribution, contributor
 editor: ckeditor
 dateCreated: 2023-08-08T14:38:21.322Z
@@ -63,8 +63,24 @@ dateCreated: 2023-08-08T14:38:21.322Z
                 });
         }```</code></pre>
 <p>The above example is the aforementioned quest definition which contains comments for each line explaining the code.&nbsp;</p>
-<p>Quest states are generally progressed using a combination of snippets and local variables snip it information can be found here.</p>
+<p>Quest states are generally progressed using a combination of snippets and local variables snip it information can be found <a href="https://wiki.starwarsnwn.com/Development/snippets">here</a>.</p>
 <p>Quest dialogue is created using the Aurora tool set. The example below illustrates this:</p>
-<p>&nbsp;</p>
-<p>The text notes are in order from latest quest state to earliest quest date in this particular instance. The topmost dialogue is what is shown to the player after they have completed the quest. The bottom most dialogue node is shown if none of the higher conditions are met; in essence, the player is not eligible for this quest.</p>
+<figure class="image"><img src="https://cdn.discordapp.com/attachments/1131640314386452662/1138243955415318630/image.png"></figure>
+<p>The text notes are in order from latest quest state to earliest quest date in this particular instance. The topmost dialogue is what is shown to the player after they have completed the quest. The bottom most dialogue node is shown if none of the higher conditions are met; in essence, the player is not eligible for this quest. In this example, cr_t_d_operator is the name of this conversation and it should be used as a reference in most cases. Since this particular quest is a fetch quest, the NPC quest-giver is looking for a specific item. The item the NPC is looking for will be based on the resref of the item.&nbsp;</p>
+<p>Another type of quest example is a common “kill x enemies” quest as shown below:<br><br>&nbsp;</p>
+<pre><code class="language-cs">  private static void MynockMayhem(QuestBuilder builder)
+        {
+            builder.Create("mynock_mayhem", "Mynock Mayhem")
+
+                .AddState()
+                .SetStateJournalText("Halron Linth wants you to head down to the maintenance level and kill some unwanted Mynocks. Cull back their numbers, obtain their teeth and return to him for your receipt. He has requested five of them.")
+                .AddKillObjective(NPCGroupType.CZ220_Mynocks, 5)
+
+                .AddState()
+                .SetStateJournalText("You've killed five Mynocks and obtained their teeth. Return to Halron Linth to collect your work receipt.")
+
+                .AddXPReward(200)
+                .AddGoldReward(100)
+                .AddKeyItemReward(KeyItemType.HalronLinthsWorkReceipt);
+        }</code></pre>
 <p>&nbsp;</p>
