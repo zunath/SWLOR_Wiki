@@ -2,7 +2,7 @@
 title: Quest Creation
 description: The process for creation of quests using Aurora toolset and Microsoft Visual Studio.
 published: false
-date: 2023-08-08T14:44:57.985Z
+date: 2023-08-08T14:46:31.143Z
 tags: development, quests, toolset, aurora, toolkit, contribution, contributor
 editor: ckeditor
 dateCreated: 2023-08-08T14:38:21.322Z
@@ -13,3 +13,53 @@ dateCreated: 2023-08-08T14:38:21.322Z
 <h2>Quest Creation</h2>
 <p>When creating a quest, quest definitions should be placed under Feature/QuestDefinition in Visual Studio.</p>
 <p>Quests are organized by planet, both for world quests and by craft for guild quest. The example depicted below is for CZ-220, but the process is the same no matter the planet:</p>
+<pre><code class="language-cs">```csharp
+        private static void SuppliesSmithery(QuestBuilder builder)
+        {
+            // Create a new quest entry. Set the unique ID to cz220_smithery. Set the name of the quest (viewable by the player) to CZ-220 Supplies - Smithery
+            builder.Create("cz220_smithery", "CZ-220 Supplies - Smithery")
+
+                // Adds a new state. Think of this like a "stage" of the quest.
+                .AddState()
+
+                // Sets the journal text for this state of the quest
+                .SetStateJournalText("The Crafting Terminal Droid operator has requested you create a single Basic Knife. You will need to purchase the \"One-Handed Blueprints\" perk in order to create this item. Once you have the perk you can use any smithery terminal to make the item. You will find the necessary resources down on the maintenance level of CZ-220.")
+                
+                // Identifies that the objective of this state is to collect an item with the resref "b_knife" and only one is required.
+                .AddCollectItemObjective("b_knife", 1)
+
+                // Adds a second state to the quest.
+                .AddState()
+                // Updates the journal text for the new objective. Because there are only two states in this quest, it is considered complete once this state has been finished.
+                .SetStateJournalText("Speak to the Crafting Terminal Droid operator for your reward.")
+
+                // Identifies the XP and Gold rewards for the quest. The player will get 200 XP and 50 Gold (aka Credits) for completion
+                .AddXPReward(200)
+                .AddGoldReward(50)
+
+                // Identifies the key item reward for the quest. The player will receive a key item for the completion of this quest. 
+                // Note: Key items are basically "flags" on a player. These items only appear in the Key Items menu
+                .AddKeyItemReward(KeyItemType.CraftingTerminalDroidOperatorsWorkReceipt)
+
+                // The following is custom logic run when the player accepts the quest. This is optional but can be helpful for giving temporary key items, sending a message, or whatever.
+                // In this case, we're giving a temporary key item to the player.
+                .OnAcceptAction((player, sourceObject) =&gt;
+                {
+                    KeyItem.GiveKeyItem(player, KeyItemType.CraftingTerminalDroidOperatorsWorkOrder);
+                })
+
+                // The following is custom logic run when the player abandons the quest. This is optional but can be helpful for removing temporary key items, sending a message, or whatever.
+                // In this case, we're removing a temporary key item from the player.
+                .OnAbandonAction(player =&gt;
+                {
+                    KeyItem.RemoveKeyItem(player, KeyItemType.CraftingTerminalDroidOperatorsWorkOrder);
+                })
+
+                // The following is custom logic run when the player completes the quest. This is optional but can be helpful for removing temporary key items, sending a message, or whatever.
+                // In this case, we're removing a temporary key item from the player.
+                .OnCompleteAction((player, sourceObject) =&gt;
+                {
+                    KeyItem.RemoveKeyItem(player, KeyItemType.CraftingTerminalDroidOperatorsWorkOrder);
+                });
+        }```
+</code></pre>
