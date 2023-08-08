@@ -2,7 +2,7 @@
 title: Quest Creation
 description: The process for creation of quests using Aurora toolset and Microsoft Visual Studio.
 published: false
-date: 2023-08-08T14:56:44.740Z
+date: 2023-08-08T14:59:35.332Z
 tags: development, quests, toolset, aurora, toolkit, contribution, contributor
 editor: ckeditor
 dateCreated: 2023-08-08T14:38:21.322Z
@@ -83,4 +83,9 @@ dateCreated: 2023-08-08T14:38:21.322Z
                 .AddGoldReward(100)
                 .AddKeyItemReward(KeyItemType.HalronLinthsWorkReceipt);
         }</code></pre>
-<p>This example is very similar to the last quest but instead of a “Collect Item” objective, this example uses a “Kill Objective” instead. In the above example, we're looking for an NPC Group Type of&nbsp;</p>
+<p>This example is very similar to the last quest but instead of a “Collect Item” objective, this example uses a “Kill Objective” instead. In the above example, we're looking for an NPC Group Type of “CZ220_Mynocks”. If you go to the definition for this, it'll show the following:</p>
+<figure class="image"><img src="https://cdn.discordapp.com/attachments/1131640314386452662/1138244886559211610/image.png"></figure>
+<p>All of the existing NPCs should be present here already, but if you're adding a new one, you'll need to give it a unique ID at the end.</p>
+<p>In Aurora the following example depicts assigned variables which shows NPC groups:</p>
+<figure class="image"><img src="https://cdn.discordapp.com/attachments/1131640314386452662/1138245249521692894/image.png"></figure>
+<p>This window can be accessed by&nbsp;</p>
