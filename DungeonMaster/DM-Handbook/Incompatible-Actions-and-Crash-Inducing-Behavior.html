@@ -1,0 +1,18 @@
+<!--
+title: Incompatible Actions and Crash Inducing Behavior
+description: 
+published: true
+date: 2023-10-10T02:32:35.209Z
+tags: 
+editor: ckeditor
+dateCreated: 2023-10-10T02:32:35.209Z
+-->
+
+<h1>Incompatible Actions and Crash Inducing Behavior</h1>
+<p>There are several actions that users should be mindful of when using the DM Client. This is a non-exhaustive list as new issues pop up frequently. If new issues are found, it should be brought up to a senior member of the DM Team.</p>
+<ol>
+  <li>Spawning large celestial bodies such as large planet placeables can cause crashes.</li>
+  <li>DM Characters attacked by other DMs or PCs can often cause crashes or broken characters. In the case of a broken character, the PC must die and respawn or the player must relog to restore proper functionality to their character.</li>
+  <li>The Character Manager <code>/cm</code> feature is meant only for NPCs. <i>Do not</i> attempt to save a PC in the Character Manager. Saving a PC in this database will result in the character's Tag to be duplicated which causes character functionality to break. The only fix for this is a full character remake.</li>
+  <li>PCs should not have credits or XP added to their characters via the Radial Menu. This should instead be done by the <code>/xp</code> and <code>/spawngold</code> commands. Adding XP and credits to a character in this way will cause XP to reset or break, or credits to be completely wiped from a character's inventory. In the case of an XP error, the character must have the proper amount of XP readded/remove from their character and brought to the character rebuild area on the server. In the case of credits, it simply needs to be readded to the character via <code>/spawngold</code>.</li>
+</ol>
