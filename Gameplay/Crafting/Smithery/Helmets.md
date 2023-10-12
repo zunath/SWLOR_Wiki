@@ -2,7 +2,7 @@
 title: Helmets
 description: A list of Helmet recipes!
 published: true
-date: 2023-10-12T10:45:54.936Z
+date: 2023-10-12T10:47:49.834Z
 tags: crafting, smithing, recipes, armor, helmet, helmets, smithery, smith
 editor: markdown
 dateCreated: 2023-07-21T01:47:33.208Z
