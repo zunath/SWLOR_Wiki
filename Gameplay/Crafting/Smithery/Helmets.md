@@ -2,25 +2,129 @@
 title: Helmets
 description: A list of Helmet recipes!
 published: true
-date: 2023-10-12T10:55:28.504Z
+date: 2023-10-12T10:55:44.307Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-21T01:47:33.208Z
 ---
 
-# Helmet Overview
-
-Helmets are heavy armor that occupies the head slot. Helmets offer high defense and HP compared to their Cap counterparts, but at the expense of less diversity and lower stamina and FP as well as lower regen of respective pools. A character, especially a Standard (someone without Force sensitivity), in heavy armor may wish to invest into Agility to counteract the loss of stamina and stamina regen or mix and match heavy and light armor.  
-  
-Heavy armor (excluding general armors) double your casting time for all Force abilities.
-
-## Helmet Recipes:
-
-| Item Name/Level/Slots | Components | Requirements | Properties |
-| --- | --- | --- | --- |
-| Battelmaster Helmet<br><br>Level 4<br><br>1x Enhancement Slot | 3x Refined Veldite<br><br>2x Ruined Fiberplast | Armor Blueprints Lvl 1 | Defense Force: 1  <br>Defense Physical: 1<br><br>HP: 10<br><br>Use Limitation: Perk: Helmets 1 |
-| Titan Helmet<br><br>Lvl 14<br><br>2x Enhancement Slot | 3x Refined Scordspar<br><br>2x Flawed Fiberplast | Armor Blueprints Lvl 2 | Defense Force: 1  <br>Defense Physical: 3<br><br>HP: 20<br><br>Use Limitation: Perks: Helmets 2 |
-| Quark Helmet<br><br>Lvl 24<br><br>2x Enhancement Slot | 3x Refined Plagionite<br><br>2x Good Quality Fiberplast | Armor Blueprints Lvl 3 | Defense Force: 6  <br>Defense Physical: 11<br><br>HP: 45<br><br>Use Limitation: Perks: Helmets 3 |
-| Argos Helmet<br><br>Lvl 34<br><br>2x Enhancement Slot | 3x Refined Keromber<br><br>2x Imperfect Fiberplast | Armor Blueprints LVl 4 | Defense Force: 8<br><br>Defense Physical: 14<br><br>HP: 65<br><br>Use Limitation: Perks: Helmets 4 |
-| Eclipse Helmet<br><br>Lvl 44<br><br>2x Enhancement Slot | 3x Refined Jasioclase<br><br>2x High Quality Fiberplast | Armor Blueprints Lvl 5 | Defense Force: 10  <br>Defense Physical: 18<br><br>HP: 80<br><br>Use Limitation: Perks: Helmets 5 |
-| Chaos Helmet<br><br>Lvl 52<br><br>2x Enhancement Slot | 2x Refined Arkoxit  <br>10x Refined Jasioclase  <br>20x High Quality Fiberplast  <br>2x Chiro Shard  <br>5x Refined Veldite  <br>5x Refined Scordspar  <br>5x Refined Plagionite  <br>5x Refined Keromber | Armor Blueprints Lvl 5  <br> <br><br>Must Be Learned | Defense Force: 14  <br>Defense Physical: 22<br><br>HP: 83<br><br>Use Limitation: Perks: Helmets 5 |
+<h1>Helmet Overview</h1>
+<p>Helmets are heavy armor that occupies the head slot. Helmets offer high defense and HP compared to their Cap counterparts, but at the expense of less diversity and lower stamina and FP as well as lower regen of respective pools. A character, especially a Standard (someone without Force sensitivity), in heavy armor may wish to invest into Agility to counteract the loss of stamina and stamina regen or mix and match heavy and light armor.<br><br>Heavy armor (excluding general armors) double your casting time for all Force abilities.</p>
+<h2><span class="text-big">Helmet Recipes:</span></h2>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:center;">Item Name/Level/Slots</th>
+        <th style="text-align:center;">Components</th>
+        <th style="text-align:center;">Requirements</th>
+        <th style="text-align:center;">Properties</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">
+          <p>Battelmaster Helmet</p>
+          <p>Level 4</p>
+          <p>1x Enhancement Slot</p>
+        </td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">
+          <p>3x Refined Veldite</p>
+          <p>2x Ruined Fiberplast</p>
+        </td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Armor Blueprints Lvl 1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">
+          <p>Defense Force: 1<br>Defense Physical: 1</p>
+          <p>HP: 10</p>
+          <p>Use Limitation: Perk: Helmets 1</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">
+          <p>Titan Helmet</p>
+          <p>Lvl 14</p>
+          <p>2x Enhancement Slot</p>
+        </td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">
+          <p>3x Refined Scordspar</p>
+          <p>2x Flawed Fiberplast</p>
+        </td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Armor Blueprints Lvl 2</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">
+          <p>Defense Force: 1<br>Defense Physical: 3</p>
+          <p>HP: 20</p>
+          <p>Use Limitation: Perks: Helmets 2</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">
+          <p>Quark Helmet</p>
+          <p>Lvl 24</p>
+          <p>2x Enhancement Slot</p>
+        </td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">
+          <p>3x Refined Plagionite</p>
+          <p>2x Good Quality Fiberplast</p>
+        </td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Armor Blueprints Lvl 3</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">
+          <p>Defense Force: 6<br>Defense Physical: 11</p>
+          <p>HP: 45</p>
+          <p>Use Limitation: Perks: Helmets 3</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">
+          <p>Argos Helmet</p>
+          <p>Lvl 34</p>
+          <p>2x Enhancement Slot</p>
+        </td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">
+          <p>3x Refined Keromber</p>
+          <p>2x Imperfect Fiberplast</p>
+        </td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Armor Blueprints LVl 4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">
+          <p>Defense Force: 8</p>
+          <p>Defense Physical: 14</p>
+          <p>HP: 65</p>
+          <p>Use Limitation: Perks: Helmets 4</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">
+          <p>Eclipse Helmet</p>
+          <p>Lvl 44</p>
+          <p>2x Enhancement Slot</p>
+        </td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">
+          <p>3x Refined Jasioclase</p>
+          <p>2x High Quality Fiberplast</p>
+        </td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Armor Blueprints Lvl 5</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">
+          <p>Defense Force: 10<br>Defense Physical: 18</p>
+          <p>HP: 80</p>
+          <p>Use Limitation: Perks: Helmets 5</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">
+          <p>Chaos Helmet</p>
+          <p>Lvl 52</p>
+          <p>2x Enhancement Slot</p>
+        </td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">2x Refined Arkoxit<br>10x Refined Jasioclase<br>20x High Quality Fiberplast<br>2x Chiro Shard<br>5x Refined Veldite<br>5x Refined Scordspar<br>5x Refined Plagionite<br>5x Refined Keromber</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">
+          <p>Armor Blueprints Lvl 5<br>&nbsp;</p>
+          <p>Must Be Learned</p>
+        </td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">
+          <p>Defense Force: 14<br>Defense Physical: 22</p>
+          <p>HP: 83</p>
+          <p>Use Limitation: Perks: Helmets 5</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
