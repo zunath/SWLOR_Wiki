@@ -1,0 +1,45 @@
+<!--
+title: Rest, busy states, and downtime
+description: Custom rest rules, recovery while resting, and when the server treats you as busy.
+published: true
+date: 2026-05-03T20:30:00.000Z
+tags: rest, busy, downtime, recovery, dungeon, gameplay, swlor
+editor: ckeditor
+dateCreated: 2026-05-03T20:30:00.000Z
+-->
+
+<h1>Rest, busy states, and downtime</h1>
+
+<h2>Rest (camp / rest action)</h2>
+<p>SWLOR <strong>replaces</strong> the default Neverwinter Nights rest finish with a custom <strong>Rest</strong> status effect. When you start resting (after the server accepts the rest attempt):</p>
+<ul>
+  <li>You play a seated loop animation and must stay within a small area; moving more than a tiny amount ends rest.</li>
+  <li>Your companion (henchman) can receive the same rest effect alongside you.</li>
+  <li>Over time, the effect ticks heal <strong>HP</strong> and restore <strong>stamina</strong> and <strong>force</strong>. Amounts scale with <strong>Vitality</strong> (with minimums so low scores still recover). Active <strong>food</strong> buffs that boost rest regeneration add to those ticks.</li>
+  <li>Taking damage or starting an attack removes rest.</li>
+  <li>Logging in clears rest.</li>
+</ul>
+<p>Rest ticks run on the server’s status-effect heartbeat (not on the vanilla NWN “rest completed” timer).</p>
+
+<h2>Where you may rest</h2>
+<ul>
+  <li><strong>Open world / non-dungeon areas:</strong> you can rest anywhere that passes the safety checks below.</li>
+  <li><strong>Dungeon areas</strong> (areas flagged as dungeons): you may only rest inside designated <strong>rest triggers</strong>. Entering one messages that it looks safe; leaving clears that permission.</li>
+</ul>
+<p>You <strong>cannot</strong> rest while you (or a party member within range) are in combat, while you are personally in combat, or while an enemy is nearby (roughly within 20 meters). The server returns a clear error string in those cases.</p>
+
+<h2>Busy flag</h2>
+<p>The server sets an internal <strong>busy</strong> state for focused actions. While busy, some systems refuse new actions (for example many item activations) with “You are busy.” Examples that set busy include:</p>
+<ul>
+  <li><strong>Resting</strong></li>
+  <li><strong>Ability activation</strong> (during the window the ability uses)</li>
+  <li><strong>Using items</strong> with the busy guard</li>
+  <li><strong>Fishing</strong></li>
+  <li>Certain <strong>quest item turn-in</strong> flows</li>
+</ul>
+<p>Busy is cleared when those actions finish (for example rest ends, container turn-in closes) and is wiped on character login or death so stuck states do not persist.</p>
+
+<h2>Quest journal</h2>
+<p>Abandoning a quest from the Quests UI also checks busy; finish resting or other busy interactions first.</p>
+
+<p>Related: <a href="/en/Gameplay/death-respawn">Death and respawn</a>, <a href="/en/Gameplay/quests">Quests</a>, <a href="/en/Gameplay/combat-skills/statuseffects">Status effects</a>, and <a href="/en/Gameplay/character-creation">Character creation</a> (ability modifiers that affect rest recovery).</p>

@@ -1,0 +1,47 @@
+<!--
+title: Death, respawn, and XP debt
+description: What happens when you die, how respawn and medical registration work, and how XP debt is calculated and paid down.
+published: true
+date: 2026-05-03T20:30:00.000Z
+tags: death, respawn, xp debt, medical, subdual, gameplay, swlor
+editor: ckeditor
+dateCreated: 2026-05-03T20:30:00.000Z
+-->
+
+<h1>Death, respawn, and XP debt</h1>
+
+<h2>Normal death (PvE / NPC)</h2>
+<p>When you die, you see a death panel message: you may wait for another character to revive you (for example First Aid abilities) or <strong>respawn</strong> to go to your <strong>registered medical center</strong> (respawn point). Respawning:</p>
+<ul>
+  <li>Resurrects you and heals you to <strong>half of your maximum HP</strong>.</li>
+  <li>Sends you to your saved respawn location (area and position).</li>
+  <li>Adds <strong>XP debt</strong> (see below).</li>
+</ul>
+
+<h2>Medical registration</h2>
+<p>Your respawn point is stored on your character when you register at a medical facility (dialog sets your respawn area and coordinates). New characters without a saved point get a default server waypoint on first entry. Player cities can build <strong>Medical Centers</strong>; those upgrades reduce XP debt from death by <strong>5% per Medical Center level</strong> (see <a href="player-cities">Player cities</a>).</p>
+
+<h2>XP debt formula (respawn)</h2>
+<p>On respawn, debt added is based on your <strong>total SP acquired</strong> and a tiered multiplier, before reductions:</p>
+<ul>
+  <li><strong>0–49 SP:</strong> multiplier <strong>15</strong></li>
+  <li><strong>50–199 SP:</strong> multiplier <strong>25</strong></li>
+  <li><strong>200–299 SP:</strong> multiplier <strong>35</strong></li>
+  <li><strong>300+ SP:</strong> multiplier <strong>45</strong></li>
+</ul>
+<p>Base debt = <code>TotalSPAcquired × multiplier</code>. Reductions apply to that amount (not below zero):</p>
+<ul>
+  <li><strong>Medical Center (citizen property):</strong> −5% per level of Medical Center upgrade.</li>
+  <li><strong>Social ability:</strong> for scores above 10, −3% per point over 10.</li>
+  <li>Total reduction is <strong>capped at 80%</strong>.</li>
+</ul>
+<p>Debt is clamped to a large server maximum. You are messaged how much debt was added and your new total.</p>
+
+<h2>Paying down XP debt</h2>
+<p>Whenever you would earn <strong>skill XP</strong>, the game pays debt first: XP goes to debt until it is cleared, then the remainder applies to skills. You can see current debt on the <strong>Skills</strong> window. <strong>Vitality</strong> and other bonuses described on <a href="character-creation">Character creation</a> also influence how punishing debt feels over time.</p>
+
+<h2>Player subdual (non-lethal)</h2>
+<p>If you are defeated by another <strong>player</strong> who has <strong>subdual mode</strong> enabled, you are not fully killed in the normal sense: you receive a subdued message, are resurrected with knockdown and temporary penalties instead of the death panel, and nearby players get a notice. This path does not use the standard respawn/debt flow above.</p>
+
+<h2>Space combat</h2>
+<p>Ship destruction and death in space follow the <a href="PilotingGuide">Piloting Guide</a> (hull loss, recovery at starport, module drops). That is separate from ground respawn/medical registration.</p>

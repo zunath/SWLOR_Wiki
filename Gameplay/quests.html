@@ -1,0 +1,40 @@
+<!--
+title: Quests
+description: How SWLOR’s quest journal, objectives, guild turn-ins, and abandonment work.
+published: true
+date: 2026-05-03T20:30:00.000Z
+tags: quests, journal, objectives, guild, gameplay, swlor
+editor: ckeditor
+dateCreated: 2026-05-03T20:30:00.000Z
+-->
+
+<h1>Quests</h1>
+<p>SWLOR uses a custom quest system backed by the server. Progress is stored on your character; many arcs mix talking to NPCs, killing specific enemies, visiting triggers or placeables, and turning in items.</p>
+
+<h2>Quest journal (UI)</h2>
+<p>Opening the standard Neverwinter Nights <strong>Journal</strong> panel (same keybind as vanilla) opens SWLOR’s <strong>Quests</strong> window instead. There you can:</p>
+<ul>
+  <li>Search and select active quests.</li>
+  <li>Read the current description and objectives text for the selected entry.</li>
+  <li><strong>Abandon Quest</strong> — you must not be in a <a href="rest-and-activities">busy</a> state (for example mid rest, using certain items, or in some interactions).</li>
+</ul>
+
+<h2>Accepting and advancing</h2>
+<p>Most quests start by speaking with an NPC and choosing dialog options. Progress usually advances when:</p>
+<ul>
+  <li>You satisfy the quest’s script logic (kill counts, flags, etc.).</li>
+  <li>You enter a <strong>quest trigger</strong> or use a <strong>quest placeable</strong> configured for that quest and state.</li>
+  <li>You complete an <strong>item turn-in</strong> (see below).</li>
+</ul>
+<p>Guild crafting quests are offered by guildmasters; details and reward tables are also summarized on the <a href="EngineeringGuild">Engineering</a>, <a href="FabricationGuild">Fabrication</a>, <a href="SmitheryGuild">Smithery</a>, <a href="AgricultureGuild">Agriculture</a>, and <a href="HuntersGuild">Hunters</a> guild pages.</p>
+
+<h2>Item collection (turn-in containers)</h2>
+<p>Some steps spawn or open a temporary container tied to the quest. Place only the requested items inside; wrong items are returned with a message. When the required quantities are met, the script may force a follow-up conversation with the quest NPC. If you need to cancel, move away from the container (it is cleaned up when closed). While that container flow is active, you are marked busy for quest handling.</p>
+
+<h2>Guild tasks and “Give Report”</h2>
+<p>Craft and gathering guilds use quests for orders and deliveries. At the guildmaster, use <strong>Give Report</strong> when you have completed the requested craft or acquisition; credit rewards scale with <strong>Social</strong> and (for guild quests) <strong>Guild Relations</strong> perks as described on the guild pages.</p>
+
+<h2>Prerequisites and resets</h2>
+<p>Quests can require other quests, key items, or guild rank. Repeatable or rotating guild tasks may refresh when the server reloads guild task data; if a task disappears from the offer list but remains in your journal, treat it as expired and abandon or re-acquire as appropriate.</p>
+
+<p>For staff and builders authoring content, see <a href="../Development/Quest_Creation">Quest Creation</a> (development wiki).</p>
