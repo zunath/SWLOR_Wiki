@@ -9,10 +9,18 @@ dateCreated: 2026-05-03T12:00:00.000Z
 -->
 
 <h1>Engineering Guild</h1>
+<h2 id="contents">Contents</h2>
+<ul>
+  <li><a href="#guild-progression">How guild progression works</a></li>
+  <li><a href="#base-task-rewards">Base task rewards</a></li>
+  <li><a href="#engineering-guild-tasks">Engineering Guild tasks</a></li>
+  <li><a href="#engineering-guild-shop">Engineering Guild shop</a></li>
+  <li><a href="#related-links">Related</a></li>
+</ul>
 <p>The Engineering Guild buys <strong>starship modules</strong> and <strong>ship deeds</strong> you deliver. In <strong>Veles</strong>, the guildmaster stands with the Smithery and Fabrication guildmasters at the <strong>Market Terminals</strong>. The Agriculture Guild is separate (Tapani Delights kitchen). Other worlds may have their own guildmaster placements.</p>
-<h2>How guild progression works</h2>
+<h2 id="guild-progression">How guild progression works</h2>
 <p>See <a href="https://wiki.starwarsnwn.com/en/Gameplay/AgricultureGuild">Agriculture Guild</a> for Guild Points, cumulative rank thresholds, rotating tasks (up to 10 per tier), shop access at guild rank 1+, and how dialog <strong>[Rank 1–5]</strong> maps to minimum internal ranks <strong>0–4</strong>.</p>
-<h2>Base task rewards (before bonuses)</h2>
+<h2 id="base-task-rewards">Base task rewards (before bonuses)</h2>
 <figure class="table">
   <table>
     <thead>
@@ -51,8 +59,9 @@ dateCreated: 2026-05-03T12:00:00.000Z
     </tbody>
   </table>
 </figure>
-<p>Actual payouts are increased by your guild rank, <a href="https://wiki.starwarsnwn.com/en/Gameplay/Perks/leadership">Guild Relations</a>, and Social modifier (see <a href="https://wiki.starwarsnwn.com/en/Gameplay/AgricultureGuild">Agriculture Guild</a>).</p>
-<h2>Engineering Guild tasks</h2>
+<p><strong>Guild Points:</strong> The base GP values above are increased by your <em>current</em> guild rank, <a href="https://wiki.starwarsnwn.com/en/Gameplay/Perks/leadership">Guild Relations</a>, and your <strong>Social</strong> ability modifier when the task pays out (see <a href="https://wiki.starwarsnwn.com/en/Gameplay/AgricultureGuild">Agriculture Guild</a>).</p>
+<p><strong>Credits:</strong> The base credit values are increased by <strong>Social</strong> (5% of the base per ability modifier point) and <strong>Guild Relations</strong> (5% of the base per perk rank). Your guild rank does <em>not</em> change credit rewards (<code>Quest.CalculateQuestGoldReward</code>).</p>
+<h2 id="engineering-guild-tasks">Engineering Guild tasks</h2>
 <p>Repeatable turn-ins: craft or acquire the item, then <strong>Give Report</strong>. Wording matches the quest title (<code>amount x name</code>). Only a subset of each tier’s tasks is offered at once when the tier has more than ten definitions.</p>
 <figure class="table">
   <table>
@@ -468,7 +477,7 @@ dateCreated: 2026-05-03T12:00:00.000Z
   </table>
 </figure>
 <p>&nbsp;</p>
-<h2>Engineering Guild shop</h2>
+<h2 id="engineering-guild-shop">Engineering Guild shop</h2>
 <p>After guild rank 1+, open <strong>Show me the guild shop</strong> and pick <strong>Rank 1–5</strong> to match the vendor tier. Items below are parsed from the module merchants <code>gp_eng_1</code> … <code>gp_eng_5</code>.</p>
 <figure class="table">
   <table>
@@ -1158,7 +1167,7 @@ dateCreated: 2026-05-03T12:00:00.000Z
     </tbody>
   </table>
 </figure>
-<h2>Related</h2>
+<h2 id="related-links">Related</h2>
 <ul>
   <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/Crafting/Engineering">Engineering (crafting)</a></li>
   <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/PilotingGuide">Piloting Guide</a> · <a href="https://wiki.starwarsnwn.com/en/Gameplay/Housingships">Starship Guide</a></li>
