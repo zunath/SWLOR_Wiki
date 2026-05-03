@@ -1,0 +1,67 @@
+<!--
+title: DM Client Basics
+description: 
+published: true
+date: 2023-10-09T23:54:44.859Z
+tags: dm, qm, dm client, client, dungeon master
+editor: ckeditor
+dateCreated: 2023-10-09T18:38:42.332Z
+-->
+
+<h1>Dungeon Master Client Basics</h1>
+<p>The DM Client for SWLOR is a versatile and powerful tool used for running events and overseeing player interaction. Because this tool has a very similar layout to the player client, it allows new quest masters to adjust to the tool very quickly.</p>
+<p>Below is an example of how the DM Client looks in-game:</p>
+<p>&nbsp;</p>
+<p>New users should note several things:</p>
+<figure class="image"><img src="https://cdn.discordapp.com/attachments/1131457115236610120/1161011068252991549/DM_Client_Hud_Raw.png?ex=6536bed1&amp;is=652449d1&amp;hm=9d89b61e7a02cc0b8028cec038297e04167a23b6cfeaade76bf9fffe15a7504d&amp;"></figure>
+<p><br>1. All players and DM Client users are visible in the party screen - this acts as a quick reference player menu which allows DMs/QMs to find online players quickly. Recent connections are generally shown at the bottom of the scrollable list.</p>
+<p>2. All player comms are shown in the left-most chat window. If a player uses SWLOR's version of party chat (comms), it will show up here for all DM Client users to see. This allows DMs to keep up with an event party event while they are in a different cell or out of normal volume range. Tells are not displayed to DMs, as they are considered private and only a server administrator can access these for review.</p>
+<p>3. Chooser - This button opens the <a href="https://wiki.starwarsnwn.com/en/DungeonMaster/DM-Handbook/Chooser">Chooser Menu</a>, you can also press ‘.’.</p>
+<p>4. Creator - This button opens the Creator Menu, you can also press ‘,’.</p>
+<p>5. Show Triggers - This button is largely useless on SWLOR due to mechanical overhaul.</p>
+<p>6. Appear/Disappear - This button allows a DM/QM to hide or reveal themselves to players for any number of reasons. Depending on whether or not the user is hidden or visible, the button will change accordingly.</p>
+<p>7. Pause - This button has been disabled on SWLOR.</p>
+<p>8. Difficulty Slider - This tool has been disabled on SWLOR.</p>
+<h2>Radial Menus</h2>
+<p>Most interactions with Player Characters and Non-Player Characters on SWLOR is done through Radial Menus, much like on other Neverwinter Nights Servers:</p>
+<figure class="image image_resized" style="width:34.98%;"><img src="/dm_ui_1.png"></figure>
+<p>Using the number pad, users can quickly navigate these menus. Buttons on the radial menu correspond to similar placements on the number pad</p>
+<p><u>Limbo</u> - Allows the selected entity to be placed in Limbo. Limbo is an unseen folder where NPCs can be placed when they are unneeded and need to be deleted. They can be recovered by finding the Limbo folder in the Chooser Menu. PCs cannot be sent to Limbo when selecting the Limbo option.</p>
+<p><u>Go To</u> - Allows the user to quickly jump to a PC or NPC when accessed from the radial menu. While this is less useful while the PC in question is in the user's immediate view, the radial menu can also be accessed by right clicking on the PC's portrait in the party sidebar mentioned above.</p>
+<p><u>Heal</u> - Heals the PC/NPC to full health and removes buffs/debuffs. Will also revive a downed PC as long as they don't respawn. Revive does not work on NPCs who have already been defeated.</p>
+<p><u>Kill</u> - Outright kills target PC/NPC. This will sometimes bug NPC bodies which will not disappear. Use cautiously. Can also be accomplished by highlighting a PC/NPC with the cursor and pressing ‘y’ key.</p>
+<p><u>Take Control</u> - Allows users to take control of NPCs. Does not work on PCs. Note that there are three options below:<br>&nbsp;</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <figure class="image image_resized" style="width:100%;"><img src="https://cdn.discordapp.com/attachments/1160828278978924594/1161087886406471710/DM_UI_2.png?ex=6537065c&amp;is=6524915c&amp;hm=0b84f5cc163b03bd9da74398b25dfd27aaa14e9552801bcd725e2516d62a221a&amp;"></figure>
+        </td>
+        <td>
+          <p><u>Take Control</u> - Only allows the user to have access to the same powers that the NPC would have access to. Note that this doesn't work as intended on SWLOR.</p>
+          <p><br><u>Toggle AI</u> - Turns on/off NPC AI if they have not engaged in combat with another PC/NPC. Unreliable, but sometimes useful.</p>
+          <p><br><u>Take Control Full Powers</u> - Allows user to take control of the NPC with <i>Most</i> DM Client powers available to you. User can jump to players, use widgets and wands, etc.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p><u>Toggle Invulnerable</u> - Toggles invulnerability on PC/NPC.</p>
+<p><u>Force Rest</u> - Forces selected PC(s) to rest.</p>
+<h2>Radial Menus Cont. - More Actions</h2>
+<p>More actions are available through this last menu located at the Num-7 position (top left) of the radial menu:</p>
+<figure class="image image_resized" style="width:37.56%;"><img src="https://cdn.discordapp.com/attachments/1160828278978924594/1161087886104477727/DM_UI_3.png?ex=6537065c&amp;is=6524915c&amp;hm=c574f52a596549a93937c1ab9aef204e2c7289172aef021ea94477fb1f582921&amp;"></figure>
+<p><u>Examine</u> - Allows the user to view the PC/NPC's NWN character sheet, description/SLWOR character sheet, and inventory. User can also leave notes on this character by using the notes tab of the SWLOR character sheet:</p>
+<figure class="image image_resized" style="width:34.51%;"><img src="https://cdn.discordapp.com/attachments/1131457115236610120/1161013604682842172/image.png?ex=6536c12d&amp;is=65244c2d&amp;hm=928bddd69496cc73b8baad9b3b30358277cce7937a36f2061c1e6a915c91215e&amp;"></figure>
+<p><u>Cast Spell</u> - Allows the user to cast a base NWN spell on the target. Due to mechanical changes with SWLOR, some spells don't work as intended and can outright kill a PC/NPC.</p>
+<p><u>Attack</u> - Causes user to attack with currently possessed NPC or as DM. Do <strong><u>not</u></strong> attack players as a DM character - this could result in a server crash.</p>
+<p><u>Special Attack</u> - Similar to Attack, but with a base NWN special attack. Same rules apply as Attack.</p>
+<p><u>Jump to DM</u> - Allows the user to teleport a PC directly to them from anywhere in the module.</p>
+<p><u>Give/Take</u> - This menu is largely broken and can irreparably damage a PC, resulting in a need for a <strong>full character rebuild</strong>. It should be disregarded.</p>
+<p><u>Special Actions</u> - This menu has a selection of unused tokens. It should be disregarded.</p>
+<p><u>Social Actions</u> - This menu has a selection of social actions that can be used on a player, ex. talk, barter, emote.</p>
+<h2>Non-Target Specific Radial Menu</h2>
+<p>The Non-Target Specific Radial Menu has two noteworthy commands which can be accessed by opening the radial menu on a point on the ground:&nbsp;</p>
+<p><u>Jump All Players to DM</u> - Rarely used, if ever. Provides user with a confirmation dialogue box before jumping all players to the user which prevents large scale server disruption.</p>
+<p><u>Jump to Point</u> - jumps the user to the cursor location. Can also be accomplished by using + key on number pad.</p>
