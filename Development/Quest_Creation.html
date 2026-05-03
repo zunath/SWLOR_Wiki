@@ -9,12 +9,11 @@ dateCreated: 2023-08-08T14:38:21.322Z
 -->
 
 <h2>Prerequisites and Required Software</h2>
-<p>The process of designing and publishing quests requires the use of Microsoft Visual Studio along with completing the prerequisite process for downloading and unpacking SWLOR from the GitHub page. More info on this process can be found <a href="https://github.com/zunath/SWLOR_NWN">here</a>.</p>
+<p>The process of designing and publishing quests requires the use of an IDE (for example Visual Studio or VS Code) with the .NET SDK, along with completing the prerequisite process for downloading and unpacking SWLOR from the GitHub page. Pack and unpack the module with <code>Star Wars LOR v2.mod</code> (see <a href="https://wiki.starwarsnwn.com/en/Development/packing-and-unpacking-module">Packing &amp; Unpacking the Module</a>). More info on this process can be found <a href="https://github.com/zunath/SWLOR_NWN">here</a>.</p>
 <h2>Quest Creation</h2>
 <p>When creating a quest, quest definitions should be placed under Feature/QuestDefinition in Visual Studio.</p>
 <p>Quests are organized by planet, both for world quests and by craft for guild quest. The example depicted below is for CZ-220, but the process is the same no matter the planet:</p>
-<pre><code class="language-cs">```csharp
-        private static void SuppliesSmithery(QuestBuilder builder)
+<pre><code class="language-cs">        private static void SuppliesSmithery(QuestBuilder builder)
         {
             // Create a new quest entry. Set the unique ID to cz220_smithery. Set the name of the quest (viewable by the player) to CZ-220 Supplies - Smithery
             builder.Create("cz220_smithery", "CZ-220 Supplies - Smithery")
@@ -33,9 +32,9 @@ dateCreated: 2023-08-08T14:38:21.322Z
                 // Updates the journal text for the new objective. Because there are only two states in this quest, it is considered complete once this state has been finished.
                 .SetStateJournalText("Speak to the Crafting Terminal Droid operator for your reward.")
 
-                // Identifies the XP and Gold rewards for the quest. The player will get 200 XP and 50 Gold (aka Credits) for completion
+                // Identifies the XP and Gold rewards for the quest. The player will get 200 XP and 75 Gold (aka Credits) for completion
                 .AddXPReward(200)
-                .AddGoldReward(50)
+                .AddGoldReward(75)
 
                 // Identifies the key item reward for the quest. The player will receive a key item for the completion of this quest. 
                 // Note: Key items are basically "flags" on a player. These items only appear in the Key Items menu
@@ -61,9 +60,9 @@ dateCreated: 2023-08-08T14:38:21.322Z
                 {
                     KeyItem.RemoveKeyItem(player, KeyItemType.CraftingTerminalDroidOperatorsWorkOrder);
                 });
-        }```</code></pre>
+        }</code></pre>
 <p>The above example is the aforementioned quest definition which contains comments for each line explaining the code.&nbsp;</p>
-<p>Quest states are generally progressed using a combination of snippets and local variables snip it information can be found <a href="https://wiki.starwarsnwn.com/Development/snippets">here</a>.</p>
+<p>Quest states are generally progressed using a combination of snippets and local variables snip it information can be found <a href="https://wiki.starwarsnwn.com/en/Development/snippets">here</a>.</p>
 <p>Quest dialogue is created using the Aurora tool set. The example below illustrates this:</p>
 <figure class="image"><img src="https://cdn.discordapp.com/attachments/1131640314386452662/1138243955415318630/image.png"></figure>
 <p>The text notes are in order from latest quest state to earliest quest date in this particular instance. The topmost dialogue is what is shown to the player after they have completed the quest. The bottom most dialogue node is shown if none of the higher conditions are met; in essence, the player is not eligible for this quest. In this example, cr_t_d_operator is the name of this conversation and it should be used as a reference in most cases. Since this particular quest is a fetch quest, the NPC quest-giver is looking for a specific item. The item the NPC is looking for will be based on the resref of the item.&nbsp;</p>
@@ -80,7 +79,7 @@ dateCreated: 2023-08-08T14:38:21.322Z
                 .SetStateJournalText("You've killed five Mynocks and obtained their teeth. Return to Halron Linth to collect your work receipt.")
 
                 .AddXPReward(200)
-                .AddGoldReward(100)
+                .AddGoldReward(150)
                 .AddKeyItemReward(KeyItemType.HalronLinthsWorkReceipt);
         }</code></pre>
 <p>This example is very similar to the last quest but instead of a “Collect Item” objective, this example uses a “Kill Objective” instead. In the above example, we're looking for an NPC Group Type of “CZ220_Mynocks”. If you go to the definition for this, it'll show the following:</p>

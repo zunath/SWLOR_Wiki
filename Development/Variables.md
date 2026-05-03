@@ -12,7 +12,7 @@ dateCreated: 2021-11-06T20:15:29.615Z
 
 ## Animation Events
 
-Sourced from the [AnimationEvent](https://github.com/zunath/SWLOR_NWN/blob/feature/ffo-rewrite/SWLOR.Game.Server/Service/AnimationService/AnimationEvent.cs) enum-ish class
+Sourced from the [AnimationEvent](https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Service/AnimationService/AnimationEvent.cs) enum-ish class
 
 #### Use
 In the toolkit, pick any of the supported Event Types (more can be added with a small amount of development work for existing NWNX Events)
@@ -31,7 +31,7 @@ eg,
 `crea_attacked_vfx_dur` or `crea_attacked_vfx_scale`
 
 
-The code also supports attaching these animations in the spawner:  [Link](https://github.com/zunath/SWLOR_NWN/blob/feature/ffo-rewrite/SWLOR.Game.Server/Feature/SpawnDefinition/CZ220SpawnDefinition.cs)
+The code also supports attaching these animations in the spawner: [Link](https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Feature/SpawnDefinition/CZ220SpawnDefinition.cs)
 
 ```cs
                 .PlayAnimation(DurationType.Instant, AnimationEvent.CreatureOnDeath, VisualEffect.Fnf_Fireball)

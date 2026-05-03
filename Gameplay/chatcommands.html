@@ -19,12 +19,12 @@ dateCreated: 2023-08-03T23:01:13.584Z
 <h2>Chat Commands</h2>
 <p>The following is a list of in game chat commands:</p>
 <p>&nbsp;</p>
-<p><strong>/a</strong>: Makes your associate (droid, pet, etc.) speak a message. (The default emote style will be used.)</p>
+<p><strong>/a</strong>: Alias of <code>/associate</code> &mdash; makes your associate (droid, pet, etc.) speak a message.</p>
 <p><strong>/alwayswalk</strong>: Toggles forced walking when moving your character.</p>
 <p><strong>/associate</strong>: Makes your associate (droid, pet, etc.) speak a message.</p>
 <p><strong>/bug</strong>: Toggles the bug report window to submit bugs to the developers. Please include as much detail as possible.</p>
 <p><strong>/cdkey</strong>: Displays your public CD key.</p>
-<p><strong>/changeitemdescription</strong>: Changes the description of an item in your inventory. Example: /changeitemdescription New Name</p>
+<p><strong>/desc</strong>, <strong>/description</strong>: Opens the description editor for a targeted item in your inventory (DMs may target other object types). Target the item, then use the command.</p>
 <p><strong>/char</strong>: Displays your character's info.</p>
 <p><strong>/character</strong>: Displays your character's info.</p>
 <p><strong>/conc</strong>: Tells you what concentration ability you have active. Follow with 'end' (no quotes) to turn your concentration ability off. Example: /concentration end</p>
@@ -32,37 +32,41 @@ dateCreated: 2023-08-03T23:01:13.584Z
 <p><strong>/coord</strong>: Displays your current coordinates in the area.</p>
 <p><strong>/customise</strong>: Opens the appearance editor window.</p>
 <p><strong>/customize</strong>: Opens the appearance editor window.</p>
-<p><strong>/delete</strong>: Permanently deletes your character.</p>
+<p><strong>/delete</strong>: Permanently deletes your character. You must use <code>/delete &lt;YourPublicCDKey&gt;</code> (use <code>/cdkey</code> to see your key). Enter the same command a second time within 30 seconds to confirm.</p>
 <p><strong>/dice</strong>: Opens the dice bag menu.</p>
-<p><strong>/dig</strong>: Plays a dig animation.</p>
 <p><strong>/emotegui</strong>: Displays the Emotes window.</p>
 <p><strong>/emotes</strong>: Displays all emotes available to you.</p>
 <p><strong>/emotesgui</strong>: Displays the Emotes window.</p>
 <p><strong>/emotestyle</strong>: Toggles your emote style between regular and novel. (Novel requires spoken words to be placed in quotations. Everything else will be displayed in green text.)</p>
-<p><strong>/endcall</strong>: Ends your current HoloCom call. (If you are unable to move after a holocom call, use this command.)</p>
-<p><strong>/exit</strong>: Exits the pilot seat when controlling a starship.</p>
+<p><strong>/endcall</strong>: Ends an active HoloCom call, cancels an outgoing call attempt, or clears stuck call state.</p>
+<p><strong>/exit</strong>: Exits the pilot seat when controlling a starship. Cannot be used while you are targeted in space combat.</p>
 <p><strong>/follow</strong>: Makes you follow a selected target.</p>
 <p><strong>/help</strong>: Displays all chat commands available to you.</p>
-<p><strong>/itemdesc</strong>: Changes the description of an item in your inventory. Example: /changeitemdescription New Name</p>
 <p><strong>/language</strong>: Switches the active language. Use /language help for more information.</p>
 <p><strong>/perk</strong>: Toggles the perks menu.</p>
 <p><strong>/perks</strong>: Toggles the perks menu.</p>
 <p><strong>/pos</strong>: Displays your current position in the area.</p>
 <p><strong>/recipe</strong>: Toggles the recipes menu.</p>
 <p><strong>/recipes</strong>: Toggles the recipes menu.</p>
-<p><strong>/rename</strong>: Renames the target. (Use this to change the name of an item in your inventory.)</p>
+<p><strong>/rename</strong>: Opens the rename window for the targeted item (players); DMs may use it on additional target types.</p>
+<p><strong>/ordercompanion</strong>, <strong>/order</strong>, <strong>/oc</strong>: Orders your companion to interact with the target (attack enemies or placeables, open unlocked doors). Use on your henchman to cancel their actions.</p>
+<p><strong>/resetwindows</strong>: Closes open UI windows and resets all window positions and sizes to defaults.</p>
 <p><strong>/save</strong>: Manually saves your character. Your character also saves automatically every few minutes.</p>
 <p><strong>/skills</strong>: Toggles the skills menu.</p>
-<p>/stuck: Emergency Escape Command. Use this if you get stuck on a map. (This will teleport you to the center of the map. Use with caution as in some cases, this means being stuck as well.)</p>
-<p>/time: Returns the current UTC server time and the in-game time.</p>
-<p>/walk: Toggles forced walking when moving your character.</p>
+<p><strong>/stuck</strong>: Emergency escape. Teleports you to this area&rsquo;s <code>STUCK_WAYPOINT</code> if one exists; otherwise falls back to a server default waypoint or the nearest waypoint. You may only use this once every 30 minutes.</p>
+<p><strong>/time</strong>: Returns the current UTC server time and the in-game time.</p>
+<p><strong>/walk</strong>: Same as <code>/alwayswalk</code> &mdash; toggles forced walking when moving your character.</p>
+<p>&nbsp;</p>
+<p><strong>DMs and admins</strong> see additional commands in <code>/help</code> (for example <code>/tpwp</code>, <code>/copyitem</code>, <code>/rez</code>, <code>/spawngold</code>). On the public test server, some DM commands are also available to players for testing. See the <a href="https://wiki.starwarsnwn.com/en/DungeonMaster/DM-Handbook/Teleport-Commands-Teleporters">DM handbook</a> for teleport tools.</p>
 <h2><br>&nbsp;Emotes</h2>
 <figure class="image"><img src="/emotegui.png">
   <figcaption>You can type in /emotegui or make a hotbar command to access this emote menu in game. Note that it does not list all available emotes.</figcaption>
 </figure>
 <p>&nbsp;</p>
 <h3>In game emote chat commands:</h3>
+<p>For <strong>looping</strong> emotes, you can optionally add a number after the command to set how long the animation runs in seconds (for example <code>/sit 30</code>). If omitted, a long default duration is used.</p>
 <p>/bootdance: Play a boot dance animation.</p>
+<p>/dig: Plays a dig animation.</p>
 <p>/bored: Plays a bored animation.</p>
 <p>/bow: Plays a bow animation.</p>
 <p>/cheerloud: Cheer loudly.</p>
@@ -148,6 +152,7 @@ dateCreated: 2023-08-03T23:01:13.584Z
 <p>cheunh</p>
 <p>dosh</p>
 <p>droidspeak</p>
+<p>ewokese, or yubnub</p>
 <p>huttese</p>
 <p>keldor</p>
 <p>mandoa</p>

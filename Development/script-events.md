@@ -12,6 +12,7 @@ dateCreated: 2021-11-13T02:16:37.442Z
 
 Todo: A brief explanation of how to hook up events and create a script method.
 
+**Authoritative list:** In the SWLOR_NWN repo, all script hook names used by `[NWNEventHandler]` are defined as constants in [`SWLOR.Game.Server/Core/ScriptName.cs`](https://github.com/zunath/SWLOR_NWN/blob/master/SWLOR.Game.Server/Core/ScriptName.cs). If this page disagrees with that file, trust the code.
 
 ## Module Events
 
@@ -23,7 +24,10 @@ Todo: A brief explanation of how to hook up events and create a script method.
 | mod_exit | Runs when a player exits the server. | |
 | mod_abort_cs | Runs when a player aborts a cutscene. | |
 | mod_heartbeat | Runs once every six seconds. | If you are iterating over players, don't use this event. Instead, hook the interval_pc_6s event because it will be more performant. |
+| mod_cache_bef | Runs during module cache, before most cache handlers. | Used for early cache setup (see `ScriptName.OnModuleCacheBefore`). |
+| mod_cache_aft | Runs during module cache, after most cache handlers. | Used for late cache setup (see `ScriptName.OnModuleCacheAfter`). |
 | mod_load | Runs when the module loads. | Very useful for caching and other one-time actions. |
+| mod_preload | Runs during module preload. | See `ScriptName.OnModulePreload`. |
 | mod_chat | Runs when a player sends a chat message. | Recommended to use the NWNX chat event instead of this one. |
 | mod_dying | Runs when a player is dying. | |
 | mod_death | Runs when a player dies. | |
@@ -44,8 +48,7 @@ Todo: A brief explanation of how to hook up events and create a script method.
 
 | Script | Description | Notes |
 | --- | --- | --- |
-| interval_pc_6s | Runs on an individual player every six seconds. | OBJECT_SELF is the player in this event. Code absolutely needs to be performant on this event. Avoid using it unless you absolutely need it. |
-| interval_pc_1s | Runs on an individual player every second. | OBJECT_SELF is the player in this event. Code absolutely needs to be performant on this event. Avoid using it unless you absolutely need it. |
+| interval_pc_6s | Runs on an individual player every six seconds. | OBJECT_SELF is the player in this event. Code absolutely needs to be performant on this event. Avoid using it unless you absolutely need it. This is the only interval player event defined in `ScriptName.cs`. |
 
 ## Area Events
 
