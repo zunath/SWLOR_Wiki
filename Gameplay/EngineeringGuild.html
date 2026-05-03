@@ -1,0 +1,1166 @@
+<!--
+title: Engineering Guild
+description: Engineering Guild tasks, shop inventory, and progression (data from module).
+published: true
+date: 2026-05-03T12:00:00.000Z
+tags: guild, engineering, crafting, piloting
+editor: ckeditor
+dateCreated: 2026-05-03T12:00:00.000Z
+-->
+
+<h1>Engineering Guild</h1>
+<p>The Engineering Guild buys <strong>starship modules</strong> and <strong>ship deeds</strong> you deliver. In <strong>Veles</strong>, the guildmaster stands with the Smithery and Fabrication guildmasters at the <strong>Market Terminals</strong>. The Agriculture Guild is separate (Tapani Delights kitchen). Other worlds may have their own guildmaster placements.</p>
+<h2>How guild progression works</h2>
+<p>See <a href="https://wiki.starwarsnwn.com/en/Gameplay/AgricultureGuild">Agriculture Guild</a> for Guild Points, cumulative rank thresholds, rotating tasks (up to 10 per tier), shop access at guild rank 1+, and how dialog <strong>[Rank 1–5]</strong> maps to minimum internal ranks <strong>0–4</strong>.</p>
+<h2>Base task rewards (before bonuses)</h2>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:center;">Task tier</th>
+        <th style="text-align:center;">Base credits</th>
+        <th style="text-align:center;">Base GP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 1 [Rank 1] (min guild rank 0)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1,000</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">21</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 2 [Rank 2] (min guild rank 1)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">2,500</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">81</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 3 [Rank 3] (min guild rank 2)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">4,000</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">117</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 4 [Rank 4] (min guild rank 3)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">5,500</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">156</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 5 [Rank 5] (min guild rank 4)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">7,200</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">195</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>Actual payouts are increased by your guild rank, <a href="https://wiki.starwarsnwn.com/en/Gameplay/Perks/leadership">Guild Relations</a>, and Social modifier (see <a href="https://wiki.starwarsnwn.com/en/Gameplay/AgricultureGuild">Agriculture Guild</a>).</p>
+<h2>Engineering Guild tasks</h2>
+<p>Repeatable turn-ins: craft or acquire the item, then <strong>Give Report</strong>. Wording matches the quest title (<code>amount x name</code>). Only a subset of each tier’s tasks is offered at once when the tier has more than ten definitions.</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:center;">Task tier</th>
+        <th style="text-align:center;">Task</th>
+        <th style="text-align:center;">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 1 [Rank 1]</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Capacitor Booster</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Combat Laser</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic EM Amplifier</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Thermal Amplifier</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Explosive Amplifier</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Evasion Booster</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Hull Booster</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Hull Repairer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Ion Cannon</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Mining Laser</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Missile Launcher</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Shield Booster</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Shield Repairer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Targeting System</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ship Deed: Striker</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ship Deed: Condor</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 2 [Rank 2]</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Capacitor Booster I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Combat Laser I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x EM Amplifier I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Thermal Amplifier I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Explosive Amplifier I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Evasion Booster I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Hull Booster I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Hull Repairer I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ion Cannon I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Mining Laser I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Missile Launcher I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Shield Booster I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Shield Repairer I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Targeting System I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ship Deed: Hound</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ship Deed: Panther</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 3 [Rank 3]</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Capacitor Booster II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Combat Laser II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x EM Amplifier II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Thermal Amplifier II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Explosive Amplifier II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Evasion Booster II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Hull Booster II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Hull Repairer II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ion Cannon II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Mining Laser II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Missile Launcher II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Shield Booster II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Shield Repairer II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Targeting System II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ship Deed: Saber</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ship Deed: Falchion</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 4 [Rank 4]</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Capacitor Booster III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Combat Laser III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x EM Amplifier III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Thermal Amplifier III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Explosive Amplifier III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Evasion Booster III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Hull Booster III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Hull Repairer III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ion Cannon III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Mining Laser III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Missile Launcher III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Shield Booster III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Shield Repairer III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Targeting System III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ship Deed: Mule</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ship Deed: Merchant</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 5 [Rank 5]</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Capacitor Booster IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Combat Laser IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x EM Amplifier IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Thermal Amplifier IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Explosive Amplifier IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Evasion Booster IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Hull Booster IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Hull Repairer IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ion Cannon IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Mining Laser IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Missile Launcher IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Shield Booster IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Shield Repairer IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Targeting System IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ship Deed: Throne</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ship Deed: Consular</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<h2>Engineering Guild shop</h2>
+<p>After guild rank 1+, open <strong>Show me the guild shop</strong> and pick <strong>Rank 1–5</strong> to match the vendor tier. Items below are parsed from the module merchants <code>gp_eng_1</code> … <code>gp_eng_5</code>.</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:center;">Shop rank</th>
+        <th style="text-align:center;">Item</th>
+        <th style="text-align:center;">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Amateur Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Amateur Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Amateur Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Amateur Helmet</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Amateur Leggings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Amateur Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Amateur Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Amateur Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Basic Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Power Supply I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Ceramacrete I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Diatium I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Ferroceramic I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Ferroconcrete I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Permaplas I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Plasticrete I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Pourstone I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Resicrete I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Steelcrete I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Sturdiplast I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synstone I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Memory Augmentation I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 2</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Worker Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Worker Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Worker Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Worker Helmet</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Worker Leggings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Worker Outfit</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Worker Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Worker Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Worker Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Small Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Ceramacrete II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Diatium II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Ferroceramic II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Ferroconcrete II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Permaplas II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Plasticrete II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Pourstone II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Resicrete II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Steelcrete II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Stresscrete II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Sturdiplast II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synstone II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Power Supply II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Memory Augmentation II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 3</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Mechanic Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Mechanic Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Mechanic Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Mechanic Helmet</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Mechanic Leggings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Mechanic Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Mechanic Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Mechanic Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Medium Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Ceramacrete III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Diatium III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Ferroceramic III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Ferroconcrete III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Permaplas III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Plasticrete III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Pourstone III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Resicrete III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Steelcrete III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Stresscrete III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Sturdiplast III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synstone III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Power Supply III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Sturdiness I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Ocular Filter I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Verve I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Neural Boost I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Mobility Boost I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Social Adaption I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Memory Augmentation III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: One-Handed Boost I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Two-Handed Boost I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Martial Arts Boost I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Ranged Boost I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Devotion Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Devotion Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Devotion Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Devotion Helmet</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Devotion Leggings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Devotion Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Devotion Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Devotion Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Large Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Power Supply IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Ceramacrete IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Diatium IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Ferroceramic IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Ferroconcrete IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Permaplas IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Plasticrete IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Pourstone IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Resicrete IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Steelcrete IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Stresscrete IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Sturdiplast IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synstone IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Memory Augmentation IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 5</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Skysteel Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Skysteel Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Skysteel Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Skysteel Helmet</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Skysteel Leggings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Skysteel Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Skysteel Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Skysteel Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Extra Large Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Power Supply V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Ceramacrete V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Diatium V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Ferroceramic V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Ferroconcrete V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Permaplas V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Plasticrete V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Pourstone V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Resicrete V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Steelcrete V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Sturdiplast V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Stresscrete V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synstone V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Sturdiness II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Ocular Filter II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Verve II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Neural Boost II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Mobility Boost II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Social Adaption II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Memory Augmentation V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: One-Handed Boost II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Two-Handed Boost II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Martial Arts Boost II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blueprint: Ranged Boost II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h2>Related</h2>
+<ul>
+  <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/Crafting/Engineering">Engineering (crafting)</a></li>
+  <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/PilotingGuide">Piloting Guide</a> · <a href="https://wiki.starwarsnwn.com/en/Gameplay/Housingships">Starship Guide</a></li>
+  <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/FabricationGuild">Fabrication Guild</a> · <a href="https://wiki.starwarsnwn.com/en/Gameplay/SmitheryGuild">Smithery Guild</a> · <a href="https://wiki.starwarsnwn.com/en/Gameplay/HuntersGuild">Hunter’s Guild</a></li>
+</ul>

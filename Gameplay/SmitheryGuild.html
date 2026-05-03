@@ -1,0 +1,2111 @@
+<!--
+title: Smithery Guild
+description: Smithery Guild tasks, shop inventory, and progression (data from module).
+published: true
+date: 2026-05-03T12:00:00.000Z
+tags: guild, smithery, crafting
+editor: ckeditor
+dateCreated: 2026-05-03T12:00:00.000Z
+-->
+
+<h1>Smithery Guild</h1>
+<p>The Smithery Guild orders <strong>weapons</strong>, <strong>shields</strong>, and <strong>armor</strong> you smith. Veles guildmaster: <strong>Market Terminals</strong> with Engineering and Fabrication.</p>
+<h2>How guild progression works</h2>
+<p>See <a href="https://wiki.starwarsnwn.com/en/Gameplay/AgricultureGuild">Agriculture Guild</a> for shared guild rules.</p>
+<h2>Base task rewards (before bonuses)</h2>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:center;">Task tier</th>
+        <th style="text-align:center;">Base credits</th>
+        <th style="text-align:center;">Base GP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 1 [Rank 1] (min guild rank 0)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1,000</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">21</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 2 [Rank 2] (min guild rank 1)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">2,500</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">81</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 3 [Rank 3] (min guild rank 2)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">4,000</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">117</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 4 [Rank 4] (min guild rank 3)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">5,500</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">156</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 5 [Rank 5] (min guild rank 4)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">7,200</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">195</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>Actual payouts are increased by your guild rank, <a href="https://wiki.starwarsnwn.com/en/Gameplay/Perks/leadership">Guild Relations</a>, and Social modifier (see <a href="https://wiki.starwarsnwn.com/en/Gameplay/AgricultureGuild">Agriculture Guild</a>).</p>
+<h2>Smithery Guild tasks</h2>
+<p>Repeatable deliveries of one crafted piece per task (<strong>Give Report</strong>).</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:center;">Task tier</th>
+        <th style="text-align:center;">Task</th>
+        <th style="text-align:center;">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 1 [Rank 1]</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Great Sword</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Spear</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Knife</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Pistol</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Staff</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Longsword</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Katar</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Shuriken</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Rifle</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Basic Twin Blade</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Battlemaster Shield</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Battlemaster Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Battlemaster Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Battlemaster Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Battlemaster Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Battlemaster Armor</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Battlemaster Helmet</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Battlemaster Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Battlemaster Leggings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Spiritmaster Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Spiritmaster Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Spiritmaster Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Spiritmaster Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Spiritmaster Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Spiritmaster Cap</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Spiritmaster Gloves</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Spiritmaster Boots</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Combat Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Combat Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Combat Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Combat Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Combat Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Combat Cap</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Combat Gloves</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Combat Boots</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 2 [Rank 2]</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Great Sword</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Spear</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Knife</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Pistol</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Staff</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Longsword</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Katar</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Shuriken</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Rifle</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Twin Blade</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Shield</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Armor</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Helmet</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Titan Leggings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Vivid Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Vivid Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Vivid Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Vivid Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Vivid Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Vivid Cap</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Vivid Gloves</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Vivid Boots</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Valor Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Valor Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Valor Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Valor Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Valor Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Valor Cap</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Valor Gloves</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Valor Boots</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 3 [Rank 3]</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Delta Great Sword</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Delta Spear</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Delta Knife</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Delta Pistol</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Delta Staff</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Delta Longsword</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Delta Katar</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Delta Shuriken</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Delta Rifle</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Delta Twin Blade</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Quark Shield</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Quark Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Quark Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Quark Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Quark Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Quark Armor</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Quark Helmet</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Quark Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Quark Leggings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Reginal Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Reginal Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Reginal Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Reginal Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Reginal Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Reginal Cap</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Reginal Gloves</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Reginal Boots</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Forza Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Forza Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Forza Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Forza Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Forza Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Forza Cap</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Forza Gloves</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Forza Boots</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 4 [Rank 4]</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Proto Great Sword</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Proto Spear</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Proto Knife</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Proto Pistol</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Proto Staff</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Proto Longsword</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Proto Katar</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Proto Shuriken</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Proto Rifle</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Proto Twin Blade</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Argos Shield</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Argos Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Argos Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Argos Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Argos Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Argos Armor</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Argos Helmet</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Argos Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Argos Leggings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Grenada Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Grenada Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Grenada Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Grenada Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Grenada Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Grenada Cap</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Grenada Gloves</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Grenada Boots</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Survival Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Survival Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Survival Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Survival Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Survival Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Survival Cap</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Survival Gloves</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Survival Boots</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 5 [Rank 5]</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ophidian Great Sword</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ophidian Spear</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ophidian Knife</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ophidian Pistol</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ophidian Staff</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ophidian Longsword</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ophidian Katar</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ophidian Shuriken</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ophidian Rifle</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ophidian Twin Blade</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Eclipse Shield</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Eclipse Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Eclipse Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Eclipse Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Eclipse Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Eclipse Armor</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Eclipse Helmet</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Eclipse Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Eclipse Leggings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Transcendent Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Transcendent Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Transcendent Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Transcendent Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Transcendent Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Transcendent Cap</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Transcendent Gloves</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Transcendent Boots</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Supreme Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Supreme Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Supreme Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Supreme Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Supreme Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Supreme Cap</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Supreme Gloves</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Supreme Boots</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<h2>Smithery Guild shop</h2>
+<p>Merchants <code>gp_smth_1</code> … <code>gp_smth_5</code>.</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:center;">Shop rank</th>
+        <th style="text-align:center;">Item</th>
+        <th style="text-align:center;">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Advent Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Advent Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Advent Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Advent Helmet</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Advent Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Advent Leggings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Advent Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Advent Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Basic Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Flame Retardant I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Chaugaine I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Chromafiber I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Cotton I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Durafiber I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Duranex I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Elastex I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Gemweb I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Grounding I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Hemp I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Insulation I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Linen I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Polyfiber I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Scintathread I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Sisal I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synthatex I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synthcloth I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synthmesh I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Zoosha Fabric I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Agrinium I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Carvanium I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Desh I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Electrum I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Flexsteel I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Kelsh I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Lommite I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Meleenium I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Molytex I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Neutronium I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Phrik I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Plasteel I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Steelfab I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Steelhide I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Zersium I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Power Core</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Power Core</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 2</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Frontier Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Frontier Helmet</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Frontier Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Frontier Leggings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Frontier Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Frontier Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Frontier Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Frontier Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Small Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Agrinium II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Carvanium II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Desh II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Electrum II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Flexsteel II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Kelsh II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Lommite II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Neutronium II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Phrik II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Plasteel II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Steelfab II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Steelhide II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Zersium II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Flame Retardant II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Chaugaine II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Chromafiber II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Cotton II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Durafiber II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Duranex II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Elastex II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Gemweb II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Grounding II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Hemp II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Insulation II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Linen II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Polyfiber II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Scintathread II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Sisal II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synthatex II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synthcloth II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synthmesh II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Zoosha Fabric II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Laminasteel I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Quadranium I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Duranium I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Ultrachrome I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Power Core</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Power Core</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 3</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Majestic Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Majestic Helmet</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Majestic Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Majestic Leggings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Majestic Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Majestic Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Majestic Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Majestic Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Medium Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Flame Retardant III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Chaugaine III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Chromafiber III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Cotton III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Durafiber III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Duranex III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Elastex III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Gemweb III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Grounding III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Hemp III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Insulation III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Linen III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Polyfiber III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Scintathread III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Sisal III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synthatex III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synthcloth III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synthmesh III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Zoosha Fabric III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Agrinium III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Carvanium III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Desh III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Electrum III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Flexsteel III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Kelsh III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Lommite III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Neutronium III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Phrik III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Plasteel III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Steelfab III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Steelhide III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Zersium III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Meleenium II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Molytex II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Power Core</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Power Core</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Dream Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Dream Helmet</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Dream Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Dream Leggings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Dream Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Dream Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Dream Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Dream Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Large Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Agrinium IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Carvanium IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Desh IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Electrum IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Flexsteel IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Kelsh IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Lommite IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Neutronium IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Phrik IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Plasteel IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Steelfab IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Steelhide IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Zersium IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Flame Retardant IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Chaugaine IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Chromafiber IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Cotton IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Durafiber IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Duranex IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Elastex IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Gemweb IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Grounding IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Hemp IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Insulation IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Linen IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Polyfiber IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Scintathread IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Sisal IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synthatex IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synthcloth IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synthmesh IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Zoosha Fabric IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Laminasteel II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Quadranium II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Duranium II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Ultrachrome II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Power Core</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Power Core</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 5</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Eternal Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Eternal Helmet</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Eternal Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Eternal Leggings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Eternal Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Eternal Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Eternal Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Eternal Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Extra Large Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Flame Retardant V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Chaugaine V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Chromafiber V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Cotton V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Durafiber V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Duranex V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Elastex V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Gemweb V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Grounding V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Hemp V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Insulation V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Linen V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Polyfiber V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Scintathread V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Sisal V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synthatex V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synthcloth V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Synthmesh V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Zoosha Fabric V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Agrinium V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Carvanium V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Desh V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Electrum V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Flexsteel V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Kelsh V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Lommite V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Neutronium V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Phrik V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Plasteel V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Steelfab V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Steelhide V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Zersium V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Meleenium III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Improved Molytex III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Power Core</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Power Core</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h2>Related</h2>
+<ul>
+  <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/Crafting/Smithery">Smithery (crafting)</a></li>
+  <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/Crafting">Crafting hub</a></li>
+  <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/EngineeringGuild">Engineering Guild</a> · <a href="https://wiki.starwarsnwn.com/en/Gameplay/FabricationGuild">Fabrication Guild</a></li>
+</ul>

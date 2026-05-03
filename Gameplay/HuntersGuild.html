@@ -1,0 +1,1080 @@
+<!--
+title: Hunter's Guild
+description: Hunter's Guild tasks, shop inventory, and progression (data from module).
+published: true
+date: 2026-05-03T12:00:00.000Z
+tags: guild, hunters, combat
+editor: ckeditor
+dateCreated: 2026-05-03T12:00:00.000Z
+-->
+
+<h1>Hunter’s Guild</h1>
+<p>The Hunter’s Guild pays for <strong>kills</strong> (NPC groups) and <strong>gathering</strong> creature drops and materials. Find the guildmaster in Veles (and other hubs); the module uses the shared guildmaster dialog on the Hunter’s Guild NPC.</p>
+<h2>How guild progression works</h2>
+<p>See <a href="https://wiki.starwarsnwn.com/en/Gameplay/AgricultureGuild">Agriculture Guild</a> for GP, ranks, and task rotation. <strong>Kill</strong> tasks use the NPC group display names from the server. <strong>Gather</strong> tasks match <code>amount x item</code> quest titles.</p>
+<h2>Base task rewards (before bonuses)</h2>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:center;">Task tier</th>
+        <th style="text-align:center;">Base credits</th>
+        <th style="text-align:center;">Base GP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 1 [Rank 1] (min guild rank 0)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1,000</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">21</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 2 [Rank 2] (min guild rank 1)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">2,500</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">81</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 3 [Rank 3] (min guild rank 2)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">4,000</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">117</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 4 [Rank 4] (min guild rank 3)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">5,500</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">156</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 5 [Rank 5] (min guild rank 4)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">7,200</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">195</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>Actual payouts are increased by your guild rank, <a href="https://wiki.starwarsnwn.com/en/Gameplay/Perks/leadership">Guild Relations</a>, and Social modifier (see <a href="https://wiki.starwarsnwn.com/en/Gameplay/AgricultureGuild">Agriculture Guild</a>).</p>
+<h2>Hunter’s Guild tasks</h2>
+<p>Order matches <code>HuntersGuildQuestDefinition.cs</code>. Use <strong>Give Report</strong> when objectives are complete.</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:center;">Task tier</th>
+        <th style="text-align:center;">Task</th>
+        <th style="text-align:center;">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 1 [Rank 1]</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 3x Colicoid Experiment</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Malfunctioning Droids</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Mynocks</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Kath Hound Fur</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Kath Hound Meat</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Kath Hound Tooth</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Mynock Tooth</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Mynock Wing</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Kath Hounds</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Warocas</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Warocas Leg</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Warocas Meat</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Warocas Spine</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 8x Gimpassa Hatchlings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Kinraths</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Outlaws</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Aluminum</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">10x Ruined Electronics</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 2 [Rank 2]</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Mandalorian Thyme</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Mandalorian Blaster Parts</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">10x Mandalorian Dog Tags</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Mandalorian Large Vibroblade Parts</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 1x Mandalorian Leader</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Mandalorian Electroblade Parts</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Mandalorian Plexi-plate</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Mandalorian Polearm Parts</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Mandalorian Rangers</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Mandalorian Vibroblade Parts</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Mandalorian Warriors</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Cairnmogs</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Nashtah</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Raivors</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Crystal Spider</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Steel</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">10x Flawed Electronics</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Pelko Bug Swarm</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x K'lor'slug</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Shyrack</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Moraband Serpent</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Sith Apprentice</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 5x Wraid</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Octotench</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Microtench</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Scorchellus</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 3 [Rank 3]</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Amphi-Hydrus Brain</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Amphi-Hydrus Brain Stem</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Amphi-Hydrus</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Aradile</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Viper</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Flesheater</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 1x Fleshleader</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Byysk</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Qion Slugs</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Qion Tigers</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Obsidian</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">10x Good Quality Electronics</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Byysk Longsword</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Byysk Knife</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Byysk Great Sword</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Byysk Spear</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Byysk Katar</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Byysk Staff</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Byysk Pistol</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Byysk Shuriken</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Byysk Twin Blade</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Byysk Rifle</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Byysk Meat</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Byysk Tail</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Citrine</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Slug Bile</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Slug Tooth</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Qion Tiger Fang</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Tiger Blood</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Qion Tiger Meat</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Qion Tiger Paw</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 4 [Rank 4]</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Womprat</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Sandswimmer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Sand Beetle</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Sand Demon</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Tusken Raider</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Crystal</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">10x Imperfect Electronics</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Womprat Hide</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Womprat Tooth</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Womprat Claw</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Womprat Meat</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Womprat Innards</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Sandswimmer Fin</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Sandswimmer Hide</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Sandswimmer Leg</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Shattered Beetle Chitin</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Beetle Chitin</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Wild Leg</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Sand Demon Claw</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Sand Demon Hide</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Sand Demon Leg</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x ruby</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Sand Worm Tooth</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Raider Longsword</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Raider Knife</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Raider Great Sword</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Raider Spear</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Raider Katar</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Raider Staff</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Raider Pistol</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Raider Shuriken</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Raider Twin Blade</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Raider Rifle</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Tusken Meat</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Tusken Bones</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x Tusken Blood</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 5 [Rank 5]</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">3x Diamond</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">10x High Quality Electronics</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">6x emerald</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Dragon Turtle</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Kwi Guardian</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Kwi Shaman</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Kwi Tribal</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Purbole</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Shear Mite</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Sprantal</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Squellbug</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Ssurian</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Swampland Bug</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Kinrath Queen</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Iriaz</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Voritor Lizard</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Gizka</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Plains Thune</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Bol</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kill 10x Dantari Shaman</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<h2>Hunter’s Guild shop</h2>
+<p>Merchants <code>gp_hunt_1</code> … <code>gp_hunt_5</code>.</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:center;">Shop rank</th>
+        <th style="text-align:center;">Item</th>
+        <th style="text-align:center;">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Knife I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Great Sword I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Electroblade I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Longsword I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Katar I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Twin Blade I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Twin Electroblade I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Spear I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Pistol I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Rifle I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Shuriken I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Staff I</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Basic Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 2</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Knife II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Great Sword II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Electroblade II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Longsword II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Katar II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Staff II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Twin Blade II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Twin Electroblade II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Spear II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Pistol II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Rifle II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Shuriken II</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Small Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 3</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Knife III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Great Sword III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Electroblade III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Longsword III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Katar III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Staff III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Twin Blade III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Twin Electroblade III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Spear III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Pistol III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Rifle III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Shuriken III</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Retraining Tome</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Medium Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Knife IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Great Sword IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Electroblade IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Longsword IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Katar IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Staff IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Twin Blade IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Twin Electroblade IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Spear IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Pistol IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Rifle IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Shuriken IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Large Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 5</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Knife V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Great Sword V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Longsword V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Electroblade V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Katar V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Staff V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Twin Blade V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Twin Electroblade V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Spear V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Pistol V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Rifle V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hunter Shuriken V</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Extra Large Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Reconditioning Tome</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h2>Related</h2>
+<ul>
+  <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/combat-skills">Combat skills</a></li>
+  <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/EngineeringGuild">Engineering Guild</a> · <a href="https://wiki.starwarsnwn.com/en/Gameplay/SmitheryGuild">Smithery Guild</a> · <a href="https://wiki.starwarsnwn.com/en/Gameplay/FabricationGuild">Fabrication Guild</a></li>
+</ul>

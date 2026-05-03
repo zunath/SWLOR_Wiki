@@ -1,22 +1,59 @@
 <!--
-title: Agriculture Guild
-description: A list of the Agriculture Guild tasks and shop items!
+title: Fabrication Guild
+description: Fabrication Guild tasks, shop inventory, and progression (data from module).
 published: true
-date: 2023-10-26T00:21:04.637Z
-tags: crafting, agriculture, guild
+date: 2026-05-03T12:00:00.000Z
+tags: guild, fabrication, crafting
 editor: ckeditor
-dateCreated: 2023-10-25T18:48:58.599Z
+dateCreated: 2026-05-03T12:00:00.000Z
 -->
 
-<h1>Agriculture Guild</h1>
-<p>The Agriculture Guild in Veles is separate from the Engineering, Smithery, and Fabrication guilds by the Market Terminals. Instead, find it in the restaurant <strong>Tapani Delights</strong> next to Racing Jim's Cantina—the guildmaster is in the back, in the kitchen. Agriculture guildmasters also appear elsewhere in the galaxy, often near starports.</p>
+<h1>Fabrication Guild</h1>
+<p>The Fabrication Guild requests crafted <strong>structures</strong> and placeables (housing/settlement deeds). In <strong>Veles</strong>, the guildmaster is with Engineering and Smithery at the <strong>Market Terminals</strong>.</p>
 <h2>How guild progression works</h2>
-<p>All SWLOR guilds share the same core rules. Completing a task pays <strong>credits</strong> and <strong>Guild Points (GP)</strong>. GP is increased by your current guild rank, the <a href="https://wiki.starwarsnwn.com/en/Gameplay/Perks/leadership">Guild Relations</a> perk (Leadership), and your character’s <strong>Social</strong> ability modifier. When your GP crosses the next threshold, your guild rank rises. Maximum rank is 5; GP stops accumulating past the cap for that system.</p>
-<p>GP is <strong>cumulative</strong> (it is not reset when you rank up). Total GP milestones: <strong>1,000</strong> for rank 1, <strong>5,000</strong> for rank 2, <strong>15,000</strong> for rank 3, <strong>30,000</strong> for rank 4, and <strong>45,000</strong> for rank 5. You must be at least <strong>guild rank 1</strong> before the guildmaster will open the guild shop (rank 0 members can still take tasks).</p>
-<p>Tasks are organized into five tiers. In dialogue, each task is labeled with a bracketed tier (e.g. <strong>[Rank 1]</strong> through <strong>[Rank 5]</strong>). That number is <em>one higher</em> than the internal minimum guild rank: tier 1 tasks need guild rank 0, tier 2 need rank 1, … tier 5 need rank 4. You only see tasks your rank qualifies for.</p>
-<p>For each tier, the guild can only have <strong>up to 10</strong> different tasks active at once if the tier has more than 10 possible tasks; which tasks are active is chosen when guild tasks are initialized on the server.</p>
-<h2>Agriculture Guild Tasks</h2>
-<p>Tasks are repeatable item turn-ins: gather the listed food or ingredient stacks and use <strong>Give Report</strong> on the guildmaster. Names below match in-game item names.</p>
+<p>See <a href="https://wiki.starwarsnwn.com/en/Gameplay/AgricultureGuild">Agriculture Guild</a> for shared guild rules.</p>
+<h2>Base task rewards (before bonuses)</h2>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:center;">Task tier</th>
+        <th style="text-align:center;">Base credits</th>
+        <th style="text-align:center;">Base GP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 1 [Rank 1] (min guild rank 0)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1,000</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">21</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 2 [Rank 2] (min guild rank 1)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">2,500</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">81</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 3 [Rank 3] (min guild rank 2)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">4,000</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">117</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 4 [Rank 4] (min guild rank 3)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">5,500</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">156</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 5 [Rank 5] (min guild rank 4)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">7,200</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">195</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>Actual payouts are increased by your guild rank, <a href="https://wiki.starwarsnwn.com/en/Gameplay/Perks/leadership">Guild Relations</a>, and Social modifier (see <a href="https://wiki.starwarsnwn.com/en/Gameplay/AgricultureGuild">Agriculture Guild</a>).</p>
+<h2>Fabrication Guild tasks</h2>
+<p>Repeatable structure turn-ins (<strong>Give Report</strong>). Names are the in-game localized names for each deed.</p>
 <figure class="table">
   <table>
     <thead>
@@ -29,1056 +66,1114 @@ dateCreated: 2023-10-25T18:48:58.599Z
     <tbody>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 1 [Rank 1]</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Moat Carp x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bed Roll</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Lamp &nbsp;Marimo x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Easel</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Viscara Urchin x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bench</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Phanauet Newt x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Candle</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cobalt Jellyfish x4&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Carpet</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Denizanasi x4&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Banner, Wall, Lizard</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Crayfish x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Weapon Rack</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cala Lobster x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Cot</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Bibikibo x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Keg</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Dathomir Sardine x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Chair, Wood, Small</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Mynock Meat Ball x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Rope Coil</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Warocas Pot Pie x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Throw Rug</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Roast Carp x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Chair, Wood</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Sugar Cookies x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Stuffed Toy, Bantha</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Marimo Stew x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Cushions</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Orange Juice x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Table, Wood</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Pebble Soup x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bench, Wood, Small</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Mynock Broth x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Table, Wood, With Fish</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Urchin Sushi x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Hand Chair</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Noodles x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Footstool</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kath Sandwich x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ornament, Solar System</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blackened Newt x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Pedestal</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kinrath Meat Ball x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Tome</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cooked Jellyfish x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Potted Plant</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Lemon Cookies x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Net</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Viscaran Herb Soup x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Gong</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Orange Curry x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Chair, Open Frame (Brown)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Denzi Treat x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Toilet, White /w Cistern</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Orange au Lait x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Doorway, Metal</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cooked Crayfish x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bird Cage</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Kath Blood Broth x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Chair, Pedestal /w Arms</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Peeled Lobster x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Cot /w Table</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Gimpassa Sandwich x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Torch Bracket</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cooked Bibikibo x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Obelisk, Small</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Gimpassa Stew x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Table, Wood, Large</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Sliced Sardine x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Space Suit (Tan)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 60%);text-align:center;" colspan="3">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 2 [Rank 2]</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hamsi x4&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ladder, Light</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Senroh Sardine x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Birdbath</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Ra'Kaznar Shellfish x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bench, Wood</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Bastion Sweeper x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ladder, Dark</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Mackerel x4&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Pillar, Wood, Dark</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Greedie x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Statue, Twi'lek</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Copper Frog x4&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Window</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Yellow Globe x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Pedestal, Evil</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Muddy Siredon x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Cabinet, Curved (Grey/White)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Istavrit x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Skeleton, Medical Display</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Raivor Meat Ball x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Brazier, Round</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cairnmog Pot Pie x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Vase, Tall</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Fish Broth x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bed, High Back (Black/Grey) </td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Chocolate Cookies x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Brazier, Stone</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">K'lor'slug Surprise x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ottoman</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cooked Sardine x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bed, Side Table</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Apple Juice x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Statue, Guardian</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Pea Soup x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Lamp Post</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Raivor Broth x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bed, Low</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Ra'Kaznar Special x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Flaming Statue</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Soba Noodles x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Pillar, Rounded</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cairnmog Sandwich x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bed, High Back (Blue)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Maringna x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Mirror (Small)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Nashtah Meat Ball x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Table, Wall, Oval</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cooked Mackerel x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Jukebox</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Mystery Cookies x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Painting 1</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Mando Herb Soup x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Banner, Standing</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Green Curry x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Ottoman, Decorated (Black)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Greedie Stew x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Doorway, Stone</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Apple au Lait x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Pillar, Wood</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blackened Frog x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bed, Medical/Exam</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Raivor Blood Broth x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Pot, Urn, Grecian</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Brain Stew x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Statue, Monster</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Nashtah Sandwich x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Candelabra</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cooked Siredon x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Chair, Crew (Grey)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Nashtah Stew x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Monitor, Wall, Logo Display (Blue)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cooked Istavrit x1&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 60%);text-align:center;" colspan="3">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 3 [Rank 3]</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Translucent Salpa x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Obelisk, Large</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Quus x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Gnomish Contraption</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Forest Carp x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Chair, Pedestal, Padded (Red)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tiny Goldfish x4&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Pot, Bush, Clipped</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Hoptoad x4&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Power Supply Unit</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cheval Salmon x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Female Statue</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Yorchete x4&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Vase, Rounded</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">White Lobster x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Chair, Pedestal, Panel</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Fat Greedie x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Pot, Bush, Flowers</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Moorish Idol x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Construction Parts</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Aradile Meat Ball x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Pedestal, Sword</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tiger Pot Pie x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bed, Wood, Yellow</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cooked Salpa x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Console, Floor Mounted (Blue Screens)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Acorn Cookies x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Pot, Bush, Tall</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Herb Quus x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Urn</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Pineapple Juice x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Pillar, Stone</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Vegetable Soup x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Console, Floor Mounted (Green Screens)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Aradile Broth x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Pipes, Conduit (with Power Controls)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Carp Sushi x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Cage</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Ramen Noodles x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Overgrown Pillar</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Aradile Sandwich x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Floor-anchored shackles</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Goldfish Bowl x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Pot, Clay Urn</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Byysk Meat Ball x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x City Hall - Style 1</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blackened Hoptoad x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Statue, Wyvern </td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cinna-Cookies x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bunk Bed</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Mon Cala Herb Soup x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Chair, Chancellor</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Red Curry x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Pot, Flower, Daisy</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Smoked Salmon x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Small House - Style 1</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Pineapple au Lait x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Fountain</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Deepwater Broth x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Round Wooden Table</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Amphi-hydrus Blood Broth x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Desk, Control Board Inlay</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">White Peeled Lobster x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Cylinder, Cross Top</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Snake Sandwich x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Small House - Style 2</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Fat Greedie Stew x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Altar, Stone</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Snake Stew x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Statue of Lathander</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Idol Sushi x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Pot, Flower, Yellow</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
-        <td style="background-color:hsl(0, 0%, 60%);text-align:center;" colspan="3">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bear Skin Rug</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Carpet, Fancy</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Desk, Control Center, Large Screen</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Pot, Long Leaf 1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Small House - Style 3</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Altar, Evil</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Illithid Table</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Desk, Control Center, Wide</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Pot, Plant, Aloa</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Small House - Style 4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 4 [Rank 4]</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Gurnard x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Reinforced Construction Parts</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Nebimonite x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Table, Stone, Small</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tricolored Carp x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bed, Large</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blindfish x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Desk, Corner /w Terminal</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Pipira x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Specimen Tube (Alien)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tiger Cod x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Reinforced Power Supply Unit</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Bonefish x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Statue, Wizard</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Giant Catfish x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bench, Large</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Yayinbaligi x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Armchair, High  Back (Orange)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Deadmoiselle x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Specimen Tube, Empty</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Womp Rat Meat Ball x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Table, Stone, Large</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Sand Demon Pot Pie x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Carpet, Round, Blue</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Gurnard Stew x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Desk, Information/Control Center</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Ginger Cookies x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Specimen Tube, Tall</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Baked Nebimonite x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Medium House - Style 1</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Melon Juice x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Chandelier</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Mushroom Soup x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Chair, Wood, Medium</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Womp Rat Broth x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Armchair, High  Back (Blue)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tricolored Sushi x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Table, Coffee, Elegant (White)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Soy Ramen x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Medium House - Style 2</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Surprise Sandwich x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Statue, Huge</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Fish &amp; Chips x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bench, Stone, Dwarven</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tusken Meat Ball x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Desk, Wall /w Terminal</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Roast Pipira x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Table, Conference, Centre Cloth</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Walnut Cookies x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Medium House - Style 3</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Desert Herb Soup x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Pillar, Flame</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Yellow Curry x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Drow Table</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Roast Cod x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Desk, Wall /w Terminal, Wide</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Melon au Lait x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Table, Oval, Centre Leg (Dark)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Bonefish Broth x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Medium House - Style 4</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tusken Blood Broth x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Mining Well Platform</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Steamed Catfish x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Weapon Rack, Wall Mounted</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Sand Demon Sandwich x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Work Station, Droid Repair</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cooked Yayinbaligi x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Table, Oval, Low (Blue)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Sand Demon Stew x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Wall Light, Curved</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Dead Stew x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Mining Well</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
-        <td style="background-color:hsl(0, 0%, 60%);text-align:center;" colspan="3">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bed, Stone, Yellow</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Footlocker, Modern (Keyed Entry)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Table, Round, Low (Blue)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Wall Light, Octagon</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Mirror</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bed, Extra Large</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Fountain, Oval</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Table, Stone (Blue)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Wardrobe, Curved (White)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Rune Pillar</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Statue, Cyric</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Holo Display</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Table, Stone (Brown)</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Washbasin, Lever Faucet</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Cantina - Style 1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tier 5 [Rank 5]</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Lungfish x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Sphinx Statue</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Dark Bass x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Dartboard</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Crystal Bass x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Holo Display 2</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Ogre Eel x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Statue, Bust on Column</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Shining Trout x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bank - Style 1</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Blowfish x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Dran Statue </td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Nosteau Herring x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Map</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Lakerda x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Holo Display 4</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Zafmlug Bass x4&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Statue, Kneeling Man</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Ruddy Seema x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Sea Idol</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Frigorifish x4</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Painting 2</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Wild Meat Ball x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Holo Display 5</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Wild Pot Pie x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Statue, Robed Figure /w Staff</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Long Ling Lung x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Medical Center - Style 1</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Wild Cookies x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Chair, Stone</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Bass Meuniere x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Drow Altar</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tomato Juice x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Holo Projector 1</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Miso Soup x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Statue, Senator</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Wild Broth x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Throne, Wood</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Crystal Sushi x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Illithid Chair</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Miso Ramen x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Holo Projector 2</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Wild Sandwich x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Storage Tank, Hemisphere /w Monitor</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Eelectric Soup x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Large House - Style 1</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Grandiose Meat Ball x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Monster Statue</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Shining Stew x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Shrine of Umberlee</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Wizard Cookies x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Instrument Panel, Large Monitor (Technical Data)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Dath Herb Soup x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Large House - Style 2</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Wild Curry x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Carpet, Fancy, Smaller</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Popper Bowl x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Drow Chair</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tomato au Lait x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Kolto Tank (Empty)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Pickled Herring x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Large House - Style 3</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Wild Blood Broth x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bench, Wood, Small 2</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Zoni Broth x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Drow Bar</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Grandiose Sandwich x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Lamp, Eggs (Pink)</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Wild Stew x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Large House - Style 4</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Sea Bass Croute x1&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Chair, Shell</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Shimmering Broth x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Bench, Wood, Large</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rancid Broth x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Lamp, On Poles</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Dantooine Carrotcake x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Couch, Wood, Yellow</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Munch Fungus Bread x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Lantern, Post, Marble</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Dantooine Flapjacks x1</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Locker, Metal Trapezoid</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">1x Starport - Style 1</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
     </tbody>
   </table>
 </figure>
 <p>&nbsp;</p>
-<h2>Agriculture Shop Items</h2>
-<p>After you reach guild rank 1, choose <strong>Show me the guild shop</strong>. The dialogue lists <strong>Rank 1</strong> through <strong>Rank 5</strong> store buttons matching your current guild rank (the same ranks as in the main guild header). Ranks 2–5 repeat some staples (for example bags) with new gear unlocked at each tier.</p>
+<h2>Fabrication Guild shop</h2>
+<p>Merchants <code>gp_fab_1</code> … <code>gp_fab_5</code>.</p>
 <figure class="table">
   <table>
     <thead>
       <tr>
         <th style="text-align:center;">Shop rank</th>
-        <th style="text-align:center;">Item Name</th>
+        <th style="text-align:center;">Item</th>
         <th style="text-align:center;">Notes</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 1</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Chef Cloak&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cloth Belt</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Chef Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cloth Bracer</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Chef Leggings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cloth Cloak</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Chef Belt&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cloth Helmet</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Chef Helmet&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cloth Leggings</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Chef Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cloth Tunic</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Chef Ring&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cloth Necklace</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Chef Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cloth Ring</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Bamboo Fishing Rod</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Carbon Fishing Rod&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Guild Exclusive</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cumin 1</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">HP Enhancement 1</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cinnamon 1</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">FP Regen Enhancement 1&nbsp;</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cayenne 1</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Max FP Enhancement 1</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Allspice 1</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Duration Enhancement 1&nbsp;</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cloves 1</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">STM Regen Enhancement 1</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Coriander 1</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Max STM Enhancement 1&nbsp;</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Fennel Seed 1</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rest Regen Enhancement 1&nbsp;</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tumeric 1</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Recast Reduction Enhancement 1&nbsp;</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Paprika 1</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">HP Regen Enhancement 1</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
@@ -1086,445 +1181,241 @@ dateCreated: 2023-10-25T18:48:58.599Z
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
-        <td style="background-color:hsl(0, 0%, 60%);text-align:center;" colspan="3">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Steel Rods</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Schematics: Production Designs</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 2</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Velveteen Cloak&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Linen Belt</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Velveteen Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Linen Bracer</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Velveteen Leggings&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Linen Cloak</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Velveteen Belt&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Linen Helmet</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Velveteen Helmet</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Linen Leggings</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Velveteen Tunic&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Linen Tunic</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Velveteen Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Linen Necklace</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Velveteen Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Linen Ring</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Composite Fishing Rod&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Balanced Steel Rods</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Ebisu Fishing Rod</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Guild Exclusive</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cumin 2</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">HP Enhancement 2</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cinnamon 2</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">FP Regen Enhancement 2</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cayenne 2</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Max FP Enhancement 2</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Allspice 2</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Duration Enhancement 2</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cloves 2</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">STM Regen Enhancement 2</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Coriander 2</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Max STM Enhancement 2</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Fennel Seed 2</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rest Regen Enhancement 2</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tumeric 2</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Recast Reduction Enhancement 2</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Paprika 2</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">HP Regen Enhancement 2</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Anise 2</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">XP Enhancement 2 &nbsp;(There is no Anise 1)</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Basic Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Small Bag</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
-        <td style="background-color:hsl(0, 0%, 60%);text-align:center;" colspan="3">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Schematics: Limited Designs</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 3</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Silk Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Designer Belt</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Silk Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Designer Bracer</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Silk Leggings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Designer Cloak</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Silk Belt&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Designer Helmet</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Silk Helmet&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Designer Leggings</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Silk Tunic&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Designer Tunic</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Silk Ring&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Designer Necklace</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Silk Necklace</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Designer Ring</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Glass Fiber Fishing Rod&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Reinforced Steel Rods</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Halcyon Rod&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Guild Exclusive</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cumin 3</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">HP Enhancement 3</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cinnamon 3</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">FP Regen Enhancement 3</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cayenne 3</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Max FP Enhancement 3</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Allspice 3</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Duration Enhancement 3</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cloves 3</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">STM Regen Enhancement 3</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Coriander 3</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Max STM Enhancement 3</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Fennel Seed 3</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rest Regen Enhancement 3</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tumeric 3</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Recast Reduction Enhancement 3</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Paprika 3</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">HP Regen Enhancement 3</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Anise 3</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">XP Enhancement 3</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Basic Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Medium Bag</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
-        <td style="background-color:hsl(0, 0%, 60%);text-align:center;" colspan="3">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Schematics: Prototype Designs</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 4</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Vintage Cloak</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Oasis Belt</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Vintage Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Oasis Bracer</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Vintage Leggings&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Oasis Cloak</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Vintage Belt</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Oasis Helmet</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Vintage Helmet&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Oasis Leggings</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Vintage Tunic&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Oasis Tunic</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Vintage Ring</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Oasis Necklace</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Vintage Necklace&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Oasis Ring</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Maze Monger Fishing Rod</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">High Quality Steel Rods</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Willow Fishing Rod&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Guild Exclusive</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cumin 4</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">HP Enhancement 4</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cinnamon 4</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">FP Regen Enhancement 4</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cayenne 4</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Max FP Enhancement 4</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Allspice 4</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Duration Enhancement 4</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cloves 4</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">STM Regen Enhancement 4</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Coriander 4</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Max STM Enhancement 4</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Fennel Seed 4</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rest Regen Enhancement 4</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tumeric 4</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Recast Reduction Enhancement 4</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Paprika 4</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">HP Regen Enhancement 4</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Anise 4</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">XP Enhancement 4</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Basic Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Large Bag</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
-        <td style="background-color:hsl(0, 0%, 60%);text-align:center;" colspan="3">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Schematics: Corporate Designs</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rank 5</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Moonflame Cloak&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rose Belt</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Moonflame Bracer</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rose Bracer</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Moonflame Leggings</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rose Cloak</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Moonflame Belt&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rose Leggings</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Moonflame Helmet&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rose Helmet</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Moonflame Tunic</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rose Tunic</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Moonflame Ring&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rose Necklace</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Moonflame Necklace&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rose Ring</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Butterfly Fishing Rod&nbsp;</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Pristine Steel Rods</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tranquility Fishing Rod</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Guild Exclusive</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Extra Large Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
       <tr>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cumin 5</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">HP Enhancement 5</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cinnamon 5</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">FP Regen Enhancement 5</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cayenne 5</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Max FP Enhancement 5</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Allspice 5</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Duration Enhancement 5</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Cloves 5</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">STM Regen Enhancement 5</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Coriander 5</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Max STM Enhancement 5</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Fennel Seed 5</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Rest Regen Enhancement 5</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Tumeric 5</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Recast Reduction Enhancement 5</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Paprika 5</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">HP Regen Enhancement 5</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Anise 5</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">XP Enhancement 5</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
-        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Basic Bag</td>
+        <td style="background-color:hsl(0, 0%, 0%);text-align:center;">Schematics: Classified Designs</td>
         <td style="background-color:hsl(0, 0%, 0%);text-align:center;">&nbsp;</td>
       </tr>
     </tbody>
   </table>
 </figure>
-<h2>Other guilds</h2>
+<h2>Related</h2>
 <ul>
-  <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/EngineeringGuild">Engineering Guild</a></li>
-  <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/FabricationGuild">Fabrication Guild</a></li>
-  <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/SmitheryGuild">Smithery Guild</a></li>
-  <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/HuntersGuild">Hunter’s Guild</a></li>
+  <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/Crafting/Fabrication">Fabrication (crafting)</a></li>
+  <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/Housingships">Starship / housing</a></li>
+  <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/EngineeringGuild">Engineering Guild</a> · <a href="https://wiki.starwarsnwn.com/en/Gameplay/SmitheryGuild">Smithery Guild</a></li>
 </ul>
-<p>For the cooking skill and ingredients, see <a href="https://wiki.starwarsnwn.com/en/Gameplay/Crafting/Agriculture">Agriculture (crafting)</a> and the <a href="https://wiki.starwarsnwn.com/en/Gameplay/Crafting/Agriculture/Fishing">Fishing Guide</a>.</p>
