@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Rewrite internal wiki hrefs to paths relative to each HTML file:
-  - https://wiki.starwarsnwn.com/en/...
-  - href="/en/Gameplay/..." (Wiki.js locale-prefixed paths)
+Rewrite internal wiki hrefs for Wiki.js (trailing-slash safe):
+  - Every internal href="..." in HTML: relative paths, /en/..., and wiki absolute URLs
+  - Emits /en/... where file-relative links would break (siblings, cross-section, Gameplay hub)
 
 Also normalizes segments for Wiki.js (no .html / .md in href).
 
 Usage:
-  python tools/relativize_internal_links.py              # fix /en/ + absolute wiki URLs
+  python tools/relativize_internal_links.py              # normalize all internal hrefs
   python tools/relativize_internal_links.py --wikijs    # strip .html/.md from all internal href
 """
 from __future__ import annotations
@@ -20,14 +20,7 @@ from urllib.parse import unquote
 
 WIKI_ROOT = Path(__file__).resolve().parent.parent
 
-# href="https://wiki.../en/PATH" — PATH may include &amp; only as entity; stop before quote
-HREF_WIKI = re.compile(
-    r'https://wiki\.starwarsnwn\.com/en/([^"\'>\s]+)',
-    re.IGNORECASE,
-)
-
-# Wiki.js host-relative locale links: href="/en/Gameplay/foo" → file-relative
-HREF_EN_PREFIX = re.compile(r'href="/en/([^"]+)"', re.IGNORECASE)
+HREF_ATTR = re.compile(r'(href=")([^"]+)(")')
 
 
 def build_index(root: Path) -> dict[str, Path]:
@@ -63,6 +56,11 @@ def resolve_target(url_path: str, idx: dict[str, Path]) -> Path | None:
         k2 = parts[0].lower()
         if k2 in idx:
             return idx[k2]
+    # Short paths like /en/combat-skills → Gameplay/combat-skills.html
+    if len(parts) == 1 and parts[0]:
+        gk = f"gameplay/{parts[0].lower()}"
+        if gk in idx:
+            return idx[gk]
     return None
 
 
@@ -98,59 +96,141 @@ def normalize_wikijs_href_inner(inner: str) -> str:
     return "/".join(parts) + query + frag
 
 
+def _wiki_url_path(target: Path) -> str:
+    return target.relative_to(WIKI_ROOT).as_posix().rsplit(".", 1)[0]
+
+
 def rel_href(source: Path, target: Path) -> str:
+    """Always use locale-prefixed paths. File-relative links break under Wiki.js when URLs use a
+    trailing slash (extra path segment): e.g. Lore/Planets/page/ + ../Factions/x resolves under
+    Planets/, not Lore/. Same for sibling hrefs, Gameplay hub, and cross-section links.
+    """
+    try:
+        return f"/en/{_wiki_url_path(target)}"
+    except ValueError:
+        pass
     rel = os.path.relpath(target.resolve(), source.parent.resolve())
-    posix = rel.replace(os.sep, "/")
-    return normalize_wikijs_href_inner(posix)
+    return normalize_wikijs_href_inner(rel.replace(os.sep, "/"))
 
 
-def _lookup_and_rel_href(
-    source: Path, raw_path: str, idx: dict[str, Path], missing: list[tuple[Path, str]]
-) -> str | None:
-    """Return relative href string, or None if target missing (caller keeps original)."""
-    frag = ""
-    lookup = raw_path
-    if "#" in lookup:
-        lookup, frag = lookup.split("#", 1)
-        frag = "#" + frag
-    if "?" in lookup:
-        lookup = lookup.split("?", 1)[0]
-    tgt = resolve_target(lookup, idx)
-    if tgt is None:
-        missing.append((source, raw_path))
+def _path_key_from_repo_rel(rel: str) -> str:
+    rel = rel.replace("\\", "/").strip("/")
+    if not rel:
+        return ""
+    lower = rel.lower()
+    for ext in (".html", ".md"):
+        if lower.endswith(ext):
+            return lower[: -len(ext)]
+    return lower
+
+
+def _resolve_fs_candidate(cand: Path) -> Path | None:
+    """Map a path under WIKI_ROOT to an existing .html/.md wiki page."""
+    if cand.is_file():
+        if cand.suffix.lower() in (".html", ".md"):
+            return cand
         return None
-    return rel_href(source, tgt) + frag
+    for ext in (".html", ".md"):
+        p = cand.with_suffix(ext)
+        if p.is_file():
+            return p
+    return None
+
+
+def normalize_internal_href(
+    source: Path,
+    inner: str,
+    idx: dict[str, Path],
+    missing: list[tuple[Path, str]],
+) -> str:
+    """Return stable href inner (path + optional ?query + #frag) for wiki-internal targets."""
+    inner_strip = inner.strip()
+    if not inner_strip:
+        return inner
+
+    decoded = inner_strip.replace("&amp;", "&")
+    base_full, frag = decoded, ""
+    if "#" in base_full:
+        base_full, frag = base_full.split("#", 1)
+        frag = "#" + frag
+    query = ""
+    if "?" in base_full:
+        base_full, query = base_full.split("?", 1)
+        query = "?" + query
+
+    base = base_full.strip()
+    if not base:
+        return inner
+
+    low = base.lower()
+    if low.startswith(
+        ("http://", "https://", "mailto:", "tel:", "javascript:", "data:")
+    ):
+        if low.startswith("https://wiki.starwarsnwn.com/en/"):
+            tail = unquote(base.split("/en/", 1)[1].strip("/"))
+            tgt = resolve_target(tail, idx)
+            if tgt is None:
+                missing.append((source, inner))
+                return inner
+            return rel_href(source, tgt) + query + frag
+        return inner
+
+    if base.startswith("//"):
+        return inner
+
+    if base.startswith("/en/") or low == "/en":
+        path_part = base[4:].lstrip("/") if base.startswith("/en/") else ""
+        if not path_part:
+            return inner
+        tgt = resolve_target(path_part, idx)
+        if tgt is None:
+            missing.append((source, inner))
+            return inner
+        return rel_href(source, tgt) + query + frag
+
+    if base.startswith("/"):
+        path_part = unquote(base.lstrip("/"))
+        tgt = resolve_target(path_part, idx)
+        if tgt is None:
+            return inner
+        return rel_href(source, tgt) + query + frag
+
+    try:
+        raw_rel = unquote(base)
+        cand = (source.parent / raw_rel).resolve()
+        cand.relative_to(WIKI_ROOT.resolve())
+    except (OSError, ValueError):
+        return inner
+
+    tgt = _resolve_fs_candidate(cand)
+    if tgt is None:
+        rel_try = cand.relative_to(WIKI_ROOT).as_posix()
+        k = _path_key_from_repo_rel(rel_try)
+        if k and k in idx:
+            tgt = idx[k]
+    if tgt is None:
+        missing.append((source, inner))
+        return inner
+    return rel_href(source, tgt) + query + frag
 
 
 def process_file(path: Path, idx: dict[str, Path], missing: list[tuple[Path, str]]) -> bool:
     text = path.read_text(encoding="utf-8")
     original = text
 
-    def repl_wiki(m: re.Match[str]) -> str:
-        raw = m.group(1)
-        out = _lookup_and_rel_href(path, raw, idx, missing)
-        if out is None:
+    def repl_href_attr(m: re.Match[str]) -> str:
+        inner = m.group(2)
+        new_inner = normalize_internal_href(path, inner, idx, missing)
+        if new_inner == inner:
             return m.group(0)
-        return out
+        return m.group(1) + new_inner + m.group(3)
 
-    text = HREF_WIKI.sub(repl_wiki, text)
-
-    def repl_en(m: re.Match[str]) -> str:
-        raw = m.group(1)
-        out = _lookup_and_rel_href(path, raw, idx, missing)
-        if out is None:
-            return m.group(0)
-        return f'href="{out}"'
-
-    text = HREF_EN_PREFIX.sub(repl_en, text)
+    text = HREF_ATTR.sub(repl_href_attr, text)
 
     if text != original:
         path.write_text(text, encoding="utf-8", newline="\n")
         return True
     return False
-
-
-HREF_ATTR = re.compile(r'(href=")([^"]+)(")')
 
 
 def strip_wikijs_extensions_in_file(path: Path) -> bool:

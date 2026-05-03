@@ -9,7 +9,7 @@ dateCreated: 2023-08-08T14:38:21.322Z
 -->
 
 <h2>Prerequisites and Required Software</h2>
-<p>The process of designing and publishing quests requires the use of an IDE (for example Visual Studio or VS Code) with the .NET SDK, along with completing the prerequisite process for downloading and unpacking SWLOR from the GitHub page. Pack and unpack the module with <code>Star Wars LOR v2.mod</code> (see <a href="packing-and-unpacking-module">Packing &amp; Unpacking the Module</a>). More info on this process can be found <a href="https://github.com/zunath/SWLOR_NWN">here</a>.</p>
+<p>The process of designing and publishing quests requires the use of an IDE (for example Visual Studio or VS Code) with the .NET SDK, along with completing the prerequisite process for downloading and unpacking SWLOR from the GitHub page. Pack and unpack the module with <code>Star Wars LOR v2.mod</code> (see <a href="/en/Development/packing-and-unpacking-module">Packing &amp; Unpacking the Module</a>). More info on this process can be found <a href="https://github.com/zunath/SWLOR_NWN">here</a>.</p>
 <h2>Quest Creation</h2>
 <p>When creating a quest, quest definitions should be placed under Feature/QuestDefinition in Visual Studio.</p>
 <p>Quests are organized by planet, both for world quests and by craft for guild quest. The example depicted below is for CZ-220, but the process is the same no matter the planet:</p>
@@ -62,7 +62,7 @@ dateCreated: 2023-08-08T14:38:21.322Z
                 });
         }</code></pre>
 <p>The above example is the aforementioned quest definition which contains comments for each line explaining the code.&nbsp;</p>
-<p>Quest states are generally progressed using a combination of snippets and local variables snip it information can be found <a href="snippets">here</a>.</p>
+<p>Quest states are generally progressed using a combination of snippets and local variables snip it information can be found <a href="/en/Development/snippets">here</a>.</p>
 <p>Quest dialogue is created using the Aurora tool set. The example below illustrates this:</p>
 <figure class="image"><img src="https://cdn.discordapp.com/attachments/1131640314386452662/1138243955415318630/image.png"></figure>
 <p>The text notes are in order from latest quest state to earliest quest date in this particular instance. The topmost dialogue is what is shown to the player after they have completed the quest. The bottom most dialogue node is shown if none of the higher conditions are met; in essence, the player is not eligible for this quest. In this example, cr_t_d_operator is the name of this conversation and it should be used as a reference in most cases. Since this particular quest is a fetch quest, the NPC quest-giver is looking for a specific item. The item the NPC is looking for will be based on the resref of the item.&nbsp;</p>
