@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """
-Rewrite https://wiki.starwarsnwn.com/en/... hrefs to paths relative to each HTML file,
-and normalize internal links for Wiki.js (no .html / .md in href — storage files are
-not the public URL).
+Rewrite internal wiki hrefs to paths relative to each HTML file:
+  - https://wiki.starwarsnwn.com/en/...
+  - href="/en/Gameplay/..." (Wiki.js locale-prefixed paths)
+
+Also normalizes segments for Wiki.js (no .html / .md in href).
 
 Usage:
-  python tools/relativize_internal_links.py              # fix absolute wiki URLs only
+  python tools/relativize_internal_links.py              # fix /en/ + absolute wiki URLs
   python tools/relativize_internal_links.py --wikijs    # strip .html/.md from all internal href
 """
 from __future__ import annotations
@@ -23,6 +25,9 @@ HREF_WIKI = re.compile(
     r'https://wiki\.starwarsnwn\.com/en/([^"\'>\s]+)',
     re.IGNORECASE,
 )
+
+# Wiki.js host-relative locale links: href="/en/Gameplay/foo" → file-relative
+HREF_EN_PREFIX = re.compile(r'href="/en/([^"]+)"', re.IGNORECASE)
 
 
 def build_index(root: Path) -> dict[str, Path]:
@@ -99,29 +104,50 @@ def rel_href(source: Path, target: Path) -> str:
     return normalize_wikijs_href_inner(posix)
 
 
+def _lookup_and_rel_href(
+    source: Path, raw_path: str, idx: dict[str, Path], missing: list[tuple[Path, str]]
+) -> str | None:
+    """Return relative href string, or None if target missing (caller keeps original)."""
+    frag = ""
+    lookup = raw_path
+    if "#" in lookup:
+        lookup, frag = lookup.split("#", 1)
+        frag = "#" + frag
+    if "?" in lookup:
+        lookup = lookup.split("?", 1)[0]
+    tgt = resolve_target(lookup, idx)
+    if tgt is None:
+        missing.append((source, raw_path))
+        return None
+    return rel_href(source, tgt) + frag
+
+
 def process_file(path: Path, idx: dict[str, Path], missing: list[tuple[Path, str]]) -> bool:
     text = path.read_text(encoding="utf-8")
-    changed = False
+    original = text
 
-    def repl(m: re.Match[str]) -> str:
-        nonlocal changed
+    def repl_wiki(m: re.Match[str]) -> str:
         raw = m.group(1)
-        frag = ""
-        lookup = raw
-        if "#" in lookup:
-            lookup, frag = lookup.split("#", 1)
-            frag = "#" + frag
-        tgt = resolve_target(lookup, idx)
-        if tgt is None:
-            missing.append((path, raw))
+        out = _lookup_and_rel_href(path, raw, idx, missing)
+        if out is None:
             return m.group(0)
-        changed = True
-        return rel_href(path, tgt) + frag
+        return out
 
-    new_text = HREF_WIKI.sub(repl, text)
-    if changed:
-        path.write_text(new_text, encoding="utf-8", newline="\n")
-    return changed
+    text = HREF_WIKI.sub(repl_wiki, text)
+
+    def repl_en(m: re.Match[str]) -> str:
+        raw = m.group(1)
+        out = _lookup_and_rel_href(path, raw, idx, missing)
+        if out is None:
+            return m.group(0)
+        return f'href="{out}"'
+
+    text = HREF_EN_PREFIX.sub(repl_en, text)
+
+    if text != original:
+        path.write_text(text, encoding="utf-8", newline="\n")
+        return True
+    return False
 
 
 HREF_ATTR = re.compile(r'(href=")([^"]+)(")')
