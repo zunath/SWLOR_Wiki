@@ -1,0 +1,605 @@
+<!--
+title: Achievements
+description: Account-wide achievements, how to unlock them, and the in-game achievements browser.
+published: true
+date: 2026-05-03T18:00:00.000Z
+tags: gameplay, achievements, account
+editor: ckeditor
+dateCreated: 2026-05-03T18:00:00.000Z
+-->
+
+<h1>Achievements</h1>
+<p>In SWLOR, <strong>achievements</strong> are tracked on your <strong>account</strong> (CD key), not per character. Any character on your account can unlock an achievement; once unlocked, it stays unlocked for the account. Progress toward numeric milestones (kills, crafts, etc.) is also stored on the account. <strong>DMs</strong> do not receive achievement grants.</p>
+<h2>Viewing achievements</h2>
+<p>Open your <strong>character sheet</strong> and use the achievements control to open the <strong>Achievements</strong> window. The list is paginated (25 entries per page). Unlocked achievements appear in <strong>green</strong>; locked ones in <strong>red</strong>. Select a row to see its full description and, if you have it, the <strong>acquired</strong> timestamp.</p>
+<h2>Pop-up notifications</h2>
+<p>When you earn a new achievement, you may get a small <strong>Achievement Unlocked</strong> banner and sound. You can turn this off in your character settings (<strong>Display achievement notification</strong>); the achievement is still granted and still appears in the achievements list.</p>
+<h2>How achievements unlock</h2>
+<ul>
+  <li><strong>Combat:</strong> Lifetime enemy kills credited to your account when you land killing blows (tiers at 10, 50, 500, 2,000, 10,000, and 100,000 kills).</li>
+  <li><strong>Perks:</strong> Count increases when you buy perks (1, 20, 50, 100, 500 perks learned).</li>
+  <li><strong>Skill points:</strong> Count increases when you gain skill points (1, 50, 150, 250, 500, 1000).</li>
+  <li><strong>Quests:</strong> Count increases when you complete quests (1, 10, 50, 100, 500, 1000, 1500, 2000, 3500, 5000).</li>
+  <li><strong>Crafting:</strong> Count increases on successful crafts (1, 10, 50, 100, 500, 1000, 1500, 2000, 3500, 5000).</li>
+  <li><strong>Exploration:</strong> Entering certain areas grants the matching achievement once (areas are configured with an exploration achievement id).</li>
+  <li><strong>Specific quests:</strong> For example, completing <strong>The Legendary Rod</strong> grants its achievement.</li>
+</ul>
+<p>Duplicate grants are ignored: if you already have an achievement, nothing changes.</p>
+<h2>Full list (active achievements)</h2>
+<p>Names and descriptions match the live server data. Regenerate from source with <code>tools/gen_achievements_wiki_fragment.py</code> in the SWLOR_NWN repo after enum changes.</p>
+<h3>Combat</h3>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:left;">Achievement</th>
+        <th style="text-align:left;">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Kill Enemies I</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Kill 10 enemies.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Kill Enemies II</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Kill 50 enemies.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Kill Enemies III</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Kill 500 enemies.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Kill Enemies IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Kill 2,000 enemies.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Kill Enemies V</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Kill 10,000 enemies.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Kill Enemies VI</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Kill 100,000 enemies.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3>Perks learned</h3>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:left;">Achievement</th>
+        <th style="text-align:left;">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Learn Perks I</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Learn 1 Perk</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Learn Perks II</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Learn 20 Perks</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Learn Perks III</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Learn 50 Perks</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Learn Perks IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Learn 100 Perks</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Learn Perks V</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Learn 500 Perks</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3>Skill points gained</h3>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:left;">Achievement</th>
+        <th style="text-align:left;">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Gain Skill Points I</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Gain 1 Skill Point</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Gain Skill Points II</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Gain 50 Skill Points</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Gain Skill Points III</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Gain 150 Skill Points</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Gain Skill Points IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Gain 250 Skill Points</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Gain Skill Points V</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Gain 500 Skill Points</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Gain Skill Points VI</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Gain 1000 Skill Points</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3>Quests completed</h3>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:left;">Achievement</th>
+        <th style="text-align:left;">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete Quests I</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete 1 Quest</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete Quests II</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete 10 Quests</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete Quests III</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete 50 Quests</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete Quests IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete 100 Quests</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete Quests V</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete 500 Quests</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete Quests VI</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete 1000 Quests</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete Quests VII</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete 1500 Quests</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete Quests VIII</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete 2000 Quests</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete Quests IX</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete 3500 Quests</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete Quests X</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Complete 5000 Quests</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3>Items crafted</h3>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:left;">Achievement</th>
+        <th style="text-align:left;">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft Items I</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft 1 Item</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft Items II</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft 10 Items</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft Items III</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft 50 Items</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft Items IV</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft 100 Items</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft Items V</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft 500 Items</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft Items VI</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft 1000 Items</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft Items VII</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft 1500 Items</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft Items VIII</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft 2000 Items</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft Items IX</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft 3500 Items</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft Items X</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Craft 5000 Items</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3>Exploration</h3>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:left;">Achievement</th>
+        <th style="text-align:left;">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Abandoned Station</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Abandoned Station</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore CZ-220</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore CZ-220</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Qion Tundra</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Qion Tundra on Hutlar</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Qion Valley</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Qion Valley on Hutlar</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Abandoned Outpost</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Abandoned Outpost on Hutlar</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Hutlar Outpost</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Hutlar Outpost</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dac City</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dac City on Mon Cala</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Coral Isles Inner</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Inner Coral Isles on Mon Cala</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Coral Isles Outer</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Outer Coral Isles on Mon Cala</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Coral Isles Facility</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Facility on Mon Cala</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Player Bank</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore a player's bank</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Player Cantina</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore a player's cantina</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Player City Hall</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore a player's city hall</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Player Medical Center</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore a player's medical center</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Player Starport</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore a player's starport</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Hutlar Orbit</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Hutlar's Orbit</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Mon Cala Orbit</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Mon Cala's Orbit</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Tatooine Orbit</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Tatooine's Orbit</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Viscara Orbit</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Viscara's Orbit</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Consular Starship</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore a Consular class starship</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Falchion Starship</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore a Falchion class starship</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Hound Starship</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore a Hound class starship</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Merchant Starship</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore a Merchant class starship</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Mule Starship</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore a Mule class starship</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Panther Starship</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore a Panther class starship</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Saber Starship</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore a Saber class starship</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Striker Starship</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore a Striker class starship</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Throne Starship</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore a Throne class starship</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Anchorhead</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Anchorhead on Tatooine</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Tatooine Desert</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the desert on Tatooine</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Deep Canyon</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the deep canyon on Tatooine</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Mos Esper</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Mos Esper on Tatooine</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Tatooine Dunes</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the dunes on Tatooine</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Tusken Camp</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Tusken raider camp on Tatooine</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Tusken Cave</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Tusken cave on Tatooine</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Viscara Cavern</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the cavern on Viscara</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Coxxion Base</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Coxxion Base on Viscara</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Coxxion HQ</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Coxxion Headquarters on Viscara</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Deep Mountains</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Deep Mountains on Viscara</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Deepwoods</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Deepwoods on Viscara</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Eastern Swamplands</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Eastern Swamplands on Viscara</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Viscara Lake</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Lake on Viscara</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Mandalorian Facility</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Mandalorian Facility on Viscara</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Mountain Valley</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Mountain Valley on Viscara</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Racin' Jims</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Racin' Jims Cantina on Viscara</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Republic Base</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Republic Base on Viscara</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Sith Lake Outpost</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Sith Lake Outpost on Viscara</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Veles Colony</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Veles Colony on Viscara</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Western Swamplands</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Western Swamplands on Viscara</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Wildlands</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Wildlands on Viscara</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Wildwoods</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Wildwoods on Viscara</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Rocky Pass</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Rocky Pass on Tatooine</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Player Apartment</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore a player's apartment</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Player House</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore a player's house</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Korriban Orbit</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Korriban's Orbit</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Wastelands</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the wastelands on Korriban</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Sith Crypt</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Sith crypt on Korriban</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Korriban Caverns</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the caverns on Korriban</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Sunkenhead Swamps</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Sunkenhead Swamps on Mon Cala.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Sharptooth Jungle</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Sharptooth Jungle on Mon Cala</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Sharptooth Caverns</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Sharptooth Caverns on Mon Cala</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Qion Foothills</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore the Qion Foothills on Hutlar.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Orbit</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir's Orbit</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Cave Ruins</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Cave Ruins</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Desert</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Desert</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Grotto Caverns</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Grotto Caverns</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Grottos</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Grottos</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Jungles</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Jungles</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Mountain Caves</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Mountain Caves</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Mountains</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Mountains</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Ruin Base</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Ruin Base</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Tribe Village</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Tribe Village</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dantooine Orbit</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dantooine's Orbit.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dantooine Fields</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dantooine's Fields.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dantooine Colony</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dantooine's Colony.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dantooine Lake</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dantooine's Lake.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dantooine Kinrath Tunnels</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dantooine's Kinrath Tunnels.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dantooine Wild Plains</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dantooine's Wild Plains.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dantooine Tribe</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dantooine's Tribe.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dantooine Abandoned Warehouse</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dantooine's Abandoned Base.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dantooine Jungle Mountain </td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dantooine's Jungle Mountains.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir Hidden Cave </td>
+        <td style="background-color:hsl(0, 0%, 0%);">Explore Dathomir's Hidden Cave.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3>Quest</h3>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:left;">Achievement</th>
+        <th style="text-align:left;">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);">The Legendary Rod</td>
+        <td style="background-color:hsl(0, 0%, 0%);">Completed the quest 'The Legendary Rod'.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h2>See also</h2>
+<ul>
+  <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/Gameplay">Gameplay overview</a></li>
+  <li><a href="https://wiki.starwarsnwn.com/en/Gameplay/skills-overview">Skills &amp; perks</a></li>
+</ul>
