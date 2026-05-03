@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
 Rewrite internal wiki hrefs for Wiki.js (trailing-slash safe):
-  - Every internal href="..." in HTML: relative paths, /en/..., and wiki absolute URLs
-  - Emits /en/... where file-relative links would break (siblings, cross-section, Gameplay hub)
+  - Internal targets use locale-relative hrefs: ../ repeated once per source path segment + target path
+    (e.g. from /en/rules use ../PvP-Rules, not /en/PvP-Rules or bare PvP-Rules — those break when the URL is /en/rules/).
+  - Normalizes https://anyhost/en/... and legacy /en/... the same way (no domain in output).
 
 Also normalizes segments for Wiki.js (no .html / .md in href).
 
@@ -16,7 +17,7 @@ import os
 import re
 import sys
 from pathlib import Path
-from urllib.parse import unquote
+from urllib.parse import unquote, urlparse
 
 WIKI_ROOT = Path(__file__).resolve().parent.parent
 
@@ -100,13 +101,26 @@ def _wiki_url_path(target: Path) -> str:
     return target.relative_to(WIKI_ROOT).as_posix().rsplit(".", 1)[0]
 
 
+def _wiki_path_depth(source: Path) -> int:
+    """Number of /en/... URL segments for this file (mirrors repo path without extension)."""
+    rel = source.relative_to(WIKI_ROOT).as_posix()
+    stemmed = rel.rsplit(".", 1)[0]
+    if not stemmed:
+        return 1
+    return len(stemmed.split("/"))
+
+
 def rel_href(source: Path, target: Path) -> str:
-    """Always use locale-prefixed paths. File-relative links break under Wiki.js when URLs use a
-    trailing slash (extra path segment): e.g. Lore/Planets/page/ + ../Factions/x resolves under
-    Planets/, not Lore/. Same for sibling hrefs, Gameplay hub, and cross-section links.
+    """Wiki.js-safe relative links: ../ × (depth of source slug) + target slug path.
+
+    Root-relative /en/foo breaks when the live URL is /en/page/ (trailing slash): the browser
+    resolves bare ``foo`` under the page folder. A single ../ per path segment reaches /en/ first.
     """
     try:
-        return f"/en/{_wiki_url_path(target)}"
+        depth = _wiki_path_depth(source)
+        tgt = _wiki_url_path(target)
+        prefix = "../" * depth
+        return normalize_wikijs_href_inner(prefix + tgt)
     except ValueError:
         pass
     rel = os.path.relpath(target.resolve(), source.parent.resolve())
@@ -163,11 +177,20 @@ def normalize_internal_href(
         return inner
 
     low = base.lower()
-    if low.startswith(
-        ("http://", "https://", "mailto:", "tel:", "javascript:", "data:")
-    ):
-        if low.startswith("https://wiki.starwarsnwn.com/en/"):
-            tail = unquote(base.split("/en/", 1)[1].strip("/"))
+    if low.startswith(("mailto:", "tel:", "javascript:", "data:")):
+        return inner
+    if low.startswith(("http://", "https://")):
+        u = urlparse(base)
+        if u.scheme in ("http", "https") and u.netloc:
+            p = u.path or ""
+            if p == "/en":
+                return inner
+            if p.startswith("/en/"):
+                tail = unquote(p[4:].strip("/"))
+            else:
+                return inner
+            if not tail:
+                return inner
             tgt = resolve_target(tail, idx)
             if tgt is None:
                 missing.append((source, inner))
