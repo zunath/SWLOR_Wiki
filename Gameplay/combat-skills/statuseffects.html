@@ -1,72 +1,119 @@
 <!--
 title: Status Effects
-description: A list of status effects and what they do.
+description: Combat ailments, control effects, and how First Aid Treatment Kits clear them in SWLOR.
 published: true
 date: 2023-11-20T20:31:47.712Z
-tags: perks, perk, gameplay, status effects, status, effects
+tags: perks, perk, gameplay, status effects, status, effects, combat
 editor: ckeditor
 dateCreated: 2023-11-20T20:31:39.776Z
 -->
 
-<h1>Status Effects</h1>
-<p>(WIP, Some status effects have not been confirmed and are based on the base NWN statuses until confirmed, but still follow the general concept.)</p>
+<nav style="border:1px solid #444;padding:10px;margin-bottom:1.5em;background:#1a1a1a;">
+  <p style="margin:0 0 8px 0;"><strong>Navigate</strong></p>
+  <p style="margin:0;">
+    <a href="../skills-overview.html">Skills &amp; perks hub</a>
+    &nbsp;|&nbsp; <a href="../combat-skills.html">Combat perk hub</a>
+    &nbsp;|&nbsp; <a href="../skills-combat.html">Combat skills</a>
+    &nbsp;|&nbsp; <a href="statuseffects.html">Status effects</a> (this page)
+  </p>
+  <p style="margin:8px 0 0 0;">
+    <a href="../perks-overview.html">All perk pages</a>
+    &nbsp;|&nbsp; <a href="../Perks/general.html">General perks</a> (Treatment Kit)
+  </p>
+</nav>
+
+<h1>Status effects</h1>
+<p>Status effects are the icons and states you see on your character during a fight—bleeding, burns, stuns, slows, and similar. They come from weapons, abilities, grenades, beast breath attacks, and some enemy powers.</p>
+<p><strong>Server-tracked damage effects</strong> (Bleed, Poison, Shock, Burn, Disease, Freezing, and special cases like Creeping Terror) run on the module heartbeat: they <strong>tick about every 6 seconds</strong> until the duration ends or the effect is removed. Each tick can deal damage and apply short follow-up penalties (for example Poison also shaves AC for a few seconds after a tick).</p>
+<p><strong>Control and vision effects</strong> (stun, knockdown, slow, blind, entangle, confusion) use the engine’s standard crowd-control rules: they lock movement, attacks, or targeting in familiar ways. Exact numbers can vary slightly by source and duration, but the table below describes what you should expect in play.</p>
+<p>Buffs, food, Rest, stims, and Force auras are also shown in your UI but are not listed here—this page is aimed at <strong>harmful or disruptive</strong> combat states.</p>
+
+<h2>Damage-over-time and stat ailments (server-tracked)</h2>
+<p>These scale with the attacker’s stats and often with an internal <strong>level</strong> tied to the ability that applied them. Higher levels mean stronger ticks.</p>
 <figure class="table">
   <table>
     <thead>
       <tr>
-        <th>Status Effect</th>
-        <th>Description</th>
+        <th>Effect</th>
+        <th>What it does (each tick)</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="background-color:hsl(0, 0%, 0%);">Bleed</td>
-        <td style="background-color:hsl(0, 0%, 0%);">Applies an untyped damage over time</td>
+        <td style="background-color:hsl(0, 0%, 0%);"><strong>Bleed</strong></td>
+        <td style="background-color:hsl(0, 0%, 0%);">Physical damage. Based on the source’s <strong>Perception</strong> modifier, a small die roll, and the effect’s level. Damage type is untyped (not reduced by elemental resistances). May leave a brief bloodstain visual.</td>
       </tr>
       <tr>
-        <td style="background-color:hsl(0, 0%, 0%);">Blind</td>
-        <td style="background-color:hsl(0, 0%, 0%);">Unable to see (screen darkens) and 50% miss chance with a -4 penalty to outgoing attacks and a +2 to incoming attacks. Ability cast range shortened.</td>
+        <td style="background-color:hsl(0, 0%, 0%);"><strong>Disease</strong></td>
+        <td style="background-color:hsl(0, 0%, 0%);">Damage plus a short <strong>Vitality</strong> penalty. Based on the source’s Perception modifier and level.</td>
       </tr>
       <tr>
-        <td style="background-color:hsl(0, 0%, 0%);">Burn</td>
-        <td style="background-color:hsl(0, 0%, 0%);">Deals fire damage over time.</td>
+        <td style="background-color:hsl(0, 0%, 0%);"><strong>Poison</strong></td>
+        <td style="background-color:hsl(0, 0%, 0%);"><strong>Acid</strong> damage from a roll plus the source’s <strong>Agility</strong> modifier and level. Also applies a brief <strong>−2 AC</strong> after the tick.</td>
       </tr>
       <tr>
-        <td style="background-color:hsl(0, 0%, 0%);">Confusion</td>
-        <td style="background-color:hsl(0, 0%, 0%);">Randomly causes target to wander aimlessly, stand still, or attack nearest target by random every round.</td>
+        <td style="background-color:hsl(0, 0%, 0%);"><strong>Shock</strong></td>
+        <td style="background-color:hsl(0, 0%, 0%);"><strong>Electrical</strong> damage from a die roll plus the source’s Agility modifier (scaled by level).</td>
       </tr>
       <tr>
-        <td style="background-color:hsl(0, 0%, 0%);">Diseased</td>
-        <td style="background-color:hsl(0, 0%, 0%);">Reduces Vitality and applies damage once.</td>
+        <td style="background-color:hsl(0, 0%, 0%);"><strong>Burn</strong></td>
+        <td style="background-color:hsl(0, 0%, 0%);"><strong>Fire</strong> damage from a roll plus the source’s <strong>Might</strong> modifier (scaled by level).</td>
       </tr>
       <tr>
-        <td style="background-color:hsl(0, 0%, 0%);">Entangle</td>
-        <td style="background-color:hsl(0, 0%, 0%);">Unable to move and -2 to all outgoing attack rolls. Sets Perception to 3 and all outgoing spells require concentration check (DC 15).</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);">Freezing</td>
-        <td style="background-color:hsl(0, 0%, 0%);">Reduces Might and applies damage once.</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);">Knockdown</td>
-        <td style="background-color:hsl(0, 0%, 0%);">Knocked prone and cannot take actions. Incoming attacks receive +4 bonus in melee and -4 at range.&nbsp;</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);">Poison</td>
-        <td style="background-color:hsl(0, 0%, 0%);">Deals acid damage over time.</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);">Shock</td>
-        <td style="background-color:hsl(0, 0%, 0%);">Deals electrical damage over time.</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);">Slow</td>
-        <td style="background-color:hsl(0, 0%, 0%);">Reduces speed by 50% (unless otherwise specified) and -2 to AC, reflex saves, and Attack Rolls, and reduces number of attacks to once per round.</td>
-      </tr>
-      <tr>
-        <td style="background-color:hsl(0, 0%, 0%);">Stun</td>
-        <td style="background-color:hsl(0, 0%, 0%);">Cannot take actions and incoming attacks receive a +2 bonus.</td>
+        <td style="background-color:hsl(0, 0%, 0%);"><strong>Freezing</strong></td>
+        <td style="background-color:hsl(0, 0%, 0%);">Damage plus a short <strong>Might</strong> penalty. Based on the source’s Perception modifier and level. Common on cold-themed beast attacks.</td>
       </tr>
     </tbody>
   </table>
 </figure>
+
+<h2>Creeping Terror</h2>
+<p>A Force affliction tied to certain powers. While it runs, it periodically deals <strong>Force-typed</strong> damage that respects combat attack/defense math (including Willpower on both sides). On each application it also forces a <strong>Will</strong> save; failure can briefly <strong>entangle</strong> the target. Higher ranks use a higher save DC and stronger damage scaling.</p>
+
+<h2>Control, movement, and vision (engine effects)</h2>
+<p>These are usually applied as fixed-duration states from abilities (for example Force Push, leg sweep, concussion grenades, Mind Trick, Slam).</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>Effect</th>
+        <th>Typical behavior</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);"><strong>Blind</strong></td>
+        <td style="background-color:hsl(0, 0%, 0%);">Vision is heavily obscured, ranged and melee attacks are much less reliable, and enemies are harder to pinpoint. Ability targeting range is shortened.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);"><strong>Confusion</strong></td>
+        <td style="background-color:hsl(0, 0%, 0%);">The creature may wander, stand idle, or swing at whoever is closest—behavior changes from round to round.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);"><strong>Entangle</strong></td>
+        <td style="background-color:hsl(0, 0%, 0%);">Movement is locked down, attacks are penalized, Perception is effectively collapsed for the purpose of the effect, and hostile actions may require a concentration check to pull off.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);"><strong>Knockdown</strong></td>
+        <td style="background-color:hsl(0, 0%, 0%);">Prone: no actions until you stand. Melee attackers gain a strong bonus to hit; ranged attackers take a penalty.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);"><strong>Slow</strong></td>
+        <td style="background-color:hsl(0, 0%, 0%);">Movement is reduced, defense and reflexes suffer, attack rolls are penalized, and you are capped at about <strong>one attack per round</strong> unless a specific ability says otherwise.</td>
+      </tr>
+      <tr>
+        <td style="background-color:hsl(0, 0%, 0%);"><strong>Stun</strong></td>
+        <td style="background-color:hsl(0, 0%, 0%);">No actions. Attackers gain a moderate bonus to hit a stunned target.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+
+<h2>Removing ailments (First Aid)</h2>
+<p>The <strong>Treatment Kit</strong> line under First Aid is the main way allies strip many server-tracked combat ailments. It spends medical supplies and has a short recast. You can only use a kit when the target meets that tier’s conditions (the ability will say if they are “healthy”).</p>
+<ul>
+  <li><strong>Treatment Kit I</strong> — Usable when the target has <strong>Bleed</strong> or <strong>Poison</strong>. Clears those effects and strips classic poison/disease engine effects when present.</li>
+  <li><strong>Treatment Kit II</strong> — Usable when the target has at least one of <strong>Bleed</strong>, <strong>Poison</strong>, <strong>Shock</strong>, or <strong>Burn</strong>. On use it clears all of those <em>plus</em> the server <strong>Disease</strong> effect and runs the same engine poison/disease cleanup. It does <strong>not</strong> remove <strong>Freezing</strong>; wait it out, heal through it, or use other options your group has.</li>
+</ul>
+<p>If someone has only <strong>Disease</strong> (and none of the four qualifiers above), Treatment Kit may not be castable until another ailment is present or the effect ends.</p>
+<p>For perk details and stamina costs, see the <a href="https://wiki.starwarsnwn.com/en/Gameplay/Perks/general">General perks</a> page (Treatment Kit entries).</p>
