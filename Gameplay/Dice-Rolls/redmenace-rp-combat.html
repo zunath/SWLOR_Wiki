@@ -1,0 +1,161 @@
+<!--
+title: RedMenace RP Combat
+description: Event combat system using archetypes, moves, AP, d20 rolls, and massive damage.
+published: true
+date: 2026-05-12T00:00:00.000Z
+tags: dice, event, combat, d20, archetypes
+editor: ckeditor
+dateCreated: 2026-05-12T00:00:00.000Z
+-->
+
+<nav style="border:1px solid #444;padding:10px;margin-bottom:1.5em;background:#1a1a1a;">
+  <p style="margin:0;"><a href="../../../Gameplay/Dice-Rolls">Dice Rolls</a></p>
+</nav>
+<h1>RedMenace RP Combat</h1>
+<p>A DM/QM event combat system built around archetypes, selected moves, Action Points, and d20 attack rolls. It is primarily intended for event scenes and is not tuned as a default PvP system.</p>
+<h2>At a Glance</h2>
+<table>
+  <tbody>
+    <tr><th>Best For</th><td>DM/QM event combat where players want tactical moves without using normal mechanical combat.</td></tr>
+    <tr><th>Players Needed</th><td>One or more event participants.</td></tr>
+    <tr><th>Dice Used</th><td>d20 for attacks and checks; d6 for Massive Damage.</td></tr>
+    <tr><th>Typical Stakes</th><td>Scene defeat, loss of moves, being out of scene, or event-declared consequences.</td></tr>
+    <tr><th>Needs DM/QM</th><td>Yes.</td></tr>
+    <tr><th>Consent Required</th><td>Required for PvP or any lasting consequence beyond scene defeat.</td></tr>
+  </tbody>
+</table>
+<h2>Core Terms</h2>
+<ul>
+  <li><strong>Scene:</strong> A single combat encounter.</li>
+  <li><strong>Situation:</strong> A collection of scenes.</li>
+  <li><strong>Event:</strong> A collection of situations.</li>
+  <li>Scenes begin at full HP.</li>
+  <li>Situations begin with Massive Damage reset.</li>
+</ul>
+<h2>Character Creation</h2>
+<ol>
+  <li>Choose one archetype.</li>
+  <li>Choose four moves.</li>
+  <li>Every PC also has access to the basic moves.</li>
+</ol>
+<p>Archetype and move choices may be changed between events. Moves and archetypes are intentionally broad and may be flavored to fit the character.</p>
+<h2>Action Points</h2>
+<ul>
+  <li>AP is spent on moves.</li>
+  <li>You start each turn with at least <strong>2 AP</strong>.</li>
+  <li>If you end a turn with AP, you bank it.</li>
+  <li>At the start of each turn, generate 1 AP. If you started the turn with less than 2 AP, generate 2 AP instead.</li>
+</ul>
+<table>
+  <thead><tr><th>End Previous Turn With</th><th>Start Next Turn With</th></tr></thead>
+  <tbody>
+    <tr><td>0 AP</td><td>2 AP</td></tr>
+    <tr><td>1 AP</td><td>3 AP</td></tr>
+    <tr><td>2 AP</td><td>3 AP</td></tr>
+    <tr><td>3 AP</td><td>4 AP</td></tr>
+  </tbody>
+</table>
+<h2>Moves</h2>
+<p>Moves are actions used on your turn or as reactions. You choose four moves from the general pool and your archetype's moves. Some moves may require certain conditions, skills, or weapon use. You cannot use the same move twice in one turn unless another move allows it.</p>
+<h2>Basic Moves</h2>
+<p>Every PC has these moves. Basic moves are not valid options for Massive Damage move loss.</p>
+<table>
+  <thead><tr><th>Move</th><th>AP</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td>Attack</td><td>1</td><td>Attack with ranged or melee to deal 1 damage. Attack type is decided by archetype.</td></tr>
+    <tr><td>Guard</td><td>1</td><td>Add +5 to your Defense Score until the end of your next turn.</td></tr>
+    <tr><td>Assist</td><td>1</td><td>When an ally in melee range makes a roll, add +2 to the result.</td></tr>
+    <tr><td>Move</td><td>1</td><td>Move a notable distance, such as into or out of melee range, out of an AOE, near a specific object, or anywhere movement is narratively significant.</td></tr>
+    <tr><td>Interact</td><td>1</td><td>Interact with a DM-defined item.</td></tr>
+    <tr><td>Pin</td><td>1</td><td>Attempt to pin an opponent with a ranged or melee attack roll, preventing them from using Move. Attack bonus is decided by archetype.</td></tr>
+    <tr><td>Recover</td><td>1</td><td>Recover 1 HP.</td></tr>
+    <tr><td>Shove</td><td>1</td><td>Make a melee attack roll. On success, move your target.</td></tr>
+  </tbody>
+</table>
+<h2>Initiative</h2>
+<p>Players and opponents alternate turns, agreeing among themselves who acts until everyone has taken one turn in the round. In PvP, both sides make one contested initiative roll every round.</p>
+<h2>Massive Damage</h2>
+<p>When health is reduced to 0, roll 1d6 and consult the table. Each later Massive Damage roll in the same situation adds one more d6; take the lowest die rolled. If you have no moves to lose, you are out of scene. If you lose a move with an ongoing effect, that effect is cancelled.</p>
+<table>
+  <thead><tr><th>Roll</th><th>Result</th></tr></thead>
+  <tbody>
+    <tr><td>6</td><td>Restore health to full.</td></tr>
+    <tr><td>5</td><td>Restore health to half.</td></tr>
+    <tr><td>4</td><td>Restore health to half and lose 1 move.</td></tr>
+    <tr><td>3</td><td>Restore health to 1 and lose 1 move.</td></tr>
+    <tr><td>2</td><td>Restore health to 1 and lose all moves.</td></tr>
+    <tr><td>1</td><td>Out of scene.</td></tr>
+  </tbody>
+</table>
+<h2>Desperate Situation and All Out</h2>
+<p>A desperate situation means the party is losing badly. A rough trigger is two players having rolled Massive Damage, but the DM decides when it applies.</p>
+<ul>
+  <li>In a desperate situation, a player may declare <strong>ALL OUT</strong>.</li>
+  <li>While ALL OUT, you generate 2 AP every turn and start each turn with at least 3 AP.</li>
+  <li>At the end of each of your turns, roll two d20s.</li>
+  <li>If you roll a 1 on any d20 at any point, you must take Massive Damage.</li>
+  <li>If you roll two 1s within one round, ALL OUT ends.</li>
+  <li>Abilities may reroll 1s away when applicable.</li>
+</ul>
+<h2>Archetypes</h2>
+<table>
+  <thead><tr><th>Archetype</th><th>HP</th><th>Melee</th><th>Range</th><th>Defense</th><th>Archetype Moves</th></tr></thead>
+  <tbody>
+    <tr><td>Duelist</td><td>4</td><td>3</td><td>2</td><td>14</td><td><strong>Challenge</strong> (2 AP): nominate an opponent. Your attacks against it gain +1 while active. The opponent attacks targets other than you at -5. Allies attacking the challenged opponent also roll at -5. You may end the challenge on your turn. <strong>Fatal Clash</strong> (1 AP): nominate an opponent. You and the opponent make contested attack rolls; the loser takes 2 damage. The winner may move once or move the opponent once involuntarily. Reroll the contest by spending 1 AP. On a tie, both characters take 1 damage.</td></tr>
+    <tr><td>Defender</td><td>5</td><td>2</td><td>1</td><td>15</td><td><strong>Hold the Line</strong> (1 AP): until the end of your next turn, all opponents in the scene attack targets other than you at -2. <strong>Unbroken</strong> (1 AP): when taking damage, reduce the damage to 1.</td></tr>
+    <tr><td>Marksman</td><td>3</td><td>2</td><td>3</td><td>12</td><td><strong>Spotter</strong> (variable AP): spend AP to add +2 per AP spent to the next attack roll against a specific opponent. Counts as a ranged attack. <strong>Love Tap</strong> (2 AP): make a ranged attack roll. On hit, deal 1 damage and the target cannot move for two rounds.</td></tr>
+    <tr><td>Sorcerer</td><td>2</td><td>1</td><td>3</td><td>10</td><td><strong>This Is the Water</strong> (4 AP): roll a die equal to the number of opponents in the scene. The number rolled is how many opponents are unconscious for one round. <strong>And This Is the Well</strong>: no detailed effect listed. <strong>Unending Torment</strong> (2 AP): ranged attack. On success, the opponent takes 1 damage, cannot move, and has -1 attack rolls until the end of your next turn. Spend 1 AP each turn to prolong the effect.</td></tr>
+    <tr><td>Scoundrel</td><td>3</td><td>2</td><td>2</td><td>13</td><td><strong>Scramble for Cover</strong> (2 AP): create cover, giving yourself and allies in range +3 Defense against ranged attacks. <strong>Chips Down</strong> (4 AP): in a desperate situation, automatically hit an opponent with an attack dealing 3 damage.</td></tr>
+    <tr><td>Saboteur</td><td>2</td><td>1</td><td>1</td><td>10</td><td><strong>Disarmament</strong> (2 AP): make an attack roll. On hit, the opponent cannot use the last move they used until the end of their next turn. <strong>Trapcrafting</strong> (1 AP): mark a location in melee range with a trap. The next opponent that enters melee range of the trap rolls d20; on 13 or lower, they take 2 damage.</td></tr>
+    <tr><td>Commander</td><td>2</td><td>1</td><td>2</td><td>12</td><td><strong>Command</strong> (2 AP): declare a direct objective. For one round, the first action a player takes on their turn that directly advances that objective gains +3. <strong>Control</strong> (2 AP): give 1 AP to an ally; they may spend it immediately.</td></tr>
+    <tr><td>Healer</td><td>2</td><td>1</td><td>1</td><td>12</td><td><strong>Urgent Care</strong> (1 AP): when an ally in melee range rolls Massive Damage, react to make them roll twice and take the better roll. <strong>Preventative</strong> (2 AP): give an ally 1 temporary HP, lost first when they take damage.</td></tr>
+    <tr><td>Engineer</td><td>3</td><td>2</td><td>2</td><td>13</td><td><strong>Deploy Security Turret</strong> (2 AP): deploy a turret with Valorant. It only activates in melee range and has +5 to the attack roll. <strong>Auto Gun</strong>: automatically uses Attack on the closest enemy at the end of your turn with -2 to the roll. Deals 1 damage on hit.</td></tr>
+  </tbody>
+</table>
+<h2>General Moves</h2>
+<table>
+  <thead><tr><th>Move</th><th>AP</th><th>Requirement</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td>Parry</td><td>Variable</td><td></td><td>When targeted by an attack, spend equal AP to make a melee attack roll contesting the result. On success, negate the damage. If successful, you may spend 1 AP to use Attack with +2. If targeted by an attack that misses, you may spend 1 AP to make an attack move.</td></tr>
+    <tr><td>Aim</td><td>1</td><td></td><td>Target an opponent. Your next attack against them gains +5.</td></tr>
+    <tr><td>Defend</td><td>1</td><td></td><td>Target an ally in melee range. Until the end of your next turn, if they are attacked by an opponent, roll d20. On 11+, swap places and redirect the attack to you. If the ally leaves melee range, they stop being valid for this move.</td></tr>
+    <tr><td>Guardian</td><td>1</td><td></td><td>Target an ally in melee range. They gain +2 Defense Score until the end of your next turn.</td></tr>
+    <tr><td>Power Attack</td><td>3</td><td></td><td>Make a melee attack. On hit, deal 2 damage.</td></tr>
+    <tr><td>Double Strike</td><td>2</td><td></td><td>Make two attacks with -2 to each roll.</td></tr>
+    <tr><td>Double Time</td><td>1</td><td></td><td>Use a move you have already used this turn. AP cost still applies.</td></tr>
+    <tr><td>Flying Swallow</td><td>1</td><td></td><td>Move one range, then make a melee attack against an opponent at -2.</td></tr>
+    <tr><td>Disarm</td><td>2</td><td></td><td>Make an attack. On hit, choose melee or ranged. The opponent cannot make attack rolls of that type.</td></tr>
+    <tr><td>Deploy Blaster Turret</td><td>2</td><td></td><td>Place one turret ally with the basic Attack move. It can only roll ranged attacks, has 1 HP, and only one blaster turret may be deployed at a time.</td></tr>
+    <tr><td>Deploy Cryo Turret</td><td>2</td><td></td><td>Place one turret ally with the Pin move. It has 1 HP. Only one cryo turret may be deployed at a time.</td></tr>
+    <tr><td>Deploy Guardian Turret</td><td>2</td><td></td><td>Place one turret ally with the Guardian move. It has 1 HP. Only one guardian turret may be deployed at a time.</td></tr>
+    <tr><td>Turret Commander</td><td>1</td><td></td><td>A turret ally uses the Move move.</td></tr>
+    <tr><td>Medical Attention</td><td>2</td><td></td><td>Target ally in melee range recovers 2 HP.</td></tr>
+    <tr><td>Energy Shield</td><td>2</td><td></td><td>Choose ranged or melee. You gain 1 temporary HP against that attack type. Does not stack with other temporary HP.</td></tr>
+    <tr><td>Berserk</td><td>1</td><td></td><td>For 3 turns, gain +1 melee attacks, -1 ranged attacks, and -2 Defense Score.</td></tr>
+    <tr><td>Danger Zone</td><td>1</td><td></td><td>Mark a location. For 3 turns, anyone who enters or ends their turn there takes 1 damage.</td></tr>
+    <tr><td>Perfect Parry</td><td>4</td><td></td><td>Negate an attack, then use Attack.</td></tr>
+    <tr><td>Obliteration Technique</td><td>3</td><td></td><td>Instantly defeat an opponent at 1 HP.</td></tr>
+    <tr><td>Bolster</td><td>1</td><td></td><td>Target ally gets +1 attack rolls until the end of your next turn.</td></tr>
+    <tr><td>Diminish</td><td>1</td><td></td><td>Target opponent gets -1 attack rolls until the end of your next turn.</td></tr>
+    <tr><td>Ram</td><td>1</td><td></td><td>Move one range, then attempt a melee Pin on one opponent in melee range at -2.</td></tr>
+    <tr><td>Inflict</td><td>1</td><td></td><td>Make an attack. On hit, the target has -3 attack rolls until the end of your next turn.</td></tr>
+    <tr><td>Sunder</td><td>1</td><td></td><td>Make an attack. On hit, reduce the target's Defense Score by 2 until the end of your next turn.</td></tr>
+    <tr><td>Goon</td><td>2</td><td></td><td>Call in one ally with all basic moves and direct them. At the start of your turn, spend 1 AP to direct your goon; otherwise the DM decides their actions. You can only have one goon at a time.</td></tr>
+    <tr><td>Self Destructive Strike</td><td>2</td><td></td><td>Make a melee attack with +5. On hit, deal 2 damage. Until the end of your next turn, you have -5 Defense Score.</td></tr>
+    <tr><td>Smoke Screen</td><td>1</td><td></td><td>Mark a location. For 2 turns, attacks against someone inside the location require d20; on 1-10 the attack automatically misses.</td></tr>
+    <tr><td>Rally</td><td>2</td><td></td><td>In a desperate situation, every ally regains 2 HP and gains +2 attack rolls until the end of your next turn.</td></tr>
+    <tr><td>Domain Expansion</td><td>4</td><td></td><td>For 3 turns, mark a location as your domain. Inside it, your attack rolls gain +3 and attacks against you take -3.</td></tr>
+    <tr><td>Tow Cable</td><td>1</td><td></td><td>Make a ranged attack. On hit, force an enemy to make the Move move in a direction of your choosing.</td></tr>
+    <tr><td>Valorant</td><td>2</td><td></td><td>Until the end of your next turn, make a free Attack against any opponent who moves within your range.</td></tr>
+    <tr><td>Special Beam Cannon</td><td>1</td><td></td><td>Begin charging a ranged attack. At the end of your turn, remaining AP becomes Charged instead of Banked. Spend 1 AP to make a ranged attack dealing damage equal to Charged AP + 1. If 3 AP was charged, the attack gains +5. Once fired, Charged AP is spent. Rolling Massive Damage while charging loses all Charged AP.</td></tr>
+  </tbody>
+</table>
+<h2>Failure and Aftermath</h2>
+<p>Massive Damage determines whether a character returns to the scene, loses moves, or is out of scene. Any outcome beyond temporary event defeat must be declared before rolling.</p>
+<h2>Clarifications Needed</h2>
+<ul>
+  <li>Several archetype trait rows are listed without detailed mechanical text, including some Healer and Engineer trait labels.</li>
+  <li>The Sorcerer's "And This Is the Well" row has no effect text in the source sheet.</li>
+</ul>
+<h2>Setup Template</h2>
+<pre><code>We are using RedMenace RP Combat. Choose one archetype and four moves. Stakes: [state outcome]. Massive Damage is active.</code></pre>

@@ -1,0 +1,298 @@
+<!--
+title: SWLOR Squadrons
+description: Squadron-scale starfighter dice system with specifications, weapons, systems, overdrives, and structure damage.
+published: true
+date: 2026-05-12T00:00:00.000Z
+tags: dice, squadrons, starfighter, space, d20
+editor: ckeditor
+dateCreated: 2026-05-12T00:00:00.000Z
+-->
+
+<nav style="border:1px solid #444;padding:10px;margin-bottom:1.5em;background:#1a1a1a;">
+  <p style="margin:0;"><a href="../../../Gameplay/Dice-Rolls">Dice Rolls</a></p>
+</nav>
+<h1>SWLOR Squadrons</h1>
+<p>A squadron-scale starfighter system for fast space combat, custom loadouts, systems, overdrives, and structure damage.</p>
+<h2>At a Glance</h2>
+<table>
+  <tbody>
+    <tr><th>Best For</th><td>Starfighter missions, squadron fights, ace duels, and special space events.</td></tr>
+    <tr><th>Players Needed</th><td>One or more pilots; supports multi-crew craft and NPC allies.</td></tr>
+    <tr><th>Dice Used</th><td>d20 for attacks and contests; weapon damage dice; d6 for structure damage and terrain risks; d2 for some debuffs or special effects.</td></tr>
+    <tr><th>Typical Stakes</th><td>Ship damage, structure damage, lost weapons/systems, retreat, mission success, or ship destruction.</td></tr>
+    <tr><th>Needs DM/QM</th><td>Yes.</td></tr>
+    <tr><th>Consent Required</th><td>Required for PvP, permanent ship loss, or lasting character consequences.</td></tr>
+  </tbody>
+</table>
+<h2>Character Creation</h2>
+<ol>
+  <li>Choose a specification. This determines ship stats and loadout slots.</li>
+  <li>Choose weapons, systems, and one overdrive.</li>
+  <li>Confirm any restricted, black-market, or mission-limited options with the DM/QM.</li>
+</ol>
+<h2>Round Structure</h2>
+<p>There is no initiative. Players and NPCs alternate turns, agreeing who acts until everyone has taken a turn. Every turn uses the same order.</p>
+<ol>
+  <li><strong>Protocols:</strong> Start-of-turn actions.</li>
+  <li><strong>Movement:</strong> Move your full Speed before taking actions other than protocols.</li>
+  <li><strong>Actions:</strong> You have 2 AP each turn. Systems or overdrives may grant extra AP, but you may spend a maximum of 4 AP per turn.</li>
+  <li><strong>Resolution:</strong> Resolve weapons or systems that trigger at the end of the turn without AP cost.</li>
+</ol>
+<h2>Terminology</h2>
+<table>
+  <thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+  <tbody>
+    <tr><td>Speed</td><td>The number of range bands you must move each turn. Speed is also added to Evasion.</td></tr>
+    <tr><td>Hull</td><td>Your ship's core durability. Hull damage can cause structure damage at 0.</td></tr>
+    <tr><td>Shield</td><td>First layer of defense. Damage removes shields before hull. Unless a weapon has Overkill, excess shield damage does not carry over to hull.</td></tr>
+    <tr><td>Armor</td><td>Second layer of defense. Hull damage is reduced by Armor.</td></tr>
+    <tr><td>Attack</td><td>The number added to the d20 roll to beat the target's Evasion. Usually determined by weapon.</td></tr>
+    <tr><td>Range</td><td>Distance from the opponent. Range bands are Engaged, Close, Medium, Long, and Distant.</td></tr>
+    <tr><td>Evasion</td><td>The target number to hit the ship.</td></tr>
+    <tr><td>Hull Debuffs</td><td>Status effects targeting the ship's hull. They are typically difficult to remove.</td></tr>
+    <tr><td>Computer Debuffs</td><td>Status effects targeting the ship's computer. They can usually be removed with a system or power cycle.</td></tr>
+    <tr><td>Deployment Zone</td><td>The mission area where your ship can begin.</td></tr>
+  </tbody>
+</table>
+<h2>How to Roll</h2>
+<pre><code>Attack: d20 + weapon Attack bonus vs target Evasion
+Damage: roll the weapon's damage die on a hit
+Structure Damage: d6 when Hull reaches 0</code></pre>
+<p>Attack results over 20 are critical hits. On a critical hit, roll the damage dice twice and take the higher result.</p>
+<h2>Core Actions</h2>
+<table>
+  <thead><tr><th>Action</th><th>AP</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td>Blast Them</td><td>Varies</td><td>Attack with a weapon.</td></tr>
+    <tr><td>Activate</td><td>Varies</td><td>Activate a system.</td></tr>
+    <tr><td>Punch It</td><td>1</td><td>Increase or decrease Speed by 1. This can be done while moving.</td></tr>
+    <tr><td>Gain the Advantage</td><td>1</td><td>Use piloting skill to improve position. Gain +2 to your next attack roll.</td></tr>
+    <tr><td>Dodge</td><td>1</td><td>Gain +2 Evasion until your next turn.</td></tr>
+    <tr><td>Brace for Impact</td><td>1</td><td>Increase Armor by 2 until the end of the current turn.</td></tr>
+    <tr><td>Restore Shields</td><td>2</td><td>Spend your turn regenerating 3 Shield.</td></tr>
+    <tr><td>Ramming Speed</td><td>1</td><td>Deal damage to yourself and an enemy in Engaged range equal to your Speed. Ramming has Overkill.</td></tr>
+    <tr><td>Power Down / Power Up</td><td>2</td><td>Powering down removes all Computer Debuffs, lowers Speed by 1 immediately and 3 on each later turn, and prevents all actions except Power Up.</td></tr>
+    <tr><td>Overdrive</td><td>Varies</td><td>Use your chosen overdrive.</td></tr>
+    <tr><td>Try Spinning</td><td>1</td><td>During movement, move without movement restriction.</td></tr>
+    <tr><td>Do Something Unusual</td><td>DM/QM set</td><td>Pitch an action not covered by the rules. The DM/QM sets cost and whether it is possible.</td></tr>
+    <tr><td>Scanning</td><td>2</td><td>Use scanners to lower enemy Evasion by 1 permanently. May reveal mission information.</td></tr>
+    <tr><td>Retreat</td><td>Varies</td><td>Retreat if at least Long range from all opponents or if on your deployment zone.</td></tr>
+  </tbody>
+</table>
+<p>Actions marked as reactions can be used outside your turn. Pay their AP from remaining AP or subtract it from your AP next turn.</p>
+<h2>Movement Restriction</h2>
+<p>At the start of your turn, move your full Speed between range bands. You cannot move back and forth between a square you previously occupied unless you use Try Spinning.</p>
+<h2>Structure Damage</h2>
+<p>When Hull reaches 0, roll d6. For each previous Structure Damage roll in the same engagement, roll one extra d6 and take the lowest die.</p>
+<table>
+  <thead><tr><th>Roll</th><th>Result</th></tr></thead>
+  <tbody>
+    <tr><td>6</td><td>Hold True: return to full Hull.</td></tr>
+    <tr><td>5</td><td>Close Call: restore 75% of Hull.</td></tr>
+    <tr><td>4</td><td>Armor Failure: lose 1 Armor and restore 75% of Hull.</td></tr>
+    <tr><td>3</td><td>System Destroyed: choose a system and lose it. Restore 50% of Hull.</td></tr>
+    <tr><td>2</td><td>Weapon Destroyed: choose a weapon and lose it. Restore 50% of Hull.</td></tr>
+    <tr><td>1</td><td>Catastrophic Failure: the ship is destroyed.</td></tr>
+  </tbody>
+</table>
+<h2>Masteries</h2>
+<p>Mastery bonuses are less central than ship loadout. Mastery benefits gain extra uses at ranks 3 and 5.</p>
+<table>
+  <thead><tr><th>Mastery</th><th>Benefit</th></tr></thead>
+  <tbody>
+    <tr><td>Piloting</td><td>Reroll any die roll involving your ship, whether targeting others or being targeted.</td></tr>
+    <tr><td>Slicing</td><td>Reroll any die roll involving Computer Debuffs, whether applying them or resisting them.</td></tr>
+    <tr><td>Gunnery</td><td>Add +1 to attack rolls.</td></tr>
+  </tbody>
+</table>
+<h2>Specifications</h2>
+<table>
+  <thead><tr><th>Specification</th><th>Speed</th><th>Hull</th><th>Armor</th><th>Shields</th><th>Evasion</th><th>Weapon Slots</th><th>System Slots</th><th>Rules</th></tr></thead>
+  <tbody>
+    <tr><td>Starfighter</td><td>4</td><td>6</td><td>1</td><td>6</td><td>12</td><td>2</td><td>2</td><td>Standard all-rounder, such as X-Wings, Aureks, and Liberators.</td></tr>
+    <tr><td>Bomber</td><td>3</td><td>10</td><td>3</td><td>4</td><td>10</td><td>3</td><td>1</td><td>Heavy, slow, weapon-focused craft such as Y-Wings, TIE/sas, and Hyenas.</td></tr>
+    <tr><td>Interceptor</td><td>6</td><td>3</td><td>0</td><td>6</td><td>14</td><td>1</td><td>3</td><td>Fast but fragile, with more systems than weapon space.</td></tr>
+    <tr><td>Double Seater</td><td>4</td><td>6</td><td>1</td><td>6</td><td>12</td><td>3</td><td>3</td><td>Choose another player as WISO. Divide weapon and system slots between pilot and WISO. The WISO has no movement phase and can use only assigned slots. Both players choose an overdrive, usable only on their turn unless the overdrive says otherwise.</td></tr>
+    <tr><td>Aphelion</td><td>Classified</td><td>Classified</td><td>Classified</td><td>Classified</td><td>Classified</td><td>Classified</td><td>Classified</td><td>Restricted. Full stats are not public in the source.</td></tr>
+    <tr><td>Basilisk</td><td>5</td><td>5</td><td>1</td><td>6</td><td>13</td><td>2</td><td>2</td><td>Open Space: when taking Hull damage, roll d6; on 1, the pilot is thrown off and the Basilisk becomes an NPC until the pilot returns with Do Something Unusual. Droid Control: in Engaged range, the pilot may let the Basilisk fire at the closest target as an NPC while the pilot attacks with small arms. Small Arms: Attack 2, AP 1, damage not specified.</td></tr>
+    <tr><td>SWACS</td><td>3</td><td>8</td><td>2</td><td>6</td><td>10</td><td>0.5</td><td>5</td><td>Restricted. Weapon slot can only select Gun Pod. Battle Management: Scanning costs 1 AP instead of 2.</td></tr>
+  </tbody>
+</table>
+<h2>Weapon Tags</h2>
+<table>
+  <thead><tr><th>Tag</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td>Overkill</td><td>Excess damage to Shields is dealt to Hull.</td></tr>
+    <tr><td>Doublefire</td><td>Attacks twice on a single activation.</td></tr>
+    <tr><td>Explosive</td><td>Half damage is dealt to ships in Engaged range of the target.</td></tr>
+    <tr><td>Ion</td><td>Deals double damage to Shield and half damage to Hull. When it hits Hull, a random system is disabled as a Computer Debuff for one round.</td></tr>
+    <tr><td>Suppressive</td><td>Targeted ship takes -2 Evasion, even on a miss.</td></tr>
+    <tr><td>Auto</td><td>Weapon activates during the Resolution phase.</td></tr>
+    <tr><td>Selfdamage</td><td>Damage is dealt to self on use equal to the specified number; if no number is specified, take the full damage roll.</td></tr>
+    <tr><td>Long Range</td><td>Attack roll takes -4 for every range band within effective range.</td></tr>
+    <tr><td>Ravage</td><td>Deals 2d6 extra damage on a critical hit. This extra damage is not rerolled.</td></tr>
+    <tr><td>Reactive</td><td>Automatically fires at missiles or enemy ships entering range. Missiles have Evasion 10.</td></tr>
+    <tr><td>Esoteric</td><td>Ignores Shield.</td></tr>
+    <tr><td>ATG</td><td>Air-to-ground. Can only target ground units or buildings.</td></tr>
+  </tbody>
+</table>
+<h2>Weapons</h2>
+<table>
+  <thead><tr><th>Weapon</th><th>Attack</th><th>AP</th><th>Range</th><th>Damage</th><th>Tags</th></tr></thead>
+  <tbody>
+    <tr><td>Laser Cannon</td><td>4</td><td>1</td><td>Medium</td><td>1d8</td><td></td></tr>
+    <tr><td>Repeating Laser Cannon</td><td>2</td><td>1</td><td>Medium</td><td>1d8</td><td>Doublefire</td></tr>
+    <tr><td>Proton Missiles</td><td>3</td><td>1</td><td>Medium</td><td>2d8</td><td>Explosive, Limited 3</td></tr>
+    <tr><td>Ion Cannon</td><td>2</td><td>1</td><td>Medium</td><td>1d6</td><td>Ion</td></tr>
+    <tr><td>Rotary Cannon</td><td>2</td><td>1</td><td>Medium</td><td>1d8</td><td>Suppressive</td></tr>
+    <tr><td>Auto Gun</td><td>0</td><td>0</td><td>Medium</td><td>1d6</td><td>Auto</td></tr>
+    <tr><td>Ramming Spike</td><td>N/A</td><td>1</td><td>Engaged</td><td>Speed x 2</td><td>Overkill, Selfdamage</td></tr>
+    <tr><td>Heavy Cannon</td><td>6</td><td>2</td><td>Long</td><td>2d10</td><td>Long Range</td></tr>
+    <tr><td>Bolt Lance</td><td>6</td><td>1</td><td>Medium</td><td>1d3</td><td>Overkill, Ravage</td></tr>
+    <tr><td>Point Defense Cannon</td><td>4</td><td>0</td><td>Close</td><td>1d6</td><td>Reactive</td></tr>
+    <tr><td>Scatter Cannon</td><td>6</td><td>1</td><td>Close</td><td>1d8</td><td></td></tr>
+    <tr><td>Enhanced Proton Missiles</td><td>3</td><td>1</td><td>Medium</td><td>2d8</td><td>Explosive, Limited 1, Esoteric; Restricted</td></tr>
+    <tr><td>Surface Bombs</td><td>10</td><td>1</td><td>Short</td><td>2d8</td><td>ATG</td></tr>
+    <tr><td>Gun Pod</td><td>0</td><td>1</td><td>Short</td><td>1d6</td><td></td></tr>
+    <tr><td>Charge Cannon</td><td>3</td><td>Variable</td><td>Medium</td><td>1d6 base</td><td>2 AP: +5 attack and 1d10 damage. 3 AP: +8 attack and 2d10 damage. 4 AP: +10 attack and 4d10 damage.</td></tr>
+  </tbody>
+</table>
+<h2>Systems</h2>
+<table>
+  <thead><tr><th>System</th><th>Phase</th><th>AP</th><th>Uses</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td>Shield Maximizer</td><td>Action</td><td>1</td><td>2</td><td>Instantly charge Shields to maximum.</td></tr>
+    <tr><td>Afterburner</td><td>Unlisted</td><td>1</td><td>2</td><td>Instantly set Speed to maximum.</td></tr>
+    <tr><td>Targeting Computer</td><td>Unlisted</td><td>2</td><td>1</td><td>For the next 3 turns, automatically gain +2 to attack rolls.</td></tr>
+    <tr><td>Shield Charger</td><td>Unlisted</td><td>2</td><td>1</td><td>For the next 3 turns, automatically recharge 2 Shield.</td></tr>
+    <tr><td>Chaff Systems</td><td>Unlisted</td><td>0</td><td>3</td><td>In response to being targeted with an attack, apply -4 to the attack roll. Can be used after the roll.</td></tr>
+    <tr><td>Booster Engine</td><td>Unlisted</td><td>1</td><td>3</td><td>Take another movement phase.</td></tr>
+    <tr><td>System Jammer</td><td>Unlisted</td><td>1</td><td>3</td><td>Apply Jammed to an opponent.</td></tr>
+    <tr><td>McAfee Pro</td><td>Unlisted</td><td>1</td><td>2</td><td>Remove Jammed, Scrambled, and Virus from yourself or a squadron member.</td></tr>
+    <tr><td>Thruster Suppresser</td><td>Unlisted</td><td>1</td><td>3</td><td>Lower opponent Speed cap by 1 and Evasion by 3.</td></tr>
+    <tr><td>Iwannacry</td><td>Unlisted</td><td>1</td><td>3</td><td>Apply Virus to an opponent.</td></tr>
+    <tr><td>Accelerator</td><td>Unlisted</td><td>2</td><td>1</td><td>For the next 3 turns, you have 3 AP instead of 2.</td></tr>
+    <tr><td>Mine Spreader</td><td>Unlisted</td><td>2</td><td>3</td><td>Turn your current square into Dangerous Terrain: Mine Field.</td></tr>
+    <tr><td>Command and Control</td><td>Unlisted</td><td>Unlisted</td><td>3</td><td>SWACS only. Nominate a target and another player. That player may immediately attack with a weapon of their choice using your AP.</td></tr>
+    <tr><td>Target Painter</td><td>Unlisted</td><td>1</td><td>3</td><td>SWACS only. Until the end of your next turn, all attacks against the target enemy gain +2.</td></tr>
+    <tr><td>Repair Droid</td><td>Unlisted</td><td>2</td><td>3</td><td>Restore 3 Hull and remove all Hull Debuffs from an allied ship.</td></tr>
+  </tbody>
+</table>
+<h2>Debuffs</h2>
+<table>
+  <thead><tr><th>Debuff</th><th>Type</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td>Jammed</td><td>Computer</td><td>All rolls take -2.</td></tr>
+    <tr><td>Virus</td><td>Computer</td><td>Before making any system action, roll d2. On 2 the action continues; on 1 the action fails and the system use is spent.</td></tr>
+    <tr><td>Scrambled</td><td>Computer</td><td>Attack rolls take -5.</td></tr>
+    <tr><td>Shredded</td><td>Hull</td><td>Armor decreases by 1 and stacks. If Shredded stacks exceed Armor by at least 1, attacks deal double Hull damage.</td></tr>
+    <tr><td>Stalling</td><td>Hull</td><td>Speed cap decreases by 1 and stacks, but cannot reduce Speed cap by more than half. If Stalling stacks exceed half Speed cap by at least 1, the ship can no longer Dodge.</td></tr>
+    <tr><td>Spinning Out</td><td>Hull</td><td>AP is reduced by 1 and stacks.</td></tr>
+  </tbody>
+</table>
+<h2>Overdrives</h2>
+<p>Each character may choose one overdrive. Each overdrive requires 50 points in the listed SWLOR skill. Unless stated otherwise, an overdrive can be used once.</p>
+<table>
+  <thead><tr><th>Overdrive</th><th>Requirement</th><th>AP</th><th>Phase</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td>Dueling Etiquette</td><td>One Handed</td><td>0</td><td>Protocol</td><td>For the next 3 rounds, attacks in Engaged range gain +5. Attacks against you from outside Engaged range take -5 if you ended your turn in Engaged range of an enemy.</td></tr>
+    <tr><td>Hulk Smash</td><td>Two Handed</td><td>0</td><td>Protocol</td><td>Your next Ramming Speed action deals no self damage.</td></tr>
+    <tr><td>Tatsumaki</td><td>Martial Arts</td><td>0</td><td>Protocol</td><td>For the next 3 rounds, move without movement restriction and ignore most dangerous terrain. For one round, when you fly into an enemy's space, make an attack roll; on hit, apply Spinning Out until Tatsumaki ends.</td></tr>
+    <tr><td>Focused Shot</td><td>Ranged</td><td>0</td><td>Protocol</td><td>Your next attack roll outside Engaged range automatically hits. You may roll to check for a critical hit.</td></tr>
+    <tr><td>Use the Force</td><td>Force</td><td>0</td><td>Protocol</td><td>For this turn only, all rolls gain +5.</td></tr>
+    <tr><td>Overdrive System</td><td>Devices</td><td>0</td><td>Protocol</td><td>For this turn only, all rolls gain +5.</td></tr>
+    <tr><td>Solid Metal</td><td>Armor</td><td>0</td><td>Reaction</td><td>When hit, subtract damage as if you had 5 Armor. Has 3 uses.</td></tr>
+    <tr><td>Ghost of Viscara</td><td>Piloting</td><td>1</td><td>Protocol</td><td>Instantly set Speed to maximum, recharge Shield to maximum, and gain +3 on the next attack roll.</td></tr>
+    <tr><td>Command</td><td>Leadership</td><td>1</td><td>Action</td><td>For the next 3 turns, other squadron members gain +3 to all d20 rolls.</td></tr>
+    <tr><td>Adrenal Booster</td><td>First Aid</td><td>0</td><td>Protocol</td><td>For this turn only, gain 1 extra AP.</td></tr>
+    <tr><td>Snap Repairs</td><td>Smithery</td><td>1</td><td>Action</td><td>Instantly remove all Hull Debuffs.</td></tr>
+    <tr><td>Quick Reboot</td><td>Engineering</td><td>1</td><td>Action</td><td>Perform Power Down and Power Up in one action. Has 3 uses.</td></tr>
+    <tr><td>Instant Install</td><td>Fabrication</td><td>2</td><td>Action</td><td>Use any system, even one not in your current loadout. Multi-use systems have a single use.</td></tr>
+    <tr><td>Wild Sushi</td><td>Agriculture</td><td>1</td><td>Action</td><td>Gain +2 Willpower and +3 Evasion for 3 turns.</td></tr>
+    <tr><td>Scavenged Enhancement</td><td>Gathering</td><td>2</td><td>Action</td><td>Roll d6. For the next 4 turns, all your weapons gain the rolled tag: 1 Overkill, 2 Auto, 3 Doublefire, 4 Suppressive, 5 Ravage, 6 Reactive.</td></tr>
+    <tr><td>Frightening Roar</td><td>Beast Mastery</td><td>1</td><td>Action</td><td>Opponents take -3 to their rolls for 3 turns.</td></tr>
+  </tbody>
+</table>
+<h2>Special Mission Rules</h2>
+<ul>
+  <li><strong>Jousting:</strong> When facing an Ace, you may Joust. Joust is taken during Movement, costs 1 AP, and triggers when you enter Engaged range with an enemy Ace. Both sides make contested d20 rolls and add current Speed. The winner deals 2d8 damage, then continues movement.</li>
+  <li><strong>Scanning:</strong> Some missions require short-range scanners. Scanning costs 2 AP unless modified.</li>
+  <li><strong>Dangerous Terrain:</strong> If entering dangerous terrain, either lower Speed by 2 to navigate safely or risk it. If you risk it immediately, and at the start of each turn you remain there, roll d6. On 1, take the terrain penalty.</li>
+  <li><strong>Asteroid Field:</strong> Dangerous terrain. On failure, take 2d6 Overkill damage.</li>
+  <li><strong>Static Minefield:</strong> Dangerous terrain. On failure, take 1d8 damage.</li>
+  <li><strong>Moving Battle:</strong> Some missions center on a moving object. At the start of each round, the object moves, but remains the center square. Players may immediately move with it by spending movement on their turn or be moved away from it.</li>
+  <li><strong>Aces:</strong> Aces receive two extra stat points allocated among Hull, Armor, Shields, Speed, Evasion, Attack, Weapon Slots, and System Slots. When destroyed, an Ace rolls Structure Damage instead of leaving the fight immediately.</li>
+  <li><strong>Reinforcements:</strong> Reinforcements appear in their side's deployment zone.</li>
+  <li><strong>Restricted Equipment:</strong> Unless specified, only one restricted loadout option may be deployed across the whole flight team.</li>
+  <li><strong>Buff Stacking:</strong> Buffs do not stack unless they last for only one round.</li>
+  <li><strong>Combined Arms:</strong> Ground units act together at the end of the round. Ground units cannot target aerial units unless they have anti-air weapons. Aerial weapons have one less range band when targeting ground units, except bomber specification ships.</li>
+  <li><strong>Allies:</strong> NPC allies join the player turn order and may act before players if the players choose.</li>
+</ul>
+<h2>Capital Ships</h2>
+<p>Capital ships are made of three components: bridge, engines, and guns. Each component has its own Hull, but all three share the same Shield.</p>
+<table>
+  <thead><tr><th>Component</th><th>Destroyed Effect</th></tr></thead>
+  <tbody>
+    <tr><td>Bridge</td><td>The ship cannot use systems.</td></tr>
+    <tr><td>Guns</td><td>The ship cannot use weapons except autoguns.</td></tr>
+    <tr><td>Engines</td><td>The ship cannot move and Evasion is reduced by 3.</td></tr>
+  </tbody>
+</table>
+<h2>Known NPC Intel</h2>
+<table>
+  <thead><tr><th>NPC / Threat</th><th>Known Rules</th></tr></thead>
+  <tbody>
+    <tr><td>Swarm Interceptors</td><td>Interceptor with Swarm Tactics and Laser Cannon. Three may take their turn at the same time if they remain Engaged with each other.</td></tr>
+    <tr><td>Gunship</td><td>Bomber with Rotary Cannon.</td></tr>
+    <tr><td>Sith Fighter</td><td>Starfighter with Laser Cannon and Proton Missile.</td></tr>
+    <tr><td>Denial Interceptor</td><td>Interceptor with Direct Control and Scatter Cannon. If you enter Engaged range with movement remaining, it decides your next square and follows you.</td></tr>
+    <tr><td>Intensity Fighter</td><td>Starfighter with Intense Fire and Repeating Laser Cannons. Each miss adds 1 Intensity Counter, max 6. A hit resets the counter and deals the removed amount as damage. At 6 counters, attacks gain Overkill and +6 until a hit.</td></tr>
+    <tr><td>Ion Bomber</td><td>Bomber with Retaliation, Ion Pulse System, and Scatter Cannon.</td></tr>
+    <tr><td>Sniper Fighter</td><td>Starfighter with Perfect Kill, Speed Stabilizer, Targeting Computer, and Heavy Cannon. Hits under Targeting Computer have Overkill.</td></tr>
+    <tr><td>Typhaeon</td><td>When the bridge is struck by an Ion weapon, roll d2; on 1, Ion Storm is paused. When two modules are destroyed, roll d6. Result 6 restores Shields and one module, then another module next round. Result 4 restores Shields or one module, or takes the result 3 option. Results 5, 3, 2, and 1 are not defined. The Typhaeon may reroll this result once.</td></tr>
+    <tr><td>Kraata 1-4</td><td>Specification and trait are not publicly defined in the source.</td></tr>
+  </tbody>
+</table>
+<h2>Black Market Options</h2>
+<p>Black-market options are experimental or temporary and require a credit payment. Confirm availability with the DM/QM before selecting them.</p>
+<h3>Black Market Weapons</h3>
+<table>
+  <thead><tr><th>Weapon</th><th>Attack</th><th>AP</th><th>Range</th><th>Damage</th><th>Tags</th><th>Cost</th><th>Rules</th></tr></thead>
+  <tbody>
+    <tr><td>Ion Pulse System</td><td>Automatic</td><td>2</td><td>Close Burst</td><td>1d8</td><td>Ion</td><td>10000</td><td>Overcharged Ion burst around your ship; can hit friendlies.</td></tr>
+    <tr><td>Latch Clamp</td><td>6</td><td>1</td><td>Medium</td><td>1d6</td><td></td><td>10000</td><td>Clamps are permanent until shot off by an ally. Clamps have Evasion 10. If a pilot misses, roll an attack against the target ship's Evasion.</td></tr>
+    <tr><td>Miniaturized Darksheer Proton Beam Cannon</td><td>Automatic</td><td>2</td><td>Distant</td><td>Special</td><td>Limited 2</td><td>50000</td><td>Every target between you and the aimed target rolls d6: 6 no damage; 5 take 1d10; 4-3 take 1d10 Overkill; 2 take 2d10 Overkill; 1 drop to 0.</td></tr>
+  </tbody>
+</table>
+<h3>Latch Clamp Options</h3>
+<table>
+  <thead><tr><th>Clamp</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td>Shock Clamp</td><td>Spend 1 AP to activate, dealing 1d6 damage for each Shock Clamp applied.</td></tr>
+    <tr><td>Slowdown Clamp</td><td>Each clamp applies Stalling.</td></tr>
+    <tr><td>Crunch Clamp</td><td>Each clamp applies Shredded.</td></tr>
+    <tr><td>Winch Clamp</td><td>Immediately pull the target ship two spaces toward the interceptor. Does not remain permanently.</td></tr>
+    <tr><td>Buzz Clamp</td><td>Each clamp deals 1 Hull damage at the start of the pilot's turn.</td></tr>
+  </tbody>
+</table>
+<h3>Black Market Systems</h3>
+<table>
+  <thead><tr><th>System</th><th>Phase</th><th>AP</th><th>Uses</th><th>Cost</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td>Spiteful Droid</td><td>Reaction</td><td>0</td><td>0</td><td>10000</td><td>Nominate one weapon. When targeted by an attack, this system automatically attacks the attacker for free with no attack bonus.</td></tr>
+    <tr><td>Ram Shield</td><td>Reaction</td><td>0</td><td>3</td><td>20000</td><td>When ramming, become immune to self-damage.</td></tr>
+    <tr><td>Rakhini</td><td>Action</td><td>1</td><td>3</td><td>10000</td><td>Target is afflicted with Jammed and Virus. While afflicted, any ship entering Close range is also afflicted with Jammed and Virus.</td></tr>
+  </tbody>
+</table>
+<h2>Failure and Aftermath</h2>
+<p>At 0 Hull, use Structure Damage. Catastrophic Failure destroys the ship unless the DM/QM declared a variant. Permanent asset loss or character consequences must be declared before the mission starts.</p>
+<h2>Clarifications Needed</h2>
+<ul>
+  <li>Several phases in the system table are blank in the source sheet. Treat them as requiring DM/QM confirmation before play.</li>
+  <li>Aphelion and Kraata entries are incomplete or classified.</li>
+  <li>Basilisk Small Arms has no damage value listed.</li>
+  <li>Some Typhaeon d6 results are undefined.</li>
+  <li>The black-market Spiteful Droid lists 0 uses; confirm whether this means passive/unlimited or unavailable before play.</li>
+</ul>
+<h2>Setup Template</h2>
+<pre><code>We are using SWLOR Squadrons. Choose specification, weapons, systems, and one overdrive. Stakes: [state outcome]. Restricted and black-market options require DM/QM approval.</code></pre>

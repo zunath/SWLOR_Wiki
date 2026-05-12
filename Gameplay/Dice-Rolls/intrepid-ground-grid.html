@@ -1,0 +1,90 @@
+<!--
+title: Intrepid Ground Grid
+description: Intrepid grid-based ground combat for infantry, vehicles, walkers, masteries, and special actions.
+published: true
+date: 2026-05-12T00:00:00.000Z
+tags: dice, ground, grid, intrepid, combat
+editor: ckeditor
+dateCreated: 2026-05-12T00:00:00.000Z
+-->
+
+<nav style="border:1px solid #444;padding:10px;margin-bottom:1.5em;background:#1a1a1a;">
+  <p style="margin:0;"><a href="../../../Gameplay/Dice-Rolls">Dice Rolls</a></p>
+</nav>
+<h1>Intrepid Ground Grid</h1>
+<p>A grid-based ground combat system for infantry, vehicles, walkers, solo deployments, and special actions. It uses d20 attacks against DCs and mastery-based bonuses.</p>
+<h2>At a Glance</h2>
+<table>
+  <tbody>
+    <tr><th>Best For</th><td>Large ground battles, faction deployments, vehicle actions, and mixed infantry scenes.</td></tr>
+    <tr><th>Players Needed</th><td>Event groups.</td></tr>
+    <tr><th>Dice Used</th><td>d20.</td></tr>
+    <tr><th>Typical Stakes</th><td>Unit defeat, forced retreat, objective progress, and event success or failure.</td></tr>
+    <tr><th>Needs DM/QM</th><td>Yes.</td></tr>
+    <tr><th>Consent Required</th><td>Required for PvP or lasting PC consequences.</td></tr>
+  </tbody>
+</table>
+<h2>Core Rules</h2>
+<ul>
+  <li>HP represents a unit's ability to move and fight as a coordinated unit. It may represent injuries, morale, stamina, equipment loss, or casualties.</li>
+  <li>A unit at 0 HP is incapable of fighting for the rest of the event unless the DM/QM says otherwise.</li>
+  <li>Base attacks are <strong>1d20 + applicable modifiers vs DC 8</strong> unless modified. Meeting the DC hits.</li>
+  <li>Diagonals count as <strong>1.5 squares, rounded down</strong>. One diagonal is range 1; two diagonals are range 3.</li>
+  <li>A single attack cannot destroy a full-health PC-led unit. A second hit may.</li>
+  <li>Subcapital ships use the current Intrepid Space Grid rules.</li>
+</ul>
+<h2>How to Roll</h2>
+<pre><code>Attack: d20 + applicable modifier vs DC 8
+Special Action: d20 + full relevant mastery ranks vs declared DC</code></pre>
+<h2>Infantry</h2>
+<table>
+  <thead><tr><th>Unit</th><th>Movement</th><th>HP</th><th>Attack</th><th>Rules</th></tr></thead>
+  <tbody>
+    <tr><td>Infantry</td><td>0-2 squares</td><td>4</td><td>Range 0-1; may target own square.</td><td>Unlimited turning. Max movement 2 regardless of mastery. One designated combat mastery may count instead of Piloting for infantry only. Smithery or Leadership may count instead of Engineering for infantry only. Piloting and Engineering masteries have no effect for infantry. Infantry block hostile ground movement through their grid. Opposing units in the same grid may attack or retreat.</td></tr>
+    <tr><td>Heavy Weapons Infantry</td><td>0-2 squares</td><td>4</td><td>Base 1 attack range 0. May make 2 attacks range 1-2 if no hostile infantry are in the same grid, or 2 attacks when counter-boarding.</td><td>Cannot attack if moving by foot in the same turn. Makes only 1 attack if boarding. Otherwise uses infantry rules.</td></tr>
+    <tr><td>Ejected Pilot / Driver / Solo Deployment</td><td>0-2 squares</td><td>1</td><td>Range 0-1; may target own square.</td><td>Uses infantry mastery rules. If defeated, the character is out of action for one full turn or forced to retreat a DM/QM-set distance.</td></tr>
+  </tbody>
+</table>
+<p>For infantry, the 4 HP includes the PC's personal HP. If the last HP is lost, the PC is out of action for one full turn or forced to retreat a DM/QM-set distance.</p>
+<h2>Ground Vehicles</h2>
+<table>
+  <thead><tr><th>Vehicle</th><th>Movement</th><th>HP</th><th>Attack</th><th>Rules</th></tr></thead>
+  <tbody>
+    <tr><td>Groundspeeder</td><td>0-3</td><td>1</td><td>Range 0-1</td><td>Unlimited turning.</td></tr>
+    <tr><td>Walker</td><td>0-2</td><td>2</td><td>Range 0-2</td><td>Unlimited turning.</td></tr>
+    <tr><td>Tank</td><td>0-2</td><td>3</td><td>Range 0-2</td><td>Unlimited turning.</td></tr>
+    <tr><td>Armored APC</td><td>0-2</td><td>3</td><td>Range 0-2</td><td>Can carry one infantry unit.</td></tr>
+    <tr><td>Heavy Tank</td><td>0-2</td><td>4</td><td>Range 1-2</td><td>Cannot attack own square.</td></tr>
+    <tr><td>Heavy Walker</td><td>0-1</td><td>4</td><td>Range 1-3, two attacks</td><td>Cannot attack own square. Can carry one infantry unit. Can move through infantry but provokes a counterattack from any unengaged hostile infantry unit. More vulnerable to speeder attacks from its own grid.</td></tr>
+    <tr><td>Artillery Walker</td><td>0-2</td><td>3</td><td>Range 1-unlimited</td><td>May attack any grid within 4 or fewer movement from a friendly unit that is not in melee. Indirect Fire and AOE: one attack against all ground units, friendly and hostile, in the target grid. Cannot target air units smaller than frigates or its own grid.</td></tr>
+    <tr><td>Speeder Bike Unit</td><td>0-3</td><td>2; 1 if solo</td><td>Range 0-1</td><td>Hybrid unit. Counts as infantry or vehicle. Piloting mastery can add bonus movement. Combat or Piloting mastery can add attack. Leadership or Smithery mastery can add defense.</td></tr>
+  </tbody>
+</table>
+<h2>Masteries</h2>
+<table>
+  <thead><tr><th>Mastery</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td>Piloting</td><td>For subcapital units, may increase turn rate to 180 degrees in one moved-into square once per turn at Mastery 1. Add half ranks, rounded up, to max movement, attack, and defense. Max movement bonus is +2. Does not apply to corvettes or capital ships.</td></tr>
+    <tr><td>Leadership</td><td>May substitute for Piloting in capital ships only. Add half ranks, rounded up, to max movement, attack, and defense. Max movement bonus is +2. Corvettes may make one 90-degree turn in a moved-into square once per turn at Mastery 1. No 180-degree flips.</td></tr>
+    <tr><td>Engineering</td><td>Add half ranks, rounded up, to defense.</td></tr>
+  </tbody>
+</table>
+<p>If a single PC has multiple applicable masteries, use the best applicable mastery for movement, attack, and defense. They do not stack.</p>
+<h2>Examples</h2>
+<ul>
+  <li>A pilot with Piloting 2 and Engineering 4 in a fighter can move minimum 2 and maximum 5, hits a plain enemy on a d20 roll of 7 or higher, and is hit by a plain enemy on a roll of 10 or higher.</li>
+  <li>An infantry PC with Dueling Mastery IV has +2 attack and +2 defense as infantry. They need a 6 to hit an ordinary opponent, and an ordinary opponent needs a 10 to hit them.</li>
+</ul>
+<h2>Special Actions</h2>
+<p>Force powers, devices, and DM-issued gear may be used in place of an attack to attempt buffs, debuffs, area control, healing, repair, or similar effects. The DM/QM determines whether an action is possible and what it does. Masteries are not always required, but may be required for specific actions.</p>
+<ul>
+  <li><strong>Battle Meditation:</strong> Requires at least one relevant mastery. Roll d20 + full mastery ranks against DC 10. On success, allies gain +1 attack from the PC's grid. Roll once. The effect lasts until the end of the event, until countered, or until the PC leaves the ship or is defeated. The PC may take other actions on later rounds.</li>
+  <li><strong>Heal:</strong> Infantry targeting infantry only. Roll d20 + full First Aid or Healing mastery ranks. Auto-success heals 1 HP. DC 10 heals 2 HP. May heal only to two-thirds max HP, rounded down. Same grid only.</li>
+  <li><strong>Repair:</strong> Roll with full Engineering, Devices, or Fabrication mastery ranks. Captains may repair normally; passengers may attempt repairs with lesser bonuses. Repairs cannot exceed two-thirds of base HP, rounded down. Auto-success repairs 1 HP. DC 10 repairs one-eighth base HP, rounded up. DC 15 repairs one-quarter base HP, rounded up. Works for ground and space vehicles.</li>
+</ul>
+<h2>Failure and Aftermath</h2>
+<p>At 0 HP, a unit is out for the rest of the event unless the DM/QM declares a different consequence. PC personal consequences must be declared before rolling if they extend beyond temporary scene defeat.</p>
+<h2>DM/QM Guidance</h2>
+<p>Hostile units and player factions may have special rules or special units, whether known in advance or revealed during play. The artillery walker rules were noted as subject to possible future nerfs; use the listed values unless the DM/QM declares an event variant before play starts.</p>
+<h2>Setup Template</h2>
+<pre><code>We are using Intrepid Ground Grid. Declare unit type, applicable masteries, HP, objectives, and consequences before round one.</code></pre>

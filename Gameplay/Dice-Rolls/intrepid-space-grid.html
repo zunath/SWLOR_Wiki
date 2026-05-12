@@ -1,0 +1,144 @@
+<!--
+title: Intrepid Space Grid
+description: Intrepid grid-based space combat for fighters, corvettes, capital ships, boarding, and ship loss.
+published: true
+date: 2026-05-12T00:00:00.000Z
+tags: dice, space, grid, intrepid, combat
+editor: ckeditor
+dateCreated: 2026-05-12T00:00:00.000Z
+-->
+
+<nav style="border:1px solid #444;padding:10px;margin-bottom:1.5em;background:#1a1a1a;">
+  <p style="margin:0;"><a href="../../../Gameplay/Dice-Rolls">Dice Rolls</a></p>
+</nav>
+<h1>Intrepid Space Grid</h1>
+<p>A grid-based aerospace and capital-ship combat system. Facing matters, movement is measured in squares, and attacks are usually d20 rolls against a DC.</p>
+<h2>At a Glance</h2>
+<table>
+  <tbody>
+    <tr><th>Best For</th><td>Large space battles, faction ships, aerospace missions, and boarding events.</td></tr>
+    <tr><th>Players Needed</th><td>Event groups; supports pilots, gunners, engineers, and boarding parties.</td></tr>
+    <tr><th>Dice Used</th><td>d20 for attacks and special actions; percentage rolls for some ship-loss outcomes.</td></tr>
+    <tr><th>Typical Stakes</th><td>Ship loss, missed turns, boarding outcomes, faction asset damage, event success or failure.</td></tr>
+    <tr><th>Needs DM/QM</th><td>Yes.</td></tr>
+    <tr><th>Consent Required</th><td>Required for PvP, permanent PC consequences, or special loss conditions.</td></tr>
+  </tbody>
+</table>
+<h2>Core Rules</h2>
+<ul>
+  <li><strong>HP</strong> represents a ship's ability to function. Usually the top half is shields and the bottom half is hull or systems.</li>
+  <li>At 0 HP, a ship is out of the fight. Destruction or salvage is determined by the DM/QM and the ship-loss rules.</li>
+  <li>Base attacks are <strong>1d20 + modifiers vs DC 8</strong> unless modified. Meeting or exceeding the DC hits.</li>
+  <li>Damage is <strong>1 HP</strong> unless a weapon or unit rule says otherwise.</li>
+  <li>A single attack cannot destroy a full-health PC unit unless an exception is declared, such as a boss unit.</li>
+  <li>Diagonals count as <strong>1.5 squares, rounded down</strong>. One diagonal is range 1; two diagonals are range 3.</li>
+  <li>Moving less than the required base movement counts as stopping or crash-stopping and gives <strong>-4 Defense</strong> until the start of your next turn.</li>
+  <li>The maximum movement from all sources is <strong>7</strong>.</li>
+</ul>
+<h2>How to Roll</h2>
+<pre><code>Attack: d20 + applicable modifier vs DC 8
+Special Action: d20 + full relevant mastery ranks vs declared DC</code></pre>
+<h2>Subcapital Ships</h2>
+<ul>
+  <li>Subcapital ships are smaller than corvettes.</li>
+  <li>Base movement is <strong>2-4 squares</strong>.</li>
+  <li>A subcapital may turn up to <strong>90 degrees per square moved into</strong>. It cannot turn in its starting square.</li>
+  <li>It must move at least <strong>2 squares</strong>.</li>
+  <li>Fighter base attack range is <strong>1-2 squares straight ahead</strong> at any point during the turn. Fighters cannot target their own square or fire to the side.</li>
+  <li>Base HP is <strong>2</strong> unless specified.</li>
+</ul>
+<h3>Flights</h3>
+<p>A solo subcapital may merge with friendly NPC fighters, usually a flight of three, or a gunship in the same grid to form a flight. The PC-led unit gains <strong>3 temporary HP</strong>, or <strong>2 temporary HP</strong> for a light freighter or gunship, and gains an extra attack using the flight leader's masteries. The extra attack is lost when the unit returns to base HP. If the NPC fighters are tracked assets, they can be lost.</p>
+<h3>Squadron Bonus</h3>
+<p>If a subcapital starts the round in the same grid and facing as another unit, and attacks the same grid after that unit, it may use the best available mastery rank to determine that attack. Declare the <strong>Squadron</strong> bonus when attacking. This does not affect defense.</p>
+<h2>Corvettes</h2>
+<ul>
+  <li>Corvettes count as capital ships and have hangars for PC respawning.</li>
+  <li>Base movement is <strong>2-3 squares</strong>.</li>
+  <li>Corvettes may turn up to <strong>90 degrees per square moved into</strong>, but not in the starting square. They must move at least 2 if moving.</li>
+  <li>The 180-degree turn bonus from masteries does not apply to corvettes. Other Piloting or Leadership mastery bonuses can apply.</li>
+  <li>Weapons: <strong>2 small turbolaser batteries</strong>.</li>
+  <li>Small turbolaser battery: range <strong>1-3</strong>, damage <strong>1</strong>, any direction unless specified, cannot target own square.</li>
+  <li>Corvette HP: <strong>8</strong>.</li>
+</ul>
+<h2>Capital Ships</h2>
+<p>Capital ships are medium freighters or larger.</p>
+<ul>
+  <li>Base movement is <strong>2 squares</strong>.</li>
+  <li>A capital ship may make a single turn up to <strong>45 degrees</strong> in each square moved into.</li>
+  <li>A capital ship cannot turn in its starting square and must move at least 2 if moving.</li>
+</ul>
+<h3>Capital Gunnery</h3>
+<table>
+  <thead><tr><th>Weapon</th><th>Range</th><th>Damage</th><th>Rules</th></tr></thead>
+  <tbody>
+    <tr><td>Turbolaser</td><td>1-4</td><td>2</td><td>Any direction unless specified; cannot target own square; -5 to hit subcapital targets.</td></tr>
+    <tr><td>Laser turret</td><td>1-2</td><td>1 unless specified</td><td>Any direction unless specified; cannot target own square.</td></tr>
+  </tbody>
+</table>
+<h3>Capital Ship Types</h3>
+<table>
+  <thead><tr><th>Ship</th><th>Movement</th><th>HP</th><th>Pilot Gunnery</th><th>Special</th></tr></thead>
+  <tbody>
+    <tr><td>Frigate</td><td>2-3</td><td>12</td><td>One turbolaser any direction, plus either one flank turbolaser at 45 degrees or less, or two laser turrets.</td><td>Derriphan: 10 HP, forward arc turbolaser instead of flank, plus once-per-event forward Barrage special.</td></tr>
+    <tr><td>Cruiser / Hammerhead / Irluuk</td><td>2</td><td>16</td><td>One turbolaser any direction, plus either two forward turbolasers at 45 degrees or less, or two laser turrets.</td><td>Czerka Bulk Cruiser uses two flank turbolasers instead of two forward turbolasers.</td></tr>
+    <tr><td>Heavy Cruiser / Interdictor</td><td>2</td><td>26</td><td>Two turbolasers any direction, plus either two flank turbolasers or two laser turrets.</td><td>Gravity Well Projector prevents hyperjumping at less than range 10 or from the map edge until the ship is below half HP.</td></tr>
+    <tr><td>Default Freighter / Quartermaster / Heraklon</td><td>2</td><td>DM/QM set</td><td>Unarmed.</td><td>Uses capital ship movement.</td></tr>
+  </tbody>
+</table>
+<h2>Non-Pilots</h2>
+<p>Extra PCs may act as gunners or engineers. A gunner provides one free turret attack using a usual weapon at 1 damage.</p>
+<ul>
+  <li>Subcapital ships may have up to <strong>1 gunner</strong>, which upgrades the ship to gunship behavior. Other PCs can ride but do not make standard attacks.</li>
+  <li>Corvettes may have up to <strong>2 gunners</strong>.</li>
+  <li>Frigates and larger ships may have unlimited gunners, subject to DM/QM pacing.</li>
+</ul>
+<h2>Ship Loss</h2>
+<ul>
+  <li><strong>Fighter/Subcapital:</strong> Destroyed. The pilot ejects as a solo PC using ground rules. On the next turn they must use the SAR special action, which automatically succeeds, to reship through any friendly capital ship other than a personal corvette. This costs a missed turn.</li>
+  <li><strong>Player-owned Corvette:</strong> At 0 HP in an Intrepid event, the owner's mechanical corvettes cannot be brought on Intrepid events for a fixed period, though they remain available for normal in-game mechanical use. PCs eject in pods that move 2 and receive one free move on ship loss, then must SAR next turn.</li>
+  <li><strong>Faction Capital Ship:</strong> At 0 HP, roll the event outcome: <strong>40% catastrophic destruction</strong>, <strong>60% salvageable</strong> at the loss location. Salvage may be claimed by hostile forces if they hold the territory at battle end. PCs eject in pods and must SAR next turn.</li>
+</ul>
+<h2>Masteries</h2>
+<table>
+  <thead><tr><th>Mastery</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td>Piloting</td><td>Add half ranks, rounded up, to max movement, attack, and defense. Max movement bonus is +2. Applies to all ships and vehicles. Subcapital ships may make one 180-degree turn in a moved-into square once per turn at Mastery 1 or higher.</td></tr>
+    <tr><td>Leadership</td><td>May substitute for Piloting in capital ships only. Add half ranks, rounded up, to max movement, attack, and defense. Max movement bonus is +2. Corvettes may make one 90-degree turn in a moved-into square once per turn at Mastery 1 or higher. No 180-degree flips.</td></tr>
+    <tr><td>Engineering</td><td>Add half ranks, rounded up, to defense.</td></tr>
+  </tbody>
+</table>
+<p>If a PC has multiple applicable masteries, use the best applicable mastery for movement, attack, and defense. They do not stack.</p>
+<h2>Special Actions</h2>
+<p>Force powers, devices, and DM-issued gear may be used in place of an attack to attempt buffs, debuffs, repairs, boarding support, or similar effects. The DM/QM determines whether the action is possible and what it does. Unless the action says otherwise, roll <strong>d20 + full relevant mastery ranks</strong>, with the DC modified by opposing full ranks if applicable.</p>
+<ul>
+  <li><strong>Battle Meditation:</strong> Requires at least one relevant mastery. Roll d20 + full mastery ranks. Affects one unit on the same map. DC 10 grants +1 attack. DC 15 grants +2 attack or applies an existing bonus to a second unit. The effect lasts until the end of the event, until countered, or until the PC leaves the ship or is defeated. It can be countered by hostile ECM or Force powers.</li>
+  <li><strong>Repair:</strong> Roll with full Engineering, Devices, or Fabrication mastery ranks. Captains may repair normally; passengers may attempt repairs with lesser bonuses. Repairs cannot exceed two-thirds of base HP, rounded down. Auto-success repairs 1 HP. DC 10 repairs one-eighth base HP, rounded up. DC 15 repairs one-quarter base HP, rounded up.</li>
+</ul>
+<h2>Exemplars</h2>
+<p>Rank V mastery may grant a reroll once per attempt or round for the relevant action.</p>
+<ul>
+  <li>Battle Meditation V: reroll failed Battle Meditation rolls, but not failure to reach DC 15.</li>
+  <li>Force Sense V: reroll failed detection rolls in grid combat.</li>
+  <li>Telekinesis V: reroll failed boarding rolls. May move 0-2 as a solo PC in space without a jetpack. Lower ranks may attempt zero-G movement as a special action.</li>
+  <li>First Aid or Force Heal V: reroll failed healing rolls.</li>
+  <li>Devices, Engineering, or Fabrication V: reroll failed repair rolls.</li>
+  <li>Zero-G or Jetpack V: reroll failed boarding rolls.</li>
+</ul>
+<h2>Boarding</h2>
+<p>Boarding is allowed but high-risk and slow. It can capture ships for a faction, but may reduce mission success if it consumes too much time or material.</p>
+<ul>
+  <li>Boarding usually requires planning and faction NPC troops aboard a suitable craft.</li>
+  <li>Shuttles may be launched as a free action, creating NPC-piloted shuttles. They start moving as subcapitals on the next turn.</li>
+  <li>If shuttles enter the same grid as the target, boarding is a free action.</li>
+  <li>Boarding automatically succeeds against a target at or below 50% HP, rounded down.</li>
+  <li>Otherwise, roll <strong>d20 + full ranks</strong> in relevant Piloting, Power Suit, Telekinesis, or Vacuum mastery against DC 10, opposed by relevant mastery if applicable. A successful boarding action includes an attack once inside.</li>
+  <li>Boarding pods or faster methods require special craft, troops, or rules.</li>
+  <li>Interior fighting uses standard ground combat: max move 2, attack range 0 unless told otherwise, and infantry block hostile movement through the same grid by ordinary movement.</li>
+  <li>At most two NPC units can target each PC unit per turn in narrow corridors.</li>
+  <li>Gunships can carry 1 platoon, corvettes up to 4, frigates up to 8. Larger ships are ruled as needed.</li>
+</ul>
+<h2>DM/QM Guidance</h2>
+<p>Hostile units and player factions may have special rules or special units that are not known in advance. Declare player-facing stakes, special exceptions, and ship-loss consequences before the battle begins whenever those consequences affect consent or player assets.</p>
+<h2>Setup Template</h2>
+<pre><code>We are using Intrepid Space Grid. Declare ship, role, applicable masteries, and stakes before round one. Facing, movement, and ship-loss rules are active.</code></pre>
