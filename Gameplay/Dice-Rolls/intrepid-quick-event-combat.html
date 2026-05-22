@@ -2,63 +2,88 @@
 title: Intrepid Quick Event Combat
 description: Lightweight Intrepid ground event combat using d20 rolls, HP, movement squares, damage, and DR.
 published: true
-date: 2026-05-12T00:00:00.000Z
-tags: dice, event, combat, intrepid
+date: 2026-05-22T18:06:50.830Z
+tags: combat, dice, intrepid, event
 editor: ckeditor
-dateCreated: 2026-05-12T00:00:00.000Z
+dateCreated: 2026-05-12T00:11:59.665Z
 -->
 
-<nav style="border:1px solid #444;padding:10px;margin-bottom:1.5em;background:#1a1a1a;">
-  <p style="margin:0;"><a href="../../../Gameplay/Dice-Rolls">Dice Rolls</a></p>
-</nav>
+<p><a href="../../../Gameplay/Dice-Rolls">Dice Rolls</a></p>
 <h1>Intrepid Quick Event Combat</h1>
 <p>This is a lightweight ground event system for quick tactical scenes where the DM/QM wants simple movement, HP, damage, and damage reduction.</p>
 <h2>At a Glance</h2>
-<table>
-  <tbody>
-    <tr><th>Best For</th><td>Fast ground event combat.</td></tr>
-    <tr><th>Players Needed</th><td>Any event group size.</td></tr>
-    <tr><th>Dice Used</th><td>d20.</td></tr>
-    <tr><th>Typical Stakes</th><td>Scene victory, defeat, retreat, objective progress, or temporary removal from combat.</td></tr>
-    <tr><th>Needs DM/QM</th><td>Yes.</td></tr>
-    <tr><th>Consent Required</th><td>Required for PvP or lasting consequences.</td></tr>
-  </tbody>
-</table>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <th>Best For</th>
+        <td>Fast ground event combat.</td>
+      </tr>
+      <tr>
+        <th>Players Needed</th>
+        <td>Any event group size.</td>
+      </tr>
+      <tr>
+        <th>Dice Used</th>
+        <td>d20.</td>
+      </tr>
+      <tr>
+        <th>Typical Stakes</th>
+        <td>Scene victory, defeat, retreat, objective progress, or temporary removal from combat.</td>
+      </tr>
+      <tr>
+        <th>Needs DM/QM</th>
+        <td>Yes.</td>
+      </tr>
+      <tr>
+        <th>Consent Required</th>
+        <td>Required for PvP or lasting consequences.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
 <h2>Setup</h2>
 <ul>
   <li>Each PC has <strong>25 HP</strong> for this event format.</li>
-  <li>Each player should know their best offensive mastery and best defensive mastery before play begins.</li>
+  <li>Each player should know their best offensive mastery and best defensive mastery before play begins (if any. Don't worry, brand-new characters can still achieve goals)</li>
   <li>A single mastery cannot count as both offensive and defensive.</li>
   <li>Movement is measured in event squares, not normal grid-combat facing. The DM/QM will show the map scale in play.</li>
 </ul>
 <h2>Movement</h2>
 <ul>
-  <li>A character may move <strong>0-2 squares</strong>.</li>
+  <li>A character may move <strong>0-4 squares.</strong> Movement is orthogonal, ie you can leave a square in any direction EXCEPT diagonally.</li>
   <li>A character may withdraw from a square containing active ground hostiles.</li>
   <li>A character may not move through a square containing active ground hostiles.</li>
 </ul>
 <h2>How to Roll</h2>
-<p>To attack, specify the target, roll d20, then state the final roll and applicable bonuses in party chat before emoting the attack.</p>
-<pre><code>Target: [target name]
+<ul>
+  <li>To attack: Specify the target, roll d20, then state the final roll and applicable bonuses in party chat before emoting the attack.&nbsp;</li>
+  <li>Your character must have line-of-sight to the target at the moment of the attack.</li>
+  <li>A character can conduct a single attack at any stage during their move. Ie they can move, attack, then move the rest of their allowed amount.</li>
+</ul>
+<pre><code class="language-plaintext">Target: [target name]
 Roll: d20
 Party chat: [roll] + [bonus] = [total]</code></pre>
 <h2>Damage and Defense</h2>
 <ul>
   <li>The best offensive mastery is added directly to the attack result and is subtracted from the hostile target's HP.</li>
   <li>The best defensive mastery is subtracted from incoming damage as direct mastery DR.</li>
-  <li>One other form of DR may be added to mastery DR.</li>
+  <li>One other form of DR may be added to mastery DR. Eg shield plus kneeling applies only one relevant DR.</li>
+  <li>NPC's will have hp totals displayed in-game. They will typically roll 1d10 for damage. Named Elites will typically roll 1d20 and are much more dangerous.</li>
 </ul>
 <h2>Special DR Rules</h2>
 <ul>
   <li>A shield in hand grants <strong>+2 DR</strong> to yourself.</li>
-  <li>A lightsaber grants <strong>+2 DR</strong> against blaster fire.</li>
-  <li>Heavy armor grants <strong>+2 DR</strong>, treated like the shield bonus.</li>
+  <li>A lightsaber in hand grants <strong>+2 DR</strong> against blaster fire to yourself and friendlies behind you.</li>
+  <li>Kneeling behind plausible cover grants <strong>+2 DR</strong> to yourself from attacks that pass over cover.</li>
 </ul>
 <h2>Failure and Aftermath</h2>
-<p>Characters reduced to 0 HP are out of the scene or suffer the DM/QM-declared event consequence. Lasting outcomes must be declared before rolling.</p>
-<h2>Setup Template</h2>
-<pre><code>We are using Intrepid Quick Event Combat. PC HP is 25. Declare one offensive and one defensive mastery before the first round.</code></pre>
-<h2>Clarifications Needed</h2>
+<p>Characters reduced to 0 HP are out of the scene or suffer the DM/QM-declared event consequence. Any lasting outcomes will be declared by DM/QM before event start.</p>
+<h2>Special Actions</h2>
 <ul>
-  <li>The source system does not define a universal hit DC or defense score. The DM/QM must explain whether d20 rolls are being used as damage, attack totals against a target number, or another event-specific resolution before combat starts.</li>
+  <li>Damaging actions are represented by attack, for sake of this being a Quick ruleset. A PC can attempt an action that does not inflict damage on a target in place of Attack.</li>
+  <li>Example: Heal. Roll 1d10 (+any relevant Healing mastery ranks), restores that amount of health to one PC, including recovering from 0 HP if allowed by DM/QM for that event.</li>
 </ul>
+<p>Setup Template</p>
+<pre><code class="language-plaintext">We are using Intrepid Quick Event Combat. PC HP is 25. Declare one offensive and one defensive mastery before the first round.</code></pre>
+<h2>&nbsp;</h2>
