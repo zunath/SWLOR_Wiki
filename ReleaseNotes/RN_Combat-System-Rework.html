@@ -1,6 +1,6 @@
 <!--
 title: Combat Upgrade Release Notes
-description: Comprehensive SWLOR combat upgrade release notes and player-impact summary.
+description: Player-friendly SWLOR combat upgrade release notes and impact summary.
 published: true
 date: 2026-06-17T00:00:00.000Z
 tags: swlor, release notes, combat, perks, rebuild
@@ -24,232 +24,181 @@ dateCreated: 2026-06-17T00:00:00.000Z
       <th>NWSync Hash</th>
       <td>TBD</td>
     </tr>
-    <tr>
-      <th>Prepared From</th>
-      <td>Current combat Bible manifest and implementation audit as of 2026-06-17.</td>
-    </tr>
   </tbody>
 </table>
-<p>This page summarizes the full combat upgrade expected in the upcoming release. The final release date and NWSync hash will be added when the deployment is scheduled.</p>
-<h2>At a Glance</h2>
+<p>This is a plain-English preview of the upcoming combat upgrade. The exact release date and NWSync hash will be added when the update is ready to deploy.</p>
+<h2>Quick Summary</h2>
 <ul>
-  <li>The combat upgrade replaces the current combat math, perk tree layout, ability definitions, status-effect behavior, resistance model, weapon stat model, and several migration paths.</li>
-  <li>All characters will be required to complete a full rebuild. No rebuild token is needed for this forced rebuild flow.</li>
-  <li>The combat-upgrade skill cap is 400 total skill ranks. Armor remains an active skill for equipment requirements, skill-cap contribution, and normal SP progression.</li>
-  <li>Combat perk trees have been reshaped toward 4-6 active buttons per tree, with many formerly active rows converted into traits, riders, upgrades, or always-on modifiers.</li>
-  <li>The current local audit reports no scoped combat-upgrade findings. The manifest contains 895 total rows, including 810 scoped implemented rows; Espionage and Farming remain intentionally out of scope.</li>
+  <li>Combat is being rebuilt from the ground up so weapons, Force powers, Devices, Leadership, First Aid, beasts, defenses, and enemy weaknesses all fit together better.</li>
+  <li>Every character will get a required full rebuild the first time they log in after the update.</li>
+  <li>You will not need a rebuild token. The server will send you into the rebuild flow automatically.</li>
+  <li>Old or removed combat perks will be refunded where needed before your character is rebuilt.</li>
+  <li>Most combat trees are being trimmed down to fewer hotbar buttons, with more of the extra bonuses moved into passive perks.</li>
+  <li>Armor is still an active skill and now counts toward the new 400 total skill rank cap.</li>
 </ul>
-<h2>Player Rebuild And Migration</h2>
+<h2>What Happens When You Log In</h2>
 <ul>
-  <li>Every stored player will be sent through the full rebuild flow before returning to regular play.</li>
-  <li>Removed or materially changed combat perks are refunded before obsolete perk data is removed.</li>
-  <li>Legacy attack-count, weapon mastery, shield mastery, rapid shot, rapid reload, obsolete armor-tree, and stale combat instruction investments are cleaned up.</li>
-  <li>Stored item requirements are migrated to the new skill-requirement model.</li>
-  <li>Player Physical Defense and Force Defense are separated from typed Resistances.</li>
-  <li>Legacy elemental defense data is moved into the new Resistance model, missing default resistance keys are filled, and invalid Physical/Force resistance entries are removed.</li>
-  <li>Beast resistance purities are added or normalized, legacy beast saving throw purities are removed, and beast elemental purities move out of defenses.</li>
-  <li>Live and serialized item records are migrated for the new Resistance, weapon DMG, WeaponDamageType, and weapon Delay models.</li>
-  <li>Legacy cooldown-reduction equipment, enhancement, and food properties are reused as Combat Readiness. Combat Readiness increases activated ability damage and healing instead of reducing cooldowns.</li>
-  <li>Obsolete combat instruction discs and obsolete Bible-era perk items are removed from players, beasts, constructed droids, inventories, markets, world properties, research jobs, outfits, DM creatures, ships, and nested serialized inventories.</li>
-  <li>Logged-out status-effect state is process-local and will not persist through the fresh boot that runs the upgrade migration.</li>
+  <li>Your character will be sent to the rebuild area.</li>
+  <li>You will rebuild your stats, skills, and perks under the new combat rules.</li>
+  <li>The rebuild is required for everyone because many combat perks and item requirements are changing.</li>
+  <li>Deleted combat perks and obsolete combat instruction items are cleaned up so they do not remain stuck on old characters, beasts, droids, storage, markets, ships, or outfits.</li>
+  <li>Old item data is updated behind the scenes so existing weapons, armor, enhancements, droids, and stored items use the new combat values.</li>
 </ul>
-<h2>Combat Math And Stats</h2>
+<h2>Character Building</h2>
 <ul>
-  <li>Character stat descriptions, hit rate, damage, accuracy, evasion, attack, defense, critical damage, and damage range formulas are updated to the combat Bible model.</li>
-  <li>Direct WIL, PER, MGT, and SOC effect scaling treats 10 as baseline and 26 as the normal cap. At 26, direct-effect scaling reaches the full +25% bonus.</li>
-  <li>Leadership SOC caps interpolate from each ability's base value to the Bible-listed cap by SOC 26.</li>
-  <li>Generated combat ability feats are linked to generated spell rows so ability targeting, icons, and recast wiring remain synchronized.</li>
-  <li>Higher ranks of active abilities replace lower-rank active feats instead of stacking redundant feats or leaving stale lower-rank hotbar entries. Superseded active ranks are rejected on use.</li>
-  <li>Ability definitions now own their targeting metadata, including positive-delay casted area shapes, sizes, and ranges.</li>
-  <li>Combat Readiness is displayed on the character sheet as activated ability damage and healing, not cooldown reduction.</li>
+  <li>The total skill rank cap is now 400.</li>
+  <li>Armor counts toward that cap and grants skill points (SP) like other active skills.</li>
+  <li>Equipment requirements now care more about your skill ranks instead of old proficiency-style perk purchases.</li>
+  <li>Higher ranks of an active ability replace lower ranks, so your feat list and hotbar should have fewer duplicate versions of the same power.</li>
+  <li>Many former active perks are now passive bonuses, upgrades, or riders on other abilities. This should make builds less crowded without removing the identity of each tree.</li>
+  <li>Combat Readiness is replacing the old cooldown-reduction bonus. It improves activated ability damage and healing instead of reducing cooldowns.</li>
 </ul>
-<h2>Defenses, Resistances, And Damage Types</h2>
+<h2>Combat Feel</h2>
 <ul>
-  <li>Physical Defense and Force Defense are presented separately from typed elemental and status-family Resistances.</li>
-  <li>Resistances now use a direct -100 to 100 percentage scale. Positive values reduce matching effects; negative values create vulnerabilities; 100 grants temporary immunity while active.</li>
-  <li>Player resistance totals from gear, food, perks, auras, and smaller stacked buffs cap below full immunity unless an active finite-duration status explicitly grants 100 resistance.</li>
-  <li>Elemental damage now goes through the normal Physical or Force defense path first, then applies matching resistance after damage is calculated.</li>
-  <li>Trauma and Disruption are status-family resistances. They reduce matching hostile status duration and matching status-effect damage ticks, but they do not reduce generic Physical, Force, or Sonic direct damage.</li>
-  <li>Resistance item properties use SWLOR's custom resistance cost table. Positive resistance rows use 0 through 100, and vulnerabilities use rows 101 through 200 so persisted records stay valid while runtime decodes them back to -1 through -100.</li>
-  <li>Weapon DMG item properties are untyped numeric amounts. WeaponDamageType now selects the whole weapon damage type.</li>
-  <li>Weapon Delay values were raised and normalized so the fastest normal weapons sit above the engine's 1.75 second practical floor and can still benefit from haste or delay-reduction effects.</li>
-  <li>Natural creature weapons use the fastest weapon-delay category, while training weapons use slower Bible-listed values.</li>
-  <li>Attack Deflection, Shield Deflection, and Guard remain distinct mechanics: Attack Deflection and Shield Deflection are attack-roll outcomes that negate hits, while Guard is a damage-stage outcome that reduces damage and increases enmity.</li>
+  <li>Damage, hit chance, evasion, critical hits, defense, and scaling have all been rebalanced.</li>
+  <li>Most combat trees should have a clearer rhythm: fewer buttons, stronger identity, and less pressure to fill every hotbar slot.</li>
+  <li>Several area attacks now show warning shapes before they land, such as lines, cones, or circles.</li>
+  <li>If an ability has a cast time, moving or interrupting the action can cancel the targeting preview.</li>
+  <li>Weapon speeds have been adjusted so fast weapons still feel fast while leaving room for haste and speed bonuses to matter.</li>
+  <li>Some enemies now pressure specific defenses or weaknesses, so swapping gear, using support abilities, and planning around resistances should matter more.</li>
 </ul>
-<h2>Ability Targeting And Telegraphs</h2>
+<h2>Defenses And Resistances</h2>
 <ul>
-  <li>Shaped combat impacts now support line, cone, and sphere telegraphs for delayed or area-targeted abilities.</li>
-  <li>Targeting telegraphs can appear during activation and cancel if the activation is interrupted.</li>
-  <li>Telegraph facing math was corrected so line and cone previews match the actual impact direction.</li>
-  <li>Representative line and cone abilities were moved onto the telegraph impact path, including Soul Burst, Earthshatter, Covering Strike, Savage Cleave, Arc Strike, Overwhelming Strike, Line Breaker, and Suppressive Line.</li>
-  <li>Broader delayed or field-style abilities now use the same shared impact path where appropriate, including examples such as Nightmare Field, Systemic Shutdown, Force Push, Overload Barrage, Worldbreaker, Stasis Volley, and several device and beast abilities.</li>
+  <li>Physical Defense and Force Defense are now shown separately from Resistances.</li>
+  <li>Resistances are easier to read: positive values reduce that kind of damage or status effect, while negative values mean you are vulnerable to it.</li>
+  <li>A Resistance of 100 means temporary immunity, but normal gear and passive bonuses will not casually reach full immunity.</li>
+  <li>Elemental damage now respects your main defense first, then applies the matching Resistance afterward.</li>
+  <li>Trauma and Disruption are mainly about resisting matching status effects, not reducing every kind of normal damage.</li>
+  <li>Attack Deflection, Shield Deflection, and Guard are separate defensive tools. Deflection stops a hit from landing; Guard reduces damage after a hit gets through.</li>
 </ul>
 <h2>Status Effects</h2>
 <ul>
-  <li>Combat statuses now use discovered status-effect definitions through the status service instead of separate hand-maintained registration lists.</li>
-  <li>New or reworked hostile statuses include Blind, Dazed, Disoriented, Exhausted, Exposed, Foggy Mind, Force Disruption, Force Erosion, Fractured Focus, Hamstring, Hemorrhage, Hobble, Knockdown, Stunned, Sunder, Toxin, Vital Strike, and Weakened.</li>
-  <li>New or reworked defensive and challenge statuses include Absolute Defense, Bastion Stance, Blazing Spikes, Deflecting Aura, Deflective Presence, Flash, Guardian Master, Rampart, Taunting Deflection, and Duelist's Challenge.</li>
-  <li>Bleed now uses max-HP scaling, and Toxin now has max-HP ticking behavior.</li>
-  <li>Exposed reduces defense, Hemorrhage increases damage taken, Fractured Focus increases FP costs, and Foggy Mind increases activation delay.</li>
-  <li>Several stance, mark, challenge, guard, decoy, incapacitation, aura, and weapon-family statuses have runtime hooks for attack, defense, accuracy, evasion, haste, recovery, bonus damage, damage prevention, and on-hit effects.</li>
-  <li>Marked for Death bonus damage uses the shared triggered-damage path so resistance, damage-dealt hooks, status-effect damage notifications, and recursion protection apply consistently.</li>
+  <li>Many buffs and debuffs have been cleaned up, renamed, or rebuilt so their behavior is more consistent.</li>
+  <li>Expect familiar combat conditions such as Blind, Dazed, Stunned, Knockdown, Hamstring, Sunder, Exposed, Hemorrhage, Toxin, Weakened, and Exhausted to matter under the new system.</li>
+  <li>Damage-over-time effects such as Bleed and Toxin now scale in a more consistent way.</li>
+  <li>Some debuffs now have clearer jobs. For example, Exposed lowers defense, Hemorrhage makes targets take more damage, Fractured Focus makes Force powers more expensive, and Foggy Mind makes activation slower.</li>
+  <li>Several stances, marks, challenges, guards, and auras now trigger extra effects when you attack, defend, guard, deflect, or support allies.</li>
 </ul>
-<h2>Perk And Ability Coverage</h2>
-<p>The scoped audit is clean against the current local workbook snapshot. The table below lists the player-facing skill families and the main changes coming with each.</p>
+<h2>Weapon Skill Changes</h2>
+<p>Every weapon skill is being updated. The short version is that each one should have a clearer playstyle and fewer unnecessary active buttons.</p>
 <table>
   <thead>
     <tr>
       <th>Skill</th>
-      <th>Styles Or Categories</th>
-      <th>Coming Changes</th>
+      <th>What To Expect</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Armor</td>
-      <td>General</td>
-      <td>Armor gates general character perks such as Provoke and Dual Wield, contributes to the 400 skill cap, grants SP normally, and controls equipment requirements. Obsolete Heavy Armor and Light Armor perk-tree data is removed.</td>
-    </tr>
-    <tr>
       <td>Vibroblade</td>
-      <td>Defense, Offense</td>
-      <td>Shield Bash, Shield Wall, Covering Strike, Defensive Stance, Invincible, Hacking Blade, Riot Blade, Berserker Stance, Rending Strike, Savage Cleave, and Carve are rebuilt around Bible costs, recasts, statuses, and guarded or cleaving effects.</td>
+      <td>Shield and berserker styles with blocking, cleaving, guard support, and durable front-line options.</td>
     </tr>
     <tr>
       <td>Vibroknife</td>
-      <td>Saboteur, Shadow</td>
-      <td>Cheap Shot, Backstab, Deadly Precision, Shadow Strike, Smoke Bomb, Vital Strike, Enfeebling Strike, Hamstring, Nerve Strike, Debilitating Stance, Incapacitate, and Systemic Shutdown now support the new toxin, vulnerability, mobility, and shutdown play pattern.</td>
+      <td>Saboteur and shadow styles with poisons, vulnerable targets, movement control, shutdowns, and burst windows.</td>
     </tr>
     <tr>
       <td>Lightsaber</td>
-      <td>Defense, Offense</td>
-      <td>Lightsaber defense emphasizes Attack Deflection, enmity, guard pressure, ally support, and challenges, while offense uses Ferocity, Focused Stance, Versatile Strike, Leg Slash, Brutal Assault, and Saber Storm for controlled pressure and Sunder support.</td>
+      <td>Defense and offense styles with deflection, challenges, controlled pressure, Sunder support, and strong dueling identity.</td>
     </tr>
     <tr>
       <td>Heavy Vibroblade</td>
-      <td>Defense, Offense</td>
-      <td>Heavy Vibroblade keeps its high-risk identity with Soul Strike, Sacrificial Blade, Soul Devourer, Soul Burst, Soul Storm, Blazing Spikes, Fortress Strike, Bastion Stance, Flash, Rampart, Earthshatter, and Absolute Defense.</td>
+      <td>High-risk offense and heavy defense, including self-sacrifice, large swings, retaliation, and emergency protection.</td>
     </tr>
     <tr>
       <td>Spear</td>
-      <td>Damage, Disabler</td>
-      <td>Spear updates Disabling Strike, Interruption Strike, Force Suppression, Disruption Field, Total Force Denial, Flanking Stance, Side Assault, Flanking Barrage, Sweeping Flank, Hampering Barrage, and Calming Stance for positional and Force-disruption control.</td>
+      <td>Damage and disabler styles with interrupts, Force disruption, flanking bonuses, and positional pressure.</td>
     </tr>
     <tr>
       <td>Twin Blade</td>
-      <td>Cyclone, Duelist</td>
-      <td>Twin Blade updates Cross Cut, Spinning Whirl, Blade Vortex, Storm Release, Tempest Bloom, Split Guard Strike, Feinting Cut, Binding Cross, Duelist Stance, Duelist's Challenge, and Final Form around alternating area pressure and duelist counterplay.</td>
+      <td>Cyclone and duelist styles with spinning attacks, rapid pressure, counters, and one-on-one payoff abilities.</td>
     </tr>
     <tr>
       <td>Saberstaff</td>
-      <td>Conduit, Tempest</td>
-      <td>Saberstaff updates Double Strike, Circle Slash, Tempest Stance, Maelstrom Arc, Tempest Release, Saber Cyclone, Focused Arc, Guarded Channel, Conduit Stance, Sever Focus, Force Capacitor, and Infinite Conduit.</td>
+      <td>Conduit and tempest styles with sweeping attacks, Force-focused control, channeling, and burst releases.</td>
     </tr>
     <tr>
       <td>Katar</td>
-      <td>Iron Guard, Venom Current</td>
-      <td>Katar updates Guard Counter, Twin Guard Stance, Twin Intercept, Whirling Guard, Iron Wall Stance, Adamantine Guard, Striking Cobra, Static Palm, Cobra Stance, Neural Shock, Current Overload, and Serpent's Eclipse.</td>
+      <td>Iron Guard and Venom Current styles with guard counters, defensive martial pressure, shocks, toxins, and control effects.</td>
     </tr>
     <tr>
       <td>Staff</td>
-      <td>Crusher, Sentinel</td>
-      <td>Staff updates Leg Sweep, Sentinel Stance, Line Breaker, Sweeping Guard, Shelter Circle, Unmoving Center, Slam, Crusher Stance, Rib Breaker, Ground Quake, Bonecrusher, and Worldbreaker for guard, control, and crushing damage identity.</td>
+      <td>Crusher and sentinel styles with knockdowns, line attacks, sheltering allies, guarded hits, and heavy blunt damage.</td>
     </tr>
     <tr>
       <td>Pistol</td>
-      <td>Gunslinger, Skirmisher</td>
-      <td>Pistol updates Quick Draw, Double Shot, Gunfighter Stance, Fan the Hammer, Gunslinger Focus, Dead Man's Hand, Disarming Shot, Skirmisher Stance, Interrupting Shot, Point Blank Burst, Smoke Round, and Last Word.</td>
+      <td>Gunslinger and skirmisher styles with quick shots, multi-shot pressure, interrupts, close-range bursts, smoke, and finishing attacks.</td>
     </tr>
     <tr>
       <td>Rifle</td>
-      <td>Marksman, Pacification</td>
-      <td>Rifle updates Aimed Shot, Piercing Round, Sniper Stance, Suppressive Line, Headshot, One Shot, Tranquilizer Shot, Crippling Shot, Spotter Stance, Tranq Cone, Pacification Field, and Stasis Volley.</td>
+      <td>Marksman and pacification styles with aimed shots, piercing rounds, suppressive fire, tranquilizers, and battlefield control.</td>
     </tr>
     <tr>
       <td>Throwing</td>
-      <td>Bombardier, Deadeye</td>
-      <td>Throwing updates Explosive Toss, Flash Toss, Bombardier Stance, Concussive Toss, Fireburst Toss, Rain of Steel, Piercing Toss, Pinning Toss, Deadeye Stance, Severing Toss, Finishing Toss, and Perfect Throw.</td>
-    </tr>
-    <tr>
-      <td>Force</td>
-      <td>Alter, Control, Sense</td>
-      <td>Force updates Light, Dark, and Universal lines, including Force Spark, Throw Rock, Force Push, Throw Lightsaber, Force Lightning, Force Drain, Creeping Terror, Force Choke, Purifying Wave, Benevolence, Guardian Ward, Renewal, Force Leap, Fury Stance, Force Judgment, Radiant Lance, Mind Trick, Nightmare Field, Force Intercept, Last Stand of the Light, Hunger of the Dark, and Eclipse of Resolve. Throw Lightsaber works as a Universal Force ability without a lightsaber-only equipment gate.</td>
-    </tr>
-    <tr>
-      <td>Devices</td>
-      <td>Assault Gadgets, Field Engineer, Field Support, Grenadier</td>
-      <td>Devices updates grenades, beacons, fields, shields, power cells, support bunkers, flamethrowers, rockets, sonic tools, rail darts, cryo tools, Arc Projector, Ion Lance, and Overload Barrage. Devices categories are balanced to equal total SP, and Field Support mitigation riders replace redundant active support screens.</td>
-    </tr>
-    <tr>
-      <td>Leadership</td>
-      <td>Diplomat, Field Steward, Mayor, Vanguard Command</td>
-      <td>Leadership updates Rallying Standard, Press the Attack, Coordinated Focus, Charge Order, Break Morale, Decisive Command, Watchful Presence, Rousing Shout, Steady Formation, Field Recovery, Cleanse Order, and Hold the Line. Leadership auras use the aura toggle and range system, and Rousing Shout now affects living allies only instead of reviving or stabilizing targets.</td>
-    </tr>
-    <tr>
-      <td>First Aid</td>
-      <td>Combat Pharmacology, Trauma Medic</td>
-      <td>First Aid updates Med Kit, Treatment Kit, Kolto Mist, Resuscitation, Infusion, Adrenal Stim, Shielding, Pain Suppressant, Antitoxin, Focus Stim, and Emergency Cocktail while preserving First Aid as the revive and healing identity.</td>
-    </tr>
-    <tr>
-      <td>Beast Mastery</td>
-      <td>Balanced, Bioengineer, Bruiser, Damage, Evasion, Force, Tank, Training</td>
-      <td>Beast Mastery updates taming, reward, soothe, revive, beast attack lines, beast role abilities, level/stat/purity formulas, resistance purities, and attack-delay interactions under the new combat model.</td>
+      <td>Bombardier and deadeye styles with explosives, flash effects, pins, firebursts, precise throws, and finishing tosses.</td>
     </tr>
   </tbody>
 </table>
-<h2>Support Skill Rows</h2>
-<p>Several Bible-scoped support skills also receive row updates tied to the combat upgrade.</p>
+<h2>Force, Devices, Leadership, And First Aid</h2>
 <table>
   <thead>
     <tr>
       <th>Skill</th>
-      <th>Updated Rows</th>
+      <th>What To Expect</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Engineering</td>
-      <td>Droid Assembly I-V.</td>
+      <td>Force</td>
+      <td>Light, Dark, and Universal Force lines have been rebuilt. Light gains more direct combat options, Dark keeps stronger raw damage and drain identity, and Universal powers such as Force Push, Force Leap, Mind Trick, and Throw Lightsaber remain broadly useful.</td>
     </tr>
     <tr>
-      <td>Fabrication</td>
-      <td>Research I-V, Scientific Networking I-II, and Research Projects I-II.</td>
+      <td>Devices</td>
+      <td>Grenades, shields, fields, beacons, gadgets, flamethrowers, rockets, sonic tools, and new energy attacks are rebalanced. Each Devices category should cost the same total skill points to complete.</td>
     </tr>
     <tr>
-      <td>Gathering</td>
-      <td>Treasure Hunter, Creditfinder, Harvesting, Refining, Refinery Management, Scavenging, and Hard Look ranks.</td>
+      <td>Leadership</td>
+      <td>Leadership now leans harder into auras, commands, and ally support. Auras such as Rallying Standard, Coordinated Focus, Charge Order, Watchful Presence, Steady Formation, and Field Recovery use the aura system. Rousing Shout now helps living allies and no longer competes with First Aid as a revive tool.</td>
     </tr>
     <tr>
-      <td>Piloting</td>
-      <td>Starships, Defensive Modules, Offensive Modules, Energy Management, Mining Modules, Starship Mining, and Intuitive Piloting ranks.</td>
+      <td>First Aid</td>
+      <td>First Aid remains the main healing, revive, cleanse, and emergency recovery skill, with updates to kits, mists, resuscitation, infusions, stims, shields, suppressants, antitoxins, and emergency cocktails.</td>
     </tr>
   </tbody>
 </table>
-<h2>Equipment, Crafting, And World Data</h2>
+<h2>Beast Mastery</h2>
 <ul>
-  <li>Weapon, armor, crafting equipment, droid equipment, and enhancement requirements now use skill prerequisites from the Bible instead of old proficiency purchases.</li>
-  <li>Weapon Delay, DMG, and WeaponDamageType data are normalized across generated items, crafting/enhancement application, live module templates, embedded area/store/NPC item instances, and serialized storage.</li>
-  <li>Armor, food, and droid resistance enhancement amounts are rebalanced to the direct -100 to 100 resistance scale.</li>
-  <li>Enhancement recipes and food bonus recipes now expose Combat Readiness where the old cooldown-reduction line existed.</li>
-  <li>The character sheet now displays Physical Defense, Force Defense, Combat Readiness, and typed Resistances in their new roles.</li>
-  <li>NPC resistance-pressure abilities are added for Hutlar Ice, CZ220 Electrical, and Korriban Disruption enemies.</li>
-  <li>Enemy resistance vulnerabilities are conservative and capped at -20.</li>
-  <li>Coolant-Scarred Mynock, Byysk Cryo Adept, and Sith Frostbinder variants are added as spawned resistance-pressure enemies.</li>
-  <li>World NPC weapon-delay and resistance data are synchronized with the Bible-backed item and NPC packages.</li>
+  <li>Beast Mastery is being updated across taming, training, rewards, soothing, revives, beast attacks, beast roles, and beast support abilities.</li>
+  <li>Beast stats, levels, purity bonuses, resistances, and attack speed behavior are being adjusted to match the new combat rules.</li>
+  <li>Beast builds should have clearer roles, including bruiser, damage, evasion, Force, tank, balanced, training, and bioengineer support.</li>
 </ul>
-<h2>Removed Or Excluded From This Upgrade</h2>
+<h2>Other Skill Updates</h2>
 <ul>
-  <li>Espionage is intentionally outside the current upgrade scope.</li>
-  <li>Farming-specific Agriculture rows, including Crop Management-style Farming-only mechanics, are intentionally outside the current upgrade scope.</li>
-  <li>Old Heavy Armor and Light Armor perk-tree rows are removed or ignored when they come from stale snapshots.</li>
-  <li>The old Heavy Armor activation-time penalty is not part of the final design.</li>
-  <li>Legacy combat effects not present in the Bible are removed from player-facing combat perks or isolated away from the upgrade surface.</li>
+  <li>Engineering: Droid Assembly ranks are updated.</li>
+  <li>Fabrication: Research, Scientific Networking, and Research Projects ranks are updated.</li>
+  <li>Gathering: Treasure Hunter, Creditfinder, Harvesting, Refining, Refinery Management, Scavenging, and Hard Look ranks are updated.</li>
+  <li>Piloting: Starships, Defensive Modules, Offensive Modules, Energy Management, Mining Modules, Starship Mining, and Intuitive Piloting ranks are updated.</li>
 </ul>
-<h2>Release Validation Still Expected</h2>
+<h2>Items, Crafting, And Enemies</h2>
 <ul>
-  <li>Playtest conditional, channel, persistent-field, and target-count-sensitive abilities such as Current Overload, Serpent's Eclipse, Tempest Bloom, Pacification Field, Disruption Field, Shield Wall, Force Capacitor, and Infinite Conduit.</li>
-  <li>Smoke-test forced rebuild, equipment skill requirements, weapon Delay and DMG, resistance enhancement behavior, and serialized item migrations against representative live data.</li>
-  <li>Verify Armor uses the 400 skill-cap and SP path, and that stale Heavy Armor, Light Armor, older Armor perk tree entries, feats, instruction discs, and UI entries are not exposed.</li>
-  <li>Review generated spell target metadata again after any ability-specific target shape, range, or playtest-driven targeting changes.</li>
-  <li>Keep the combat Bible manifest, implementation audit, sync tests, and release notes aligned if the Bible changes before release.</li>
+  <li>Weapons, armor, crafting equipment, droid equipment, and enhancements are updated to match the new skill requirements and combat values.</li>
+  <li>Existing weapon damage, weapon speed, and resistance data will be updated where possible.</li>
+  <li>Armor, food, and droid resistance bonuses are being adjusted for the new Resistance system.</li>
+  <li>Some enhancement and food recipes now use Combat Readiness instead of the old cooldown-reduction bonus.</li>
+  <li>Some enemies will now more clearly favor certain damage types or weaknesses, including Ice-themed Hutlar enemies, Electrical-themed CZ220 enemies, and Disruption-themed Korriban enemies.</li>
+  <li>New enemy variants include Coolant-Scarred Mynock, Byysk Cryo Adept, and Sith Frostbinder.</li>
+</ul>
+<h2>Not Included In This Update</h2>
+<ul>
+  <li>Espionage is not part of this combat update.</li>
+  <li>Farming-only Agriculture perks, such as Crop Management-style mechanics, are not part of this combat update.</li>
+  <li>Old Heavy Armor and Light Armor perk trees are not returning.</li>
+  <li>The old Heavy Armor activation-time penalty is not part of the new design.</li>
+</ul>
+<h2>Still Being Checked Before Release</h2>
+<ul>
+  <li>Some more complex abilities still need playtesting, especially channels, fields, delayed attacks, and effects that hit several targets.</li>
+  <li>The forced rebuild flow still needs one more test with example characters.</li>
+  <li>Equipment requirements, weapon speed, weapon damage, resistances, and old stored items still need final checks.</li>
+  <li>Final wording may change if playtesting finds confusing descriptions or balance issues before release.</li>
 </ul>
