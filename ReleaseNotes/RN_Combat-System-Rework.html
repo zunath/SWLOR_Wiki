@@ -2,7 +2,7 @@
 title: Combat Upgrade Release Notes
 description: Player-friendly SWLOR combat upgrade release notes and impact summary.
 published: true
-date: 2026-06-20T14:32:08.453Z
+date: 2026-06-21T18:55:44.852Z
 tags: perks, combat, swlor, release notes, rebuild
 editor: ckeditor
 dateCreated: 2026-06-17T23:27:44.492Z
@@ -31,7 +31,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
 </figure>
 <p>Contributors: John Republic, Girlfailure, jax, Ryudo, AsuraKing, flyingaces, forsakenreaver, Hazin, pastius, Announcer, Witch Time</p>
 <p>&nbsp;</p>
-<p>This is a plain-English preview of the upcoming combat upgrade. The exact release date and NWSync hash will be added when the update is ready to deploy.</p>
+<p>This is a plain-English preview of the upcoming combat upgrade. These changes are not live yet. The exact release date and NWSync hash will be added when the update is ready to deploy.</p>
 <h2>Quick Summary</h2>
 <ul>
   <li>Combat is being rebuilt from the ground up so weapons, Force powers, Devices, Leadership, First Aid, beasts, defenses, and enemy weaknesses all fit together better.</li>
@@ -40,6 +40,18 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Old or removed combat perks will be refunded where needed before your character is rebuilt.</li>
   <li>Most combat trees are being trimmed down to fewer hotbar buttons, with more of the extra bonuses moved into passive perks.</li>
   <li>Armor is still an active skill and now counts toward the new 400 total skill rank cap.</li>
+  <li>The update also includes clearer ability text, new Player Guide pages, and many balance and bug-fix passes.</li>
+</ul>
+<h2>What Is Changing</h2>
+<ul>
+  <li>The old combat setup is being replaced. Most combat perks, abilities, stats, status effects, item requirements, and enemies are changing.</li>
+  <li>Many old broad perk groups are split into clearer combat trees. For example, ranged combat becomes Pistol, Rifle, and Throwing, and Force is split into Light, Dark, and Universal lines.</li>
+  <li>Many current active buttons are removed, replaced, or folded into passives. Expect to rebuild your hotbars after the update.</li>
+  <li>Shared cooldown groups are shown in the Perks window, so it should be easier to tell which abilities block each other.</li>
+  <li>Area attacks and delayed attacks use clearer warning shapes. Several line and area attacks also check line of sight more carefully.</li>
+  <li>NPCs and creatures are rebalanced for the new combat rules, with new enemy abilities, new enemy variants, and more cleanup around leashing and chase behavior.</li>
+  <li>The in-game Player Guide explains several of the new systems in plain language.</li>
+  <li>The update also includes the new /name system, so unknown characters behave differently.</li>
 </ul>
 <h2>What Happens When You Log In</h2>
 <ul>
@@ -47,6 +59,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>You will rebuild your stats, skills, and perks under the new combat rules.</li>
   <li>The rebuild is required for everyone because many combat perks and item requirements are changing.</li>
   <li>Deleted combat perks and obsolete combat instruction items are cleaned up so they do not remain stuck on old characters, beasts, droids, storage, markets, ships, or outfits.</li>
+  <li>Old combat feat buttons are also removed when your character is updated, so old versions should not stay stuck in your feat list.</li>
   <li>Old item data is updated behind the scenes so existing weapons, armor, enhancements, droids, and stored items use the new combat values.</li>
 </ul>
 <h2>Character Building</h2>
@@ -57,6 +70,8 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Higher ranks of an active ability replace lower ranks, so your feat list and hotbar should have fewer duplicate versions of the same power.</li>
   <li>Many former active perks are now passive bonuses, upgrades, or riders on other abilities. This should make builds less crowded without removing the identity of each tree.</li>
   <li>Combat Readiness is replacing the old cooldown-reduction bonus. It improves activated ability damage and healing instead of reducing cooldowns.</li>
+  <li>The Character Sheet and rebuild screens will show skill point numbers more clearly and should better match your build.</li>
+  <li>Ability descriptions will show shared recast groups when abilities use the same cooldown timer.</li>
 </ul>
 <h2>Combat Feel</h2>
 <ul>
@@ -64,8 +79,10 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Most combat trees should have a clearer rhythm: fewer buttons, stronger identity, and less pressure to fill every hotbar slot.</li>
   <li>Several area attacks now show warning shapes before they land, such as lines, cones, or circles.</li>
   <li>If an ability has a cast time, moving or interrupting the action can cancel the targeting preview.</li>
+  <li>Line attacks and other area attacks will check line of sight more reliably.</li>
   <li>Weapon speeds have been adjusted so fast weapons still feel fast while leaving room for haste and speed bonuses to matter.</li>
   <li>Some enemies now pressure specific defenses or weaknesses, so swapping gear, using support abilities, and planning around resistances should matter more.</li>
+  <li>Enemy leashing and chase behavior is tighter, so enemies should be less likely to fight you from the wrong area or keep attacking when they cannot properly reach you.</li>
 </ul>
 <h2>Defenses And Resistances</h2>
 <ul>
@@ -158,7 +175,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
     <tbody>
       <tr>
         <td>Force</td>
-        <td>Light, Dark, and Universal Force lines have been rebuilt. Light gains more direct combat options, Dark keeps stronger raw damage and drain identity, and Universal powers such as Force Push, Force Leap, Mind Trick, and Throw Lightsaber remain broadly useful.</td>
+        <td>Light, Dark, and Universal Force lines have been rebuilt. Light gains more direct combat options, Dark keeps stronger raw damage and drain identity, and Universal powers such as Force Push, Force Leap, Mind Trick, and Throw Lightsaber remain broadly useful. Throw Lightsaber's animation is also returning.</td>
       </tr>
       <tr>
         <td>Devices</td>
@@ -170,7 +187,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
       </tr>
       <tr>
         <td>First Aid</td>
-        <td>First Aid remains the main healing, revive, cleanse, and emergency recovery skill, with updates to kits, mists, resuscitation, infusions, stims, shields, suppressants, antitoxins, and emergency cocktails.</td>
+        <td>First Aid remains the main healing, revive, cleanse, and emergency recovery skill, with updates to kits, mists, resuscitation, infusions, stims, shields, suppressants, antitoxins, and emergency cocktails. Kolto Mist and Emergency Triage ranges, First Aid visuals and sounds, and Emergency Sealant behavior are also changing.</td>
       </tr>
     </tbody>
   </table>
@@ -179,6 +196,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
 <ul>
   <li>Beast Mastery is being updated across taming, training, rewards, soothing, revives, beast attacks, beast roles, and beast support abilities.</li>
   <li>Beast stats, levels, purity bonuses, resistances, and attack speed behavior are being adjusted to match the new combat rules.</li>
+  <li>Tame will care about your social stats in a clearer way.</li>
   <li>Beast builds should have clearer roles, including bruiser, damage, evasion, Force, tank, balanced, training, and bioengineer support.</li>
 </ul>
 <h2>Items, Crafting, And Enemies</h2>
@@ -187,8 +205,15 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Existing weapon damage, weapon speed, and resistance data will be updated where possible.</li>
   <li>Armor, food, and droid resistance bonuses are being adjusted for the new Resistance system.</li>
   <li>Some enhancement and food recipes now use Combat Readiness instead of the old cooldown-reduction bonus.</li>
+  <li>The update will adjust old saved items in one cleaner pass, so weapons, armor, enhancements, droids, storage, markets, ships, and outfits are handled more consistently.</li>
   <li>Some enemies will now more clearly favor certain damage types or weaknesses, including Ice-themed Hutlar enemies, Electrical-themed CZ220 enemies, and Disruption-themed Korriban enemies.</li>
   <li>New enemy variants include Coolant-Scarred Mynock, Byysk Cryo Adept, and Sith Frostbinder.</li>
+</ul>
+<h2>Other Changes</h2>
+<ul>
+  <li>The character name system has clearer unknown-character names.</li>
+  <li>Players can use /name on themselves to set the description other players see before they learn the character's name.</li>
+  <li>Several old perk categories, old perk items, old status effects, and old item requirements are cleaned up as part of the rebuild path.</li>
 </ul>
 <h2>Not Included In This Update</h2>
 <ul>
@@ -200,8 +225,8 @@ dateCreated: 2026-06-17T23:27:44.492Z
 </ul>
 <h2>Still Being Checked Before Release</h2>
 <ul>
-  <li>Some more complex abilities still need playtesting, especially channels, fields, delayed attacks, and effects that hit several targets.</li>
-  <li>The forced rebuild flow still needs one more test with example characters.</li>
-  <li>Equipment requirements, weapon speed, weapon damage, resistances, and old stored items still need final checks.</li>
+  <li>Some more complex abilities still need playtesting, especially channels, fields, delayed attacks, ally-support effects, line attacks, and effects that hit several targets.</li>
+  <li>The forced rebuild flow, old-feat cleanup, and old-item cleanup still need final checks with example characters.</li>
+  <li>Equipment requirements, weapon speed, weapon damage, resistances, and stored items still need final checks.</li>
   <li>Final wording may change if playtesting finds confusing descriptions or balance issues before release.</li>
 </ul>
