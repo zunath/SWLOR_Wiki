@@ -2,7 +2,7 @@
 title: Combat Upgrade Release Notes
 description: Player-friendly SWLOR combat upgrade release notes and impact summary.
 published: true
-date: 2026-06-21T18:55:44.852Z
+date: 2026-06-26T00:00:00.000Z
 tags: perks, combat, swlor, release notes, rebuild
 editor: ckeditor
 dateCreated: 2026-06-17T23:27:44.492Z
@@ -40,7 +40,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Old or removed combat perks will be refunded where needed before your character is rebuilt.</li>
   <li>Most combat trees are being trimmed down to fewer hotbar buttons, with more of the extra bonuses moved into passive perks.</li>
   <li>Armor is still an active skill and now counts toward the new 400 total skill rank cap.</li>
-  <li>The update also includes clearer ability text, new Player Guide pages, and many balance and bug-fix passes.</li>
+  <li>The update also includes clearer ability text, new Player Guide pages, combat feedback polish, droid equipment updates, name display improvements, and disguise support.</li>
 </ul>
 <h2>What Is Changing</h2>
 <ul>
@@ -49,9 +49,10 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Many current active buttons are removed, replaced, or folded into passives. Expect to rebuild your hotbars after the update.</li>
   <li>Shared cooldown groups are shown in the Perks window, so it should be easier to tell which abilities block each other.</li>
   <li>Area attacks and delayed attacks use clearer warning shapes. Several line and area attacks also check line of sight more carefully.</li>
-  <li>NPCs and creatures are rebalanced for the new combat rules, with new enemy abilities, new enemy variants, and more cleanup around leashing and chase behavior.</li>
+  <li>NPCs and creatures are rebalanced for the new combat rules, with new enemy abilities, new enemy variants, and more reliable leashing and chase behavior.</li>
   <li>The in-game Player Guide explains several of the new systems in plain language.</li>
   <li>The update also includes the new /name system, so unknown characters behave differently.</li>
+  <li>Recognized names, unknown descriptions, and disguises display more consistently across chat, HoloNet-style messages, staff tools, property lists, and ship lists.</li>
 </ul>
 <h2>What Happens When You Log In</h2>
 <ul>
@@ -82,7 +83,8 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Line attacks and other area attacks will check line of sight more reliably.</li>
   <li>Weapon speeds have been adjusted so fast weapons still feel fast while leaving room for haste and speed bonuses to matter.</li>
   <li>Some enemies now pressure specific defenses or weaknesses, so swapping gear, using support abilities, and planning around resistances should matter more.</li>
-  <li>Enemy leashing and chase behavior is tighter, so enemies should be less likely to fight you from the wrong area or keep attacking when they cannot properly reach you.</li>
+  <li>Enemy leashing and chase behavior is tighter, including ranged enemies, so enemies should be less likely to fight you from the wrong area or keep attacking when they cannot properly reach you.</li>
+  <li>Ability animations, sounds, warning shapes, and impact feedback are clearer, so combat should be easier to read while it is happening.</li>
 </ul>
 <h2>Defenses And Resistances</h2>
 <ul>
@@ -100,6 +102,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Damage-over-time effects such as Bleed and Toxin now scale in a more consistent way.</li>
   <li>Some debuffs now have clearer jobs. For example, Exposed lowers defense, Hemorrhage makes targets take more damage, Fractured Focus makes Force powers more expensive, and Foggy Mind makes activation slower.</li>
   <li>Several stances, marks, challenges, guards, and auras now trigger extra effects when you attack, defend, guard, deflect, or support allies.</li>
+  <li>Area and status powers such as Creeping Terror use clearer area size and visual feedback.</li>
 </ul>
 <h2>Weapon Skill Changes</h2>
 <p>Every weapon skill is being updated. The short version is that each one should have a clearer playstyle and fewer unnecessary active buttons.</p>
@@ -163,6 +166,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
     </tbody>
   </table>
 </figure>
+<p>Several individual weapon abilities also have clearer feedback, including Vibroknife telegraphs and sound feedback, Staff Crusher area effects, and Rifle targeting and impact animation behavior.</p>
 <h2>Force, Devices, Leadership, And First Aid</h2>
 <figure class="table">
   <table>
@@ -175,11 +179,11 @@ dateCreated: 2026-06-17T23:27:44.492Z
     <tbody>
       <tr>
         <td>Force</td>
-        <td>Light, Dark, and Universal Force lines have been rebuilt. Light gains more direct combat options, Dark keeps stronger raw damage and drain identity, and Universal powers such as Force Push, Force Leap, Mind Trick, and Throw Lightsaber remain broadly useful. Throw Lightsaber's animation is also returning.</td>
+        <td>Light, Dark, and Universal Force lines have been rebuilt. Light gains more direct combat options, Dark keeps stronger raw damage and drain identity, and Universal powers such as Force Push, Force Leap, Mind Trick, and Throw Lightsaber remain broadly useful. Throw Lightsaber's animation is also returning. Force Judgment, Force Sanctuary, Force Spark, Force Drain, Force Push, Force Leap, Eclipse of Resolve, Weaken Resolve, Radiant Lance, Guardian Ward, and Creeping Terror also have clearer targeting, visuals, sounds, or balance.</td>
       </tr>
       <tr>
         <td>Devices</td>
-        <td>Grenades, shields, fields, beacons, gadgets, flamethrowers, rockets, sonic tools, and new energy attacks are rebalanced. Each Devices category should cost the same total skill points to complete.</td>
+        <td>Grenades, shields, fields, beacons, gadgets, flamethrowers, rockets, sonic tools, and new energy attacks are rebalanced. Each Devices category should cost the same total skill points to complete. Grenades, beacons, fields, Emergency Bunker, and device area effects have clearer targeting, visuals, and behavior.</td>
       </tr>
       <tr>
         <td>Leadership</td>
@@ -187,7 +191,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
       </tr>
       <tr>
         <td>First Aid</td>
-        <td>First Aid remains the main healing, revive, cleanse, and emergency recovery skill, with updates to kits, mists, resuscitation, infusions, stims, shields, suppressants, antitoxins, and emergency cocktails. Kolto Mist and Emergency Triage ranges, First Aid visuals and sounds, and Emergency Sealant behavior are also changing.</td>
+        <td>First Aid remains the main healing, revive, cleanse, and emergency recovery skill, with updates to kits, mists, resuscitation, infusions, stims, shields, suppressants, antitoxins, and emergency cocktails. Kolto Mist and Emergency Triage ranges, First Aid visuals and sounds, and Emergency Sealant behavior are also changing. Treatment Kit healing counts more reliably for combat support.</td>
       </tr>
     </tbody>
   </table>
@@ -202,8 +206,9 @@ dateCreated: 2026-06-17T23:27:44.492Z
 <h2>Items, Crafting, And Enemies</h2>
 <ul>
   <li>Combat-linked equipment requirements and item values are updated to match the new skill requirements and combat rules.</li>
-  <li>Existing weapon damage, weapon speed, and resistance data will be updated where possible.</li>
+  <li>Existing weapon damage, weapon speed, elemental blueprint bonuses, and resistance data will be updated where possible.</li>
   <li>Armor, food, and droid resistance bonuses are being adjusted for the new Resistance system.</li>
+  <li>Droid CPU items and droid assembly options use the new combat values.</li>
   <li>Some enhancement and food recipes now use Combat Readiness instead of the old cooldown-reduction bonus.</li>
   <li>The update will adjust old saved items in one cleaner pass, so weapons, armor, enhancements, droids, storage, markets, ships, and outfits are handled more consistently.</li>
   <li>Some enemies will now more clearly favor certain damage types or weaknesses, including Ice-themed Hutlar enemies, Electrical-themed CZ220 enemies, and Disruption-themed Korriban enemies.</li>
@@ -213,20 +218,18 @@ dateCreated: 2026-06-17T23:27:44.492Z
 <ul>
   <li>The character name system has clearer unknown-character names.</li>
   <li>Players can use /name on themselves to set the description other players see before they learn the character's name.</li>
+  <li>Settings now include more privacy controls for descriptor display and account-name visibility.</li>
+  <li>Disguise and persona support includes saved identities and matching display-name handling.</li>
+  <li>The Perks window now keeps purchased and maxed perks in a more natural order.</li>
+  <li>Some older area, creature, item, and dialogue text is clearer and more consistent.</li>
+  <li>A new Dantooine quest is available.</li>
   <li>Several old perk categories, old perk items, old status effects, and old item requirements are cleaned up as part of the rebuild path.</li>
 </ul>
 <h2>Not Included In This Update</h2>
 <ul>
   <li>Espionage is not part of this combat update.</li>
   <li>Farming-only Agriculture perks, such as Crop Management-style mechanics, are not part of this combat update.</li>
-  <li>Engineering, Fabrication, Gathering, and Piloting are not being presented here as standalone skill revamps. Any related changes are limited to combat-linked items, recipes, equipment, or cleanup of old stored items.</li>
+  <li>Engineering, Fabrication, Gathering, and Piloting are not being presented here as standalone skill revamps. Any related changes are limited to combat-linked items, recipes, equipment, or handling old stored items.</li>
   <li>Old Heavy Armor and Light Armor perk trees are not returning.</li>
   <li>The old Heavy Armor activation-time penalty is not part of the new design.</li>
-</ul>
-<h2>Still Being Checked Before Release</h2>
-<ul>
-  <li>Some more complex abilities still need playtesting, especially channels, fields, delayed attacks, ally-support effects, line attacks, and effects that hit several targets.</li>
-  <li>The forced rebuild flow, old-feat cleanup, and old-item cleanup still need final checks with example characters.</li>
-  <li>Equipment requirements, weapon speed, weapon damage, resistances, and stored items still need final checks.</li>
-  <li>Final wording may change if playtesting finds confusing descriptions or balance issues before release.</li>
 </ul>
