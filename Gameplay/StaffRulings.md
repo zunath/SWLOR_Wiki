@@ -2,7 +2,7 @@
 title: Staff Rulings
 description: Rulings by the Staff team. Subject to change over time.
 published: true
-date: 2026-03-27T00:53:56.520Z
+date: 2026-07-03T20:36:16.085Z
 tags: rules, dm, qm, staff
 editor: markdown
 dateCreated: 2025-10-14T21:51:34.027Z
@@ -43,6 +43,10 @@ Cortosis and other materials that are either extremely potent or otherwise rare 
 
 ### Kyber
 Rare kyber crystals will always require a ticket first unless awarded for an event by a ***DM***
+
+## Recording and Messages in RP
+When it comes to sending messages, or starting recordings, we require you to make some kind of emote as proof, as well as for the other players present to have a chance to figure out what you're doing. We don't allow recordings (or messages sent during tense situations like PvP) without some sort of public facing emote. This is to allow plausible counter-play or response.
+
 ## Custom Ship Rules
 If a player has a ship based engineering mastery of three or higher they can request unique mechanical ship plans related to their NPC faction. Should a PC leave the associated NPC faction they can no longer use said ship.
 
