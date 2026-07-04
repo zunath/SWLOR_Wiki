@@ -2,13 +2,13 @@
 title: Staff Rulings
 description: Rulings by the Staff team. Subject to change over time.
 published: true
-date: 2026-07-04T00:34:07.259Z
+date: 2026-07-04T00:35:21.178Z
 tags: rules, dm, qm, staff
 editor: markdown
 dateCreated: 2025-10-14T21:51:34.027Z
 ---
 
-# Staff Rulings:
+1. # Staff Rulings:
 
 
 ---
@@ -30,9 +30,9 @@ For Jedi/Sith who have been given go ahead by their mentors in-game and in-chara
 
 1. DM/QM Issued: 
 
-As per the Design Bible, they are Tier5 weapons, base damage 26, with two weapon enhancements.
+	As per the Design Bible, they are Tier5 weapons, base damage 26, with two weapon enhancements.
 
-As issued max damage is 26+3+3 (for physical enhancements). Or 26+2+2 (for elemental damage enhancements).
+	As issued max damage is 26+3+3 (for physical enhancements). Or 26+2+2 (for elemental damage enhancements).
 
 2. Lightsaber Upgrade Kit: This item is crafted in-game. It can be used to further enhance a lightsaber to match Chiro or T5.5 items. It increases physical damage by 4, and can be applied once to a lightsaber item.
 
