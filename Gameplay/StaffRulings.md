@@ -2,7 +2,7 @@
 title: Staff Rulings
 description: Rulings by the Staff team. Subject to change over time.
 published: true
-date: 2026-07-03T20:36:16.085Z
+date: 2026-07-04T00:34:07.259Z
 tags: rules, dm, qm, staff
 editor: markdown
 dateCreated: 2025-10-14T21:51:34.027Z
@@ -24,6 +24,20 @@ The Remnant faction however is unique in that betrayals are not allowed at all o
 
 DMs can make exceptions to these  traitor rulings if the betrayal plays out during an event and aligns with the story being portrayed. 
 
+## Lightsabers
+
+For Jedi/Sith who have been given go ahead by their mentors in-game and in-character. Requested via Ticket on Discord.
+
+1. DM/QM Issued: 
+
+As per the Design Bible, they are Tier5 weapons, base damage 26, with two weapon enhancements.
+
+As issued max damage is 26+3+3 (for physical enhancements). Or 26+2+2 (for elemental damage enhancements).
+
+2. Lightsaber Upgrade Kit: This item is crafted in-game. It can be used to further enhance a lightsaber to match Chiro or T5.5 items. It increases physical damage by 4, and can be applied once to a lightsaber item.
+
+3. Weapon Submission Token: Possible further Development to match what is available via Research is as per this Annoucement:
+https://discord.com/channels/484936923341651971/504903829049835530/1274789718751711345
 
 ## Limb Loss, Cybernetics & Replacements
 Cybernetics beyond the scope of a regular limb with regular functionality made of a regular material must be ticketed and cleared with the DM Team prior. An instance of a multi-PC project to create a cybernetic that has a single additional gimmick (one additional functionality) may be considered, but is up to the DM team's discretion.
