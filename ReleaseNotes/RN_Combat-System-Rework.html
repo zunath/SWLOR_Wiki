@@ -2,7 +2,7 @@
 title: Combat Upgrade Release Notes
 description: Player-friendly SWLOR combat upgrade release notes and impact summary.
 published: true
-date: 2026-06-26T00:00:00.000Z
+date: 2026-07-12T00:00:00.000Z
 tags: perks, combat, swlor, release notes, rebuild
 editor: ckeditor
 dateCreated: 2026-06-17T23:27:44.492Z
@@ -41,6 +41,8 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Most combat trees are being trimmed down to fewer hotbar buttons, with more of the extra bonuses moved into passive perks.</li>
   <li>Armor is still an active skill and now counts toward the new 400 total skill rank cap.</li>
   <li>The update also includes clearer ability text, new Player Guide pages, combat feedback polish, droid equipment updates, name display improvements, and disguise support.</li>
+  <li>New this release: a Mimicry skill line for copying creature techniques, per-skill mastery (capstone) quests, DM-free lightsaber construction with Kyber Tokens, and a player-run Quest Contracts board.</li>
+  <li>Quality-of-life additions include scheduled shuttle travel, globally accessible banks, a portrait Mini-Vitals overlay, and a redesigned Perks window.</li>
 </ul>
 <h2>What Is Changing</h2>
 <ul>
@@ -196,12 +198,31 @@ dateCreated: 2026-06-17T23:27:44.492Z
     </tbody>
   </table>
 </figure>
+<h2>Mimicry (New Skill Line)</h2>
+<ul>
+  <li>Mimicry is a new combat skill that lets you copy and use the techniques enemy creatures fight with.</li>
+  <li>You are introduced to it through the intro quest "Salvaged Intelligence" from Renna Tarsk in the Veles Colony, which points you to the Combat Analyzer perk and the /techniques window.</li>
+  <li>Once you own the Combat Analyzer, your analyzer records techniques used by nearby enemies. When one of those enemies dies near you, you have a chance to permanently learn its technique. Your learn chance rises with your Mimicry rank and the Pattern Recognition perk.</li>
+  <li>Manage your library and build a loadout in the /techniques window, which can only be changed out of combat. Equipped actives go on your hotbar, while equipped stances and passive traits apply automatically.</li>
+  <li>Techniques cost Stamina instead of Force Points and work the same for every character type. They come in four tiers unlocked at Mimicry ranks 0, 15, 30, and 45, and cover damage, control, debuffs, ally support, stances, and passive traits.</li>
+  <li>You have a limited number of technique slots that grow as you invest in the skill, so you tailor your loadout to each fight. Equipping several techniques of the same damage element grants a resonance bonus, and the Overclocked Analyzer capstone adds more slots and a burst ability.</li>
+</ul>
+<h2>Skill Mastery Quests</h2>
+<ul>
+  <li>Each combat and support skill now has capstone "mastery" quest chains for characters who reach rank 50 in that skill.</li>
+  <li>Every skill has two mastery paths, one for each of its combat styles, and each path is a five-stage chain that builds from clearing groups of trial enemies to defeating a final master.</li>
+  <li>The trials take place in dedicated locations across the galaxy, such as the Jedi Enclave Trial Halls on Dantooine and the Czerka Arms Test Range on Nar Shaddaa.</li>
+  <li>The later stages are built for a group, so expect to bring companions or allies for the wardens and masters.</li>
+  <li>Completing a mastery chain awards XP, credits, and a matching achievement.</li>
+</ul>
 <h2>Beast Mastery</h2>
 <ul>
   <li>Beast Mastery is being updated across taming, training, rewards, soothing, revives, beast attacks, beast roles, and beast support abilities.</li>
   <li>Beast stats, levels, purity bonuses, resistances, and attack speed behavior are being adjusted to match the new combat rules.</li>
   <li>Tame will care about your social stats in a clearer way.</li>
   <li>Beast builds should have clearer roles, including bruiser, damage, evasion, Force, tank, balanced, training, and bioengineer support.</li>
+  <li>New Incubation Field Notes are codex key items, one per mutation-target beast, that spell out every way to incubate that beast and what each method needs, such as the required enzyme, day of week, and minimum success chance.</li>
+  <li>You earn a beast's note automatically the first time you successfully incubate it. Starter notes are also sold by Zoya the Beastwright in the Veles Colony, and some are dropped by specific world bosses.</li>
 </ul>
 <h2>Items, Crafting, And Enemies</h2>
 <ul>
@@ -214,13 +235,32 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Some enemies will now more clearly favor certain damage types or weaknesses, including Ice-themed Hutlar enemies, Electrical-themed CZ220 enemies, and Disruption-themed Korriban enemies.</li>
   <li>New enemy variants include Coolant-Scarred Mynock, Byysk Cryo Adept, and Sith Frostbinder.</li>
 </ul>
+<h2>Building And Upgrading Lightsabers</h2>
+<ul>
+  <li>Force Sensitive characters can now build their own lightsabers without a DM crafting the weapon. A DM only grants you a Kyber Token; everything after that is in your hands.</li>
+  <li>Use the token to attune it into a Kyber Token in your currency list, then visit a Lightsaber Workbench at the Sith Academy on Korriban, the Jedi Enclave on Dantooine, or a hidden cave on Dathomir.</li>
+  <li>At the workbench you build a tier 1 lightsaber or saberstaff: pick a hilt style and blade color, optionally socket up to two enhancements, and optionally apply a Weapon Submission Token to carry crafted stats onto the saber. Building consumes one Kyber Token.</li>
+  <li>Sabers grow stronger through tiered upgrade kits crafted with Engineering. Each kit raises the weapon one tier and keeps its existing bonuses, with the top "Chiro" tier requiring research to unlock.</li>
+  <li>Old DM-built sabers are normalized to a tier 5 baseline so the new upgrade kits work on them.</li>
+</ul>
+<h2>Quest Contracts</h2>
+<ul>
+  <li>You can now post your own quests for other players at a Contract Board, backed by rewards you lock in up front.</li>
+  <li>Open a board to Browse and accept others' contracts or manage your own. To create one, set a title and description, add one to three item-delivery objectives by searching for items, and set the reward.</li>
+  <li>Publishing charges the reward credits, which are held in escrow, plus a small non-refundable posting fee. The escrow is paid to the first player who turns the contract in, or refunded to you if you cancel it or it expires after 30 days.</li>
+  <li>Completers accept a contract, gather the requested items, and turn it in at any board. Only the first player to finish earns the reward.</li>
+  <li>Rewards and returned items are handed out through a Claim Deliveries mailbox at any board, so nothing is lost to a full inventory. You can hold up to three active contracts at once.</li>
+</ul>
 <h2>Other Changes</h2>
 <ul>
   <li>The character name system has clearer unknown-character names.</li>
   <li>Players can use /name on themselves to set the description other players see before they learn the character's name.</li>
   <li>Settings now include more privacy controls for descriptor display and account-name visibility.</li>
   <li>Disguise and persona support includes saved identities and matching display-name handling.</li>
-  <li>The Perks window now keeps purchased and maxed perks in a more natural order.</li>
+  <li>The Perks window has been redesigned to read at a glance: rows are color-coded by state (buyable, too expensive, skill-locked, or maxed), show the next upgrade's SP cost and an icon for what gates each perk, and can be filtered by All, Owned, Can Buy, or Maxed. Your available SP is shown in the window title.</li>
+  <li>Interplanetary travel now uses scheduled shuttles instead of instant flight terminals. You buy a ticket at a starport, wait for the next departure, board the shuttle near the terminal, and ride an instanced shuttle to your destination. Fares scale with distance, and unboarded tickets can be refunded for the base fare.</li>
+  <li>Banks now share one global storage account, so anything you deposit at one bank can be withdrawn at any other. Standard bank storage holds 120 items.</li>
+  <li>A new Mini-Vitals overlay shows your Stamina and FP as compact bars on your portrait, or your ship's shield, hull, and capacitor in space. It is on by default and can be toggled in Settings.</li>
   <li>Some older area, creature, item, and dialogue text is clearer and more consistent.</li>
   <li>A new Dantooine quest is available.</li>
   <li>Several old perk categories, old perk items, old status effects, and old item requirements are cleaned up as part of the rebuild path.</li>
