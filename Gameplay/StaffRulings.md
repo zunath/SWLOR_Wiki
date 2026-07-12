@@ -2,13 +2,13 @@
 title: Staff Rulings
 description: Rulings by the Staff team. Subject to change over time.
 published: true
-date: 2026-03-27T00:53:56.520Z
+date: 2026-07-04T00:40:01.321Z
 tags: rules, dm, qm, staff
 editor: markdown
 dateCreated: 2025-10-14T21:51:34.027Z
 ---
 
-# Staff Rulings:
+1. # Staff Rulings:
 
 
 ---
@@ -24,6 +24,29 @@ The Remnant faction however is unique in that betrayals are not allowed at all o
 
 DMs can make exceptions to these  traitor rulings if the betrayal plays out during an event and aligns with the story being portrayed. 
 
+## Lightsabers
+
+For Jedi/Sith who have been given go ahead by their mentors in-game and in-character. Requested via Ticket on Discord.
+
+1. DM/QM Issued: 
+
+	As per the Design Bible, they are Tier5 weapons, base damage 26, with two weapon enhancements.
+
+	As issued max damage is 26+3+3 (for physical enhancements). Or 26+2+2 (for elemental damage enhancements).
+
+2. Lightsaber Upgrade Kit: This item is crafted in-game. It can be used to further enhance a lightsaber to match Chiro or T5.5 items. It increases physical damage by 4, and can be applied once to a lightsaber item.
+
+3. Weapon Submission Token: Possible further Development to match what is available via Research is as per this process:
+
+> DM-granted items such as lightsabers can now be upgraded to match what's available via research on other items. In other words, to upgrade your item you need to open a ticket and coordinate with a DM/QM. From there, you'll need to craft the following:
+> 
+> Weapon Submission Token (Smithery/Engineering)
+> 
+> It's recommended you research these blueprints to level 10 to get the maximum effect but it's not required. Also, any random stats applied to the token are copied verbatim over to the token. If you aren't happy with the stats, craft another token. You can only do this upgrade one time per item.
+> 
+> Again - to be clear, simply crafting the token is not sufficient. You can't show up with it and say "I'm here for my item". You have to coordinate with the QM/DM team ahead of time, roleplay, earn it, and turn in the token. 
+> 
+> If you have questions please reach out via ticket. 
 
 ## Limb Loss, Cybernetics & Replacements
 Cybernetics beyond the scope of a regular limb with regular functionality made of a regular material must be ticketed and cleared with the DM Team prior. An instance of a multi-PC project to create a cybernetic that has a single additional gimmick (one additional functionality) may be considered, but is up to the DM team's discretion.
@@ -43,6 +66,10 @@ Cortosis and other materials that are either extremely potent or otherwise rare 
 
 ### Kyber
 Rare kyber crystals will always require a ticket first unless awarded for an event by a ***DM***
+
+## Recording and Messages in RP
+When it comes to sending messages, or starting recordings, we require you to make some kind of emote as proof, as well as for the other players present to have a chance to figure out what you're doing. We don't allow recordings (or messages sent during tense situations like PvP) without some sort of public facing emote. This is to allow plausible counter-play or response.
+
 ## Custom Ship Rules
 If a player has a ship based engineering mastery of three or higher they can request unique mechanical ship plans related to their NPC faction. Should a PC leave the associated NPC faction they can no longer use said ship.
 
