@@ -2,7 +2,7 @@
 title: Combat Upgrade Release Notes
 description: Player-friendly SWLOR combat upgrade release notes and impact summary.
 published: true
-date: 2026-07-12T00:00:00.000Z
+date: 2026-07-18T00:00:00.000Z
 tags: perks, combat, swlor, release notes, rebuild
 editor: ckeditor
 dateCreated: 2026-06-17T23:27:44.492Z
@@ -34,242 +34,315 @@ dateCreated: 2026-06-17T23:27:44.492Z
 <p>This is a plain-English preview of the upcoming combat upgrade. These changes are not live yet. The exact release date and NWSync hash will be added when the update is ready to deploy.</p>
 <h2>Quick Summary</h2>
 <ul>
-  <li>Combat is being rebuilt from the ground up so weapons, Force powers, Devices, Leadership, First Aid, beasts, defenses, and enemy weaknesses all fit together better.</li>
-  <li>Every character will get a required full rebuild the first time they log in after the update.</li>
-  <li>You will not need a rebuild token. The server will send you into the rebuild flow automatically.</li>
-  <li>Old or removed combat perks will be refunded where needed before your character is rebuilt.</li>
-  <li>Most combat trees are being trimmed down to fewer hotbar buttons, with more of the extra bonuses moved into passive perks.</li>
+  <li>Combat is being rebuilt from the ground up so weapons, Force powers, Devices, Leadership, First Aid, beasts, defenses, and enemy weaknesses all fit together.</li>
+  <li>Every character gets a required full rebuild the first time they log in after the update.</li>
+  <li>The rebuild costs you nothing. The server sends you into the rebuild flow automatically, and you are also given one bonus rebuild token to keep for a future respec.</li>
+  <li>Old or removed combat perks are refunded as SP before your character is rebuilt.</li>
+  <li>Most combat trees have fewer hotbar buttons, with more of the extra bonuses moved into passive perks.</li>
   <li>Armor is still an active skill and now counts toward the new 400 total skill rank cap.</li>
-  <li>The update also includes clearer ability text, new Player Guide pages, combat feedback polish, droid equipment updates, name display improvements, and disguise support.</li>
-  <li>New this release: a Mimicry skill line for copying creature techniques, per-skill mastery (capstone) quests, DM-free lightsaber construction with Kyber Tokens, and a player-run Quest Contracts board.</li>
-  <li>Quality-of-life additions include scheduled shuttle travel, globally accessible banks, a portrait Mini-Vitals overlay, and a redesigned Perks window.</li>
+  <li>Two brand-new skills arrive with this update: <strong>Mimicry</strong> (copy the techniques enemy creatures use) and <strong>Espionage</strong> (stealth, poisons, traps, and lockboxes).</li>
+  <li>Also new: per-skill mastery quest chains, DM-free lightsaber construction with Kyber Tokens, and a player-run Quest Contracts board.</li>
+  <li>Quality-of-life additions include scheduled shuttle travel, globally accessible banks, a portrait Mini-Vitals overlay, a redesigned Perks window, and an in-game Player Guide.</li>
+  <li>Some things are being removed. See <a href="#removed-in-this-update">Removed In This Update</a>.</li>
 </ul>
 <h2>What Is Changing</h2>
 <ul>
   <li>The old combat setup is being replaced. Most combat perks, abilities, stats, status effects, item requirements, and enemies are changing.</li>
-  <li>Many old broad perk groups are split into clearer combat trees. For example, ranged combat becomes Pistol, Rifle, and Throwing, and Force is split into Light, Dark, and Universal lines.</li>
-  <li>Many current active buttons are removed, replaced, or folded into passives. Expect to rebuild your hotbars after the update.</li>
-  <li>Shared cooldown groups are shown in the Perks window, so it should be easier to tell which abilities block each other.</li>
-  <li>Area attacks and delayed attacks use clearer warning shapes. Several line and area attacks also check line of sight more carefully.</li>
-  <li>NPCs and creatures are rebalanced for the new combat rules, with new enemy abilities, new enemy variants, and more reliable leashing and chase behavior.</li>
-  <li>The in-game Player Guide explains several of the new systems in plain language.</li>
-  <li>The update also includes the new /name system, so unknown characters behave differently.</li>
-  <li>Recognized names, unknown descriptions, and disguises display more consistently across chat, HoloNet-style messages, staff tools, property lists, and ship lists.</li>
+  <li>Many old broad perk groups are split into clearer combat trees. Every weapon skill now has two named styles, and Force is organised into Alter, Control, and Sense lines.</li>
+  <li>Many current active buttons are removed, replaced, or folded into passives. You will need to rebuild your hotbars after the update.</li>
+  <li>Area attacks and delayed attacks use warning shapes such as lines, cones, and circles. Several line and area attacks also check line of sight more carefully.</li>
+  <li>NPCs and creatures are rebalanced for the new combat rules, with new enemy abilities, new enemy variants, and updated chase behaviour.</li>
+  <li>A new in-game Player Guide explains the new systems in plain language.</li>
+  <li>The new /name system changes how unknown characters are displayed, and adds player-facing disguises.</li>
 </ul>
 <h2>What Happens When You Log In</h2>
 <ul>
-  <li>Your character will be sent to the rebuild area.</li>
-  <li>You will rebuild your stats, skills, and perks under the new combat rules.</li>
+  <li>Your character is sent to the rebuild area and cannot leave until the rebuild is finished.</li>
+  <li>You rebuild your stats, skills, and perks under the new combat rules.</li>
   <li>The rebuild is required for everyone because many combat perks and item requirements are changing.</li>
+  <li>The forced rebuild does not consume a rebuild token, and you are granted one extra token to keep.</li>
+  <li>Perks that no longer exist are refunded as SP before you rebuild, so nothing invested in a deleted perk is lost.</li>
+  <li>Your feat list is reset to baseline at login and again when you complete the rebuild, clearing out retired combat feats.</li>
   <li>Deleted combat perks and obsolete combat instruction items are cleaned up so they do not remain stuck on old characters, beasts, droids, storage, markets, ships, or outfits.</li>
-  <li>Old combat feat buttons are also removed when your character is updated, so old versions should not stay stuck in your feat list.</li>
   <li>Old item data is updated behind the scenes so existing weapons, armor, enhancements, droids, and stored items use the new combat values.</li>
 </ul>
 <h2>Character Building</h2>
 <ul>
-  <li>The total skill rank cap is now 400.</li>
+  <li>The total skill rank cap is 400.</li>
   <li>Armor counts toward that cap and grants skill points (SP) like other active skills.</li>
-  <li>Equipment requirements now care more about your skill ranks instead of old proficiency-style perk purchases.</li>
-  <li>Higher ranks of an active ability replace lower ranks, so your feat list and hotbar should have fewer duplicate versions of the same power.</li>
-  <li>Many former active perks are now passive bonuses, upgrades, or riders on other abilities. This should make builds less crowded without removing the identity of each tree.</li>
-  <li>Combat Readiness is replacing the old cooldown-reduction bonus. It improves activated ability damage and healing instead of reducing cooldowns.</li>
-  <li>The Character Sheet and rebuild screens will show skill point numbers more clearly and should better match your build.</li>
-  <li>Ability descriptions will show shared recast groups when abilities use the same cooldown timer.</li>
+  <li>Equipment requirements are now based on your skill ranks rather than old proficiency-style perk purchases. A few items still require a specific perk.</li>
+  <li>Higher ranks of an active ability replace lower ranks, so your feat list and hotbar no longer carry duplicate versions of the same power.</li>
+  <li>Many former active perks are now passive bonuses, upgrades, or riders on other abilities.</li>
+  <li>Combat Readiness replaces the old recast-reduction gear bonus. It increases activated ability damage and healing, and does <strong>not</strong> reduce cooldowns.</li>
+  <li>Cooldown reduction still exists, but only as specific perk effects that shorten one named recast group after a triggering action. It is no longer a stat you stack from gear.</li>
+  <li>The Perks window shows a "Recast Group" line on a perk's detail panel when that perk's ability shares a cooldown timer with others.</li>
 </ul>
-<h2>Combat Feel</h2>
+<h2>Combat Changes</h2>
 <ul>
   <li>Damage, hit chance, evasion, critical hits, defense, and scaling have all been rebalanced.</li>
-  <li>Most combat trees should have a clearer rhythm: fewer buttons, stronger identity, and less pressure to fill every hotbar slot.</li>
-  <li>Several area attacks now show warning shapes before they land, such as lines, cones, or circles.</li>
-  <li>If an ability has a cast time, moving or interrupting the action can cancel the targeting preview.</li>
-  <li>Line attacks and other area attacks will check line of sight more reliably.</li>
-  <li>Weapon speeds have been adjusted so fast weapons still feel fast while leaving room for haste and speed bonuses to matter.</li>
-  <li>Some enemies now pressure specific defenses or weaknesses, so swapping gear, using support abilities, and planning around resistances should matter more.</li>
-  <li>Enemy leashing and chase behavior is tighter, including ranged enemies, so enemies should be less likely to fight you from the wrong area or keep attacking when they cannot properly reach you.</li>
-  <li>Ability animations, sounds, warning shapes, and impact feedback are clearer, so combat should be easier to read while it is happening.</li>
+  <li>Several area attacks show warning shapes before they land, such as lines, cones, or circles.</li>
+  <li>If an ability has a cast time, moving or interrupting the action cancels the targeting preview.</li>
+  <li>Line attacks and other area attacks check line of sight more reliably.</li>
+  <li>Weapon speeds have been adjusted so that haste and speed bonuses have room to matter.</li>
+  <li>Some enemies pressure specific defenses or weaknesses, so gear swaps, support abilities, and resistances matter more. Enemy vulnerabilities are capped at -20, so no enemy has a crippling elemental weakness.</li>
+  <li>Enemies will now follow you up to a certain range before giving up the chase and returning home. This applies to ranged enemies as well.</li>
+  <li>Ability animations, sounds, warning shapes, and impact feedback have been reworked.</li>
 </ul>
 <h2>Defenses And Resistances</h2>
 <ul>
-  <li>Physical Defense and Force Defense are now shown separately from Resistances.</li>
-  <li>Resistances are easier to read: positive values reduce that kind of damage or status effect, while negative values mean you are vulnerable to it.</li>
-  <li>A Resistance of 100 means temporary immunity, but normal gear and passive bonuses will not casually reach full immunity.</li>
-  <li>Elemental damage now respects your main defense first, then applies the matching Resistance afterward.</li>
-  <li>Trauma and Disruption are mainly about resisting matching status effects, not reducing every kind of normal damage.</li>
-  <li>Attack Deflection, Shield Deflection, and Guard are separate defensive tools. Deflection stops a hit from landing; Guard reduces damage after a hit gets through.</li>
+  <li>Physical Defense and Force Defense are shown separately from Resistances on the Character Sheet. These are the only two Defense values.</li>
+  <li>There are eight Resistances: Fire, Poison, Electrical, and Ice for elemental damage, and Mind, Mobility, Trauma, and Disruption for status effect families.</li>
+  <li>Positive Resistance values reduce that kind of damage or status effect. Negative values mean you are vulnerable to it. The range is -100 to 100.</li>
+  <li>A Resistance of 100 means immunity, but gear and passive bonuses cap you at 99. Only a temporary status effect can push you to full immunity.</li>
+  <li>Resistance also shortens how long a matching status effect lasts, not just the damage it deals.</li>
+  <li>Elemental damage is reduced by Physical Defense first, then the matching Resistance is applied afterward.</li>
+  <li>Trauma and Disruption resist matching status effects and the damage those effects deal over time. They do not reduce ordinary weapon or Force damage.</li>
+  <li>Attack Deflection, Shield Deflection, and Guard are separate defensive tools. Attack Deflection applies when wielding a weapon with no shield, Shield Deflection applies when a shield is equipped, and both stop a hit from landing. Guard reduces damage after a hit gets through, and also restores Stamina, deals retaliation damage, and increases enmity.</li>
+  <li>Note when reading gear: item stats named "Fire Defense", "Poison Defense", "Electrical Defense", and "Ice Defense" feed your <em>Resistances</em>, not your two Defense values.</li>
 </ul>
 <h2>Status Effects</h2>
 <ul>
-  <li>Many buffs and debuffs have been cleaned up, renamed, or rebuilt so their behavior is more consistent.</li>
-  <li>Expect familiar combat conditions such as Blind, Dazed, Stunned, Knockdown, Hamstring, Sunder, Exposed, Hemorrhage, Toxin, Weakened, and Exhausted to matter under the new system.</li>
-  <li>Damage-over-time effects such as Bleed and Toxin now scale in a more consistent way.</li>
-  <li>Some debuffs now have clearer jobs. For example, Exposed lowers defense, Hemorrhage makes targets take more damage, Fractured Focus makes Force powers more expensive, and Foggy Mind makes activation slower.</li>
-  <li>Several stances, marks, challenges, guards, and auras now trigger extra effects when you attack, defend, guard, deflect, or support allies.</li>
-  <li>Area and status powers such as Creeping Terror use clearer area size and visual feedback.</li>
+  <li>Many buffs and debuffs have been cleaned up, renamed, or rebuilt.</li>
+  <li>Familiar combat conditions such as Blind, Dazed, Stunned, Knockdown, Hamstring, Sunder, Exposed, Hemorrhage, Toxin, Weakened, and Exhausted all matter under the new system.</li>
+  <li>Damage-over-time effects such as Bleed and Toxin scale in a consistent way.</li>
+  <li>Debuffs have clearer jobs. Exposed lowers defense, Hemorrhage makes targets take more damage, Fractured Focus makes Force powers more expensive, and Foggy Mind makes activation slower.</li>
+  <li>Several stances, marks, challenges, guards, and auras trigger extra effects when you attack, defend, guard, deflect, or support allies.</li>
 </ul>
 <h2>Weapon Skill Changes</h2>
-<p>Every weapon skill is being updated. The short version is that each one should have a clearer playstyle and fewer unnecessary active buttons.</p>
+<p>Every weapon skill has two named styles, each with its own perk tree.</p>
 <figure class="table">
   <table>
     <thead>
       <tr>
         <th>Skill</th>
+        <th>Styles</th>
         <th>What To Expect</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>Vibroblade</td>
-        <td>Bulwark and Frenzy styles with blocking, cleaving, guard support, and durable front-line options.</td>
+        <td>Bulwark, Frenzy</td>
+        <td>Blocking, cleaving, guard support, and durable front-line options.</td>
       </tr>
       <tr>
         <td>Vibroknife</td>
-        <td>Saboteur and Shadow styles with poisons, vulnerable targets, movement control, shutdowns, and burst windows.</td>
+        <td>Shadow, Saboteur</td>
+        <td>Poisons, vulnerable targets, movement control, shutdowns, and burst windows.</td>
       </tr>
       <tr>
         <td>Lightsaber</td>
-        <td>Severance and Ward styles with deflection, challenges, controlled pressure, and strong dueling identity.</td>
+        <td>Severance, Ward</td>
+        <td>Deflection, challenges, controlled pressure, and duelling.</td>
       </tr>
       <tr>
         <td>Heavy Vibroblade</td>
-        <td>Immortal and Berserker styles with self-sacrifice, large swings, retaliation, and emergency protection.</td>
+        <td>Immortal, Berserker</td>
+        <td>Self-sacrifice, large swings, retaliation, and emergency protection.</td>
       </tr>
       <tr>
         <td>Spear</td>
-        <td>Vigor and Disabler styles with interrupts, Force disruption, flanking bonuses, and positional pressure.</td>
+        <td>Vigor, Disabler</td>
+        <td>Interrupts, Force disruption, flanking bonuses, and positional pressure.</td>
       </tr>
       <tr>
         <td>Twin Blade</td>
-        <td>Cyclone and Lacerator styles with spinning attacks, rapid pressure, counters, and one-on-one payoff abilities.</td>
+        <td>Cyclone, Lacerator</td>
+        <td>Spinning attacks, rapid pressure, counters, and one-on-one payoff abilities.</td>
       </tr>
       <tr>
         <td>Saberstaff</td>
-        <td>Conduit and Tempest styles with sweeping attacks, Force-focused control, channeling, and burst releases.</td>
+        <td>Conduit, Tempest</td>
+        <td>Sweeping attacks, Force-focused control, channelling, and burst releases.</td>
       </tr>
       <tr>
         <td>Katar</td>
-        <td>Iron Guard and Scrapper styles with guard counters, defensive martial pressure, shocks, toxins, and control effects.</td>
+        <td>Iron Guard, Scrapper</td>
+        <td>Guard counters, defensive martial pressure, shocks, toxins, and control effects.</td>
       </tr>
       <tr>
         <td>Staff</td>
-        <td>Crusher and Sentinel styles with knockdowns, line attacks, sheltering allies, guarded hits, and heavy blunt damage.</td>
+        <td>Crusher, Sentinel</td>
+        <td>Knockdowns, line attacks, sheltering allies, guarded hits, and heavy blunt damage.</td>
       </tr>
       <tr>
         <td>Pistol</td>
-        <td>Gambler and Skirmisher styles with quick shots, multi-shot pressure, interrupts, close-range bursts, smoke, and finishing attacks.</td>
+        <td>Gambler, Skirmisher</td>
+        <td>Quick shots, multi-shot pressure, interrupts, close-range bursts, smoke, and finishing attacks.</td>
       </tr>
       <tr>
         <td>Rifle</td>
-        <td>Marksman and Suppression styles with aimed shots, piercing rounds, suppressive fire, tranquilizers, and battlefield control.</td>
+        <td>Marksman, Suppression</td>
+        <td>Aimed shots, piercing rounds, suppressive fire, tranquilizers, and battlefield control.</td>
       </tr>
       <tr>
         <td>Throwing</td>
-        <td>Ordnance and Flurry styles with explosives, flash effects, pins, firebursts, precise throws, and finishing tosses.</td>
+        <td>Ordnance, Flurry</td>
+        <td>Explosives, flash effects, pins, firebursts, precise throws, and finishing tosses.</td>
       </tr>
     </tbody>
   </table>
 </figure>
-<p>Several individual weapon abilities also have clearer feedback, including Vibroknife telegraphs and sound feedback, Staff Crusher area effects, and Rifle targeting and impact animation behavior.</p>
 <h2>Force, Devices, Leadership, And First Aid</h2>
 <figure class="table">
   <table>
     <thead>
       <tr>
         <th>Skill</th>
+        <th>Perk Trees</th>
         <th>What To Expect</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>Force</td>
-        <td>Light, Dark, and Universal Force lines have been rebuilt. Light gains more direct combat options, Dark keeps stronger raw damage and drain identity, and Universal powers such as Force Push, Force Leap, Mind Trick, and Throw Lightsaber remain broadly useful. Throw Lightsaber's animation is also returning. Force Judgment, Force Sanctuary, Force Spark, Force Drain, Force Push, Force Leap, Eclipse of Resolve, Weaken Resolve, Radiant Lance, Guardian Ward, and Creeping Terror also have clearer targeting, visuals, sounds, or balance.</td>
+        <td>Alter, Control, Sense</td>
+        <td>The Force perk lines have been rebuilt across three trees. Light-side and dark-side powers both draw from all three. Light gains more direct combat options, dark keeps stronger raw damage and drain identity, and staples such as Force Push, Force Leap, Mind Trick, and Throw Lightsaber remain broadly useful. Throw Lightsaber's animation returns. Force Judgment, Force Sanctuary, Force Spark, Force Drain, Force Push, Force Leap, Eclipse of Resolve, Weaken Resolve, Radiant Lance, Guardian Ward, and Creeping Terror all have updated targeting, visuals, sounds, or balance.</td>
       </tr>
       <tr>
         <td>Devices</td>
-        <td>Grenades, shields, fields, beacons, gadgets, flamethrowers, rockets, sonic tools, and new energy attacks are rebalanced. Each Devices category should cost the same total skill points to complete. Grenades, beacons, fields, Emergency Bunker, and device area effects have clearer targeting, visuals, and behavior.</td>
+        <td>Grenadier, Field Engineer, Field Support, Assault Gadgets</td>
+        <td>Grenades, shields, fields, beacons, gadgets, flamethrowers, rockets, sonic tools, and new energy attacks are rebalanced. Each Devices category costs the same total skill points to complete. Grenades, beacons, fields, Emergency Bunker, and device area effects have updated targeting, visuals, and behaviour.</td>
       </tr>
       <tr>
         <td>Leadership</td>
-        <td>Leadership now leans harder into auras, commands, and ally support. Auras such as Rallying Standard, Coordinated Focus, Charge Order, Watchful Presence, Steady Formation, and Field Recovery use the aura system. Rousing Shout now helps living allies and no longer competes with First Aid as a revive tool.</td>
+        <td>Vanguard Command, Field Steward</td>
+        <td>Leadership leans harder into auras, commands, and ally support. Auras such as Rallying Standard, Coordinated Focus, Charge Order, Watchful Presence, Steady Formation, and Field Recovery use the aura system. Rousing Shout now helps living allies and no longer competes with First Aid as a revive tool.</td>
       </tr>
       <tr>
         <td>First Aid</td>
-        <td>First Aid remains the main healing, revive, cleanse, and emergency recovery skill, with updates to kits, mists, resuscitation, infusions, stims, shields, suppressants, antitoxins, and emergency cocktails. Kolto Mist and Emergency Triage ranges, First Aid visuals and sounds, and Emergency Sealant behavior are also changing. Treatment Kit healing counts more reliably for combat support.</td>
+        <td>Trauma Medic, Combat Pharmacology</td>
+        <td>First Aid remains the main healing, revive, cleanse, and emergency recovery skill, with updates to kits, mists, resuscitation, infusions, stims, shields, suppressants, antitoxins, and emergency cocktails. Kolto Mist and Emergency Triage ranges, First Aid visuals and sounds, and Emergency Sealant behaviour all change. Treatment Kit healing counts more reliably for combat support.</td>
       </tr>
     </tbody>
   </table>
 </figure>
-<h2>Mimicry (New Skill Line)</h2>
+<h2>Mimicry (New Skill)</h2>
 <ul>
-  <li>Mimicry is a new combat skill that lets you copy and use the techniques enemy creatures fight with.</li>
-  <li>You are introduced to it through the intro quest "Salvaged Intelligence" from Renna Tarsk in the Veles Colony, which points you to the Combat Analyzer perk and the /techniques window.</li>
-  <li>Once you own the Combat Analyzer, your analyzer records techniques used by nearby enemies. When one of those enemies dies near you, you have a chance to permanently learn its technique. Your learn chance rises with your Mimicry rank and the Pattern Recognition perk.</li>
-  <li>Manage your library and build a loadout in the /techniques window, which can only be changed out of combat. Equipped actives go on your hotbar, while equipped stances and passive traits apply automatically.</li>
+  <li>Mimicry is a new combat skill that lets you copy and use the techniques enemy creatures fight with. It is available to all character types.</li>
+  <li>You are introduced to it through the intro quest "Salvaged Intelligence" from Renna Tarsk in the Veles settlement on Viscara, which points you to the Combat Analyzer perk and the /techniques window (also /tech).</li>
+  <li>Once you own the Combat Analyzer, your analyzer records techniques used by nearby enemies. When one of those enemies dies near you, you have a chance to permanently learn its technique.</li>
+  <li>Learn chance starts at 20% and rises with your Mimicry rank, the Pattern Recognition perk, and your Perception, up to a maximum of 75%.</li>
+  <li>Manage your library and build a loadout in the /techniques window, which can only be changed out of combat.</li>
+  <li>Equipped active techniques, including toggled stances, are added to your hotbar. Only passive traits apply automatically with no button to press.</li>
   <li>Techniques cost Stamina instead of Force Points and work the same for every character type. They come in four tiers unlocked at Mimicry ranks 0, 15, 30, and 45, and cover damage, control, debuffs, ally support, stances, and passive traits.</li>
-  <li>You have a limited number of technique slots that grow as you invest in the skill, so you tailor your loadout to each fight. Equipping several techniques of the same damage element grants a resonance bonus, and the Overclocked Analyzer capstone adds more slots and a burst ability.</li>
+  <li>Technique slots come from perks, not skill ranks. You start with 2 from Combat Analyzer, gain 2 per rank of Analyzer Memory, and 2 more from the Overclocked Analyzer capstone, for a maximum of 10. Your Mimicry rank gates which technique <em>tiers</em> you can equip.</li>
+  <li>Equipping two or more active techniques that share a damage element grants an elemental resonance bonus: +5% technique potency per extra technique of that element, capped at +20%. Passive traits do not count.</li>
+  <li>The Overclocked Analyzer capstone adds 2 slots and the Overload ability, which briefly boosts your equipped techniques.</li>
+</ul>
+<h2>Espionage (New Skill)</h2>
+<ul>
+  <li>Espionage is a new utility skill covering stealth, weapon poisons, traps, and cracking lockboxes.</li>
+  <li><strong>Espionage is available to Standard characters only.</strong> Force Sensitive characters cannot learn it, and it does not appear in their skill list.</li>
+  <li>It has two perk trees. <strong>Infiltrator</strong> covers stealth, back attacks, escapes, repositioning, and lockbox slicing. <strong>Saboteur</strong> covers crafting poisons and traps, and placing trap abilities.</li>
+  <li>There is no intro quest or trainer. Poisoncraft I has no skill requirement, so crafting poisons is the usual starting point. You also earn Espionage XP for staying hidden near hostile NPCs.</li>
+  <li>Poisons and trap kits are crafted at the Espionage Workbench in the Dantooine crafter base.</li>
+  <li>Stealth has been completely reworked. Whether you are spotted is decided by your Stealth against the observer's Detection, and listening no longer plays any part. You must own the Stealth perk to enter stealth, you cannot enter it while in combat, and staying hidden drains Stamina.</li>
+  <li>The Alertness perk, which grants Detection, remains available to every character type so that anyone can counter stealth.</li>
+  <li>Venom Coatings are crafted vials applied to a weapon, and work on melee and thrown weapons only. They cannot be used on lightsabers, saberstaffs, pistols, or rifles.</li>
+  <li>Coating vials are tradable, and <strong>anyone can use them</strong>, including Force Sensitive characters. Only crafting them requires Espionage.</li>
+  <li>Traps come in two kinds. Razor Trap and Shock Trap are placed with an ability and are visible to everyone, while crafted Snare Kits are concealed and can be spotted and disarmed by players with enough Trapcraft training.</li>
+  <li>Lockboxes are rare drops that you crack open using the Slicing perk line, and contain exclusive rings, necklaces, and belts carrying the new Espionage stats. A failed attempt never destroys the box.</li>
 </ul>
 <h2>Skill Mastery Quests</h2>
 <ul>
-  <li>Each combat and support skill now has capstone "mastery" quest chains for characters who reach rank 50 in that skill.</li>
-  <li>Every skill has two mastery paths, one for each of its combat styles, and each path is a five-stage chain that builds from clearing groups of trial enemies to defeating a final master.</li>
+  <li>Seventeen skills have capstone "mastery" quest chains, unlocked at rank 50 in that skill.</li>
+  <li>The combat skills covered are Beast Mastery, Devices, Force, Heavy Vibroblade, Katar, Lightsaber, Pistol, Rifle, Saberstaff, Spear, Staff, Throwing, Twin Blade, Vibroblade, and Vibroknife. Among support skills, First Aid and Leadership have chains. Mimicry and Espionage do not have mastery chains in this update.</li>
+  <li>The number of mastery paths varies by skill. Most have two, Beast Mastery has six, Devices has four, Force has three, and Vibroblade and First Aid have one each.</li>
+  <li>Each path is a five-stage chain, building from clearing groups of trial enemies through a warden fight and an inner circle to a final master.</li>
   <li>The trials take place in dedicated locations across the galaxy, such as the Jedi Enclave Trial Halls on Dantooine and the Czerka Arms Test Range on Nar Shaddaa.</li>
-  <li>The later stages are built for a group, so expect to bring companions or allies for the wardens and masters.</li>
-  <li>Completing a mastery chain awards XP, credits, and a matching achievement.</li>
+  <li>The warden fight and the final master fight are built for a group. Some chains ask for at least two allies.</li>
+  <li>Every stage awards XP and credits, and completing a chain awards a matching achievement.</li>
 </ul>
 <h2>Beast Mastery</h2>
 <ul>
-  <li>Beast Mastery is being updated across taming, training, rewards, soothing, revives, beast attacks, beast roles, and beast support abilities.</li>
-  <li>Beast stats, levels, purity bonuses, resistances, and attack speed behavior are being adjusted to match the new combat rules.</li>
-  <li>Tame will care about your social stats in a clearer way.</li>
-  <li>Beast builds should have clearer roles, including bruiser, damage, evasion, Force, tank, balanced, training, and bioengineer support.</li>
-  <li>New Incubation Field Notes are codex key items, one per mutation-target beast, that spell out every way to incubate that beast and what each method needs, such as the required enzyme, day of week, and minimum success chance.</li>
-  <li>You earn a beast's note automatically the first time you successfully incubate it. Starter notes are also sold by Zoya the Beastwright in the Veles Colony, and some are dropped by specific world bosses.</li>
+  <li>Beast Mastery is updated across taming, training, rewards, soothing, revives, beast attacks, beast roles, and beast support abilities.</li>
+  <li>Beast stats, levels, purity bonuses, resistances, and attack speed behaviour are adjusted to match the new combat rules.</li>
+  <li>Tame chance starts at 40%, shifts by 3% for each level your Beast Mastery rank is above or below the target, and gains 3% per point of Social. It is capped at 75%.</li>
+  <li>Beast roles are Bruiser, Damage, Evasion, Force, Tank, and Balanced.</li>
+  <li>New Incubation Field Notes are key items, filed under their own "Incubation Field Notes" category, one per mutation-target beast. Each note spells out every way to incubate that beast and what each method needs, such as the required enzyme, day of the week, and minimum mutation chance.</li>
+  <li>You earn a beast's note automatically the first time you successfully <strong>mutate into</strong> that beast. A normal incubation does not grant a note.</li>
+  <li>Starter notes are sold by Zoya the Beastwright in the Veles general store on Viscara, and some are dropped by specific world bosses.</li>
 </ul>
 <h2>Items, Crafting, And Enemies</h2>
 <ul>
   <li>Combat-linked equipment requirements and item values are updated to match the new skill requirements and combat rules.</li>
-  <li>Existing weapon damage, weapon speed, elemental blueprint bonuses, and resistance data will be updated where possible.</li>
-  <li>Armor, food, and droid resistance bonuses are being adjusted for the new Resistance system.</li>
+  <li>Existing weapon damage, weapon speed, elemental blueprint bonuses, and resistance data are updated to the new values.</li>
+  <li>Armor, food, and droid resistance bonuses are adjusted for the new Resistance system, including a full eight-type droid resistance line.</li>
   <li>Droid CPU items and droid assembly options use the new combat values.</li>
-  <li>Some enhancement and food recipes now use Combat Readiness instead of the old cooldown-reduction bonus.</li>
-  <li>The update will adjust old saved items in one cleaner pass, so weapons, armor, enhancements, droids, storage, markets, ships, and outfits are handled more consistently.</li>
-  <li>Some enemies will now more clearly favor certain damage types or weaknesses, including Ice-themed Hutlar enemies, Electrical-themed CZ220 enemies, and Disruption-themed Korriban enemies.</li>
-  <li>New enemy variants include Coolant-Scarred Mynock, Byysk Cryo Adept, and Sith Frostbinder.</li>
+  <li>Some enhancement and food recipes now grant Combat Readiness instead of the old cooldown-reduction bonus. Existing recipe unlocks carry over.</li>
+  <li>Old saved items are updated in one pass, so weapons, armor, enhancements, droids, storage, markets, ships, and outfits are handled consistently.</li>
+  <li>Some enemies favour certain damage types: Ice-themed Hutlar enemies, Electrical-themed CZ220 enemies, and Disruption-themed Korriban enemies.</li>
+  <li>Three new Ice-pressure enemy variants are added, one per region: Coolant-Scarred Mynock on CZ-220, Byysk Cryo Adept on Hutlar, and Sith Frostbinder on Korriban.</li>
+  <li>A large batch of new crafting recipes is added across Fabrication, Smithery, Cooking, and Engineering, including new furniture lines, new armor and weapon material lines, field and foraged provisions, field tools, and saber upgrade kits.</li>
+  <li>Smithery weapon recipes are reorganised. The old One-Handed, Two-Handed, Martial, and Ranged groupings are merged into a single Weapon category, so the crafting menu looks different.</li>
+  <li>When two enhancements with different damage types are socketed onto a weapon, the game now picks one at random rather than always keeping the most recent. Damage amounts still stack.</li>
 </ul>
 <h2>Building And Upgrading Lightsabers</h2>
 <ul>
-  <li>Force Sensitive characters can now build their own lightsabers without a DM crafting the weapon. A DM only grants you a Kyber Token; everything after that is in your hands.</li>
+  <li>Force Sensitive characters can build their own lightsabers without a DM crafting the weapon. A DM only grants you a Kyber Token; everything after that is in your hands.</li>
   <li>Use the token to attune it into a Kyber Token in your currency list, then visit a Lightsaber Workbench at the Sith Academy on Korriban, the Jedi Enclave on Dantooine, or a hidden cave on Dathomir.</li>
-  <li>At the workbench you build a tier 1 lightsaber or saberstaff: pick a hilt style and blade color, optionally socket up to two enhancements, and optionally apply a Weapon Submission Token to carry crafted stats onto the saber. Building consumes one Kyber Token.</li>
-  <li>Sabers grow stronger through tiered upgrade kits crafted with Engineering. Each kit raises the weapon one tier and keeps its existing bonuses, with the top "Chiro" tier requiring research to unlock.</li>
-  <li>Old DM-built sabers are normalized to a tier 5 baseline so the new upgrade kits work on them.</li>
+  <li>At the workbench you build a tier 1 lightsaber or saberstaff: pick a hilt style and blade colour, optionally socket up to two enhancements, and optionally apply a Weapon Submission Token to carry crafted stats onto the saber. Building consumes one Kyber Token, along with any enhancements and token you socket.</li>
+  <li>Sabers grow stronger through tiered upgrade kits crafted with Engineering. Each kit raises the weapon one tier at a time and keeps its existing bonuses. The weapon must be unequipped to apply one.</li>
+  <li>The top tier is tier 5.5, reached with the <strong>Chiro</strong> upgrade kit, whose blueprint must be unlocked through research before it can be crafted.</li>
+  <li>Sabers that were built by a DM are recalibrated to a tier 5 baseline on login so the new upgrade kits work on them. Damage, attack delay, and skill requirement are set to tier 5 values, and off-tier modifiers such as damage type and enhancement, damage, or accuracy bonuses are removed. Name and appearance are kept, and nothing is taken from your inventory.</li>
+  <li>Crafted training sabers and workbench-built sabers are not affected by that recalibration.</li>
 </ul>
 <h2>Quest Contracts</h2>
 <ul>
-  <li>You can now post your own quests for other players at a Contract Board, backed by rewards you lock in up front.</li>
-  <li>Open a board to Browse and accept others' contracts or manage your own. To create one, set a title and description, add one to three item-delivery objectives by searching for items, and set the reward.</li>
-  <li>Publishing charges the reward credits, which are held in escrow, plus a small non-refundable posting fee. The escrow is paid to the first player who turns the contract in, or refunded to you if you cancel it or it expires after 30 days.</li>
-  <li>Completers accept a contract, gather the requested items, and turn it in at any board. Only the first player to finish earns the reward.</li>
-  <li>Rewards and returned items are handed out through a Claim Deliveries mailbox at any board, so nothing is lost to a full inventory. You can hold up to three active contracts at once.</li>
+  <li>You can post your own quests for other players at a Contract Board, backed by rewards you lock in up front. Boards are placed in twelve locations across the galaxy.</li>
+  <li>Open a board to browse and accept others' contracts or manage your own. To create one, set a title and description, add one to three item-delivery objectives by searching for items, and set the reward.</li>
+  <li>The reward is credits, and you may also attach up to two items.</li>
+  <li>Publishing charges the reward credits, which are held in escrow, plus a posting fee of 5% (minimum 100 credits) which is never refunded.</li>
+  <li>The escrow is paid to the first player who turns the contract in, or refunded to you if you cancel it or it expires after 30 days.</li>
+  <li>Completers accept a contract, gather the requested items, and turn it in at any board. Only the first player to finish earns the reward, and you cannot complete your own contract.</li>
+  <li>When you complete a contract, the credits and reward items go straight to you. Everything else waits in <strong>Claim Deliveries</strong> on the My Contracts tab of any board: the items players turn in to your contract, and any escrow refunded when a contract is cancelled or expires. You are notified on login if deliveries are waiting.</li>
+  <li>You can have three published contracts at a time, counted across every character on your account, and one draft in progress. There is no limit on how many contracts you can accept.</li>
+</ul>
+<h2>Names, Disguises, And Privacy</h2>
+<ul>
+  <li>Unknown characters are shown with a descriptor instead of their name.</li>
+  <li>Type /name and then click a target. Clicking yourself sets the description that players who do not know you will see. Clicking another player sets the private name you recognise them by. /forgetname clears a name you assigned.</li>
+  <li>Settings has a new <strong>Identity</strong> tab with three toggles: show your own descriptor beside your name, show other players' descriptors, and hide your account name from player-facing lists. Hiding your account name is enabled by default.</li>
+  <li>Disguises are a new player system, opened with /disguise or /disguises. A disguise stores a private label, a public descriptor, a portrait, a sound set, and its own account-name setting.</li>
+  <li>You have one disguise slot by default, and there is a 30-minute cooldown between activations. Removing a disguise is immediate.</li>
+  <li>People who learned your name undisguised do not see through your disguise. Each disguise is recognised separately.</li>
+  <li>Retired disguises keep occupying a slot until wiped by an Identity Broker, who charges 100,000 credits or 25,000 RP XP to erase an identity permanently.</li>
 </ul>
 <h2>Other Changes</h2>
 <ul>
-  <li>The character name system has clearer unknown-character names.</li>
-  <li>Players can use /name on themselves to set the description other players see before they learn the character's name.</li>
-  <li>Settings now include more privacy controls for descriptor display and account-name visibility.</li>
-  <li>Disguise and persona support includes saved identities and matching display-name handling.</li>
-  <li>The Perks window has been redesigned to read at a glance: rows are color-coded by state (buyable, too expensive, skill-locked, or maxed), show the next upgrade's SP cost and an icon for what gates each perk, and can be filtered by All, Owned, Can Buy, or Maxed. Your available SP is shown in the window title.</li>
-  <li>Interplanetary travel now uses scheduled shuttles instead of instant flight terminals. You buy a ticket at a starport, wait for the next departure, board the shuttle near the terminal, and ride an instanced shuttle to your destination. Fares scale with distance, and unboarded tickets can be refunded for the base fare.</li>
-  <li>Banks now share one global storage account, so anything you deposit at one bank can be withdrawn at any other. Standard bank storage holds 120 items.</li>
-  <li>A new Mini-Vitals overlay shows your Stamina and FP as compact bars on your portrait, or your ship's shield, hull, and capacitor in space. It is on by default and can be toggled in Settings.</li>
+  <li>The Perks window has been redesigned. Rows are colour-coded by state: blue for maxed, green for buyable, amber when you meet the requirements but lack SP, and grey when a requirement is unmet. Each row shows the next upgrade's SP cost and an icon for what gates the perk, and the window can be filtered by All, Owned, Can Buy, or Maxed. Your available SP is shown in the window title. There is also a search box, category and sort dropdowns, and a My Perks / Beast Perks toggle.</li>
+  <li>A new in-game Player Guide covers 19 topics, including skills, skill decay, perks, perk refunds, XP debt, abilities, attributes, rebuilds, death and recovery, combat basics, crafting, beasts, quests, housing, and ships. Open it with the Spell Book panel key (default <strong>B</strong>) or from the Character Sheet.</li>
+  <li>Interplanetary travel now uses scheduled shuttles instead of instant flight terminals. You buy a ticket at a starport, wait for the next departure, board within 15 metres of the terminal when boarding is called, and ride an instanced shuttle to your destination.</li>
+  <li>Shuttles run every 4 to 6 minutes per route, with orbital hops every 60 seconds. A boarding call goes out 60 seconds before departure, and if you miss it your ticket stays valid for the next shuttle. Transit takes 10 to 20 minutes, or 60 seconds for orbital hops.</li>
+  <li>Fares scale with distance, with a minimum of 100 credits and a flat 25 credits for orbital hops. Fares also carry a city transportation tax of up to 25%. Unboarded tickets can be refunded at the departure starport for the base fare, but the tax is not refunded.</li>
+  <li>Shuttle travel requires the CZ-220 Shuttle Pass, granted when you complete CZ-220 orientation.</li>
+  <li>Banks now share one global storage account, so anything you deposit at one bank can be withdrawn at any other. Standard bank storage holds 120 items. City bank terminals still require citizenship in that city and no owed taxes to access, though the contents are the same account.</li>
+  <li>A new Mini-Vitals overlay shows your Stamina and FP as compact bars on your portrait, or your ship's shield, hull, and capacitor in space. It is on by default and can be toggled in Settings. Turning it off restores the full status window in the lower right.</li>
+  <li>A new Dantooine quest, "Field Tinctures", is available from Healer Elara in the Dantooine Colony after you complete "Harvesting Herbs".</li>
+  <li>A new Blood Frenzy quest is available, along with eighteen new capstone achievements.</li>
+  <li>Several new gadgets and consumables are added, including the Ghostkey Relay, Stonewake Relay, Tidecall Beacon, Wayfinder Sensor, Stormcore Matrix, Kinetic Harness, Lucid Splice, Flux Diverter, and Faultline Capacitor.</li>
+  <li>The Shield Booster ship module now costs more capacitor: its maximum capacitor penalty is increased from 40 to 60.</li>
+  <li>Property and housing loading is more reliable, with fewer failures when entering a property.</li>
   <li>Some older area, creature, item, and dialogue text is clearer and more consistent.</li>
-  <li>A new Dantooine quest is available.</li>
+  <li>Every base item type now shows a custom SWLOR description instead of the stock Neverwinter Nights one.</li>
+  <li>Scenery and prop names have been cleaned up. Items that previously showed internal builder tags now display proper names, such as "Blaster Rifle (Small)" and "DLT-20A Rifle".</li>
+  <li>Perks, abilities, and status effects have a large set of new icons, including per-rank perk artwork and markers showing whether you meet a perk's requirements.</li>
+  <li>The status effect icon bar is far more detailed, with distinct icons for hundreds of buffs and debuffs.</li>
+  <li>New sound effects have been added for Force and tech abilities.</li>
+</ul>
+<h2 id="removed-in-this-update">Removed In This Update</h2>
+<ul>
+  <li><strong>Concentration abilities are removed entirely</strong>, along with the /concentration (/conc) command. There is no replacement.</li>
+  <li><strong>The "Show Holonet" setting is removed.</strong> You can no longer hide the Holonet/Shout chat channel from the Settings window.</li>
+  <li><strong>The "Lightsaber XP Share" setting is removed.</strong> Force XP is no longer gained from lightsaber combat through that toggle.</li>
+  <li>Old Heavy Armor and Light Armor perk trees are not returning.</li>
+  <li>The old Heavy Armor activation-time penalty is not part of the new design.</li>
   <li>Several old perk categories, old perk items, old status effects, and old item requirements are cleaned up as part of the rebuild path.</li>
 </ul>
 <h2>Not Included In This Update</h2>
 <ul>
-  <li>Espionage is not part of this combat update.</li>
   <li>Farming-only Agriculture perks, such as Crop Management-style mechanics, are not part of this combat update.</li>
-  <li>Engineering, Fabrication, Gathering, and Piloting are not being presented here as standalone skill revamps. Any related changes are limited to combat-linked items, recipes, equipment, or handling old stored items.</li>
-  <li>Old Heavy Armor and Light Armor perk trees are not returning.</li>
-  <li>The old Heavy Armor activation-time penalty is not part of the new design.</li>
+  <li>Engineering, Fabrication, Gathering, and Piloting are not standalone skill revamps here. Any related changes are limited to combat-linked items, recipes, equipment, or handling old stored items.</li>
+  <li>Espionage Slicing currently applies to lockboxes only. Sliceable doors, containers, and terminals are not part of this update.</li>
 </ul>
