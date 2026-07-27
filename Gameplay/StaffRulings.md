@@ -2,7 +2,7 @@
 title: Staff Rulings
 description: Rulings by the Staff team. Subject to change over time.
 published: true
-date: 2026-07-04T00:40:01.321Z
+date: 2026-07-27T19:37:16.337Z
 tags: rules, dm, qm, staff
 editor: markdown
 dateCreated: 2025-10-14T21:51:34.027Z
@@ -88,6 +88,8 @@ The blueprint buffs are applied EXACTLY as they are on the token being turned in
 
 ## Custom weapons and you!
 We are implementing a limit of two custom staff-made weapons per character, this includes lightsabers and other faction specific weaponry. The reason for this change is to alleviate weapon requests upon the staff which have been steadily growing in recent times. Additionally it's to avoid PCs ending up with a dragons hoard of unique weaponry that are rarely used or otherwise gather dust in distant storage spaces.
+
+Custom weapon requests will be treated in the same vein as event requests. They will require a degree of RP behind them and may not be immediately picked up by a member of staff. They are rewards for exceptional RP or cool plot lines.
 
 
 ## Retirement Rules
