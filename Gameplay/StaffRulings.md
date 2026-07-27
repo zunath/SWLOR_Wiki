@@ -2,7 +2,7 @@
 title: Staff Rulings
 description: Rulings by the Staff team. Subject to change over time.
 published: true
-date: 2026-07-27T19:37:16.337Z
+date: 2026-07-27T19:40:36.793Z
 tags: rules, dm, qm, staff
 editor: markdown
 dateCreated: 2025-10-14T21:51:34.027Z
@@ -12,6 +12,7 @@ dateCreated: 2025-10-14T21:51:34.027Z
 
 
 ---
+#
 ## Traitor Rules
 Betraying an NPC faction comes with a great deal of risk. 
 Firstly before betraying an NPC faction players MUST create a ticket and speak with the team before proceeding into the betrayal roleplay. 
@@ -23,7 +24,7 @@ Once ticketed and the betrayal is played out, the wronged NPC faction has perma 
 The Remnant faction however is unique in that betrayals are not allowed at all once you're a member of the Empire. 
 
 DMs can make exceptions to these  traitor rulings if the betrayal plays out during an event and aligns with the story being portrayed. 
-
+#
 ## Lightsabers
 
 For Jedi/Sith who have been given go ahead by their mentors in-game and in-character. Requested via Ticket on Discord.
@@ -47,13 +48,13 @@ For Jedi/Sith who have been given go ahead by their mentors in-game and in-chara
 > Again - to be clear, simply crafting the token is not sufficient. You can't show up with it and say "I'm here for my item". You have to coordinate with the QM/DM team ahead of time, roleplay, earn it, and turn in the token. 
 > 
 > If you have questions please reach out via ticket. 
-
+#
 ## Limb Loss, Cybernetics & Replacements
 Cybernetics beyond the scope of a regular limb with regular functionality made of a regular material must be ticketed and cleared with the DM Team prior. An instance of a multi-PC project to create a cybernetic that has a single additional gimmick (one additional functionality) may be considered, but is up to the DM team's discretion.
 
 Organic limbs and replacement parts borne of science or magic are also extremely rare and limited to DM team discretion.
 
-
+#
 ## Material Rules
 
 ### Beskar
@@ -66,10 +67,10 @@ Cortosis and other materials that are either extremely potent or otherwise rare 
 
 ### Kyber
 Rare kyber crystals will always require a ticket first unless awarded for an event by a ***DM***
-
+#
 ## Recording and Messages in RP
 When it comes to sending messages, or starting recordings, we require you to make some kind of emote as proof, as well as for the other players present to have a chance to figure out what you're doing. We don't allow recordings (or messages sent during tense situations like PvP) without some sort of public facing emote. This is to allow plausible counter-play or response.
-
+#
 ## Custom Ship Rules
 If a player has a ship based engineering mastery of three or higher they can request unique mechanical ship plans related to their NPC faction. Should a PC leave the associated NPC faction they can no longer use said ship.
 
@@ -77,6 +78,7 @@ If a player has a ship based engineering mastery of three or higher they can req
 **Republic**: Aurek
 **Mandalorian Clans**: Basilisk 
 
+#
 ## Weapon Token Rules
 Upon the player receiving a custom weapon (Must be Chiro level in terms of stats only) Players can craft a research token. The research tokens can then be turned in to upgrade their weapon, provided the Staff approve, but the player provides the researched token (not the blueprint). It is then accepted. Do not give Staff the blueprint, you must actually craft the item. The process:
 
@@ -85,26 +87,26 @@ Craft the Item
 Turn it in to a DM via Ticket.
 
 The blueprint buffs are applied EXACTLY as they are on the token being turned in. They can not be changed.
-
+#
 ## Custom weapons and you!
 We are implementing a limit of two custom staff-made weapons per character, this includes lightsabers and other faction specific weaponry. The reason for this change is to alleviate weapon requests upon the staff which have been steadily growing in recent times. Additionally it's to avoid PCs ending up with a dragons hoard of unique weaponry that are rarely used or otherwise gather dust in distant storage spaces.
 
 Custom weapon requests will be treated in the same vein as event requests. They will require a degree of RP behind them and may not be immediately picked up by a member of staff. They are rewards for exceptional RP or cool plot lines.
-
-
+#
 ## Retirement Rules
 In order to retire a character, all you need is for that character to be three months old at minimum and have 350sp. Activity is no longer a major factor. Our two retirement options remain as a mastery boost or an item, and you may request an introduction event if a QM or DM is available to run such a thing.
 
+#
 ## PVP Rule
 Should players become engaged in PVP (Player versus player) on a planet, requests for aid can not be sent to other players beyond that planet. Such as if PVP happens on Dathomir, only individuals on Dathomir at the start of the combat can get involved.
 
-
+#
 ## Disguising As Other Races
 You can't use alien heads that aren't your own as a convincing disguise. There's no technology the players have to make something that's convincingly authentic.
 
 
 
-
+#
 ## Ticketing
 As you may have noticed with these rulings there is a common thread, that being tickets!  To make a ticket all you need to do is hop onto the SWLOR discord and head to the ticket channel. 
 
