@@ -2,8 +2,8 @@
 title: Incubation
 description: Incubation Guide for new Bioengineers
 published: true
-date: 2026-08-15T18:48:33.524Z
-tags: beasts, beast mastery, crating, incubation, mutations, enzymes, dna
+date: 2026-08-15T18:52:24.987Z
+tags: crafting, beasts, beast mastery, incubation, mutations, enzymes, dna
 editor: markdown
 dateCreated: 2026-08-15T18:48:33.524Z
 ---
