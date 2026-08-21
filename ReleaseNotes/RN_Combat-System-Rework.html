@@ -2,7 +2,7 @@
 title: Combat Upgrade Release Notes
 description: Player-friendly SWLOR combat upgrade release notes and impact summary.
 published: true
-date: 2026-07-18T00:00:00.000Z
+date: 2026-08-21T00:00:00.000Z
 tags: perks, combat, swlor, release notes, rebuild
 editor: ckeditor
 dateCreated: 2026-06-17T23:27:44.492Z
@@ -41,6 +41,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Most combat trees have fewer hotbar buttons, with more of the extra bonuses moved into passive perks.</li>
   <li>Armor is still an active skill and now counts toward the new 400 total skill rank cap.</li>
   <li>Two brand-new skills arrive with this update: <strong>Mimicry</strong> (copy the techniques enemy creatures use) and <strong>Espionage</strong> (stealth, poisons, traps, and lockboxes).</li>
+  <li>Espionage also introduces five tiers of circuit-board slicing for lockboxes and dedicated terminals, with its own rewards and consumable tools.</li>
   <li>Also new: per-skill mastery quest chains, DM-free lightsaber construction with Kyber Tokens, and a player-run Quest Contracts board.</li>
   <li>Quality-of-life additions include scheduled shuttle travel, globally accessible banks, a portrait Mini-Vitals overlay, a redesigned Perks window, and an in-game Player Guide.</li>
   <li>Some things are being removed. See <a href="#removed-in-this-update">Removed In This Update</a>.</li>
@@ -97,7 +98,8 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Resistance also shortens how long a matching status effect lasts, not just the damage it deals.</li>
   <li>Elemental damage is reduced by Physical Defense first, then the matching Resistance is applied afterward.</li>
   <li>Trauma and Disruption resist matching status effects and the damage those effects deal over time. They do not reduce ordinary weapon or Force damage.</li>
-  <li>Attack Deflection, Shield Deflection, and Guard are separate defensive tools. Attack Deflection applies when wielding a weapon with no shield, Shield Deflection applies when a shield is equipped, and both stop a hit from landing. Guard reduces damage after a hit gets through, and also restores Stamina, deals retaliation damage, and increases enmity.</li>
+  <li>Weapon deflection is split into <strong>Melee Deflection</strong> and <strong>Ranged Deflection</strong>. Without a shield, Melee Deflection can stop ordinary melee weapon attacks and Ranged Deflection can stop ordinary ranged weapon attacks. Each has a maximum chance of 50%.</li>
+  <li>With a shield equipped, <strong>Shield Deflection</strong> can stop either kind of weapon attack and does not stack with Melee or Ranged Deflection on the same hit. Its maximum chance is 75%. <strong>Guard</strong> is different: it reduces the damage of a hit instead of preventing it, and can also restore Stamina, deal retaliation damage, and increase enmity.</li>
   <li>Note when reading gear: item stats named "Fire Defense", "Poison Defense", "Electrical Defense", and "Ice Defense" feed your <em>Resistances</em>, not your two Defense values.</li>
 </ul>
 <h2>Status Effects</h2>
@@ -168,7 +170,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
       <tr>
         <td>Pistol</td>
         <td>Gambler, Skirmisher</td>
-        <td>Quick shots, multi-shot pressure, interrupts, close-range bursts, smoke, and finishing attacks.</td>
+        <td>Quick shots, multi-shot pressure, interrupts, close-range bursts, smoke, and finishing attacks. Pistols are held in the right hand, allowing you to equip a shield in the other hand.</td>
       </tr>
       <tr>
         <td>Rifle</td>
@@ -197,12 +199,12 @@ dateCreated: 2026-06-17T23:27:44.492Z
       <tr>
         <td>Force</td>
         <td>Alter, Control, Sense</td>
-        <td>The Force perk lines have been rebuilt across three trees. Light-side and dark-side powers both draw from all three. Light gains more direct combat options, dark keeps stronger raw damage and drain identity, and staples such as Force Push, Force Leap, Mind Trick, and Throw Lightsaber remain broadly useful. Throw Lightsaber's animation returns. Force Judgment, Force Sanctuary, Force Spark, Force Drain, Force Push, Force Leap, Eclipse of Resolve, Weaken Resolve, Radiant Lance, Guardian Ward, and Creeping Terror all have updated targeting, visuals, sounds, or balance.</td>
+        <td>The Force perk lines have been rebuilt across three trees. Light-side and dark-side powers both draw from all three. Light gains more direct combat options, dark keeps stronger raw damage and drain identity, and staples such as Force Push, Force Leap, Mind Trick, and Throw Lightsaber remain broadly useful. Throw Lightsaber's animation returns. Force Burst keeps one hotbar button as it improves, and Force Lightning III is now available. Force Judgment, Force Sanctuary, Force Spark, Force Drain, Force Push, Force Leap, Eclipse of Resolve, Weaken Resolve, Radiant Lance, Guardian Ward, and Creeping Terror all have updated targeting, visuals, sounds, or balance.</td>
       </tr>
       <tr>
         <td>Devices</td>
         <td>Grenadier, Field Engineer, Field Support, Assault Gadgets</td>
-        <td>Grenades, shields, fields, beacons, gadgets, flamethrowers, rockets, sonic tools, and new energy attacks are rebalanced. Each Devices category costs the same total skill points to complete. Grenades, beacons, fields, Emergency Bunker, and device area effects have updated targeting, visuals, and behaviour.</td>
+        <td>Grenades, shields, fields, beacons, gadgets, flamethrowers, rockets, sonic tools, and new energy attacks are rebalanced. Each Devices category costs the same total skill points to complete. Grenades, beacons, fields, Power Cell III, Emergency Bunker, and other device area effects have updated targeting, visuals, and behaviour. Emergency Bunker is an aimed 8m field that grants temporary HP and reduces physical and Force damage taken by 15%.</td>
       </tr>
       <tr>
         <td>Leadership</td>
@@ -226,6 +228,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Manage your library and build a loadout in the /techniques window, which can only be changed out of combat.</li>
   <li>Equipped active techniques, including toggled stances, are added to your hotbar. Only passive traits apply automatically with no button to press.</li>
   <li>Techniques cost Stamina instead of Force Points and work the same for every character type. They come in four tiers unlocked at Mimicry ranks 0, 15, 30, and 45, and cover damage, control, debuffs, ally support, stances, and passive traits.</li>
+  <li>Your Mimicry rank and the attribute named by each technique determine whether it hits. Accuracy bonuses help these checks, but a +6% Accuracy bonus does not simply add six percentage points to your chance to hit.</li>
   <li>Technique slots come from perks, not skill ranks. You start with 2 from Combat Analyzer, gain 2 per rank of Analyzer Memory, and 2 more from the Overclocked Analyzer capstone, for a maximum of 10. Your Mimicry rank gates which technique <em>tiers</em> you can equip.</li>
   <li>Equipping two or more active techniques that share a damage element grants an elemental resonance bonus: +5% technique potency per extra technique of that element, capped at +20%. Passive traits do not count.</li>
   <li>The Overclocked Analyzer capstone adds 2 slots and the Overload ability, which briefly boosts your equipped techniques.</li>
@@ -234,7 +237,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
 <ul>
   <li>Espionage is a new utility skill covering stealth, weapon poisons, traps, and cracking lockboxes.</li>
   <li><strong>Espionage is available to Standard characters only.</strong> Force Sensitive characters cannot learn it, and it does not appear in their skill list.</li>
-  <li>It has two perk trees. <strong>Infiltrator</strong> covers stealth, back attacks, escapes, repositioning, and lockbox slicing. <strong>Saboteur</strong> covers crafting poisons and traps, and placing trap abilities.</li>
+  <li>It has three perk trees. <strong>Infiltrator</strong> covers stealth, back attacks, escapes, repositioning, and slicing. <strong>Saboteur</strong> covers crafting poisons and traps, and placing trap abilities. <strong>Tradecraft</strong> expands your disguise capacity and reduces the delay between disguise activations.</li>
   <li>There is no intro quest or trainer. Poisoncraft I has no skill requirement, so crafting poisons is the usual starting point. You also earn Espionage XP for staying hidden near hostile NPCs.</li>
   <li>Poisons and trap kits are crafted at the Espionage Workbench in the Dantooine crafter base.</li>
   <li>Stealth has been completely reworked. Whether you are spotted is decided by your Stealth against the observer's Detection, and listening no longer plays any part. You must own the Stealth perk to enter stealth, you cannot enter it while in combat, and staying hidden drains Stamina.</li>
@@ -242,7 +245,10 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Venom Coatings are crafted vials applied to a weapon, and work on melee and thrown weapons only. They cannot be used on lightsabers, saberstaffs, pistols, or rifles.</li>
   <li>Coating vials are tradable, and <strong>anyone can use them</strong>, including Force Sensitive characters. Only crafting them requires Espionage.</li>
   <li>Traps come in two kinds. Razor Trap and Shock Trap are placed with an ability and are visible to everyone, while crafted Snare Kits are concealed and can be spotted and disarmed by players with enough Trapcraft training.</li>
-  <li>Lockboxes are rare drops that you crack open using the Slicing perk line, and contain exclusive rings, necklaces, and belts carrying the new Espionage stats. A failed attempt never destroys the box.</li>
+  <li>The five-rank Slicing perk line unlocks matching tiers of rare lockboxes and dedicated slicing terminals found around the galaxy.</li>
+  <li>Slicing uses a circuit-board minigame. Rotate and swap circuit tiles to connect the entry to the security core before your trace runs out. Your Slicing rank, Lockpicking, and positive Perception modifier increase the trace available, and one consumable slicing tool can assist each attempt.</li>
+  <li>Successful slicing grants XP and a reward based on the target's tier and whether you sliced a lockbox or terminal. Rewards include named weapons and equipment, schematics and recipes, Incubation Field Notes, and more slicing tools.</li>
+  <li>The first failed attempt cannot destroy the target. Later failures have escalating destruction risks of 10%, 25%, 50%, and then 100%. If you begin changing the circuit and then abandon the attempt, it counts as a failure.</li>
 </ul>
 <h2>Skill Mastery Quests</h2>
 <ul>
@@ -263,6 +269,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>New Incubation Field Notes are key items, filed under their own "Incubation Field Notes" category, one per mutation-target beast. Each note spells out every way to incubate that beast and what each method needs, such as the required enzyme, day of the week, and minimum mutation chance.</li>
   <li>You earn a beast's note automatically the first time you successfully <strong>mutate into</strong> that beast. A normal incubation does not grant a note.</li>
   <li>Starter notes are sold by Zoya the Beastwright in the Veles general store on Viscara, and some are dropped by specific world bosses.</li>
+  <li>Incubation and mutation can produce 75 additional beast types, including Char Hound and Garral. Hellhounds also receive an updated appearance.</li>
 </ul>
 <h2>Items, Crafting, And Enemies</h2>
 <ul>
@@ -305,7 +312,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Type /name and then click a target. Clicking yourself sets the description that players who do not know you will see. Clicking another player sets the private name you recognise them by. /forgetname clears a name you assigned.</li>
   <li>Settings has a new <strong>Identity</strong> tab with three toggles: show your own descriptor beside your name, show other players' descriptors, and hide your account name from player-facing lists. Hiding your account name is enabled by default.</li>
   <li>Disguises are a new player system, opened with /disguise or /disguises. A disguise stores a private label, a public descriptor, a portrait, a sound set, and its own account-name setting.</li>
-  <li>You have one disguise slot by default, and there is a 30-minute cooldown between activations. Removing a disguise is immediate.</li>
+  <li>You have one disguise slot by default, and there is a 30-minute cooldown between activations. The Espionage <strong>False Identities</strong> perks raise capacity to as many as four slots, while <strong>Cover Story</strong> reduces the activation cooldown by 40% or 70%. Removing a disguise is immediate.</li>
   <li>People who learned your name undisguised do not see through your disguise. Each disguise is recognised separately.</li>
   <li>Retired disguises keep occupying a slot until wiped by an Identity Broker, who charges 100,000 credits or 25,000 RP XP to erase an identity permanently.</li>
 </ul>
@@ -327,9 +334,11 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Some older area, creature, item, and dialogue text is clearer and more consistent.</li>
   <li>Every base item type now shows a custom SWLOR description instead of the stock Neverwinter Nights one.</li>
   <li>Scenery and prop names have been cleaned up. Items that previously showed internal builder tags now display proper names, such as "Blaster Rifle (Small)" and "DLT-20A Rifle".</li>
-  <li>Perks, abilities, and status effects have a large set of new icons, including per-rank perk artwork and markers showing whether you meet a perk's requirements.</li>
+  <li>Perks, abilities, and status effects have a large set of new icons, including per-rank perk artwork, light- and dark-side corner markers on Force powers, and markers showing whether you meet a perk's requirements.</li>
   <li>The status effect icon bar is far more detailed, with distinct icons for hundreds of buffs and debuffs.</li>
+  <li>Each currency now has its own icon. Key items also have new artwork based on their category, and every key item displays an icon.</li>
   <li>New sound effects have been added for Force and tech abilities.</li>
+  <li>Several visual and interface problems are fixed, including the white lightsaber glow, inconsistent portrait directions, unclear loading hints, scenery names that were still in French, and unwanted Hacking Blade entries in the feat menu.</li>
 </ul>
 <h2 id="removed-in-this-update">Removed In This Update</h2>
 <ul>
@@ -344,5 +353,5 @@ dateCreated: 2026-06-17T23:27:44.492Z
 <ul>
   <li>Farming-only Agriculture perks, such as Crop Management-style mechanics, are not part of this combat update.</li>
   <li>Engineering, Fabrication, Gathering, and Piloting are not standalone skill revamps here. Any related changes are limited to combat-linked items, recipes, equipment, or handling old stored items.</li>
-  <li>Espionage Slicing currently applies to lockboxes only. Sliceable doors, containers, and terminals are not part of this update.</li>
+  <li>Ordinary doors and containers are not sliceable in this update. Slicing applies to rare lockboxes and dedicated slicing terminals.</li>
 </ul>
