@@ -2,7 +2,7 @@
 title: Combat Upgrade Release Notes
 description: Player-friendly SWLOR combat upgrade release notes and impact summary.
 published: true
-date: 2026-09-07T00:00:00.000Z
+date: 2026-09-07T21:11:58.550Z
 tags: perks, combat, swlor, release notes, rebuild
 editor: ckeditor
 dateCreated: 2026-06-17T23:27:44.492Z
@@ -29,7 +29,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
     </tbody>
   </table>
 </figure>
-<p>Contributors: John Republic, Girlfailure, jax, Ryudo, AsuraKing, flyingaces, forsakenreaver, Hazin, pastius, Announcer, Witch Time</p>
+<p>Contributors: John Republic, Girlfailure, jax, Ryudo, AsuraKing, flyingaces, forsakenreaver, Hazin, pastius, Announcer, Witch Time, Scorchys</p>
 <p>&nbsp;</p>
 <p>This is a plain-English preview of the upcoming combat upgrade. These changes are not live yet. The exact release date and NWSync hash will be added when the update is ready to deploy.</p>
 <p>Last checked against the upcoming update on September 7, 2026.</p>
@@ -108,7 +108,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Weapon deflection is split into <strong>Melee Deflection</strong> and <strong>Ranged Deflection</strong>. With a weapon equipped and no shield, each can stop ordinary weapon attacks of the matching kind. The usual chance cap is 50%; Guardian Master raises the Ranged Deflection cap to 60%.</li>
   <li>With a shield equipped, <strong>Shield Deflection</strong> can stop either kind of weapon attack and does not stack with Melee or Ranged Deflection on the same hit. Its maximum chance is 75%. <strong>Guard</strong> is different: it reduces the damage of a hit instead of preventing it, and can also restore Stamina, deal retaliation damage, and increase enmity.</li>
   <li>Temporary HP from different abilities can stack. Reapplying the same ability replaces its previous temporary HP, even if a different ally casts it.</li>
-  <li>Note when reading gear: item stats named "Fire Defense", "Poison Defense", "Electrical Defense", and "Ice Defense" feed your <em>Resistances</em>, not your two Defense values.</li>
+  <li>Note when reading gear: item stats named "Fire Defense", "Poison Defense", "Electrical Defense", and "Ice Defense" feed your <i>Resistances</i>, not your two Defense values.</li>
 </ul>
 <h2>Status Effects</h2>
 <ul>
@@ -371,7 +371,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Loading hints explain the new identity system, and conversation text and portraits display more consistently.</li>
   <li>Pistol firing animations and shot sounds have been corrected, and leaving space restores your character's appearance properly.</li>
 </ul>
-<h2 id="removed-in-this-update">Removed In This Update</h2>
+<h2>Removed In This Update</h2>
 <ul>
   <li><strong>The old concentration ability system is removed</strong>, along with the /concentration (/conc) command.</li>
   <li>The /headscale command is removed.</li>
@@ -387,70 +387,3 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Engineering, Fabrication, Gathering, and Piloting are not standalone skill revamps here. Any related changes are limited to combat-linked items, recipes, equipment, or handling old stored items.</li>
   <li>Ordinary doors and containers are not sliceable in this update. Slicing applies to rare lockboxes and dedicated slicing terminals.</li>
 </ul>
-
-<!--
-Editorial verification, 2026-09-07. This comment is not part of the player-facing page.
-Compared SWLOR_NWN master ce4f91749c2ec9df57883538e4e380ddb3bbb690 with
-feature/combat-upgrade f5bb477f7dce56a06204c7a060b4e4555b6dd79f.
-Both tips matched the connected GitHub app at the start of the audit.
-Compared committed content, excluding unrelated local appearance-editor work.
-Parent-pinned Haks revisions: c38161d5414902591ce6393da5b21ad90a072e83 and
-565e5901801a73f8f15d0971264428d3870f969d. Release status, date, and NWSync hash remain preview/TBD.
-Verification is a source/data audit, not an in-game playtest or deployment certification.
-
-Source paths below are relative to SWLOR.Game.Server/ unless prefixed Module/.
-Rebuild/refunds/beast reset: Feature/MigrationDefinition/ServerMigration/_22_CombatSystemReplacement.cs;
-  Feature/GuiDefinition/ViewModel/CharacterFullRebuildViewModel.cs; Feature/PlayerInitialization.cs.
-Skill split/cap/character restrictions: Service/SkillService/SkillType.cs; Service/Skill.cs; Service/Item.cs.
-Attribute limits and detailed statistics: Feature/GuiDefinition/ViewModel/CharacterSheetViewModel.cs.
-Readiness (15%), deflection (50%, Guardian Master 60%, shield 75%): Service/Stat.cs;
-  Service/Ability.cs; Feature/StatusEffectDefinition/GuardianMasterStatusEffect.cs.
-Resistance range and immunity rules: Service/Resistance.cs; Service/CombatService/CombatDamageType.cs;
-  Service/CombatService/ResistanceType.cs; Feature/StatusEffectDefinition/{Bleed,Toxin,Exposed,Hemorrhage,
-  FracturedFocus,FoggyMind,ForceDisruption}StatusEffect.cs.
-Temporary HP stacking: Feature/AbilityDefinition/TemporaryHitPointEffects.cs.
-Weapon descriptions and names: Feature/PerkDefinition/*PerkDefinition.cs; Service/PerkService/PerkCategoryType.cs;
-  corresponding Feature/AbilityDefinition/ and Feature/StatusEffectDefinition/ implementations.
-  Retained Katar Iron Guard: it is the implemented tree; some design-review prose instead says Opportunist.
-Force affinity: Service/PerkService/PerkBuilder.cs; Service/Perk.cs; Service/Ability.cs.
-Devices: four definition files each total 60 SP; grenade definitions require explosives at every rank;
-  Feature/AbilityDefinition/Devices/EmergencyBunkerAbilityDefinition.cs;
-  Feature/StatusEffectDefinition/EmergencyBunker1StatusEffect.cs.
-Leadership/First Aid: their perk and ability definitions, including RousingShout and TreatmentKit.
-Mimicry: Service/Mimicry.cs; Feature/PerkDefinition/MimicryPerkDefinition.cs;
-  Feature/AbilityDefinition/Mimicry/*.cs (88 registrations, requirements 0 through 50, slot costs 1-3);
-  Feature/GuiDefinition/ViewModel/TechniquesViewModel.cs; Feature/QuestDefinition/MimicryQuestDefinition.cs.
-Espionage: its perk definition; Service/Stealth.cs; Service/EspionageInfiltration.cs;
-  Feature/ItemDefinition/VenomCoatingItemDefinition.cs; Service/Traps.cs; Service/SlicingService/;
-  Module/git/*.git.json has espionage_bench placements in 11 areas, rather than Dantooine alone.
-Masteries: 195 quests in 17 *CapstoneQuestDefinition.cs files, plus the 5 BloodFrenzy quests;
-  40 chains/achievements across 17 skills. Perk RequirementQuest calls establish the capstone gates.
-  First Aid has one path; Vibroblade has two including Blood Frenzy.
-  Rare loot: Feature/LootTableDefinition/CapstoneLootTableDefinition.cs.
-Beasts: Feature/AbilityDefinition/Beastmaster/TameAbilityDefinition.cs; Service/BeastMastery.cs; Service/IncubationFieldNote.cs;
-  75 added IncubationBeastDefinition files. Companion commands: Service/CompanionControlService/.
-Equipment/crafting: migration helpers under Feature/MigrationDefinition/; Service/Craft.cs;
-  Feature/RecipeDefinition/; Feature/GuiDefinition/ViewModel/DroidAssemblyViewModel.cs.
-Sabers: Service/LightsaberWorkbench.cs; Feature/GuiDefinition/ViewModel/LightsaberWorkbenchViewModel.cs;
-  Feature/ItemDefinition/{ConsumableItemDefinition,SaberUpgradeItemDefinition}.cs;
-  Feature/MigrationDefinition/LegacySaberMigration.cs;
-  Feature/RecipeDefinition/EngineeringRecipeDefinition/SaberUpgradeKitRecipes.cs.
-Contracts: Service/QuestContractBoard.cs and Service/QuestContractService/; editor/board view models;
-  qcontract_board placements in 12 Module/git area files. Expiry is swept at boot, not on an exact timer.
-Identity: Service/{PlayerName,PlayerDescriptor,Disguise}.cs; Entity/PlayerDisguise.cs; identity Settings bindings;
-  Service/Communication.cs; Feature/ChatCommandDefinition/CharacterChatCommand.cs; Docker/swlor.env.
-Guide: 28 BuildTopics entries in Feature/GuiDefinition/ViewModel/PlayerGuideViewModel.cs; Service/Gui.cs.
-Travel: Service/Shuttle.cs; Service/ShuttleService/{GalaxyMap,ShuttleSchedule}.cs;
-  Feature/DialogDefinition/StarportFlightsDialog.cs.
-Banking: Service/Bank.cs (120 items, per-player query, city access gates);
-  Feature/MigrationDefinition/ServerMigration/LinkedBankStorageMigration.cs.
-Other UI: Perks, Notes, Currencies, Settings, CharacterSheet, PlayerStatusPortrait and AppearanceEditor definitions;
-  Service/Language.cs; Service/SkillService/SkillType.cs; Feature/QuestDefinition/DantooineQuestDefinition.cs.
-Ship correction: Feature/ShipModuleDefinition/CapitalPowerDeiverterModuleDefinition.cs changes description 40 to 60;
-  runtime already used 60. Feature/ShipModuleDefinition/ShieldBoosterModuleDefinition.cs has no corresponding
-  gameplay change relative to master.
-Removed systems/commands/settings: direct master-to-feature diffs of CharacterChatCommand, Settings, Ability,
-  Armor perk definitions and item/migration helpers. No claim that preview code has shipped.
-Validation: extracted counts, perk quest gates, thresholds, and limits from the pinned commits;
-  checked balanced HTML, unique anchors, internal link targets, and git diff whitespace.
--->
