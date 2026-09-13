@@ -2,7 +2,7 @@
 title: Combat Upgrade Release Notes
 description: Player-friendly SWLOR combat upgrade release notes and impact summary.
 published: true
-date: 2026-09-12T00:00:00.000Z
+date: 2026-09-13T00:00:00.000Z
 tags: perks, combat, swlor, release notes, rebuild
 editor: ckeditor
 dateCreated: 2026-06-17T23:27:44.492Z
@@ -32,8 +32,8 @@ dateCreated: 2026-06-17T23:27:44.492Z
 <p>Contributors: John Republic, Girlfailure, jax, Ryudo, AsuraKing, flyingaces, forsakenreaver, Hazin, pastius, Announcer, Witch Time, Scorchys</p>
 <p>&nbsp;</p>
 <p>This is a plain-English preview of the upcoming combat upgrade. These changes are not live yet. The exact release date and NWSync hash will be added when the update is ready to deploy.</p>
-<p>Last checked on September 12, 2026. These notes describe changes from the previous system, including additions, replacements, removals, and effects on existing characters. Some mastery trial locations are still being completed during this preview; see <a href="#skill-mastery-quests">Skill Mastery Quests</a>.</p>
-<!-- Comparison reviewed: SWLOR_NWN master ce4f91749c2ec9df57883538e4e380ddb3bbb690 -> feature/combat-upgrade 814ee323c10b8dcbcb7ac95dc7b6106046fdd9d8. HAK comparison uses the parent branches' recorded submodule commits c38161d5414902591ce6393da5b21ad90a072e83 -> aefbdec94bde2c1d2663150562d3d1f6fb0e0ec3. Uncommitted work and separate feature branches are excluded. -->
+<p>Last checked on September 13, 2026. These notes describe changes from the previous system, including additions, replacements, removals, and effects on existing characters.</p>
+<!-- Comparison reviewed: SWLOR_NWN master ce4f91749c2ec9df57883538e4e380ddb3bbb690 -> feature/combat-upgrade 8e587032785783fe3e881da830e84da9cba38573. HAK comparison uses the parent branches' recorded submodule commits c38161d5414902591ce6393da5b21ad90a072e83 -> 8a1ab83c7f842fefbc7ee388ac58af81713351d0. Uncommitted work and separate feature branches are excluded. -->
 <h2>Quick Summary</h2>
 <ul>
   <li>Combat is being rebuilt from the ground up so weapons, Force powers, Devices, Leadership, First Aid, beasts, defenses, and enemy weaknesses all fit together.</li>
@@ -44,7 +44,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>The total skill rank cap rises from 350 to 400, and the earned Ability Point cap rises from 35 to 40. Armor remains part of the skill cap.</li>
   <li>Alongside separate skills for each weapon type, the update adds <strong>Mimicry</strong> (learn enemy creature techniques) and <strong>Espionage</strong> (stealth, poisons, traps, and slicing).</li>
   <li>Espionage also introduces five tiers of circuit-board slicing for lockboxes and dedicated terminals, with its own rewards and consumable tools.</li>
-  <li>Also new: skill mastery quest chains, player-built lightsabers with DM-granted Kyber Tokens, and a player-run Quest Contracts board.</li>
+  <li>Also new: 40 capstone quest chains with new trial dungeons and boss arenas, player-built lightsabers with DM-granted Kyber Tokens, and a player-run Quest Contracts board.</li>
   <li>Crafting actions and ordinary recipe access unlock through skill ranks instead of separate SP purchases. Research, gathering, piloting, and civic perk costs also change.</li>
   <li>Weather lasts longer between changes, storm hazards work more consistently, and the appropriate resistances and protective abilities now help against them.</li>
   <li>Quality-of-life additions include scheduled shuttle travel, globally accessible banks, a portrait Mini-Vitals overlay, a redesigned Perks window, and an in-game Player Guide.</li>
@@ -118,6 +118,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
 <h2>Combat Changes</h2>
 <ul>
   <li>Damage, hit chance, evasion, critical hits, defense, and scaling have all been rebalanced.</li>
+  <li>Characters who are dead when an enemy is defeated do not receive combat XP for that kill.</li>
   <li>Melee accuracy uses Perception by default, including weapons that previously used Agility. Ranged and throwing accuracy use Agility. Normal melee damage uses Might, while ranged and throwing damage use Perception; individual perks can change which attribute applies.</li>
   <li>Critical hit chance now includes your skill rank and compares your Perception against the target's Vitality, replacing Might as the defending attribute. The ordinary critical chance cap falls from 90% to 50%.</li>
   <li>Area attacks use lines, cones, or circles to show their reach. Cast-time attacks can warn you before impact; instant area abilities also show an impact marker.</li>
@@ -278,7 +279,6 @@ dateCreated: 2026-06-17T23:27:44.492Z
 <h2>Mimicry (New Skill)</h2>
 <ul>
   <li>Mimicry is a new combat skill that lets you copy and use the techniques enemy creatures fight with. It is available to all character types.</li>
-  <li>You are introduced to it through the intro quest "Salvaged Intelligence" from Renna Tarsk in the Veles settlement on Viscara, which points you to the Combat Analyzer perk and the /techniques window (also /tech).</li>
   <li>Once you own the Combat Analyzer, it records learnable techniques used by enemies within 15m. If you are alive, in the same area, and within 40m when the enemy dies, you can roll to permanently learn a witnessed technique whose rank requirement you meet.</li>
   <li>Learn chance starts at 20% when you meet the technique's required rank. Higher Mimicry rank, Pattern Recognition, and Perception above 10 improve it, up to a maximum of 75%. The analyzer tells you when a pattern is beyond your rank or a learning attempt fails.</li>
   <li>Manage your library and build a loadout in the /techniques window, which can only be changed out of combat.</li>
@@ -310,36 +310,13 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Successful slicing grants XP and a reward based on the target's tier and whether you sliced a lockbox or terminal. Rewards include named weapons and equipment, recipe unlocks, Incubation Field Notes, and more slicing tools.</li>
   <li>The first failed attempt cannot destroy the target. Later failures have escalating destruction risks of 10%, 25%, 50%, and then 100%. If you begin changing the circuit and then abandon the attempt, it counts as a failure.</li>
 </ul>
-<h2 id="skill-mastery-quests">Skill Mastery Quests</h2>
-<p><strong>Preview still in progress:</strong> the update includes 40 mastery chains across 17 skills, but not all trial locations can yet be played from start to finish. The connected trials and the locations still being completed are listed below. A quest giver being present does not mean their trial is ready.</p>
-<ul>
-  <li>Seventeen skills have a total of 40 capstone "mastery" quest chains, unlocked at rank 50 in the relevant skill.</li>
-  <li>The combat skills covered are Beast Mastery, Devices, Force, Heavy Vibroblade, Katar, Lightsaber, Pistol, Rifle, Saberstaff, Spear, Staff, Throwing, Twin Blade, Vibroblade, and Vibroknife. Among support skills, First Aid and Leadership have chains. Mimicry and Espionage do not have mastery chains in this update.</li>
-  <li>Most skills have two paths. Beast Mastery has six, Devices has four, Force has three, and First Aid has one. Vibroblade's two paths are Invincible and Blood Frenzy.</li>
-  <li>Each path is a five-stage chain, building from clearing groups of trial enemies through a warden fight and an inner circle to a final master.</li>
-  <li>The trials take place in dedicated high-level locations across the galaxy. Their enemies are separate from ordinary low-level hunting areas.</li>
-  <li>The quest journals recommend bringing allies for the warden and final master fights.</li>
-  <li>Every stage awards XP and credits. Finishing each chain grants a matching achievement and satisfies the quest requirement for its capstone perk; you still need to buy the perk with SP and meet its other requirements.</li>
-  <li>Warden and master fights begin by interacting with a quest encounter object that appears at the appropriate quest step. Only one instance of that encounter can be active at once, and the player who starts it has a 60-minute wait before starting it again.</li>
-  <li>Eligible participants can receive quest credit together. Required proof is awarded through quest progress, so party members do not have to compete for a single proof item on the corpse. Abandoned boss encounters eventually disappear.</li>
-  <li>The mastery areas also introduce named rare enemies with themed equipment and recipe drops. The Dantooine Medical Sublevel houses the First Aid chain, and Sera Vonn in Veles begins the Blood Frenzy chain leading into the Viscara Sewers Depths.</li>
-</ul>
-<h3>Connected Mastery Trials In This Preview</h3>
-<ul>
-  <li><strong>Viscara Sewers Depths:</strong> Blood Frenzy.</li>
-  <li><strong>CZ-220 Breaker Bay and Breaker Yard:</strong> Adamantine Guard, Scrapheap Lockdown, and Worldbreaker.</li>
-  <li><strong>Smuggler's Moon Czerka Arms Test Range:</strong> Kill Box, One Shot, and Rain of Steel.</li>
-  <li><strong>Smuggler's Moon Fight Club Backrooms and Private Pit:</strong> Crippling Defense, Tempest Bloom, and Red Bloom.</li>
-  <li><strong>Dathomir Grotto Apex Den:</strong> Primal Overrun, Untouchable Instinct, and Force-Bonded Beast.</li>
-  <li><strong>Dantooine Medical Sublevel and Protected Ward:</strong> Hold the Line, Emergency Cocktail, and Infinite Conduit.</li>
-</ul>
-<p>The remaining 24 chains still need completed trial locations and access: Veles Militia Annex, Republic Engineering Bunker, Jedi Enclave Trial Halls, Korriban Forge Caverns, Sith Crypt Depths, Anchorhead Canyon Range, Hutlar Qion Test Site, and Dathomir Tarn Jungle Preserve. Their final arenas are being added, but these chains are not yet complete playable routes in this preview.</p>
-<p>The Lightsaber quests named Saber Storm and Guardian Master unlock <strong>Epicenter</strong> and <strong>Aegis Eternal</strong>, respectively. Those are the new perk names; the quest paths retain their older names.</p>
+<h2 id="capstone-quests">Capstone Quests</h2>
+<p>The update adds 40 capstone quest chains across 17 skills.</p>
 <h2>Beast Mastery</h2>
 <ul>
   <li>Beast Mastery is updated across taming, training, rewards, soothing, revives, beast attacks, beast roles, and beast support abilities.</li>
   <li>Beast stats, levels, purity bonuses, resistances, and attack speed behaviour are adjusted to match the new combat rules.</li>
-  <li>Called beasts arrive at full health. Beast Stamina recovery, queued attacks, and support abilities have been corrected for the new combat system.</li>
+  <li>Called beasts arrive at full health instead of approximately half health.</li>
   <li>Tame chance starts at 40%, shifts by 3% for each level your Beast Mastery rank is above or below the target, and gains 3% per point of Social. It is capped at 75%.</li>
   <li>Beast roles are Bruiser, Damage, Evasion, Force, Tank, and Balanced.</li>
   <li>Snarl and Growl are replaced by two ongoing bond stances. <strong>Guarding Bond</strong> improves your beast's defenses and helps it hold enemy attention. <strong>Predatory Bond</strong> improves its damage, haste, and ability accuracy while reducing the attention it draws. Only one stance can be active at a time.</li>
@@ -348,7 +325,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>You earn a beast's note automatically the first time you successfully <strong>mutate into</strong> that beast. A normal incubation does not grant a note.</li>
   <li>Starter notes are sold by Zoya the Beastwright in the Veles general store on Viscara, and some are dropped by specific world bosses.</li>
   <li>Incubation and mutation can produce 75 additional beast types, including Char Hound and Garral. Hellhounds also receive an updated appearance.</li>
-  <li>Garral uses the Balanced role. Beast area attacks, breath effects, attack pacing, and recovery have been adjusted so companions use their abilities more reliably.</li>
+  <li>Garral uses the Balanced role.</li>
 </ul>
 <h3>Beast And Droid Commands</h3>
 <ul>
@@ -372,7 +349,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Market categories now use Vibroknife and Spear in place of Finesse Vibroblade and Polearm. Separate light/heavy armor listings are combined into Armor, Helmet, Glove, and Boot categories.</li>
   <li>Miscellaneous Furniture has its own crafting category instead of overlapping with Beds.</li>
   <li>When two enhancements with different damage types are socketed onto a weapon, the game now picks one at random rather than always keeping the most recent. Damage amounts still stack.</li>
-  <li>Viscara gains additional named rare enemies, including Old Scar and Stormplume, with their own loot. Mastery trial enemies also have themed rare equipment and recipe rewards.</li>
+  <li>Viscara gains additional named rare enemies, including Old Scar and Stormplume, with their own loot. Capstone trial enemies also have themed rare equipment and recipe rewards.</li>
   <li>Quest Contract item searches exclude creature equipment and other items players cannot obtain.</li>
 </ul>
 <h3>Crafting And Noncombat Perk Changes</h3>
@@ -446,18 +423,16 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>You have one disguise slot by default, and there is a 30-minute cooldown between activations. The Espionage <strong>False Identities</strong> perks raise capacity to as many as four slots, while <strong>Cover Story</strong> reduces the activation cooldown by 40% or 70%. Removing a disguise is immediate.</li>
   <li>People who learned your name undisguised do not see through your disguise. Each disguise is recognised separately.</li>
   <li>A disguise does not change your clothing or armor; change your outfit yourself. It also does not hide your identity from staff.</li>
-  <li>Retired disguises can be restored for reuse and keep occupying a slot until wiped by an Identity Broker. A permanent wipe costs 100,000 credits or 25,000 available RP XP, frees the slot, and removes other characters' remembered names for that identity.</li>
+  <li>Retired disguises can be restored for reuse and keep occupying a slot until wiped by an Identity Broker. A permanent wipe frees the slot and removes other characters' remembered names for that identity.</li>
   <li>If several players have the same public descriptor, give the intended person a unique private name before sending a tell. Ambiguous names are rejected instead of silently choosing a recipient.</li>
   <li>The player list on the login screen is hidden. In-game names and communication use the identity that the observer knows.</li>
 </ul>
-<h2>Communication And Roleplay XP</h2>
+<h2>Communication</h2>
 <ul>
   <li><strong>Party chat now works as location-limited Comms.</strong> Party members can communicate across areas on the same planet, aboard the same ship, within the same space region, or between supported event areas. It no longer reaches every party member everywhere in the galaxy.</li>
   <li>Nearby players within 20 metres can still overhear Comms, including non-party members. Comms is not a private conversation channel.</li>
   <li>The player Shout channel is disabled. The separate HoloNet broadcast window remains available for paid broadcasts, and staff can still send server-wide Shout messages.</li>
-  <li>Chat settings include an option to hide Comms out-of-range warnings. HoloCom dialogue relay and duplicated Party/Comms labels have been corrected, and messages use the identity their recipient recognises.</li>
-  <li>Out-of-character messages in Talk, Whisper, or Comms now clear progress toward your next automatic RP XP award and restart its 30-minute timer. Repeated OOC messages add five minutes per occurrence after the first, up to 30 extra minutes. Already awarded RP XP is retained.</li>
-  <li>The RP XP system recognises common OOC prefixes, including //, ((, [[, {{, OOC:, [OOC], and (OOC). Dead characters no longer accumulate or receive automatic RP XP, and do not receive combat XP from a kill while dead.</li>
+  <li>Chat settings include an option to hide Comms out-of-range warnings. Messages use the identity their recipient recognises.</li>
 </ul>
 <h2>Travel, Banking, And Player Cities</h2>
 <ul>
@@ -490,8 +465,8 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>A new Dantooine quest, "Field Tinctures", is available from Healer Elara in the Dantooine Colony after you complete "Harvesting Herbs".</li>
   <li>Arkanian is added as a learnable language, with /arkanian as its chat command.</li>
   <li>The Notes window adds search, categories, and clearer editing controls. The Currencies window has been redesigned with individual currency icons.</li>
-  <li>The Appearance Editor lets you choose custom colours on supported models and materials, including supported robe parts. Colour choices refresh more reliably when changing the selected part, and existing helmet dyes display correctly.</li>
-  <li>Sixteen pistol appearances and 35 rifle appearances receive replacement blaster models. There is also a new Vesper-9 pistol appearance. Weapon grips, rifle trigger alignment, and pistol inventory pictures have been corrected.</li>
+  <li>The Appearance Editor lets you choose custom colours on supported models and materials, including supported robe parts.</li>
+  <li>Sixteen pistol appearances and 35 rifle appearances receive replacement blaster models. There is also a new Vesper-9 pistol appearance.</li>
   <li>New craftable field tools include the Ghostkey Relay, Stonewake Relay, Tidecall Beacon, Wayfinder Sensor, Stormcore Matrix, Kinetic Harness, Lucid Splice, Flux Diverter, and Faultline Capacitor.</li>
   <li>The Capital Power Diverter description now correctly lists its existing 60-point maximum capacitor penalty.</li>
   <li>Some older area, creature, item, and dialogue text is clearer and more consistent.</li>
@@ -502,7 +477,8 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>New sound effects have been added for Force and tech abilities.</li>
   <li>Active abilities receive new casting and attack animations, with improved robe movement and more distinct effects when an ability hits. Fishing now uses a standing fishing animation and stops correctly if you enter combat, die, or remove your rod.</li>
   <li>Portraits, world textures, and sounds have been made smaller to reduce download size, alongside repairs to missing textures and portraits.</li>
-  <li>Crafted lightsaber lighting now matches the blade colour. Missing or incorrect NPC and beast portraits, portrait directions, and several incubation beast appearances have been corrected.</li>
+  <li>Workbench-built lightsabers emit light matching their blade colour.</li>
+  <li>Missing or incorrect NPC and beast portraits, portrait directions, and several incubation beast appearances have been corrected.</li>
   <li>Loading hints explain the new identity system, and conversation text and portraits display more consistently.</li>
   <li>Pistol firing animations and shot sounds have been corrected, and leaving space restores your character's appearance properly.</li>
 </ul>
