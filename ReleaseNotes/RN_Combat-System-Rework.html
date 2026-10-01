@@ -2,7 +2,7 @@
 title: Combat Upgrade Release Notes
 description: Player-friendly SWLOR combat upgrade release notes and impact summary.
 published: true
-date: 2026-09-13T00:00:00.000Z
+date: 2026-10-01T00:00:00.000Z
 tags: perks, combat, swlor, release notes, rebuild
 editor: ckeditor
 dateCreated: 2026-06-17T23:27:44.492Z
@@ -32,13 +32,13 @@ dateCreated: 2026-06-17T23:27:44.492Z
 <p>Contributors: John Republic, Girlfailure, jax, Ryudo, AsuraKing, flyingaces, forsakenreaver, Hazin, pastius, Announcer, Witch Time, Scorchys</p>
 <p>&nbsp;</p>
 <p>This is a plain-English preview of the upcoming combat upgrade. These changes are not live yet. The exact release date and NWSync hash will be added when the update is ready to deploy.</p>
-<p>Last checked on September 13, 2026. These notes describe changes from the previous system, including additions, replacements, removals, and effects on existing characters.</p>
-<!-- Comparison reviewed: SWLOR_NWN master ce4f91749c2ec9df57883538e4e380ddb3bbb690 -> feature/combat-upgrade 8e587032785783fe3e881da830e84da9cba38573. HAK comparison uses the parent branches' recorded submodule commits c38161d5414902591ce6393da5b21ad90a072e83 -> 8a1ab83c7f842fefbc7ee388ac58af81713351d0. Uncommitted work and separate feature branches are excluded. -->
+<p>Last checked on October 1, 2026. These notes cover changes since the May 2, 2026 release, including additions, replacements, removals, and effects on existing characters.</p>
+<!-- Source review: last dated wiki release is 2026-05-02; final May 2 SWLOR_NWN master snapshot 68e2c64a8b53f25fcf60283f90cded0924279d0a -> current master d4258e9ba08fab5673e82fadd73a1a6e69c89ff9. CU-specific comparison also uses pre-merge master d0474806c525312487bb48e85d77b69b49194c14 -> current master, including squash merge 2fa527816 and subsequent fixes through September 30. Recorded HAK commits: May 2 17ed3d23976e31e31b9fc3f9fac8936c8057823d; pre-CU c38161d5414902591ce6393da5b21ad90a072e83; current 3ec67b47d533c06773a86596d917999029915db9. Uncommitted work and unmerged branches are excluded. -->
 <h2>Quick Summary</h2>
 <ul>
-  <li>Combat is being rebuilt from the ground up so weapons, Force powers, Devices, Leadership, First Aid, beasts, defenses, and enemy weaknesses all fit together.</li>
+  <li>Combat is being reworked across weapons, Force powers, Devices, Leadership, First Aid, beasts, defenses, and enemy weaknesses.</li>
   <li>Every character gets a required full rebuild the first time they log in after the update.</li>
-  <li>The rebuild costs you nothing. The server sends you into the rebuild flow automatically, and you are also given one bonus rebuild token to keep for a future respec.</li>
+  <li>The rebuild costs you nothing. The server sends you into the rebuild flow automatically, and you are also given one bonus rebuild token to keep for a future rebuild.</li>
   <li>Removed perks, including old weapon proficiencies and crafting unlock perks, return their original SP investment during the rebuild process.</li>
   <li>Higher ability ranks replace lower ranks, and many perks add passive bonuses or extra effects to your existing attacks.</li>
   <li>The total skill rank cap rises from 350 to 400, and the earned Ability Point cap rises from 35 to 40. Armor remains part of the skill cap.</li>
@@ -83,7 +83,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
 <h2>What Happens When You Log In</h2>
 <ul>
   <li>Your character is sent to the rebuild area and cannot leave until the rebuild is finished.</li>
-  <li>You rebuild your stats, skills, and perks under the new combat rules.</li>
+  <li>You rebuild your stats, skills, and perks under the new combat rules. You can also reassign your racial stat bonus.</li>
   <li>The rebuild is required for everyone because many combat perks and item requirements are changing.</li>
   <li>The forced rebuild does not consume a rebuild token, and you are granted one extra token to keep.</li>
   <li>New characters also start with one rebuild token.</li>
@@ -102,7 +102,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>You can spend Ability Points to raise an attribute to 26, or 27 with its racial bonus.</li>
   <li>Maximum Stamina now scales with Might instead of Agility, gaining 3 Stamina per 2 Might. Maximum FP gains 3 FP per point of Willpower. Gear and perk bonuses apply in addition.</li>
   <li>Natural recovery still occurs every 30 seconds, but each resource now uses its own attribute: Vitality for HP, Willpower for FP, and Might for Stamina. Vitality no longer improves all three.</li>
-  <li>Lightsaber and Saberstaff skills and equipment are restricted to Force Sensitive characters. Espionage is restricted to Standard characters.</li>
+  <li>Force, Lightsaber, and Saberstaff are restricted to Force Sensitive characters. Devices and Espionage are restricted to Standard characters.</li>
   <li>Equipment requirements are now based on your skill ranks rather than old proficiency-style perk purchases. A few items still require a specific perk.</li>
   <li>Higher ranks of an active ability replace lower ranks, so your feat list and hotbar no longer carry duplicate versions of the same power.</li>
   <li>Perk trees combine active attacks with passive bonuses, upgrades, and extra effects triggered by other abilities.</li>
@@ -160,6 +160,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>These disabling effects cannot last longer than 30 seconds after bonuses and resistances, and cannot be extended indefinitely by refreshing them. Turning a daze into a knockdown does not restart the control timer. The separate penalty for being subdued keeps its own duration.</li>
   <li>Area control abilities have a limited number of targets. Many affect at most five enemies; check the individual description for exceptions.</li>
   <li>Several stances, marks, challenges, guards, and auras trigger extra effects when you attack, defend, guard, deflect, or support allies.</li>
+  <li>Marked for Death increases the marker's damage by a percentage instead of adding a fixed amount to each hit. Other attackers do not use up its charges.</li>
 </ul>
 <h2>Weapon Skill Changes</h2>
 <p>Every weapon skill has two named styles, each with its own perk tree. Their first perk purchases become available at skill rank 2.</p>
@@ -270,6 +271,13 @@ dateCreated: 2026-06-17T23:27:44.492Z
     </tbody>
   </table>
 </figure>
+<h3>Force And Healing Updates</h3>
+<ul>
+  <li>Radiant Lance is in the Alter tree and deals Force damage in a line.</li>
+  <li>Light Force wards and protection can also target yourself. Reflective Barrier adds weapon and Force damage while the granted temporary HP lasts.</li>
+  <li>Serene Focus now restores FP when you heal yourself, while healing another ally still helps restore their FP and Stamina.</li>
+  <li>Med Kit, Benevolence, Renewal, Infusion, and Emergency Sealant have adjusted healing amounts. Kolto Mist has a longer cooldown to reduce repeated group healing.</li>
+</ul>
 <h3>Force Affinity</h3>
 <ul>
   <li>Learning a Light or Dark perk shifts your Force Affinity toward that side. Each different perk contributes one point, regardless of how many ranks you buy; Universal perks do not shift it.</li>
@@ -312,6 +320,21 @@ dateCreated: 2026-06-17T23:27:44.492Z
 </ul>
 <h2 id="capstone-quests">Capstone Quests</h2>
 <p>The update adds 40 capstone quest chains across 17 skills.</p>
+<ul>
+  <li>You need rank 50 in the matching skill to begin its capstone quest chain. Beast capstone quests use your Beast Mastery rank.</li>
+  <li>Completing the chain unlocks its final perk. Each chain has its own trainer, with new trial dungeons, enemies, and boss encounters.</li>
+</ul>
+<h2>World, Quests, And Enemy Balance</h2>
+<ul>
+  <li>Normal enemies have been adjusted for solo play. High-level enemies have stronger defenses.</li>
+  <li>The Chirodactyl and Mutated Ice Bol are tuned as world bosses, and the Ancient Sand Worm has a new ability set.</li>
+  <li>A new Tusken caves dungeon on Tatooine includes champions, a warlord, rare equipment, crafting materials, and Tusken gear recipes.</li>
+  <li>Veles, eastern Viscara, the Republic Base, and Nar Shaddaa receive map updates.</li>
+  <li>Missing entrances and exits on Viscara and Tatooine have been restored. Veles also has repairs to its Trade Concourse, guild entrances, workshop exit, cantina rooftop, vendors, and training terminals.</li>
+  <li>North Wildwoods enemy spawns and quest directions have been corrected, along with several Viscara exploration achievements.</li>
+  <li>Quest acceptance, turn-ins, and journals have been repaired. Quest proof items now reach each eligible participant instead of depending on shared corpse loot.</li>
+  <li>Interrupted Sith training can be resumed, and the Republic oath is available through Sergeant Nahulu. Older dragon, sandworm, and frog quests stuck at the proof-collection step are repaired.</li>
+</ul>
 <h2>Beast Mastery</h2>
 <ul>
   <li>Beast Mastery is updated across taming, training, rewards, soothing, revives, beast attacks, beast roles, and beast support abilities.</li>
@@ -319,7 +342,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Called beasts arrive at full health instead of approximately half health.</li>
   <li>Tame chance starts at 40%, shifts by 3% for each level your Beast Mastery rank is above or below the target, and gains 3% per point of Social. It is capped at 75%.</li>
   <li>Beast roles are Bruiser, Damage, Evasion, Force, Tank, and Balanced.</li>
-  <li>Snarl and Growl are replaced by two ongoing bond stances. <strong>Guarding Bond</strong> improves your beast's defenses and helps it hold enemy attention. <strong>Predatory Bond</strong> improves its damage, haste, and ability accuracy while reducing the attention it draws. Only one stance can be active at a time.</li>
+  <li>Snarl and Growl are replaced by two ongoing bond stances. <strong>Guarding Bond Stance</strong> improves your beast's defenses and helps it hold enemy attention. <strong>Predatory Bond Stance</strong> improves its damage, haste, and ability accuracy while reducing the attention it draws. Only one stance can be active at a time.</li>
   <li>Reward still consumes a treat, but its healing now also benefits from your beast's maximum HP and your Social. Revive Beast's restored HP has also been rebalanced.</li>
   <li>New Incubation Field Notes are key items, filed under their own "Incubation Field Notes" category, one per mutation-target beast. Each note spells out every way to incubate that beast and what each method needs, such as the required enzyme, day of the week, and minimum mutation chance.</li>
   <li>You earn a beast's note automatically the first time you successfully <strong>mutate into</strong> that beast. A normal incubation does not grant a note.</li>
@@ -333,11 +356,13 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Stand Ground keeps a companion in place while allowing attacks against enemies already in reach. Attack Nearest sends it after a nearby visible enemy, then returns it to following you.</li>
   <li>Companions give up on unreachable targets and return to you instead of remaining stuck in a chase. They also make better use of their available combat and healing abilities.</li>
   <li>Droid programs keep only one active rank of an ability, and consistently enforce the droid's tier and AI-slot limits. The AI editor and the deployed droid now agree about which abilities are active.</li>
+  <li>New Engineering instruction discs let droids learn weapon abilities and stances alongside Devices and First Aid abilities. Instructions still need to fit the droid's tier and available AI slots.</li>
 </ul>
 <h2>Items, Crafting, And Enemies</h2>
 <ul>
   <li>Combat-linked equipment requirements and item values are updated to match the new skill requirements and combat rules.</li>
   <li>Existing weapons receive updated damage, speed, and elemental bonuses. Equipment resistances also use the new values.</li>
+  <li>Gear now shows <strong>Accuracy</strong> for bonuses to hit chance. Existing Attack Bonus and Enhancement Bonus accuracy values are converted automatically; the separate Attack stat still improves damage.</li>
   <li>Armor, food, and droid resistance bonuses are adjusted for the new Resistance system, including a full eight-type droid resistance line.</li>
   <li>Droid CPU items and droid assembly options use the new combat values.</li>
   <li>Some enhancement and food recipes now grant Combat Readiness instead of the old cooldown-reduction bonus. Existing recipe unlocks carry over.</li>
@@ -394,7 +419,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
 <h2>Building And Upgrading Lightsabers</h2>
 <ul>
   <li>Force Sensitive characters can build their own lightsabers without a DM crafting the weapon. A DM only grants you a Kyber Token; everything after that is in your hands.</li>
-  <li>Use the token to attune it into a Kyber Token in your currency list, then visit a Lightsaber Workbench at the Sith Academy on Korriban, the Jedi Enclave on Dantooine, or a hidden cave on Dathomir.</li>
+  <li>Use the token to attune it into a Kyber Token in your currency list, then visit a Lightsaber Workbench at the Jedi Temple on Viscara, the Jedi Enclave on Dantooine, the Sith Academy on Korriban, or a hidden cave on Dathomir.</li>
   <li>At the workbench you build a tier 1 lightsaber or saberstaff: pick a hilt style and blade colour, optionally socket up to two enhancements, and optionally apply a Weapon Submission Token to carry crafted stats onto the saber. Building consumes one Kyber Token, along with any enhancements and token you socket.</li>
   <li>Sabers grow stronger through tiered upgrade kits crafted with Engineering. Each kit raises the weapon one tier at a time and keeps its existing bonuses. The weapon must be unequipped to apply one.</li>
   <li>The top tier is tier 5.5, reached with the <strong>Chiro</strong> upgrade kit, whose recipe must be unlocked before it can be crafted.</li>
@@ -417,6 +442,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Unknown characters are shown with a stable, grey descriptor instead of their character name. Characters without a chosen descriptor receive one automatically.</li>
   <li>Type <strong>/name followed by the text you want to use</strong>, then click a target. For example, /name Tall Armoured Human followed by clicking yourself sets your public descriptor. Clicking another player saves a private name only your character sees. Neither action changes the underlying character name. /forgetname followed by clicking that player clears your private label.</li>
   <li>By default, a character you have named appears with your assigned name followed by their grey descriptor in brackets. Names and descriptors entered through /name are limited to 64 characters and cannot contain colour codes.</li>
+  <li>Use <strong>/introduce Your Name</strong> to offer a name or alias to visible players within 20 metres. They choose whether to remember it through <strong>/introductions</strong> or <strong>/intro</strong>; their private labels change only if they accept. Introductions have a five-minute cooldown.</li>
   <li>Settings has a new <strong>Identity</strong> tab with three toggles: show your own descriptor beside your name, show other players' descriptors, and hide your account name from player-facing lists. Hiding your account name is enabled by default.</li>
   <li>Disguises are a new player system, opened with /disguise or /disguises. A disguise stores a private label, a public descriptor, a portrait, a sound set, its own biography of up to 5,000 characters, and its own account-name setting.</li>
   <li>While disguised, other players examining you see that disguise's biography. A blank disguise biography does not reveal your usual one. Removing the disguise restores your normal portrait, sound set, and biography.</li>
@@ -437,7 +463,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
 <h2>Travel, Banking, And Player Cities</h2>
 <ul>
   <li>Interplanetary travel now uses scheduled shuttles instead of instant flight terminals. Buy a ticket at a starport and be within 15 metres of the terminal when the shuttle departs to board it automatically.</li>
-  <li>Shuttles run every 4 to 6 minutes per route, with orbital hops every 60 seconds. A boarding call goes out 60 seconds before departure. If you miss the departure, your ticket stays valid for the next shuttle. Transit takes 5 to 10 minutes, or 60 seconds for orbital hops.</li>
+  <li>Interplanetary shuttles depart every two minutes and take five minutes to reach their destination. Orbital hops depart every 60 seconds and take 60 seconds. A boarding call goes out 60 seconds before departure. If you miss the departure, your ticket stays valid for the next shuttle.</li>
   <li>Fares scale with distance, with a minimum of 100 credits and a flat 25 credits for orbital hops. City transportation tax can add up to 25%. Unboarded tickets can be refunded at the departure starport for the base fare, but the tax is not refunded.</li>
   <li>Shuttle travel still requires the CZ-220 Shuttle Pass from orientation.</li>
   <li>Your character's banks now share one storage pool, so items deposited at one bank can be withdrawn at another. This is per character, not shared between your characters. Storage holds 120 items, with an item count shown in the bank window. City banks still require local citizenship and paid-up taxes.</li>
@@ -466,6 +492,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Arkanian is added as a learnable language, with /arkanian as its chat command.</li>
   <li>The Notes window adds search, categories, and clearer editing controls. The Currencies window has been redesigned with individual currency icons.</li>
   <li>The Appearance Editor lets you choose custom colours on supported models and materials, including supported robe parts.</li>
+  <li><strong>/headscale</strong> and the Appearance Editor let you adjust head size separately from body height.</li>
   <li>Sixteen pistol appearances and 35 rifle appearances receive replacement blaster models. There is also a new Vesper-9 pistol appearance.</li>
   <li>New craftable field tools include the Ghostkey Relay, Stonewake Relay, Tidecall Beacon, Wayfinder Sensor, Stormcore Matrix, Kinetic Harness, Lucid Splice, Flux Diverter, and Faultline Capacitor.</li>
   <li>The Capital Power Diverter description now correctly lists its existing 60-point maximum capacitor penalty.</li>
@@ -481,18 +508,31 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Missing or incorrect NPC and beast portraits, portrait directions, and several incubation beast appearances have been corrected.</li>
   <li>Loading hints explain the new identity system, and conversation text and portraits display more consistently.</li>
   <li>Pistol firing animations and shot sounds have been corrected, and leaving space restores your character's appearance properly.</li>
+  <li>Dual-wield attack timing, robe movement, character proportions, head accessory colours, rifle grips, and missing spear appearance options have been repaired.</li>
+  <li>Purchased perk abilities are restored correctly after server restarts. New abilities can fill all ten slots in the first hotbar row.</li>
+  <li>Settings and conversation windows have received fixes. Conversations close when you change areas, HoloCom messages stay out of the combat log, and shuttle announcements no longer fill chat history.</li>
+</ul>
+<h2>Other Changes Since The Last Release</h2>
+<ul>
+  <li>Guild item tasks require items you produced yourself, such as by crafting or fishing. Hunter's Guild tasks are unaffected.</li>
+  <li>A new Guild Tasks window replaces the old task dialogue.</li>
+  <li>Dantari Shaman kills and several Agriculture item tasks now count correctly.</li>
+  <li>Crafted items and incubated eggs sell for more credits to NPC vendors.</li>
+  <li>Katars use unarmed attack animations.</li>
+  <li>Dice bags work for DM-possessed creatures.</li>
+  <li>Bug reports and player-city broadcasts have been repaired. Discord receives server startup and restart notices, and test-server bug reports no longer have a cooldown.</li>
 </ul>
 <h2 id="removed-in-this-update">Removed In This Update</h2>
 <ul>
   <li><strong>The old concentration ability system is removed</strong>, along with the /concentration (/conc) command.</li>
-  <li>The /headscale command is removed.</li>
   <li><strong>Dash is removed as a purchasable general perk.</strong> Movement bonuses now come from the remaining abilities and perks that explicitly grant them.</li>
   <li><strong>Player Shout and the "Show Holonet" setting are removed.</strong> Use Comms within its location limits or the separate paid HoloNet broadcast window.</li>
   <li><strong>The "Lightsaber XP Share" setting is removed.</strong> Force XP is no longer gained from lightsaber combat through that toggle.</li>
   <li>Old weapon and armor proficiency perks, crafting-equipment and fishing-rod proficiency perks, broad blueprint-category unlock perks, and separately purchased crafting-action perks are retired. Their replacements are the skill-rank requirements described above.</li>
-  <li>Snarl and Growl are replaced by Guarding Bond and Predatory Bond. Rousing Shout now grants temporary HP rather than reviving a fallen ally.</li>
+  <li>Snarl and Growl are replaced by Guarding Bond Stance and Predatory Bond Stance. Rousing Shout now grants temporary HP rather than reviving a fallen ally.</li>
   <li>The old City Bank Level upgrade is retired as part of shared banking.</li>
   <li>Dario, the training-equipment vendor on CZ-220, is removed.</li>
+  <li>First Rites, Collect Dantooine Starwort Herbs, and Neutralize the Rooftop Sniper are retired quests.</li>
   <li>Several old perk categories, old perk items, old status effects, and old item requirements are cleaned up as part of the rebuild path.</li>
 </ul>
 <h2>Not Included In This Update</h2>
