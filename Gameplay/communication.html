@@ -1,37 +1,33 @@
 <!--
 title: Communication — channels, Holonet, HoloNet terminal, HoloCom
-description: IC talk ranges, party overhear, server-wide Holonet shout, paid HoloNet broadcasts, and HoloCom calls.
+description: IC talk ranges, scoped Comms, staff-only Shout, paid HoloNet broadcasts, and HoloCom calls.
 published: true
-date: 2026-05-03T20:30:00.000Z
+date: 2026-10-03T13:10:04.154Z
 tags: chat, holonet, holocom, party, shout, communication, gameplay, swlor
 editor: ckeditor
 dateCreated: 2026-05-03T20:30:00.000Z
 -->
 
 <h1>Communication</h1>
-<p>SWLOR routes most player chat through custom logic: emote splitting, languages, ranges, and special rules for party and “Holonet” shouts.</p>
+<p>SWLOR routes player chat through custom logic for emotes, languages, ranges, and scoped Comms. See the <a href="../../Gameplay/PlayerGuide/communication">Player Guide communication article</a> for the full current reference, including private names, public descriptions, introductions, notes, and settings.</p>
 
 <h2>IC channels and range</h2>
 <ul>
   <li><strong>Talk:</strong> in-character speech to players (and relevant listeners) within about <strong>20 meters</strong>.</li>
   <li><strong>Whisper:</strong> about <strong>4 meters</strong>.</li>
-  <li><strong>Party:</strong> goes to party members, and also to anyone within <strong>20 meters</strong> of the speaker (overhear).</li>
+  <li><strong>Party / Comms:</strong> reaches party members in the same ship, space region, supported event area, or planet. Nearby non-party listeners within <strong>20 meters</strong> can overhear when they share that scope. General Settings can disable the warning about party members who are out of range.</li>
 </ul>
-<p>Messages starting with <code>//</code> or <code>((</code> are treated as <strong>OOC</strong> and are not translated; they cannot be sent on the Holonet/shout channel.</p>
+<p>Text after <code>//</code> or <code>((</code> is treated as <strong>OOC</strong> and is not translated through the language system.</p>
 <p>Dead characters cannot send normal chat unless the line starts with <code>/</code> (commands).</p>
 
-<h2>Holonet (shout channel)</h2>
-<p>The <strong>shout</strong> chat volume is treated as the in-character <strong>Holonet</strong>: it can reach all players who have Holonet visibility enabled, plus DMs.</p>
-<ul>
-  <li>You must have <strong>Holonet enabled</strong> in settings to <em>send</em> Holonet messages (receivers can toggle whether they <em>see</em> Holonet traffic).</li>
-  <li>There is a <strong>5 minute</strong> cooldown between your Holonet sends.</li>
-  <li>OOC prefixes are blocked on this channel.</li>
-</ul>
+<h2>Shout (staff only)</h2>
+<p>The <strong>Shout</strong> channel is disabled for players. DMs can still use it for server-wide messages. Use scoped Comms for in-character radio-style communication.</p>
 
 <h2>HoloNet terminal (paid broadcast)</h2>
 <p>Interact with a <strong>HoloNet terminal</strong> placeable to open a UI, type a broadcast (up to <strong>600</strong> characters), and pay <strong>2,500 credits</strong> to send it. When configured on the server, the same submission can forward to a Discord webhook; online players also see a colored broadcast line in game. If the webhook URL is not configured, the UI reports an error and the broadcast does not go out.</p>
 
 <h2>HoloCom</h2>
+<p>Open HoloCom from the Character Sheet to call another available online player. HoloCom cannot be used in space, and both participants are immobilized while a connected call is active. Unanswered attempts time out.</p>
 <p><strong>HoloCom</strong> is a directed call system between characters (voice/chat routing to a hologram stand-in). Use <code>/endcall</code> to end an active call, cancel a ringing attempt, or clear stuck state (also listed under <a href="../../Gameplay/chatcommands">Chat commands</a>). HoloCom state is cleaned up on death and disconnect.</p>
 
 <h2>Other notes</h2>
