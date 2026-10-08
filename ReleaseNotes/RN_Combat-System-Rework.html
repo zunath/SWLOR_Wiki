@@ -2,7 +2,7 @@
 title: Combat Upgrade Release Notes
 description: Player-friendly SWLOR combat upgrade release notes and impact summary.
 published: true
-date: 2026-10-03T00:00:00.000Z
+date: 2026-10-08T00:00:00.000Z
 tags: perks, combat, swlor, release notes, rebuild
 editor: ckeditor
 dateCreated: 2026-06-17T23:27:44.492Z
@@ -32,8 +32,8 @@ dateCreated: 2026-06-17T23:27:44.492Z
 <p>Contributors: John Republic, Girlfailure, jax, Ryudo, AsuraKing, flyingaces, forsakenreaver, Hazin, pastius, Announcer, Witch Time, Scorchys</p>
 <p>&nbsp;</p>
 <p>This is a plain-English preview of the upcoming combat upgrade. These changes are not live yet. The exact release date and NWSync hash will be added when the update is ready to deploy.</p>
-<p>Last checked on October 3, 2026. These notes cover changes since the May 2, 2026 release, including additions, replacements, removals, and effects on existing characters.</p>
-<!-- Source review: last dated wiki release is 2026-05-02; final May 2 SWLOR_NWN master snapshot 68e2c64a8b53f25fcf60283f90cded0924279d0a -> current master c6330dfcc520b0672f8f2e4fce61efa0e3f3cf64. CU-specific comparison also uses pre-merge master d0474806c525312487bb48e85d77b69b49194c14 -> current master, including squash merge 2fa527816 and subsequent fixes through October 3. Recorded HAK commits: May 2 17ed3d23976e31e31b9fc3f9fac8936c8057823d; pre-CU c38161d5414902591ce6393da5b21ad90a072e83; current 665ff34a1fc2867fa59cb53fce1d7730a9e3227f. Uncommitted work and unmerged branches are excluded. -->
+<p>Last checked on October 8, 2026. These notes compare the May 2, 2026 live release with the upcoming combat upgrade, including additions, replacements, removals, and effects on existing characters.</p>
+<!-- Source review: last dated wiki release is 2026-05-02; final May 2 SWLOR_NWN master snapshot 68e2c64a8b53f25fcf60283f90cded0924279d0a -> current master 12a419c462083405e0d4f7c83ec31ebcb6187312. CU-specific comparison also uses pre-merge master d0474806c525312487bb48e85d77b69b49194c14 -> current master, including squash merge 2fa527816 and subsequent fixes through October 8. Recorded HAK commits: May 2 17ed3d23976e31e31b9fc3f9fac8936c8057823d; pre-CU c38161d5414902591ce6393da5b21ad90a072e83; current aadb8d48a561a5b8dddadd09d2ab637a3953116b. Uncommitted work and unmerged branches are excluded. -->
 <h2>Quick Summary</h2>
 <ul>
   <li>Combat is being reworked across weapons, Force powers, Devices, Leadership, First Aid, beasts, defenses, and enemy weaknesses.</li>
@@ -106,13 +106,13 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Equipment requirements are now based on your skill ranks rather than old proficiency-style perk purchases. A few items still require a specific perk.</li>
   <li>Higher ranks of an active ability replace lower ranks, so your feat list and hotbar no longer carry duplicate versions of the same power.</li>
   <li>Perk trees combine active attacks with passive bonuses, upgrades, and extra effects triggered by other abilities.</li>
-  <li>You can combine perks from different weapon skills. Weapon abilities generally need a weapon equipped, but no longer demand a weapon from their own skill. Their damage scaling, accuracy, range, and any explicit shield or other requirements still follow the ability. Normal attacks continue to use the skill of the weapon you are wielding.</li>
+  <li>Weapon abilities and passive attack bonuses can be combined across weapon skills. Most weapon abilities need any weapon equipped; listed shield or other requirements still apply. Each ability keeps its listed damage scaling, accuracy, and range. Normal attacks use the skill of your equipped weapon.</li>
   <li>General perks now include Armor-based Provoke, Dual Wield, and Alertness. Provoke draws enemy attention, Dual Wield speeds up off-hand attacks, and Alertness helps spot hidden enemies.</li>
-  <li>The upgrade will add a natural <strong>Single Weapon</strong> bonus of +20% weapon DMG for eligible one-handed melee and throwing weapons with an empty off hand. The new <strong>Doublehand I / II / III</strong> perks will raise that total to +30% / +45% / +60%. Pistols, two-handed weapons, and double weapons do not qualify.</li>
+  <li>The upgrade will add a natural <strong>Single Weapon</strong> bonus of +20% weapon DMG for eligible one-handed melee weapons, throwing weapons, and pistols with an empty off hand. The new <strong>Doublehand I / II / III</strong> perks will raise that total to +30% / +45% / +60%. A shield or any other off-hand item disables these bonuses. Rifles, two-handed weapons, and double weapons do not qualify.</li>
   <li>You no longer need the Dual Wield perk just to equip two eligible weapons. Pistols are still restricted to the right hand and can only be paired with a shield; this does not allow dual pistols.</li>
   <li>Combat Readiness replaces the old recast-reduction gear bonus. It increases activated ability damage, healing, and temporary HP, up to a maximum bonus of 15%. It does <strong>not</strong> reduce cooldowns.</li>
   <li>Specific perks can still change ability cooldowns, including reducing a shared cooldown after a successful attack or deflection. Check the perk description for the affected abilities and conditions.</li>
-  <li>The Perks window shows a "Recast Group" line on a perk's detail panel when that perk's ability shares a cooldown timer with others.</li>
+  <li>The Perks window shows base FP and Stamina costs and cooldowns for current and next ability ranks. A "Recast Group" line identifies abilities that share a cooldown.</li>
   <li>If the skill cap prevents you from gaining XP because no eligible skill can decay, you now receive an explanation.</li>
   <li>The Skills window is alphabetised, with languages grouped at the bottom and toggles for locking skills against decay.</li>
 </ul>
@@ -134,7 +134,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>When dual wielding, each hand uses its own weapon's damage and damage type.</li>
   <li>Twin blades and saberstaves will make two attack rolls per cycle, one for each end, with damage and speed balanced accordingly. Dual Wield will speed up the second end, and Haste and Slow will affect paired attacks consistently with single weapons.</li>
   <li>Queued attacks use the weapon that actually lands the hit, including off-hand hits. Abilities with follow-up hits and splash damage now apply their bonuses and limits more consistently.</li>
-  <li>Combat messages give clearer feedback about resisted effects, immunities, resource drains, stacks, and successful healing. Temporary HP is included in the Character Sheet's health display.</li>
+  <li>Combat messages give clearer feedback about resisted effects, immunities, resource drains, stacks, and successful healing. Temporary HP is included in the Character Sheet and full vitals window's health displays.</li>
 </ul>
 <h2>Defenses And Resistances</h2>
 <ul>
@@ -146,7 +146,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Elemental damage is reduced by Physical Defense first, then the matching Resistance is applied afterward.</li>
   <li>Trauma and Disruption resist matching status effects and the damage those effects deal over time. They do not reduce ordinary weapon or Force damage.</li>
   <li>Weapon deflection is split into <strong>Melee Deflection</strong> and <strong>Ranged Deflection</strong>. With a weapon equipped and no shield, each can stop ordinary weapon attacks of the matching kind. The normal chance cap for each is 50%.</li>
-  <li>With a shield equipped, <strong>Shield Deflection</strong> can stop either kind of weapon attack and does not stack with Melee or Ranged Deflection on the same hit. Its chance comes from item bonuses and perks, up to 75%; equipping an ordinary shield does not grant a free deflection chance. <strong>Guard</strong> is different: it reduces the damage of a hit instead of preventing it, and can also restore Stamina, deal retaliation damage, and increase enmity.</li>
+  <li>With a shield equipped, <strong>Shield Deflection</strong> can stop either kind of weapon attack and does not stack with Melee or Ranged Deflection on the same hit. Its chance comes from item bonuses and perks, up to 75%; equipping an ordinary shield does not grant a free deflection chance. <strong>Guard</strong> is different: it reduces physical damage from a hit instead of preventing it, and can also restore Stamina, deal retaliation damage, and increase enmity.</li>
   <li>Temporary HP from different abilities can stack. Reapplying the same ability replaces its previous temporary HP, even if a different ally casts it.</li>
   <li>Guard starts with 20% damage reduction on a guarded hit and can be improved to 55%. It has its own chance to occur and does not require a katar.</li>
   <li>Note when reading gear: item stats named "Fire Defense", "Poison Defense", "Electrical Defense", and "Ice Defense" feed your <i>Resistances</i>, not your two Defense values.</li>
@@ -258,7 +258,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
       <tr>
         <td>Devices</td>
         <td>Grenadier, Field Engineer, Field Support, Assault Gadgets</td>
-        <td>Grenades, shields, fields, beacons, flamethrowers, rockets, and energy attacks are rebalanced. Each tree costs 60 SP to complete. Grenade abilities consume explosives at every rank. Emergency Bunker creates an aimed field with an 8m radius, granting temporary HP and reducing physical and Force damage taken by 15%.</td>
+        <td>Grenades, shields, fields, beacons, flamethrowers, rockets, and energy attacks are rebalanced. Assault Gadget damage scales with your Devices rank and Perception; droids use their level for Gadget DMG. Each tree costs 60 SP to complete. Grenade abilities consume explosives at every rank. Emergency Bunker creates an aimed field with an 8m radius, granting temporary HP and reducing physical and Force damage taken by 15%.</td>
       </tr>
       <tr>
         <td>Leadership</td>
@@ -276,6 +276,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
 <h3>Force And Healing Updates</h3>
 <ul>
   <li>Radiant Lance is in the Alter tree and deals Force damage in a line.</li>
+  <li>Force Leap has two ranks, with 15m / 18m range and an 18-second cooldown. Its arrival stun follows the new resistance and control-immunity rules.</li>
   <li>Light Force wards and protection can also target yourself. Reflective Barrier adds weapon and Force damage while the granted temporary HP lasts.</li>
   <li>Serene Focus now restores FP when you heal yourself, while healing another ally still helps restore their FP and Stamina.</li>
   <li>Med Kit, Benevolence, Renewal, Infusion, and Emergency Sealant have adjusted healing amounts. Kolto Mist has a longer cooldown to reduce repeated group healing.</li>
@@ -294,7 +295,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Manage your library and build a loadout in the /techniques window, which can only be changed out of combat.</li>
   <li>Equipped active techniques, including toggled stances, become usable abilities and are added to an empty main hotbar slot when one is available. Passive traits apply automatically.</li>
   <li>Activated techniques use Stamina rather than Force Points. There are 88 learnable techniques and traits, with individual requirements spread across Mimicry ranks 0–50. They cover damage, control, debuffs, ally support, stances, and passive bonuses.</li>
-  <li>Your Mimicry rank, the technique's listed attribute, and applicable Accuracy bonuses help determine whether a hostile technique hits. The Techniques window shows each technique's requirements, slot cost, and description, with search, filtering, and sorting.</li>
+  <li>Your Mimicry rank, the technique's listed attribute, and applicable Accuracy bonuses help determine whether a hostile technique hits. The Techniques window shows each technique's requirements, slot cost, and description, with search, filtering, and sorting. Hotbar descriptions also show Stamina costs and cooldowns.</li>
   <li>Slots come from perks: Combat Analyzer gives 2, each Analyzer Memory rank adds 2, and Overclocked Analyzer adds 2, for a maximum of 10. Each equipped technique or trait uses 1–3 slots, so ten slots do not necessarily mean ten equipped techniques.</li>
   <li>Equipping techniques with matching damage elements grants resonance: each additional technique in a matching group adds 5% technique potency. Bonuses from different matching groups add together, up to 20% total. Passive traits do not contribute.</li>
   <li>You gain Mimicry XP from learning and using techniques, and from analyzing techniques during fights in which you have contributed.</li>
@@ -308,10 +309,13 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>You can start by buying Stealth I or Poisoncraft I without an Espionage rank requirement. Crafting poisons and sneaking past hostile NPCs provide ways to earn Espionage XP.</li>
   <li>Poisons and trap kits are crafted at Espionage Workbenches in several settlements, including CZ-220 Offices &amp; Labs, the Veles shops, Dantooine's Central Craft Base, and the starports or settlements on Korriban, Hutlar, Dathomir, Tatooine, Mon Cala, and Smuggler's Moon.</li>
   <li>Stealth checks your Stealth against the observer's Detection; listening no longer detects hidden characters. Normal stealth requires the Stealth perk and can only be entered out of combat. It drains 2 Stamina every six seconds and breaks when you deal damage or use an ability that reveals you. Ghost Protocol provides a special way to enter stealth during combat.</li>
+  <li>Friendly or neutral observers can notice you without ending your stealth. Hostile detection reveals you; enemies that cannot detect your stealth or invisibility stop attacking.</li>
   <li>Stealth XP rewards moving past danger: evade an NPC's detection, move through its nearby threat area, and leave while hidden. Each NPC can grant this reward once per life; being detected grants a smaller amount. Simply standing hidden does not repeatedly earn XP.</li>
   <li>Back Attack rewards melee attacks from behind a target; it is a positioning bonus, so you do not have to be hidden for it to apply.</li>
+  <li>Shadow Step moves you behind an enemy within 10m and attempts a two-second stun on arrival. Rank II also clears movement penalties. Resistance and control immunity apply to the stun.</li>
   <li>The Alertness perk, which grants Detection, remains available to every character type so that anyone can counter stealth.</li>
-  <li>Venom Coatings are crafted vials applied to a weapon, and work on melee and thrown weapons only. They cannot be used on lightsabers, saberstaffs, pistols, or rifles.</li>
+  <li>Venom Coatings are crafted vials that work on all weapon types, including lightsabers, saberstaffs, pistols, and rifles. Coated hits apply Venom, dealing poison damage every six seconds. Higher-tier coatings deal more damage and last longer.</li>
+  <li>Standard coatings have 20 charges, or 30 with Lasting Coatings. Concentrated Venom has 10 charges and adds a +50% Venom damage bonus. A charge is spent at most once every six seconds.</li>
   <li>Coating vials are tradable, and <strong>anyone can use them</strong>, including Force Sensitive characters. Only crafting them requires Espionage.</li>
   <li>Traps come in two kinds. Razor Trap and Shock Trap are placed with an ability and are visible to everyone, while crafted Snare Kits are concealed and can be spotted and disarmed by players with enough Trapcraft training.</li>
   <li>You can maintain one trap by default, with more available through Trap Management. Traps need three metres of separation, take three seconds to arm, and last up to five minutes. Exceeding your limit removes the oldest trap. A failed disarm sets the trap off.</li>
@@ -341,7 +345,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
 <h2>Beast Mastery</h2>
 <ul>
   <li>Beast Mastery is updated across taming, training, rewards, soothing, revives, beast attacks, beast roles, and beast support abilities.</li>
-  <li>Beast stats, levels, purity bonuses, resistances, and attack speed behaviour are adjusted to match the new combat rules.</li>
+  <li>Beast stats, levels, purity bonuses, resistances, and attack speed behaviour are adjusted to match the new combat rules. Their FP and Stamina recovery scale with Willpower and Might, helping them keep using abilities in longer fights.</li>
   <li>Called beasts arrive at full health instead of approximately half health.</li>
   <li>Tame chance starts at 40%, shifts by 3% for each level your Beast Mastery rank is above or below the target, and gains 3% per point of Social. It is capped at 75%.</li>
   <li>Beast roles are Bruiser, Damage, Evasion, Force, Tank, and Balanced.</li>
@@ -495,7 +499,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>A new Dantooine quest, "Field Tinctures", is available from Healer Elara in the Dantooine Colony after you complete "Harvesting Herbs".</li>
   <li>Arkanian is added as a learnable language, with /arkanian as its chat command.</li>
   <li>The Notes window adds search, categories, and clearer editing controls. The Currencies window has been redesigned with individual currency icons.</li>
-  <li>The Appearance Editor lets you choose custom colours on supported models and materials, including supported robe parts.</li>
+  <li>The Appearance Editor lets you choose custom colours for supported hair, robes, helmets, and other materials. Custom hair and body colours are saved between logins.</li>
   <li><strong>/headscale</strong> and the Appearance Editor let you adjust head size separately from body height.</li>
   <li>Sixteen pistol appearances and 35 rifle appearances receive replacement blaster models. There is also a new Vesper-9 pistol appearance.</li>
   <li>New craftable field tools include the Ghostkey Relay, Stonewake Relay, Tidecall Beacon, Wayfinder Sensor, Stormcore Matrix, Kinetic Harness, Lucid Splice, Flux Diverter, and Faultline Capacitor.</li>
@@ -504,6 +508,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Base item descriptions have been rewritten for SWLOR, and scenery and prop names have been cleaned up.</li>
   <li>Perks, abilities, and status effects have a large set of new icons, including per-rank perk artwork, light- and dark-side corner markers on Force powers, and markers showing whether you meet a perk's requirements.</li>
   <li>Ability icons show cooldown progress, including other abilities sharing the same timer. The progress display is restored when you log back in with a cooldown still running.</li>
+  <li>Active ship module icons also show recharge progress, with separate timers for each fitted module slot. Remaining recharge time is restored when you return to space or log back in.</li>
   <li>Settings will add optional <strong>Cooldown Floating Text</strong>, off by default. It will show an ability's name and remaining cooldown above your character when you try to use it too soon, visible only to you and at most once every two seconds.</li>
   <li>The status effect bar has many more distinct buff and debuff icons. Key items also receive artwork based on their category.</li>
   <li>New sound effects have been added for Force and tech abilities.</li>
@@ -536,7 +541,9 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Old weapon and armor proficiency perks, crafting-equipment and fishing-rod proficiency perks, broad blueprint-category unlock perks, and separately purchased crafting-action perks are retired. Their replacements are the skill-rank requirements described above.</li>
   <li>Snarl and Growl are replaced by Guarding Bond Stance and Predatory Bond Stance. Rousing Shout now grants temporary HP rather than reviving a fallen ally.</li>
   <li>The old City Bank Level upgrade is retired as part of shared banking.</li>
+  <li>The /save command is removed. Your character continues to save automatically.</li>
   <li>Dario, the training-equipment vendor on CZ-220, is removed.</li>
+  <li>The Holographic Kinrath, Kath Hound, and Gimpassa training NPCs are removed from CZ-220 Offices &amp; Labs.</li>
   <li>First Rites, Collect Dantooine Starwort Herbs, and Neutralize the Rooftop Sniper are retired quests.</li>
   <li>Several old perk categories, old perk items, old status effects, and old item requirements are cleaned up as part of the rebuild path.</li>
 </ul>
