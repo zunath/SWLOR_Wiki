@@ -2,7 +2,7 @@
 title: Combat Upgrade Release Notes
 description: Player-friendly SWLOR combat upgrade release notes and impact summary.
 published: true
-date: 2026-10-08T00:00:00.000Z
+date: 2026-10-09T17:00:13.905Z
 tags: perks, combat, swlor, release notes, rebuild
 editor: ckeditor
 dateCreated: 2026-06-17T23:27:44.492Z
@@ -29,11 +29,10 @@ dateCreated: 2026-06-17T23:27:44.492Z
     </tbody>
   </table>
 </figure>
-<p>Contributors: John Republic, Girlfailure, jax, Ryudo, AsuraKing, flyingaces, forsakenreaver, Hazin, pastius, Announcer, Witch Time, Scorchys</p>
+<p>Contributors: John Republic, Girlfailure, jax, Ryudo, AsuraKing, flyingaces, forsakenreaver, Hazin, pastius, Announcer, Witch Time, Scorchys, arkanista, Lance, Xisifer, Zakaddum, Kirtanna, ganara, the1kobra, grymshun, cravenravenus, Alazar &nbsp; (If I missed your name, reach out and I'll add it. There are tons of people who helped test this thing!)</p>
 <p>&nbsp;</p>
 <p>This is a plain-English preview of the upcoming combat upgrade. These changes are not live yet. The exact release date and NWSync hash will be added when the update is ready to deploy.</p>
 <p>Last checked on October 8, 2026. These notes compare the May 2, 2026 live release with the upcoming combat upgrade, including additions, replacements, removals, and effects on existing characters.</p>
-<!-- Source review: last dated wiki release is 2026-05-02; final May 2 SWLOR_NWN master snapshot 68e2c64a8b53f25fcf60283f90cded0924279d0a -> current master 12a419c462083405e0d4f7c83ec31ebcb6187312. CU-specific comparison also uses pre-merge master d0474806c525312487bb48e85d77b69b49194c14 -> current master, including squash merge 2fa527816 and subsequent fixes through October 8. Recorded HAK commits: May 2 17ed3d23976e31e31b9fc3f9fac8936c8057823d; pre-CU c38161d5414902591ce6393da5b21ad90a072e83; current aadb8d48a561a5b8dddadd09d2ab637a3953116b. Uncommitted work and unmerged branches are excluded. -->
 <h2>Quick Summary</h2>
 <ul>
   <li>Combat is being reworked across weapons, Force powers, Devices, Leadership, First Aid, beasts, defenses, and enemy weaknesses.</li>
@@ -50,23 +49,67 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Quality-of-life additions include scheduled shuttle travel, globally accessible banks, a portrait Mini-Vitals overlay, a redesigned Perks window, and an in-game Player Guide.</li>
   <li>Some things are being removed. See <a href="#removed-in-this-update">Removed In This Update</a>.</li>
 </ul>
-<h2 id="before-and-after">At A Glance: Before And After</h2>
+<h2>At A Glance: Before And After</h2>
 <figure class="table">
   <table>
     <thead>
-      <tr><th>System</th><th>Before</th><th>With This Update</th></tr>
+      <tr>
+        <th>System</th>
+        <th>Before</th>
+        <th>With This Update</th>
+      </tr>
     </thead>
     <tbody>
-      <tr><td>Character growth</td><td>350 total skill ranks and up to 35 earned AP.</td><td>400 total skill ranks and up to 40 earned AP. The 10 starting SP plus up to 400 earned SP give a maximum of 410 spendable SP.</td></tr>
-      <tr><td>Stamina and recovery</td><td>Agility increased maximum Stamina, and Vitality improved natural recovery of HP, FP, and Stamina.</td><td>Might increases maximum Stamina. Natural recovery uses Vitality for HP, Willpower for FP, and Might for Stamina.</td></tr>
-      <tr><td>Weapon training</td><td>One-Handed, Two-Handed, Martial Arts, and Ranged grouped several weapons together.</td><td>Twelve individual weapon skills, each with two perk styles.</td></tr>
-      <tr><td>Equipment access</td><td>Separate proficiency and equipment perks unlocked tiers of gear.</td><td>Gear primarily checks your skill rank directly. Review your equipment requirements when rebuilding.</td></tr>
-      <tr><td>Crafting access</td><td>SP purchases unlocked crafting actions and broad recipe categories.</td><td>Actions and ordinary recipe access come from skill ranks; special recipe unlocks and remaining specialist perks still apply.</td></tr>
-      <tr><td>Cooldown gear</td><td>Recast Reduction shortened ability cooldowns.</td><td>Combat Readiness improves activated damage, healing, and temporary HP instead.</td></tr>
-      <tr><td>Banking</td><td>Storage depended on the bank location and city bank upgrades.</td><td>One 120-item bank pool per character, accessible through bank terminals across the galaxy.</td></tr>
-      <tr><td>Public travel</td><td>Flight terminals provided instant travel.</td><td>Tickets, scheduled departures, and time aboard a shuttle.</td></tr>
-      <tr><td>Character names</td><td>Other players could see your character name directly.</td><td>They see your public descriptor until they assign you a private name; disguises are remembered separately.</td></tr>
-      <tr><td>Communication</td><td>Party chat reached party members across the server, and players could use Shout for HoloNet messages.</td><td>Comms follows location limits. Player Shout is disabled; the separate paid HoloNet broadcast window remains.</td></tr>
+      <tr>
+        <td>Character growth</td>
+        <td>350 total skill ranks and up to 35 earned AP.</td>
+        <td>400 total skill ranks and up to 40 earned AP. The 10 starting SP plus up to 400 earned SP give a maximum of 410 spendable SP.</td>
+      </tr>
+      <tr>
+        <td>Stamina and recovery</td>
+        <td>Agility increased maximum Stamina, and Vitality improved natural recovery of HP, FP, and Stamina.</td>
+        <td>Might increases maximum Stamina. Natural recovery uses Vitality for HP, Willpower for FP, and Might for Stamina.</td>
+      </tr>
+      <tr>
+        <td>Weapon training</td>
+        <td>One-Handed, Two-Handed, Martial Arts, and Ranged grouped several weapons together.</td>
+        <td>Twelve individual weapon skills, each with two perk styles.</td>
+      </tr>
+      <tr>
+        <td>Equipment access</td>
+        <td>Separate proficiency and equipment perks unlocked tiers of gear.</td>
+        <td>Gear primarily checks your skill rank directly. Review your equipment requirements when rebuilding.</td>
+      </tr>
+      <tr>
+        <td>Crafting access</td>
+        <td>SP purchases unlocked crafting actions and broad recipe categories.</td>
+        <td>Actions and ordinary recipe access come from skill ranks; special recipe unlocks and remaining specialist perks still apply.</td>
+      </tr>
+      <tr>
+        <td>Cooldown gear</td>
+        <td>Recast Reduction shortened ability cooldowns.</td>
+        <td>Combat Readiness improves activated damage, healing, and temporary HP instead.</td>
+      </tr>
+      <tr>
+        <td>Banking</td>
+        <td>Storage depended on the bank location and city bank upgrades.</td>
+        <td>One 120-item bank pool per character, accessible through bank terminals across the galaxy.</td>
+      </tr>
+      <tr>
+        <td>Public travel</td>
+        <td>Flight terminals provided instant travel.</td>
+        <td>Tickets, scheduled departures, and time aboard a shuttle.</td>
+      </tr>
+      <tr>
+        <td>Character names</td>
+        <td>Other players could see your character name directly.</td>
+        <td>They see your public descriptor until they assign you a private name; disguises are remembered separately.</td>
+      </tr>
+      <tr>
+        <td>Communication</td>
+        <td>Party chat reached party members across the server, and players could use Shout for HoloNet messages.</td>
+        <td>Comms follows location limits. Player Shout is disabled; the separate paid HoloNet broadcast window remains.</td>
+      </tr>
     </tbody>
   </table>
 </figure>
@@ -321,7 +364,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Successful slicing grants XP and a reward based on the target's tier and whether you sliced a lockbox or field crate. Rewards include named weapons and equipment, recipe unlocks, Incubation Field Notes, and more slicing tools.</li>
   <li>The first failed attempt cannot destroy the target. Later failures have escalating destruction risks of 10%, 25%, 50%, and then 100%. If you begin changing the circuit and then abandon the attempt, it counts as a failure.</li>
 </ul>
-<h2 id="capstone-quests">Capstone Quests</h2>
+<h2>Capstone Quests</h2>
 <p>The update adds 40 capstone quest chains across 17 skills.</p>
 <ul>
   <li>You need rank 50 in the matching skill to begin its capstone quest chain. Beast capstone quests use your Beast Mastery rank.</li>
@@ -391,32 +434,98 @@ dateCreated: 2026-06-17T23:27:44.492Z
 </ul>
 <figure class="table">
   <table>
-    <thead><tr><th>Crafting Rank</th><th>Actions Unlocked Without Spending SP</th></tr></thead>
+    <thead>
+      <tr>
+        <th>Crafting Rank</th>
+        <th>Actions Unlocked Without Spending SP</th>
+      </tr>
+    </thead>
     <tbody>
-      <tr><td>5</td><td>Basic Touch</td></tr>
-      <tr><td>8</td><td>Waste Not</td></tr>
-      <tr><td>10</td><td>Rapid Synthesis and Master's Mend</td></tr>
-      <tr><td>15</td><td>Standard Touch</td></tr>
-      <tr><td>20</td><td>Steady Hand</td></tr>
-      <tr><td>25</td><td>Veneration</td></tr>
-      <tr><td>30</td><td>Careful Synthesis</td></tr>
-      <tr><td>35</td><td>Precise Touch</td></tr>
-      <tr><td>40</td><td>Muscle Memory</td></tr>
+      <tr>
+        <td>5</td>
+        <td>Basic Touch</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Waste Not</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Rapid Synthesis and Master's Mend</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>Standard Touch</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td>Steady Hand</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td>Veneration</td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td>Careful Synthesis</td>
+      </tr>
+      <tr>
+        <td>35</td>
+        <td>Precise Touch</td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td>Muscle Memory</td>
+      </tr>
     </tbody>
   </table>
 </figure>
 <p>These are prices for the individual rank being purchased, not the total cost of the whole perk.</p>
 <figure class="table">
   <table>
-    <thead><tr><th>Perk Rank</th><th>Previous SP Cost</th><th>New SP Cost</th></tr></thead>
+    <thead>
+      <tr>
+        <th>Perk Rank</th>
+        <th>Previous SP Cost</th>
+        <th>New SP Cost</th>
+      </tr>
+    </thead>
     <tbody>
-      <tr><td>Droid Assembly I / II / III / IV / V</td><td>3 / 3 / 3 / 3 / 3</td><td>1 / 1 / 2 / 3 / 4</td></tr>
-      <tr><td>Research V</td><td>3</td><td>4</td></tr>
-      <tr><td>Scientific Networking II</td><td>3</td><td>4</td></tr>
-      <tr><td>Harvesting V, Refining V, Scavenging V</td><td>3 each</td><td>4 each</td></tr>
-      <tr><td>Refinery Management V / VI</td><td>2 / 2</td><td>3 / 4</td></tr>
-      <tr><td>Defensive Modules V, Offensive Modules V, Mining Modules V</td><td>3 each</td><td>4 each</td></tr>
-      <tr><td>Upkeep II</td><td>3</td><td>4</td></tr>
+      <tr>
+        <td>Droid Assembly I / II / III / IV / V</td>
+        <td>3 / 3 / 3 / 3 / 3</td>
+        <td>1 / 1 / 2 / 3 / 4</td>
+      </tr>
+      <tr>
+        <td>Research V</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Scientific Networking II</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Harvesting V, Refining V, Scavenging V</td>
+        <td>3 each</td>
+        <td>4 each</td>
+      </tr>
+      <tr>
+        <td>Refinery Management V / VI</td>
+        <td>2 / 2</td>
+        <td>3 / 4</td>
+      </tr>
+      <tr>
+        <td>Defensive Modules V, Offensive Modules V, Mining Modules V</td>
+        <td>3 each</td>
+        <td>4 each</td>
+      </tr>
+      <tr>
+        <td>Upkeep II</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
     </tbody>
   </table>
 </figure>
@@ -529,7 +638,7 @@ dateCreated: 2026-06-17T23:27:44.492Z
   <li>Dice bags work for DM-possessed creatures.</li>
   <li>Bug reports and player-city broadcasts have been repaired. Discord receives server startup and restart notices, and test-server bug reports no longer have a cooldown.</li>
 </ul>
-<h2 id="removed-in-this-update">Removed In This Update</h2>
+<h2>Removed In This Update</h2>
 <ul>
   <li><strong>The old concentration ability system is removed</strong>, along with the /concentration (/conc) command.</li>
   <li><strong>Dash is removed as a purchasable general perk.</strong> Movement bonuses now come from the remaining abilities and perks that explicitly grant them.</li>
