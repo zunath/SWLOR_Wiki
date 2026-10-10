@@ -1,0 +1,146 @@
+<!--
+title: Post-Combat Upgrade Release Notes
+description: Fixes and balance changes since the October 9, 2026 combat upgrade, including upcoming dungeon corrections.
+published: true
+date: 2026-10-10T23:41:29.000Z
+tags: swlor, release notes, updates, combat, unreleased
+editor: ckeditor
+dateCreated: 2026-10-10T23:41:29.000Z
+-->
+
+<h1>Post-Combat Upgrade Release Notes</h1>
+<p><a href="../../ReleaseNotes">Back to Release Notes</a> | <a href="../../ReleaseNotes/RN_Combat-System-Rework">Original Combat Upgrade</a></p>
+<table>
+  <tbody>
+    <tr><th>Status</th><td>Collected updates; dungeon corrections in progress</td></tr>
+    <tr><th>Coverage</th><td>Since the October 9, 2026 combat upgrade; compiled October 10, 2026</td></tr>
+    <tr><th>Next Release Date</th><td>TBD</td></tr>
+    <tr><th>NWSync Hash</th><td>TBD</td></tr>
+  </tbody>
+</table>
+<p>These notes collect fixes and balance changes after the combat upgrade rollout. The main sections describe completed, merged changes; their deployment timing may differ. The final section covers dungeon work still in progress.</p>
+
+<h2 id="combat-and-recovery">Combat and Recovery</h2>
+<ul>
+  <li><strong>Natural stamina recovery increased.</strong> The baseline rises from 1 to 10 stamina per 30 seconds, before Might and other bonuses. Recovery arrives every six seconds, with fractional amounts carried forward. Maximum stamina and ability costs are unchanged.</li>
+  <li>Weapon ability hit refunds now share a limit based on the stamina actually spent, preventing discounted or multi-hit attacks from generating more stamina than they cost. Double Shot's once-per-use critical refund also works when a landed critical is fully resisted.</li>
+  <li><strong>Tank threat generation repaired.</strong> Bastion, Defensive, Immovable, Iron Wall, Sentinel, and Warden Wall add 100% damage-generated enmity; a guarding beast gains 50%. These bonuses increase threat without increasing damage.</li>
+  <li>Provoke, Anger, Guarding Roar, and Evasive Challenge now catch up to the leading opponent's threat and add their normal lead when used from behind. Repeating them while already ahead does not add more goad threat or force a target lock.</li>
+  <li>NPCs respond more reliably when the threat leader changes, including while approaching another target. Dead, hidden, invalid, and out-of-area targets are excluded.</li>
+  <li>Damage threat is counted once from damage actually dealt. Healing generates threat from HP actually restored; overhealing does not. Beast support that heals nothing or cleanses nothing no longer produces its support threat bonus.</li>
+  <li>Guardian and Ward bonuses aimed at one enemy now stay tied to that enemy instead of replacing a general threat modifier.</li>
+  <li>Queued weapon abilities now receive their physical or Force ability accuracy bonuses. This includes Focus Stim's +5/+8 percentage points for ranks I/II.</li>
+  <li>Shadow Step now teleports correctly while the caster is already attacking in melee, retaining its arrival stun and facing behavior.</li>
+  <li>Blazing Spikes can coexist with Cyclone Stance and other stances. Toggling it or changing stance no longer cancels the other effect.</li>
+  <li>Entering Stealth successfully ends Rest and its sitting animation, preventing rest recovery from continuing while hidden.</li>
+  <li>Serene Focus and other FP/stamina restoration no longer throw an exception when the target has no player record, including supported DM-possession cases.</li>
+  <li>Droid companions once again include their native Vitality HP contribution. HP equipment upgrades now increase their maximum HP correctly.</li>
+</ul>
+
+<h3 id="damage-over-time">Damage over Time</h3>
+<ul>
+  <li>Bleed and Toxin retain their percentage-based damage against ordinary targets, but their base ticks now have attacker-stat ceilings so very high-HP bosses do not take disproportionate damage.</li>
+  <li>Bleed: 4% of target maximum HP, capped at <code>20 + 2 &times; max(0, Might modifier, Perception modifier)</code> before outgoing Bleed bonuses and mitigation.</li>
+  <li>Toxin: 6% of target maximum HP, capped at <code>30 + 3 &times; max(0, Agility modifier)</code> before mitigation. Missing attackers use neutral modifiers.</li>
+  <li>Bleed and Fragmentation now correctly report physical damage rather than Force damage. The shared Bleed correction also applies to Piercing Toss.</li>
+</ul>
+
+<h3 id="lifesteal-and-drains">Lifesteal and Drains</h3>
+<p>Recovery from damage and defeats now has shared health-based limits after healing bonuses:</p>
+<table>
+  <thead><tr><th>Recovery source</th><th>Maximum recovery</th></tr></thead>
+  <tbody>
+    <tr><td>Explicit drains, including Force Drain and Soul Strike</td><td>15% of maximum HP per activation, shared across targets and phases</td></tr>
+    <tr><td>Ordinary passive lifesteal, including capstone sources</td><td>6% of maximum HP per hit, shared across sources</td></tr>
+    <tr><td>Critical recovery with its own cooldown, such as Vampiric Fury</td><td>A separate allowance of 12% of maximum HP per hit</td></tr>
+    <tr><td>Combined passive lifesteal and cooldown-based critical recovery</td><td>24% of maximum HP over any rolling six seconds</td></tr>
+    <tr><td>Defeat-triggered HP recovery</td><td>12% of maximum HP over any rolling six seconds</td></tr>
+  </tbody>
+</table>
+<p>The existing combined ceiling of 50% of damage dealt still applies. Overkill and invulnerable targets cannot supply extra healing, and overhealing does not consume the recovery allowance. Combat Readiness no longer boosts Force Drain or Soul Strike healing a second time after already increasing their damage.</p>
+
+<h2 id="mimicry-and-character-data">Mimicry and Character Data</h2>
+<ul>
+  <li><strong>Passive Mimicry observations no longer reduce another skill's combat XP.</strong> Combat Analyzer observation XP is awarded separately from the utility XP pool. Actively using Mimicry techniques still follows normal XP sharing.</li>
+  <li>Passive observation awards eligible combat participants 5% of kill XP calculated against their Mimicry rank, rounded down and capped at 30 XP per creature before normal penalties. Character and area XP bonuses do not multiply this reward. Trivial enemies and maximum-rank Mimicry grant none; repeated observations cannot increase it.</li>
+  <li>Active technique use, observation, and learning rewards from the same kill now appear in one combined Mimicry XP message.</li>
+  <li>Logging in restores purchased attributes from saved character data after a crash. Spent AP, investment caps, and racial bonuses remain consistent.</li>
+  <li>Quest item hand-ins and collector timeouts now release the busy state correctly, preventing later abilities such as Slam from being blocked until relogging.</li>
+</ul>
+
+<h2 id="items-and-crafting">Items and Crafting</h2>
+<ul>
+  <li><strong>Force weapon enhancements retired.</strong> Enhancements and random blueprint bonuses no longer convert a player's entire weapon to Force damage. Imbuement Stance remains the intended route for that conversion.</li>
+  <li>Existing affected weapons return to physical damage while retaining their damage bonuses and other item data. Force enhancement recipe knowledge, books, researched blueprints, and pending research move to the corresponding DMG enhancement recipes. Merchant stock is updated too.</li>
+  <li>Player weapons lose legacy Accuracy Stat and Damage Stat overrides that could force the wrong attributes, while keeping supported bonuses, elements, appearance, and identity. Stored weapons and equipped/carried weapons are repaired through startup and login migrations; old items encountered later are cleaned up on acquisition.</li>
+  <li>These item repairs cover saved storage and nested inventories, including bank, market, property, and droid equipment. The Force-enhancement repair also covers Quest Contract rewards and deliveries.</li>
+  <li><strong>Intermediate equipment recipes now have distinct costs.</strong> All 220 affected recipes across armor, accessories, shields, weapons, and droid equipment require 50% more of their original materials, rounded up, plus a material appropriate to the equipment type. Variants no longer simply repeat the preceding tier's ingredient list.</li>
+  <li>Item examine windows now show weight, including unidentified items and market, storage, and contract previews.</li>
+  <li>Cosmetic Datapads have proper descriptions instead of blank text or <code>[Bad Strref]</code>.</li>
+  <li>The default NWN Craft Skills dialogue is disabled again.</li>
+</ul>
+
+<h3 id="food-balance">Food Balance</h3>
+<p>Recipe bonuses have been adjusted to bring outliers in line and improve the learned Cartel Cakes reward. Other bonuses and recipe requirements remain unchanged.</p>
+<table>
+  <thead><tr><th>Food</th><th>Previous bonus</th><th>Updated bonus</th></tr></thead>
+  <tbody>
+    <tr><td>Gardula</td><td>+2 Social, +7 Vitality</td><td>+1 Social, +1 Vitality</td></tr>
+    <tr><td>Keebadas Binggona</td><td>+5 Vitality</td><td>+1 Vitality; retains +10 Attack</td></tr>
+    <tr><td>Idol Sushi</td><td>20 rest regeneration</td><td>6 rest regeneration</td></tr>
+    <tr><td>Steamed Catfish</td><td>10 HP regeneration</td><td>5 HP regeneration</td></tr>
+    <tr><td>Zoni Broth</td><td>8 stamina regeneration</td><td>5 stamina regeneration</td></tr>
+    <tr><td>Sea Bass en Croute</td><td>8 FP regeneration</td><td>5 FP regeneration</td></tr>
+    <tr><td>Marshleaf Broth</td><td>5 stamina regeneration</td><td>4 stamina regeneration</td></tr>
+    <tr><td>Bitter Fen Tea</td><td>5 stamina regeneration</td><td>4 stamina regeneration</td></tr>
+    <tr><td>Cartel Cakes</td><td>+4 HP</td><td>+40 HP; retains 6 stamina regeneration</td></tr>
+  </tbody>
+</table>
+
+<h2 id="world-and-shops">World and Shops</h2>
+<ul>
+  <li>Czerka Weapons Testing Facility enemies use fixed spawn locations with clear standing room instead of appearing inside scenery. Warden and rare-enemy positions are adjusted without changing spawn counts, weights, or respawn timing.</li>
+  <li>The Veles vending machine again sells Czerka Soda, Packaged pickle, Hot Chips, and Czerky Jerky(tm).</li>
+  <li>Ressa and Varko Jellin's Veles outfitter stall again opens the original accessory shop, including cigarettes, cigars, instruments, umbrellas, and other props.</li>
+  <li>The front benches around Mart's statue and the starport bus shelter in Veles have corrected seating approaches.</li>
+  <li>The Veles Sheriff office and jail doors start locked and use the existing reusable Czerka ID Codes - Level 2 keycard again.</li>
+  <li>The Trade Concourse warehouse's Smuggler-key entrance closes five seconds after opening and locks when closed. The return teleporter remains available.</li>
+  <li>Talking to the Anchorhead Droid Merchant no longer makes her perform sit-ups.</li>
+  <li>The Jawa Ninja blueprint has an English examine description with corrected text encoding.</li>
+  <li>Chi-Med, Druzer, and Druzer Store are labeled as prefabs.</li>
+</ul>
+
+<h2 id="appearance-and-effects">Appearance and Effects</h2>
+<ul>
+  <li>Armor appearance editing refreshes its part choices after equipment changes, fixing crashes and unresponsive controls.</li>
+  <li>Exposed hand and bicep body edits now show through outfits that were repeating the old body model. The muscular bicep option is restored for supported human-model species and outfits.</li>
+  <li>Dark hair presets and reflective armor dyes regain their intended brightness. Helmet 53 has smoother dye boundaries, especially with black dye.</li>
+  <li>Dropped-item tint refreshes no longer fail when processing skin, hair, or tattoo layers.</li>
+  <li>The appearance editor closes safely when a DM-possessed creature has an unsupported appearance.</li>
+  <li>Wrist Rocket I&ndash;III regain their original casting gesture, rocket, and fireball presentation.</li>
+  <li>Force Burst, Force Judgment, and Radiant Lance have revised impact visuals. Force Burst's center and Radiant Lance III's projectile stay aligned with the warned damage area when the selected target moves.</li>
+  <li>Guardian Master trial enemies received corrected sound sets. The planned enclave enemy replacements below supersede their humanoid presentation.</li>
+</ul>
+
+<h2 id="quality-of-life-and-stability">Quality of Life, Staff Tools, and Stability</h2>
+<ul>
+  <li><code>/introduce</code> has a two-minute cooldown, down from five minutes.</li>
+  <li>DM clients regain the Shout label and supported character descriptors.</li>
+  <li>DM player examine now includes portrait, current/maximum HP, FP and stamina, alignment, credits, description, and available RP XP. Skills and perks gain search/filter controls; a new Effects tab shows sources and remaining durations, and the Notes editor has more writing space.</li>
+  <li>Bug report, HoloNet, and DM shout submission handling is corrected to avoid unsafe game-thread callbacks and associated server crashes.</li>
+  <li>Area searches and scheduled polling are guarded against repeated targets and waits that fail to yield, addressing potential server stalls.</li>
+  <li>Combat leash cleanup no longer recursively repeats when removing immobilization and other control effects.</li>
+  <li>An experimental native network-packet hang mitigation is enabled in the server configuration.</li>
+  <li>Delayed mining laser completion safely stops if the pilot no longer has an active ship.</li>
+</ul>
+
+<h2 id="dungeon-work-in-progress">In Progress: Dantooine Enclave and Korriban Tombs</h2>
+<p><strong>Work in progress:</strong> This section includes the current <em>Fix Dantooine enclave dungeon loot</em> session, which also covers the Sith tombs. These changes are being validated and are not listed as completed releases.</p>
+<ul>
+  <li><strong>Dantooine enclave:</strong> Replace hostile Jedi students and instructors with malfunctioning training constructs, including matching droid appearances, portraits, sounds, and mechanical traits. Quest dialogue and journal text describe containing dangerous constructs rather than attacking fellow Jedi.</li>
+  <li><strong>Korriban tombs:</strong> Replace the academy-student framing with independent hostile relic raiders. Quest dialogue and journal text describe stopping tomb looters; the replacement enemies are not spirits.</li>
+  <li><strong>Protect saber progression:</strong> Remove 21 training-saber, lightsaber, and saberstaff templates from regular loot tables across the affected dungeon rewards, including medical-wing loot. Their drop weight moves to existing cowls, sashes, and vambraces from the same reward tiers.</li>
+  <li><strong>Repair existing drops:</strong> Convert the affected saber templates to matching nonweapon rewards, including equipped items, inventories, bank/storage records, market listings, and saved droid equipment. Converted market listings are delisted so sellers can reprice them. Player-crafted sabers are outside this replacement list.</li>
+  <li>Keep existing quest IDs, objective counts, access keys, and quest rewards so current quest progress carries forward.</li>
+  <li>Add a standing loot rule and regression checks preventing training sabers, training saberstaves, lightsabers, and saberstaves from regular rare, boss, chest, and steal tables. Acquisition stays with dedicated progression and crafting.</li>
+</ul>
