@@ -1,8 +1,8 @@
 <!--
 title: Post-Combat Upgrade Release Notes
-description: Fixes and balance changes since the October 9, 2026 combat upgrade, including upcoming dungeon corrections.
+description: Fixes and balance changes since the October 9, 2026 combat upgrade, including dungeon corrections and pending neck appearance fixes.
 published: true
-date: 2026-10-10T23:41:29.000Z
+date: 2026-10-11T01:50:33.000Z
 tags: swlor, release notes, updates, combat, unreleased
 editor: ckeditor
 dateCreated: 2026-10-10T23:41:29.000Z
@@ -12,13 +12,13 @@ dateCreated: 2026-10-10T23:41:29.000Z
 <p><a href="../../ReleaseNotes">Back to Release Notes</a> | <a href="../../ReleaseNotes/RN_Combat-System-Rework">Original Combat Upgrade</a></p>
 <table>
   <tbody>
-    <tr><th>Status</th><td>Collected updates; dungeon corrections in progress</td></tr>
-    <tr><th>Coverage</th><td>Since the October 9, 2026 combat upgrade; compiled October 10, 2026</td></tr>
+    <tr><th>Status</th><td>Collected updates; neck appearance fixes pending review</td></tr>
+    <tr><th>Coverage</th><td>Since the October 9, 2026 combat upgrade; updated October 10, 2026 at 9:50 p.m. EDT</td></tr>
     <tr><th>Next Release Date</th><td>TBD</td></tr>
     <tr><th>NWSync Hash</th><td>TBD</td></tr>
   </tbody>
 </table>
-<p>These notes collect fixes and balance changes after the combat upgrade rollout. The main sections describe completed, merged changes; their deployment timing may differ. The final section covers dungeon work still in progress.</p>
+<p>These notes collect fixes and balance changes after the combat upgrade rollout. The main sections describe completed, merged changes; their deployment timing may differ. The final section covers neck appearance fixes awaiting review.</p>
 
 <h2 id="combat-and-recovery">Combat and Recovery</h2>
 <ul>
@@ -119,7 +119,6 @@ dateCreated: 2026-10-10T23:41:29.000Z
   <li>The appearance editor closes safely when a DM-possessed creature has an unsupported appearance.</li>
   <li>Wrist Rocket I&ndash;III regain their original casting gesture, rocket, and fireball presentation.</li>
   <li>Force Burst, Force Judgment, and Radiant Lance have revised impact visuals. Force Burst's center and Radiant Lance III's projectile stay aligned with the warned damage area when the selected target moves.</li>
-  <li>Guardian Master trial enemies received corrected sound sets. The planned enclave enemy replacements below supersede their humanoid presentation.</li>
 </ul>
 
 <h2 id="quality-of-life-and-stability">Quality of Life, Staff Tools, and Stability</h2>
@@ -132,15 +131,24 @@ dateCreated: 2026-10-10T23:41:29.000Z
   <li>Combat leash cleanup no longer recursively repeats when removing immobilization and other control effects.</li>
   <li>An experimental native network-packet hang mitigation is enabled in the server configuration.</li>
   <li>Delayed mining laser completion safely stops if the pilot no longer has an active ship.</li>
+  <li>The Concourse Datapad store blueprint has its missing palette category restored, removing the palette-refresh error that blocked module packing.</li>
 </ul>
 
-<h2 id="dungeon-work-in-progress">In Progress: Dantooine Enclave and Korriban Tombs</h2>
-<p><strong>Work in progress:</strong> This section includes the current <em>Fix Dantooine enclave dungeon loot</em> session, which also covers the Sith tombs. These changes are being validated and are not listed as completed releases.</p>
+<h2 id="dungeon-work-in-progress">Dantooine Enclave and Korriban Tombs</h2>
+<p>The enclave and Sith tomb corrections are now merged, including the enemy replacements, revised quest text, loot changes, and migrations for existing items and quest progress.</p>
 <ul>
-  <li><strong>Dantooine enclave:</strong> Replace hostile Jedi students and instructors with malfunctioning training constructs, including matching droid appearances, portraits, sounds, and mechanical traits. Quest dialogue and journal text describe containing dangerous constructs rather than attacking fellow Jedi.</li>
-  <li><strong>Korriban tombs:</strong> Replace the academy-student framing with independent hostile relic raiders. Quest dialogue and journal text describe stopping tomb looters; the replacement enemies are not spirits.</li>
-  <li><strong>Protect saber progression:</strong> Remove 21 training-saber, lightsaber, and saberstaff templates from regular loot tables across the affected dungeon rewards, including medical-wing loot. Their drop weight moves to existing cowls, sashes, and vambraces from the same reward tiers.</li>
-  <li><strong>Repair existing drops:</strong> Convert the affected saber templates to matching nonweapon rewards, including equipped items, inventories, bank/storage records, market listings, and saved droid equipment. Converted market listings are delisted so sellers can reprice them. Player-crafted sabers are outside this replacement list.</li>
-  <li>Keep existing quest IDs, objective counts, access keys, and quest rewards so current quest progress carries forward.</li>
-  <li>Add a standing loot rule and regression checks preventing training sabers, training saberstaves, lightsabers, and saberstaves from regular rare, boss, chest, and steal tables. Acquisition stays with dedicated progression and crafting.</li>
+  <li><strong>Dantooine enclave:</strong> Hostile Jedi students and instructors are replaced with malfunctioning training droids, including matching appearances, portraits, sounds, mechanical abilities, and trauma immunity. Quest dialogue and journal text describe containing dangerous constructs rather than attacking fellow Jedi.</li>
+  <li><strong>Korriban tombs:</strong> The academy-student framing is replaced with independent hostile relic raiders. Quest dialogue and journal text describe stopping tomb looters; the replacement enemies are not spirits.</li>
+  <li><strong>Protect saber progression:</strong> All 21 affected training-saber, lightsaber, and saberstaff templates are removed from regular loot tables, including medical-wing loot. Their drop weight moves to existing cowls, sashes, and vambraces from the same reward tiers.</li>
+  <li><strong>Repair existing drops:</strong> Migrations convert the affected saber templates to matching nonweapon rewards, preserving quantities and covering equipped items, inventories, bank/storage records, market listings, contract rewards and deliveries, and saved creature/droid equipment. Converted droid equipment moves to inventory, and converted market listings are delisted so sellers can reprice them. Player-crafted and custom sabers outside the affected templates are untouched.</li>
+  <li><strong>Preserve quest progress:</strong> Existing quest IDs, objective counts, access keys, and quest rewards remain intact. Saved kill counters and archived enemy groups move to the replacement enemies, including for offline characters. If old and new counters both exist, the greater progress is retained.</li>
+  <li>A standing loot rule and regression checks prevent training sabers, training saberstaves, lightsabers, and saberstaves from regular rare, boss, chest, and steal tables. Acquisition stays with dedicated progression and crafting.</li>
+</ul>
+
+<h2 id="pending-appearance-fixes">Pending Review: Neck Appearance Fixes</h2>
+<p><strong>Not yet merged:</strong> The neck appearance repair is prepared in <a href="https://github.com/zunath/SWLOR_NWN/pull/2493">PR #2493</a> with its companion assets. It is separate from the merged changes above.</p>
+<ul>
+  <li>Correct collars, hats, and other neck accessories following unrelated body joints, including displaced female neck styles 257, 260, 264, and 267. The repair covers supported playable races and both genders, including robe body types.</li>
+  <li>Repair corrupted female dwarf neck 159 weights. Preserve existing appearance styles, item stats, and dyes.</li>
+  <li>Limit neck choices to models available for the wearer and recover unavailable equipped neck models to the native fallback.</li>
 </ul>
