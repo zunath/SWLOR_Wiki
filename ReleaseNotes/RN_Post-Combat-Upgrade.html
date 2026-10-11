@@ -1,8 +1,8 @@
 <!--
 title: Post-Combat Upgrade Release Notes
-description: Fixes and balance changes since the October 9, 2026 combat upgrade, including dungeon corrections and pending neck appearance fixes.
+description: Merged fixes and balance changes since the October 9, 2026 combat upgrade, including dungeon corrections.
 published: true
-date: 2026-10-11T01:50:33.000Z
+date: 2026-10-11T11:10:40.000Z
 tags: swlor, release notes, updates, combat, unreleased
 editor: ckeditor
 dateCreated: 2026-10-10T23:41:29.000Z
@@ -12,13 +12,13 @@ dateCreated: 2026-10-10T23:41:29.000Z
 <p><a href="../../ReleaseNotes">Back to Release Notes</a> | <a href="../../ReleaseNotes/RN_Combat-System-Rework">Original Combat Upgrade</a></p>
 <table>
   <tbody>
-    <tr><th>Status</th><td>Collected updates; neck appearance fixes pending review</td></tr>
-    <tr><th>Coverage</th><td>Since the October 9, 2026 combat upgrade; updated October 10, 2026 at 9:50 p.m. EDT</td></tr>
+    <tr><th>Status</th><td>Collected merged updates</td></tr>
+    <tr><th>Coverage</th><td>Since the October 9, 2026 combat upgrade; updated October 11, 2026 at 7:10 a.m. EDT</td></tr>
     <tr><th>Next Release Date</th><td>TBD</td></tr>
     <tr><th>NWSync Hash</th><td>TBD</td></tr>
   </tbody>
 </table>
-<p>These notes collect fixes and balance changes after the combat upgrade rollout. The main sections describe completed, merged changes; their deployment timing may differ. The final section covers neck appearance fixes awaiting review.</p>
+<p>These notes collect merged fixes and balance changes after the combat upgrade rollout. Deployment timing may differ.</p>
 
 <h2 id="combat-and-recovery">Combat and Recovery</h2>
 <ul>
@@ -143,12 +143,4 @@ dateCreated: 2026-10-10T23:41:29.000Z
   <li><strong>Repair existing drops:</strong> Migrations convert the affected saber templates to matching nonweapon rewards, preserving quantities and covering equipped items, inventories, bank/storage records, market listings, contract rewards and deliveries, and saved creature/droid equipment. Converted droid equipment moves to inventory, and converted market listings are delisted so sellers can reprice them. Player-crafted and custom sabers outside the affected templates are untouched.</li>
   <li><strong>Preserve quest progress:</strong> Existing quest IDs, objective counts, access keys, and quest rewards remain intact. Saved kill counters and archived enemy groups move to the replacement enemies, including for offline characters. If old and new counters both exist, the greater progress is retained.</li>
   <li>A standing loot rule and regression checks prevent training sabers, training saberstaves, lightsabers, and saberstaves from regular rare, boss, chest, and steal tables. Acquisition stays with dedicated progression and crafting.</li>
-</ul>
-
-<h2 id="pending-appearance-fixes">Pending Review: Neck Appearance Fixes</h2>
-<p><strong>Not yet merged:</strong> The neck appearance repair is prepared in <a href="https://github.com/zunath/SWLOR_NWN/pull/2493">PR #2493</a> with its companion assets. It is separate from the merged changes above.</p>
-<ul>
-  <li>Correct collars, hats, and other neck accessories following unrelated body joints, including displaced female neck styles 257, 260, 264, and 267. The repair covers supported playable races and both genders, including robe body types.</li>
-  <li>Repair corrupted female dwarf neck 159 weights. Preserve existing appearance styles, item stats, and dyes.</li>
-  <li>Limit neck choices to models available for the wearer and recover unavailable equipped neck models to the native fallback.</li>
 </ul>
