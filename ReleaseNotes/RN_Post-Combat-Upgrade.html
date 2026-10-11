@@ -2,26 +2,39 @@
 title: Post-Combat Upgrade Release Notes
 description: Combat, crafting, dungeon, appearance, and quality-of-life updates since the October 9, 2026 combat upgrade.
 published: true
-date: 2026-10-11T13:01:48.000Z
-tags: swlor, release notes, updates, combat, unreleased
+date: 2026-10-11T14:03:57.303Z
+tags: combat, swlor, release notes, updates, unreleased
 editor: ckeditor
-dateCreated: 2026-10-10T23:41:29.000Z
+dateCreated: 2026-10-10T23:43:36.138Z
 -->
 
 <h1>Post-Combat Upgrade Release Notes</h1>
 <p><a href="../../ReleaseNotes">Back to Release Notes</a> | <a href="../../ReleaseNotes/RN_Combat-System-Rework">Original Combat Upgrade</a></p>
-<table>
-  <tbody>
-    <tr><th>Status</th><td>Collected updates</td></tr>
-    <tr><th>Coverage</th><td>Since the October 9, 2026 combat upgrade; updated October 11, 2026 at 9:01 a.m. EDT</td></tr>
-    <tr><th>Next Release Date</th><td>TBD</td></tr>
-    <tr><th>NWSync Hash</th><td>TBD</td></tr>
-  </tbody>
-</table>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <th>Status</th>
+        <td>Collected updates</td>
+      </tr>
+      <tr>
+        <th>Coverage</th>
+        <td>Since the October 9, 2026 combat upgrade; updated October 11, 2026 at 9:01 a.m. EDT</td>
+      </tr>
+      <tr>
+        <th>Next Release Date</th>
+        <td>TBD</td>
+      </tr>
+      <tr>
+        <th>NWSync Hash</th>
+        <td>d887eb8f5837da8eced4091fd9b6302125236fbd</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
 <p>These notes cover fixes and balance changes since the October 9 combat upgrade. Changes may reach the live server at different times; the next release date has not been confirmed.</p>
 <p><strong>Free rebuild token:</strong> All existing players will receive one free rebuild token.</p>
-
-<h2 id="combat-and-recovery">Combat and Recovery</h2>
+<h2>Combat and Recovery</h2>
 <ul>
   <li><strong>You recover stamina faster.</strong> Base recovery rises from 1 to 10 stamina per 30 seconds, before Might and other bonuses. You receive recovery every six seconds. Maximum stamina and ability costs are unchanged.</li>
   <li>Stamina refunds from weapon abilities can no longer exceed the stamina spent, including on discounted attacks and attacks that hit several times. Double Shot's once-per-use critical-hit refund now works even when the target resists all of the damage.</li>
@@ -37,30 +50,49 @@ dateCreated: 2026-10-10T23:41:29.000Z
   <li>Serene Focus and other FP or stamina recovery abilities work correctly on supported DM-controlled creatures.</li>
   <li>Droid companions once again gain HP from their Vitality, and HP equipment upgrades correctly increase their maximum HP.</li>
 </ul>
-
-<h3 id="damage-over-time">Damage over Time</h3>
+<h3>Damage over Time</h3>
 <ul>
   <li>Bleed and Toxin still deal damage based on the target's maximum HP, but now have damage caps that grow with your attributes. This keeps their damage in check against bosses with very high HP.</li>
   <li>Bleed deals 4% of the target's maximum HP per tick, up to 20 damage plus twice your higher Might or Perception modifier. Negative modifiers do not reduce this cap. Bleed bonuses and the target's damage reduction apply afterward.</li>
   <li>Toxin deals 6% of the target's maximum HP per tick, up to 30 damage plus three times your Agility modifier. Negative modifiers do not reduce this cap. The target's damage reduction applies afterward.</li>
   <li>Bleed, including Bleed from Piercing Toss, and Fragmentation now correctly appear as physical damage in the combat log.</li>
 </ul>
-
-<h3 id="lifesteal-and-drains">Lifesteal and Drains</h3>
+<h3>Lifesteal and Drains</h3>
 <p>Healing from lifesteal, drains, and defeating enemies now has the following limits. Healing bonuses count toward these limits:</p>
-<table>
-  <thead><tr><th>Recovery source</th><th>Maximum recovery</th></tr></thead>
-  <tbody>
-    <tr><td>Drain abilities, including Force Drain and Soul Strike</td><td>15% of your maximum HP per use, even when hitting multiple targets or dealing damage in several stages</td></tr>
-    <tr><td>Passive lifesteal, including capstone perks</td><td>6% of your maximum HP per hit, with all passive sources sharing this limit</td></tr>
-    <tr><td>Critical-hit healing with its own cooldown, such as Vampiric Fury</td><td>A separate limit of 12% of your maximum HP per hit</td></tr>
-    <tr><td>Passive lifesteal and cooldown-based critical healing combined</td><td>24% of your maximum HP in any six-second period</td></tr>
-    <tr><td>Healing from defeating enemies</td><td>12% of your maximum HP in any six-second period</td></tr>
-  </tbody>
-</table>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>Recovery source</th>
+        <th>Maximum recovery</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Drain abilities, including Force Drain and Soul Strike</td>
+        <td>15% of your maximum HP per use, even when hitting multiple targets or dealing damage in several stages</td>
+      </tr>
+      <tr>
+        <td>Passive lifesteal, including capstone perks</td>
+        <td>6% of your maximum HP per hit, with all passive sources sharing this limit</td>
+      </tr>
+      <tr>
+        <td>Critical-hit healing with its own cooldown, such as Vampiric Fury</td>
+        <td>A separate limit of 12% of your maximum HP per hit</td>
+      </tr>
+      <tr>
+        <td>Passive lifesteal and cooldown-based critical healing combined</td>
+        <td>24% of your maximum HP in any six-second period</td>
+      </tr>
+      <tr>
+        <td>Healing from defeating enemies</td>
+        <td>12% of your maximum HP in any six-second period</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
 <p>Healing from damage still cannot exceed 50% of the damage you deal. Damage beyond an enemy's remaining HP and hits on invulnerable targets do not grant extra healing. Healing beyond your maximum HP does not use up your allowance. Combat Readiness no longer boosts Force Drain or Soul Strike healing twice.</p>
-
-<h2 id="mimicry-and-character-data">Mimicry and Character Progress</h2>
+<h2>Mimicry and Character Progress</h2>
 <ul>
   <li><strong>Observing enemies with Combat Analyzer no longer takes combat XP away from your other skills.</strong> Actively using Mimicry techniques still shares XP normally.</li>
   <li>Observation grants 5% of the kill XP appropriate for your Mimicry rank, rounded down, up to 30 XP per creature before normal penalties. Character and area XP bonuses do not increase it. Trivial enemies, repeated observations, and maximum-rank Mimicry grant no extra observation XP.</li>
@@ -68,8 +100,7 @@ dateCreated: 2026-10-10T23:41:29.000Z
   <li>Purchased attributes are restored correctly when you log in after a crash, keeping your spent AP and racial bonuses intact.</li>
   <li>Handing in quest items, or letting a hand-in expire, no longer leaves you stuck as busy and unable to use abilities such as Slam.</li>
 </ul>
-
-<h2 id="items-and-crafting">Items and Crafting</h2>
+<h2>Items and Crafting</h2>
 <ul>
   <li><strong>Force weapon enhancements have been replaced.</strong> Enhancements and random blueprint bonuses no longer turn your entire weapon's damage into Force damage. You can still do this with Imbuement Stance.</li>
   <li>Affected weapons return to physical damage while keeping their damage bonuses and other properties. Your learned Force enhancement recipes, books, researched blueprints, and research in progress change to the matching DMG enhancement recipes. Shops also sell the replacements.</li>
@@ -80,25 +111,67 @@ dateCreated: 2026-10-10T23:41:29.000Z
   <li>Cosmetic Datapads now have readable descriptions instead of blank text or an error.</li>
   <li>The default NWN Craft Skills dialogue is disabled again.</li>
 </ul>
-
-<h3 id="food-balance">Food Balance</h3>
+<h3>Food Balance</h3>
 <p>Several food bonuses have been reduced, while Cartel Cakes now grant more HP. Other bonuses and recipe requirements remain unchanged.</p>
-<table>
-  <thead><tr><th>Food</th><th>Previous bonus</th><th>Updated bonus</th></tr></thead>
-  <tbody>
-    <tr><td>Gardula</td><td>+2 Social, +7 Vitality</td><td>+1 Social, +1 Vitality</td></tr>
-    <tr><td>Keebadas Binggona</td><td>+5 Vitality</td><td>+1 Vitality; retains +10 Attack</td></tr>
-    <tr><td>Idol Sushi</td><td>20 rest regeneration</td><td>6 rest regeneration</td></tr>
-    <tr><td>Steamed Catfish</td><td>10 HP regeneration</td><td>5 HP regeneration</td></tr>
-    <tr><td>Zoni Broth</td><td>8 stamina regeneration</td><td>5 stamina regeneration</td></tr>
-    <tr><td>Sea Bass en Croute</td><td>8 FP regeneration</td><td>5 FP regeneration</td></tr>
-    <tr><td>Marshleaf Broth</td><td>5 stamina regeneration</td><td>4 stamina regeneration</td></tr>
-    <tr><td>Bitter Fen Tea</td><td>5 stamina regeneration</td><td>4 stamina regeneration</td></tr>
-    <tr><td>Cartel Cakes</td><td>+4 HP</td><td>+40 HP; retains 6 stamina regeneration</td></tr>
-  </tbody>
-</table>
-
-<h2 id="world-and-shops">World and Shops</h2>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Previous bonus</th>
+        <th>Updated bonus</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Gardula</td>
+        <td>+2 Social, +7 Vitality</td>
+        <td>+1 Social, +1 Vitality</td>
+      </tr>
+      <tr>
+        <td>Keebadas Binggona</td>
+        <td>+5 Vitality</td>
+        <td>+1 Vitality; retains +10 Attack</td>
+      </tr>
+      <tr>
+        <td>Idol Sushi</td>
+        <td>20 rest regeneration</td>
+        <td>6 rest regeneration</td>
+      </tr>
+      <tr>
+        <td>Steamed Catfish</td>
+        <td>10 HP regeneration</td>
+        <td>5 HP regeneration</td>
+      </tr>
+      <tr>
+        <td>Zoni Broth</td>
+        <td>8 stamina regeneration</td>
+        <td>5 stamina regeneration</td>
+      </tr>
+      <tr>
+        <td>Sea Bass en Croute</td>
+        <td>8 FP regeneration</td>
+        <td>5 FP regeneration</td>
+      </tr>
+      <tr>
+        <td>Marshleaf Broth</td>
+        <td>5 stamina regeneration</td>
+        <td>4 stamina regeneration</td>
+      </tr>
+      <tr>
+        <td>Bitter Fen Tea</td>
+        <td>5 stamina regeneration</td>
+        <td>4 stamina regeneration</td>
+      </tr>
+      <tr>
+        <td>Cartel Cakes</td>
+        <td>+4 HP</td>
+        <td>+40 HP; retains 6 stamina regeneration</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h2>World and Shops</h2>
 <ul>
   <li>Capstone quest givers have been moved to new locations.</li>
   <li>Czerka Weapons Testing Facility enemies, including wardens and rare enemies, no longer appear inside scenery. Enemy numbers, rarity, and respawn times are unchanged.</li>
@@ -110,19 +183,17 @@ dateCreated: 2026-10-10T23:41:29.000Z
   <li>Talking to the Anchorhead Droid Merchant no longer makes her perform sit-ups.</li>
   <li>The Jawa Ninja now has a readable English description.</li>
 </ul>
-
-<h2 id="appearance-and-effects">Appearance and Effects</h2>
+<h2>Appearance and Effects</h2>
 <ul>
   <li>The armor appearance editor updates its choices when you change equipment, fixing crashes and unresponsive controls.</li>
   <li>Changes to exposed hands and biceps now show correctly through affected outfits. The muscular bicep option is available again for supported species and outfits.</li>
   <li>Dark hair presets and reflective armor dyes regain their intended brightness. Helmet 53 has smoother dye boundaries, especially with black dye.</li>
   <li>Fixed a dropped-item coloring error involving skin, hair, and tattoo colors.</li>
   <li>The appearance editor closes safely when a DM controls a creature whose appearance cannot be edited.</li>
-  <li>Wrist Rocket I&ndash;III regain their original firing animation, rocket, and explosion.</li>
+  <li>Wrist Rocket I–III regain their original firing animation, rocket, and explosion.</li>
   <li>Force Burst, Force Judgment, and Radiant Lance have updated effects. Force Burst and Radiant Lance III visuals now match the marked damage area even when the target moves.</li>
 </ul>
-
-<h2 id="quality-of-life-and-stability">Quality of Life and Stability</h2>
+<h2>Quality of Life and Stability</h2>
 <ul>
   <li><code>/introduce</code> has a two-minute cooldown, down from five minutes.</li>
   <li>Fixed server crashes related to submitting bug reports, HoloNet posts, and DM shouts.</li>
@@ -130,14 +201,12 @@ dateCreated: 2026-10-10T23:41:29.000Z
   <li>Added a change intended to reduce network-related server freezes.</li>
   <li>Mining lasers stop safely if you no longer have an active ship when mining finishes.</li>
 </ul>
-
-<h3 id="dm-tools">DM Tools</h3>
+<h3>DM Tools</h3>
 <ul>
   <li>DMs can once again see the Shout label and supported character descriptors.</li>
   <li>DM character inspection now shows portraits, HP, FP, stamina, alignment, credits, descriptions, and available RP XP. Skills and perks are easier to search, a new Effects tab shows active effects and their remaining time, and character notes have more writing space.</li>
 </ul>
-
-<h2 id="dungeon-work-in-progress">Dantooine Enclave and Korriban Tombs</h2>
+<h2>Dantooine Enclave and Korriban Tombs</h2>
 <p>Dungeon enemies and quest stories have been revised, with matching changes to loot. Your existing quest progress carries over.</p>
 <ul>
   <li><strong>Dantooine enclave:</strong> Malfunctioning training droids replace the hostile Jedi students and instructors. They look, sound, and fight like droids and are immune to trauma. Dialogue and journal entries now ask you to contain dangerous training droids.</li>
