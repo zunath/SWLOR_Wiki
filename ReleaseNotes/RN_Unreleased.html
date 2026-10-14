@@ -2,7 +2,7 @@
 title: Upcoming Release Notes
 description: Upcoming adventures, saved Mimicry builds, music collection, quest contract improvements, and gameplay fixes.
 published: true
-date: 2026-10-14T01:12:20.000Z
+date: 2026-10-14T09:14:37.000Z
 tags: swlor, release notes, updates, unreleased
 editor: ckeditor
 dateCreated: 2026-10-12T22:02:30.000Z
@@ -16,7 +16,7 @@ dateCreated: 2026-10-12T22:02:30.000Z
       <tr><th>Status</th><td>Upcoming</td></tr>
       <tr><th>Release Date</th><td>TBD</td></tr>
       <tr><th>NWSync Hash</th><td>TBD</td></tr>
-      <tr><th>Notes Updated</th><td>October 13, 2026</td></tr>
+      <tr><th>Notes Updated</th><td>October 14, 2026</td></tr>
     </tbody>
   </table>
 </figure>
@@ -69,6 +69,9 @@ dateCreated: 2026-10-12T22:02:30.000Z
 
 <h2 id="combat-and-progression">Combat and Progression</h2>
 <ul>
+  <li>Each point of Vitality now contributes to maximum HP correctly, including odd-numbered scores.</li>
+  <li>Party auras now apply when nearby players join the party, without needing to move out of range and back.</li>
+  <li>When a stronger aura stops affecting you, the strongest remaining aura in range now takes over.</li>
   <li><strong>Supporting allies now earns combat XP more reliably.</strong> Healing, shielding, commands, beast support, and similar actions can earn skill XP from enemies fighting the allies you support, even if you have not attacked those enemies yourself. Normal kill XP requirements still apply; casting outside a fight does not grant XP.</li>
   <li>Ship repairs, resource support, and Capital E-War now give Piloting credit for the enemy ships involved in the fight.</li>
   <li>Using a weapon ability no longer unexpectedly stops your automatic attacks. You resume attacking your current enemy without needing to click them again.</li>
@@ -104,6 +107,7 @@ dateCreated: 2026-10-12T22:02:30.000Z
   <li>Crafting guild shops now sell rank-appropriate equipment sets for droid characters.</li>
   <li>Bracers and vambraces, including the Detonation Vambrace, have readable descriptions instead of missing or incorrect text.</li>
   <li>Many items, including Pulsegrip Gloves, now have descriptions that fit their names and the setting instead of missing, unrelated, or &ldquo;Bad Strref&rdquo; text. Items already owned may still show their old descriptions.</li>
+  <li>Ship module descriptions no longer include unrelated component text before their effects.</li>
   <li>The Czerka Arms merchant on Smuggler's Moon now opens the correct local shop.</li>
   <li>Byysk Cryo Adepts now drop ordinary Byysk loot and no longer drop the Ziggurat shaman's key and boss rewards.</li>
   <li>Retired Force weapon enhancements no longer appear in player item searches.</li>
@@ -126,6 +130,7 @@ dateCreated: 2026-10-12T22:02:30.000Z
 
 <h2 id="world-and-housing">World and Housing</h2>
 <ul>
+  <li>Arriving in Mountain Valley from Mountain Ascent now places you farther from the map edge. The <code>/stuck</code> command there returns you to a local recovery point.</li>
   <li>More small and medium apartment options are available, with furnished and unfurnished choices and three new interiors.</li>
   <li>The entrance to Hutlar's Abandoned Outpost and its exit back outside now work correctly.</li>
   <li>Fixed invisible barriers on Veles sidewalks and around the HNN entrance and news building.</li>
@@ -145,6 +150,9 @@ dateCreated: 2026-10-12T22:02:30.000Z
   <li>Droid companions now keep the correct equipment, carried items, and stack sizes between summons, fixing duplicated and missing items. Items that cannot be restored or returned immediately remain saved for the next summon.</li>
   <li>Changing a droid companion's inventory near an enemy no longer makes it put away its rifle and start punching.</li>
   <li>Item names, descriptions, and properties display their intended colors and formatting.</li>
+  <li>Item inspection now shows the item's icon, type, quantity, remaining charges, and weight, including how many uses remain on a DNA extractor.</li>
+  <li>Unidentified items no longer reveal their true names in the inspection window.</li>
+  <li>Item descriptions, properties, and weapon damage now share a scrolling view, making long details easier to read. Properties are listed alphabetically.</li>
   <li>Property permission lists now have pages so you can manage all permission holders.</li>
   <li>Character sheet combat values line up consistently.</li>
   <li>The return teleporter from the rebuild area works even if your previous return location is unavailable.</li>
