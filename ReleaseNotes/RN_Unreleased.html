@@ -1,8 +1,8 @@
 <!--
 title: Upcoming Release Notes
-description: Upcoming adventures, saved Mimicry builds, music collection, quest contract improvements, and gameplay fixes.
+description: Upcoming adventures, combat balance and revival changes, saved Mimicry builds, music collection, and gameplay fixes.
 published: true
-date: 2026-10-15T02:25:28.000Z
+date: 2026-10-15T20:04:09.000Z
 tags: swlor, release notes, updates, unreleased
 editor: ckeditor
 dateCreated: 2026-10-12T22:02:30.000Z
@@ -16,11 +16,11 @@ dateCreated: 2026-10-12T22:02:30.000Z
       <tr><th>Status</th><td>Upcoming</td></tr>
       <tr><th>Release Date</th><td>TBD</td></tr>
       <tr><th>NWSync Hash</th><td>TBD</td></tr>
-      <tr><th>Notes Updated</th><td>October 14, 2026</td></tr>
+      <tr><th>Notes Updated</th><td>October 15, 2026</td></tr>
     </tbody>
   </table>
 </figure>
-<p>Explore the Hutlar Droid Foundry and restored Abandoned Station, save your Mimicry builds, build a collectible music library, and repost contracts more easily. This upcoming update also includes improvements to combat, quests, crafting, and appearances following the October 11 release. The release date and NWSync hash will be added once confirmed.</p>
+<p>Explore the Hutlar Droid Foundry and restored Abandoned Station, save your Mimicry builds, build a collectible music library, and repost contracts more easily. This upcoming update also includes combat balance and revival changes, along with improvements to quests, crafting, and appearances following the October 11 release. The release date and NWSync hash will be added once confirmed.</p>
 
 <h2 id="new-adventuring-areas">New Adventuring Areas</h2>
 <h3>Hutlar Droid Foundry</h3>
@@ -74,6 +74,28 @@ dateCreated: 2026-10-12T22:02:30.000Z
   <li>Aimed area abilities, revival, and weapon abilities keep their usual targeting.</li>
 </ul>
 
+<h2 id="combat-balance">Combat Balance</h2>
+<ul>
+  <li><strong>Benevolence now has a 10-second cooldown, and Med Kit has a 10.5-second cooldown</strong> at every rank, increased from 6 seconds.</li>
+  <li><strong>Combined temporary HP from all shields and similar effects is now limited to 50% of your maximum HP.</strong> New shields fill the remaining room up to that limit. If your maximum HP falls, excess temporary HP is removed.</li>
+  <li>Force affinity now adds at most 25% to healing, shields, and regeneration. Its bonuses to damage and accuracy keep their existing limits.</li>
+  <li>Force and Lightsaber ability ranks requiring skill rank 28 or higher now cost approximately 20% more FP, rounded to whole points. The three Force capstone abilities now cost 12 FP instead of 10.</li>
+  <li>Force Convergence now restores 40% of maximum FP over 20 seconds. Its 5% Force accuracy bonus still lasts 30 seconds, and it can still trigger once every 45 seconds.</li>
+  <li>Defensive Harmony can now restore STM from direct ability heals at most once every 6 seconds. Healing over time, life-stealing effects, and drains no longer trigger this STM restoration.</li>
+  <li>Bloodlust's STM restoration now depends on the HP actually spent. Paying only part of an ability's HP cost gives a smaller refund, and HP absorbed by a shield does not count as HP spent.</li>
+  <li>Soul Storm, Soul Burst, and Sacrificial Blade can no longer be used at 1 HP.</li>
+  <li>Using abilities between automatic attacks no longer resets Rundown's repeated-hit bonus.</li>
+</ul>
+
+<h2 id="reviving-players-and-beasts">Reviving Players and Beasts</h2>
+<ul>
+  <li><strong>Taking damage now interrupts Resuscitation and Revive Beast.</strong></li>
+  <li>Neither ability can be used while a hostile player is within 20 metres of the caster or revival location.</li>
+  <li>After a player or beast is killed by another player or their companion, revival must wait at least 15 seconds after the death and until nearby party members have gone 15 seconds without taking damage or dying.</li>
+  <li><strong>Each player can be revived during an ongoing fight at most once every 5 minutes.</strong> Revive Beast keeps its existing 90-second cooldown without this additional limit.</li>
+  <li>Revival attempts blocked by these restrictions do not spend STM or medical supplies.</li>
+</ul>
+
 <h2 id="combat-and-progression">Combat and Progression</h2>
 <ul>
   <li>Improved performance during busy fights.</li>
@@ -85,6 +107,7 @@ dateCreated: 2026-10-12T22:02:30.000Z
   <li><strong>Supporting allies now earns combat XP more reliably.</strong> Healing, shielding, commands, beast support, and similar actions can earn skill XP from enemies fighting the allies you support, even if you have not attacked those enemies yourself. Normal kill XP requirements still apply; casting outside a fight does not grant XP.</li>
   <li>Ship repairs, resource support, and Capital E-War now give Piloting credit for the enemy ships involved in the fight.</li>
   <li>Using a weapon ability no longer unexpectedly stops your automatic attacks. You resume attacking your current enemy without needing to click them again.</li>
+  <li>Automatic attacks now resume after abilities such as Force Choke, Force Leap, Pounce, and Sonic Burst interrupt your actions.</li>
   <li>Weapon abilities that include your weapon's damage now use its elemental damage type. Abilities with their own Force or elemental damage type keep that type.</li>
   <li>Delayed traps now scale with Perception and retain the damage bonuses from the ability used to place them. Traps can also detonate after their owner dies.</li>
   <li>Unstable Pressure now updates its extra Force damage vulnerability as the target's HP changes and clears it correctly when the effect ends.</li>
@@ -131,6 +154,8 @@ dateCreated: 2026-10-12T22:02:30.000Z
 
 <h2 id="appearances-and-animation">Appearances and Animation</h2>
 <ul>
+  <li>Changing an NPC's outfit now applies its colors correctly. Removing a helmet restores the NPC's original head.</li>
+  <li>Removed one portrait from selection and updated the affected NPC's portrait.</li>
   <li><strong>Cloaks now appear correctly with robe outfits</strong> and support custom colors. Changing your robe or editing a cloak refreshes its appearance.</li>
   <li>Neck accessories now follow the wearer's body correctly across supported species and outfits. Several neck, helmet, and head styles have corrected textures and dye areas.</li>
   <li>New helmets use appearances that better suit their names, including visors, goggles, masks, hoods, and caps.</li>
@@ -145,6 +170,7 @@ dateCreated: 2026-10-12T22:02:30.000Z
 
 <h2 id="world-and-housing">World and Housing</h2>
 <ul>
+  <li>The Shipping District exit in Smuggler's Moon sewers now has the correct map label.</li>
   <li>Arriving in Mountain Valley from Mountain Ascent now places you farther from the map edge. The <code>/stuck</code> command there returns you to a local recovery point.</li>
   <li>More small and medium apartment options are available, with furnished and unfurnished choices and three new interiors.</li>
   <li>The entrance to Hutlar's Abandoned Outpost and its exit back outside now work correctly.</li>
@@ -173,6 +199,8 @@ dateCreated: 2026-10-12T22:02:30.000Z
   <li>Item descriptions, properties, and weapon damage now share a scrolling view, making long details easier to read. Properties are listed alphabetically.</li>
   <li>Property permission lists now have pages so you can manage all permission holders.</li>
   <li>Character sheet combat values line up consistently.</li>
+  <li>The character sheet now includes base STM regeneration in its total. The Player Guide explains the 6-second STM recovery intervals and the Force affinity limit on healing, while perk descriptions show the appropriate healing and shield bonuses.</li>
+  <li>Purifying Wave's description now includes the healing it provides to nearby allies.</li>
   <li>The return teleporter from the rebuild area works even if your previous return location is unavailable.</li>
   <li>The <code>/name</code> command only blocks a private name when you already use it for another character currently online. If a reused name later becomes ambiguous, rename one character before sending tells.</li>
   <li>Removing cities or retrieving starports no longer leaves inaccessible buildings or stranded ship interiors behind. A failed property cleanup no longer prevents other properties from loading.</li>
@@ -188,6 +216,8 @@ dateCreated: 2026-10-12T22:02:30.000Z
 
 <h2 id="dm-tools">DM Tools</h2>
 <ul>
+  <li>DMs can adjust an NPC's height and head size through the appearance editor, including while possessing it. Scale limits and feedback now work correctly for DMs.</li>
+  <li>NPCs keep their custom names when a DM possesses them, including when other players arrive or name displays refresh.</li>
   <li>A new DM toolbar provides quick access to object search, creation, player search, creature and placeable tools, area notes, and music.</li>
   <li>Searchable Chooser and Creator windows help DMs find, inspect, and create objects. Player Search can find online and offline characters.</li>
   <li>The toolbar and its new search windows stay open across area changes.</li>
