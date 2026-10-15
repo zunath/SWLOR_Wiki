@@ -1,8 +1,8 @@
 <!--
 title: Upcoming Release Notes
-description: Upcoming adventures, combat balance and revival changes, saved Mimicry builds, music collection, and gameplay fixes.
+description: Upcoming adventures, equipment and combat balance changes, revival updates, saved Mimicry builds, music collection, and gameplay fixes.
 published: true
-date: 2026-10-15T20:40:11.000Z
+date: 2026-10-15T23:30:50.000Z
 tags: swlor, release notes, updates, unreleased
 editor: ckeditor
 dateCreated: 2026-10-12T22:02:30.000Z
@@ -20,7 +20,7 @@ dateCreated: 2026-10-12T22:02:30.000Z
     </tbody>
   </table>
 </figure>
-<p>Explore the Hutlar Droid Foundry and restored Abandoned Station, save your Mimicry builds, build a collectible music library, and repost contracts more easily. This upcoming update also includes combat balance and revival changes, along with improvements to quests, crafting, and appearances following the October 11 release. The release date and NWSync hash will be added once confirmed.</p>
+<p>Explore the Hutlar Droid Foundry and restored Abandoned Station, save your Mimicry builds, build a collectible music library, and repost contracts more easily. This upcoming update also includes equipment and combat balance changes, revised revival rules, and improvements to quests, crafting, and appearances following the October 11 release. The release date and NWSync hash will be added once confirmed.</p>
 
 <h2 id="new-adventuring-areas">New Adventuring Areas</h2>
 <h3>Hutlar Droid Foundry</h3>
@@ -34,7 +34,8 @@ dateCreated: 2026-10-12T22:02:30.000Z
 <h3>Abandoned Station</h3>
 <ul>
   <li><strong>The Abandoned Station returns as an adventure for levels 20&ndash;30.</strong> Explore three levels inhabited by reanimated crew and rakghouls, with restored doors and lifts.</li>
-  <li>Reach the station by player ship from Viscara orbit. An escape pod provides a way back to Veles if your pilot leaves.</li>
+  <li>Reach the station by player ship using its own docking point in Viscara orbit. The station is separate from Viscara's planetary docking menu, and Telford's directions explain how to reach it.</li>
+  <li>An escape pod provides a way back to Veles starport if your pilot leaves. It asks you to confirm before launching, so you can cancel and stay aboard the station.</li>
   <li>Encounter Chief Varrick, Subject Zero, the Reanimated Rancor, and the Station Director. Discover tier-3 equipment, crafting blueprints, and materials, along with slicing terminals and supply crates.</li>
   <li>Telford Brelnak offers the repeatable quest <strong>Put Them to Rest</strong>: defeat 20 station horrors for 400 credits and 950 XP.</li>
   <li>The Hunter's Guild has a new rank-1 task to defeat station horrors.</li>
@@ -81,6 +82,9 @@ dateCreated: 2026-10-12T22:02:30.000Z
 
 <h2 id="combat-balance">Combat Balance</h2>
 <ul>
+  <li><strong>Hostile abilities now share a 0.5-second delay</strong> in both PvE and PvP. Healing, shields, cleanses, buffs, and stances do not trigger or wait for this delay.</li>
+  <li>If you use another hostile ability during that delay, it waits until the delay ends. Choosing a different hostile ability replaces the waiting choice. Each ability keeps its own normal cooldown.</li>
+  <li><strong>Conduit Training now restores 20% of the relevant ability cost, down from 35%, while Conduit Stance restores 40%, up from 25%.</strong> Saberstaff abilities restore FP from STM spent, and Force powers restore STM from FP spent. Using both still provides the same combined 60% restoration.</li>
   <li><strong>Benevolence now has a 10-second cooldown, and Med Kit has a 10.5-second cooldown</strong> at every rank, increased from 6 seconds.</li>
   <li><strong>Combined temporary HP from all shields and similar effects is now limited to 50% of your maximum HP.</strong> New shields fill the remaining room up to that limit. If your maximum HP falls, excess temporary HP is removed.</li>
   <li>Force affinity now adds at most 25% to healing, shields, and regeneration. Its bonuses to damage and accuracy keep their existing limits.</li>
@@ -139,8 +143,17 @@ dateCreated: 2026-10-12T22:02:30.000Z
   <li>Fixed dungeon entrances and return points that were blocked by scenery or could leave players on the wrong side of a barrier.</li>
 </ul>
 
+<h2 id="equipment-balance">Equipment Balance</h2>
+<ul>
+  <li><strong>Equipment introduced with the combat upgrade has been rebalanced to better match level progression.</strong> This includes capstone dungeon drops, level-45 world loot, rare enemy rewards, salvaged crafted gear, and slicing reward weapons.</li>
+  <li>Underpowered capstone equipment has been strengthened, while excessive Attack, Force Attack, Evasion, and slicing weapon damage have been reduced.</li>
+  <li><strong>Existing copies update automatically, with crafted enhancements preserved.</strong> This includes items in your inventory, banks, market listings, storage, and droid equipment.</li>
+  <li>Salvaged recipes that produce level-45 gear now require high-quality electronics, fiberplast, and leather where applicable, replacing good-quality materials.</li>
+</ul>
+
 <h2 id="crafting-items-and-shops">Crafting, Items, and Shops</h2>
 <ul>
+  <li>The Null Trace Fuse recipe now explains its slicing effect and how to use it.</li>
   <li><strong>Successful slicing always gives supplies and a bonus reward.</strong> Receive 3&ndash;5 supplies of the appropriate tier, plus a tool, named item, schematic, or field note.</li>
   <li>Five new Smithery recipes can be learned from blueprints found in the Droid Foundry and Abandoned Station. Craft belts, gauntlets, and necklaces using components from their rare enemies.</li>
   <li><strong>Search recipes by ingredient.</strong> Tick Include Components in the Recipes window to find recipes that use a named material. Partial names work, and your other recipe filters still apply.</li>
@@ -190,6 +203,7 @@ dateCreated: 2026-10-12T22:02:30.000Z
 
 <h2 id="quality-of-life">Quality of Life</h2>
 <ul>
+  <li>DM avatars no longer appear as HoloCom call targets while the DM is possessing an NPC.</li>
   <li>Using <code>/walk</code> or <code>/alwayswalk</code> now moves you at normal walking speed. Slows still apply, and turning walk mode off restores your normal movement speed.</li>
   <li>Use <code>/afk</code> to add a purple <strong>[AFK]</strong> tag to your displayed name. Use it again to turn it off; moving, changing areas, or logging out also clears the tag.</li>
   <li>The Settings window now keeps a usable minimum size so its controls remain accessible.</li>
@@ -221,6 +235,8 @@ dateCreated: 2026-10-12T22:02:30.000Z
 
 <h2 id="dm-tools">DM Tools</h2>
 <ul>
+  <li>While possessing an NPC, DM movement and window tools now act on the controlled creature correctly. Comms messages and server restart reminders also reach the DM reliably.</li>
+  <li>Possessing DMs no longer appear in player search results or have their unattended avatars count as players for trap detection and enemy return behavior.</li>
   <li>DMs can adjust an NPC's height and head size through the appearance editor, including while possessing it. Scale limits and feedback now work correctly for DMs.</li>
   <li>NPCs keep their custom names when a DM possesses them, including when other players arrive or name displays refresh.</li>
   <li>A new DM toolbar provides quick access to object search, creation, player search, creature and placeable tools, area notes, and music.</li>
