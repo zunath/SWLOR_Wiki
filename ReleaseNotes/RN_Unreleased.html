@@ -1,8 +1,8 @@
 <!--
 title: Upcoming Release Notes
-description: Upcoming adventures, equipment and combat balance changes, revival updates, saved Mimicry builds, music collection, and gameplay fixes.
+description: Upcoming adventures and rewards, equipment and PvP balance changes, revival updates, saved Mimicry builds, music collection, and gameplay fixes.
 published: true
-date: 2026-10-15T23:30:50.000Z
+date: 2026-10-16T01:40:50.000Z
 tags: swlor, release notes, updates, unreleased
 editor: ckeditor
 dateCreated: 2026-10-12T22:02:30.000Z
@@ -20,7 +20,7 @@ dateCreated: 2026-10-12T22:02:30.000Z
     </tbody>
   </table>
 </figure>
-<p>Explore the Hutlar Droid Foundry and restored Abandoned Station, save your Mimicry builds, build a collectible music library, and repost contracts more easily. This upcoming update also includes equipment and combat balance changes, revised revival rules, and improvements to quests, crafting, and appearances following the October 11 release. The release date and NWSync hash will be added once confirmed.</p>
+<p>Explore the Hutlar Droid Foundry and restored Abandoned Station, discover new dungeon rewards, save your Mimicry builds, build a collectible music library, and repost contracts more easily. This upcoming update also includes equipment and combat balance changes, new rules for long PvP fights, revised revival rules, and improvements to quests, crafting, and appearances following the October 11 release. The release date and NWSync hash will be added once confirmed.</p>
 
 <h2 id="new-adventuring-areas">New Adventuring Areas</h2>
 <h3>Hutlar Droid Foundry</h3>
@@ -28,6 +28,10 @@ dateCreated: 2026-10-12T22:02:30.000Z
   <li><strong>A new three-floor adventure for levels 41&ndash;55.</strong> Battle malfunctioning droids in a faction-neutral foundry reached through the Abandoned Outpost on Hutlar.</li>
   <li>Challenge the Foundry Overseer and three named rare enemies for new equipment, crafting blueprints, and salvage. Tier-5 gear includes options for droid characters.</li>
   <li>Each floor has slicing terminals and supply crates. You can also find a collectible Foundry map.</li>
+  <li>Foundry enemies now drop tier-5 salvage, including High Quality Electronics and refined metals. Rare rewards include diamonds, zinsiam, tier-5 lockboxes, and chiro shards.</li>
+  <li>The Foundry Overseer now guarantees a chiro shard and awards additional gems, salvage, and credits alongside its equipment and blueprint rewards.</li>
+  <li>More droids populate all three floors. Transition door scenery has been corrected, and misleading stairs and doorways that led nowhere have been removed.</li>
+  <li>The Abandoned Outpost's stairs now connect properly to its upper command deck.</li>
   <li>Kesa Morn offers the repeatable quest <strong>Shut Down the Line</strong>: defeat 20 foundry droids for 750 credits and 1,750 XP.</li>
   <li>The Hunter's Guild has a new rank-4 task to defeat foundry droids.</li>
 </ul>
@@ -37,6 +41,12 @@ dateCreated: 2026-10-12T22:02:30.000Z
   <li>Reach the station by player ship using its own docking point in Viscara orbit. The station is separate from Viscara's planetary docking menu, and Telford's directions explain how to reach it.</li>
   <li>An escape pod provides a way back to Veles starport if your pilot leaves. It asks you to confirm before launching, so you can cancel and stay aboard the station.</li>
   <li>Encounter Chief Varrick, Subject Zero, the Reanimated Rancor, and the Station Director. Discover tier-3 equipment, crafting blueprints, and materials, along with slicing terminals and supply crates.</li>
+  <li><strong>Collect level-25 Containment, Gantry, and Biolab crew gear</strong> from station enemies. The Station Director and Reanimated Rancor also offer unique level-30 rewards: Director's Field Coat, Director's Signet, Rancor-Bone Cleaver, and Rancor-Hide Mantle.</li>
+  <li>The Station Director always drops an accessory blueprint from a pool of 12. Combine these blueprints with Quarantine Seals found aboard the station to craft crew-themed cloaks, belts, rings, and necklaces.</li>
+  <li><strong>Find a collectible station map</strong> from enemies on any floor to reveal the minimap across all three levels.</li>
+  <li>Station enemies now wander between fights. A dockside spawn has been moved clear of cargo containers.</li>
+  <li>The Wookiee experiment logs now have readable examine text, and a misplaced Reference Database has been removed.</li>
+  <li>Station chairs no longer offer sitting interactions. The large briefing table now blocks walking through it while leaving the surrounding aisles clear.</li>
   <li>Telford Brelnak offers the repeatable quest <strong>Put Them to Rest</strong>: defeat 20 station horrors for 400 credits and 950 XP.</li>
   <li>The Hunter's Guild has a new rank-1 task to defeat station horrors.</li>
 </ul>
@@ -63,6 +73,8 @@ dateCreated: 2026-10-12T22:02:30.000Z
   <li><strong>Save up to five named Mimicry builds</strong> in the Techniques window. You can rename or delete saved builds as your playstyle changes.</li>
   <li>Existing characters automatically receive a <strong>Default</strong> build of their equipped techniques. New characters begin with an empty Default build.</li>
   <li>Preview technique changes before equipping them. <strong>Save</strong> stores the preview, <strong>Apply Build</strong> equips it outside combat, and <strong>Revert</strong> returns the preview to the saved build.</li>
+  <li><strong>Manage</strong> now lets you rename or delete builds without hiding the technique lists. Both actions can be cancelled, deletion asks for confirmation, and your last saved build cannot be deleted.</li>
+  <li>If you have applied unsaved changes to the selected equipped build, <strong>Revert</strong> now also re-equips its saved techniques outside combat. It remains available until those applied changes have been reverted.</li>
   <li>Switching builds restores saved Mimicry hotbar positions where space is available and preserves your other shortcuts. Switching does not reset technique cooldowns.</li>
   <li>Your starting Mimicry hotbar layout is saved with the Default build, so refunding techniques before your first build switch no longer loses that layout.</li>
   <li>The Techniques window has a clearer layout for finding learned techniques, checking available slots, and comparing your preview with your equipped build.</li>
@@ -94,6 +106,17 @@ dateCreated: 2026-10-12T22:02:30.000Z
   <li>Bloodlust's STM restoration now depends on the HP actually spent. Paying only part of an ability's HP cost gives a smaller refund, and HP absorbed by a shield does not count as HP spent.</li>
   <li>Soul Storm, Soul Burst, and Sacrificial Blade can no longer be used at 1 HP.</li>
   <li>Using abilities between automatic attacks no longer resets Rundown's repeated-hit bonus.</li>
+</ul>
+
+<h2 id="pvp-combat">PvP Combat</h2>
+<ul>
+  <li><strong>Long PvP fights now gradually reduce healing and increase incoming PvP damage.</strong> Your timer starts when you deal damage to, or take damage from, another player or their pet. Simply being nearby does not start it.</li>
+  <li>Healing you receive is reduced by 10% after 2 minutes, 20% after 2 minutes 30 seconds, 30% after 3 minutes, 45% after 3 minutes 30 seconds, and 60% from 4 minutes onward.</li>
+  <li>Damage other players and their pets deal to you increases by 20% after 3 minutes, then by another 20 percentage points every 30 seconds, reaching double damage after 5 minutes. This follows your time in the fight, so newly arriving players do not immediately take increased damage.</li>
+  <li>The healing reduction affects all HP recovery, including healing over time, life-stealing effects, consumables, rest, and natural regeneration. Shields, FP recovery, and STM recovery are unaffected by this reduction.</li>
+  <li>Stuns, knockdowns, dazes, immobilization, blindness, confusion, and sleep applied by players or their pets to another player now last half as long, with a minimum duration of one second.</li>
+  <li>The healing reduction and extra incoming damage end after 30 seconds without dealing or taking PvP damage, or when you die or are subdued.</li>
+  <li>Status icons and private combat-log messages help you track the changes. The Player Guide has a new <strong>PvP Combat</strong> topic explaining the rules.</li>
 </ul>
 
 <h2 id="reviving-players-and-beasts">Reviving Players and Beasts</h2>
@@ -158,6 +181,8 @@ dateCreated: 2026-10-12T22:02:30.000Z
   <li>Five new Smithery recipes can be learned from blueprints found in the Droid Foundry and Abandoned Station. Craft belts, gauntlets, and necklaces using components from their rare enemies.</li>
   <li><strong>Search recipes by ingredient.</strong> Tick Include Components in the Recipes window to find recipes that use a named material. Partial names work, and your other recipe filters still apply.</li>
   <li>Ruptor Visor and other affected salvaged helmet recipes now make helmets. Salvaged gauntlet recipes produce gloves, and droid light bracer recipes appear in the Glove category.</li>
+  <li>Older crafted headgear that incorrectly occupied the body-armor slot is now repaired to use the helmet slot, preserving crafted enhancements and supported appearance customizations. An existing helmet is kept, and repaired headgear is stored if it cannot be equipped.</li>
+  <li>If there is no room to complete a headgear repair, you can still log in and will be asked to free space and reconnect so the repair can finish.</li>
   <li>Cloth belt and cloak recipes now produce the matching item.</li>
   <li>Fixed rifles and pistols that could not fire because they lacked ammunition, including the Killbox, Oneshot, Dead Hand, and Last Word blasters. Existing broken copies need to be replaced.</li>
   <li>Crafting guild shops now sell rank-appropriate equipment sets for droid characters.</li>
@@ -203,6 +228,7 @@ dateCreated: 2026-10-12T22:02:30.000Z
 
 <h2 id="quality-of-life">Quality of Life</h2>
 <ul>
+  <li>Fixed a login problem for returning characters carrying older Force-damage weapons or enhancements.</li>
   <li>DM avatars no longer appear as HoloCom call targets while the DM is possessing an NPC.</li>
   <li>Using <code>/walk</code> or <code>/alwayswalk</code> now moves you at normal walking speed. Slows still apply, and turning walk mode off restores your normal movement speed.</li>
   <li>Use <code>/afk</code> to add a purple <strong>[AFK]</strong> tag to your displayed name. Use it again to turn it off; moving, changing areas, or logging out also clears the tag.</li>
@@ -235,6 +261,8 @@ dateCreated: 2026-10-12T22:02:30.000Z
 
 <h2 id="dm-tools">DM Tools</h2>
 <ul>
+  <li>The DM toolbar's <strong>Appear/Disappear</strong> button now fades and restores the DM avatar correctly.</li>
+  <li>Dropdowns in Creator, Chooser, and Player Search now open correctly. Deleting a saved creature in Creature Manager now asks for confirmation.</li>
   <li>While possessing an NPC, DM movement and window tools now act on the controlled creature correctly. Comms messages and server restart reminders also reach the DM reliably.</li>
   <li>Possessing DMs no longer appear in player search results or have their unattended avatars count as players for trap detection and enemy return behavior.</li>
   <li>DMs can adjust an NPC's height and head size through the appearance editor, including while possessing it. Scale limits and feedback now work correctly for DMs.</li>
