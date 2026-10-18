@@ -1,8 +1,8 @@
 <!--
 title: Upcoming Release Notes
-description: Upcoming Mimicry fixes, Player List and ship improvements, dungeon updates, quest and language fixes, and equipment and appearance corrections.
+description: Upcoming combat and Mimicry fixes, Player List and ship improvements, dungeon updates, quest and language fixes, and equipment and appearance corrections.
 published: true
-date: 2026-10-17T19:17:55.000Z
+date: 2026-10-18T02:32:05.093Z
 tags: swlor, release notes, updates, unreleased
 editor: ckeditor
 dateCreated: 2026-10-17T06:29:39.000Z
@@ -20,11 +20,13 @@ dateCreated: 2026-10-17T06:29:39.000Z
     </tbody>
   </table>
 </figure>
-<p>The next update brings a redesigned Player List, ship management and recovery improvements, dungeon balance and reward changes, and fixes to Mimicry, quests, language commands, equipment, appearances, and the game world. The release date and NWSync hash will be added once confirmed.</p>
+<p>The next update brings a redesigned Player List, ship management and recovery improvements, dungeon balance and reward changes, and fixes to combat, Mimicry, quests, language commands, equipment, appearances, and the game world. The release date and NWSync hash will be added once confirmed.</p>
 
 <h2>Combat and Mimicry</h2>
 <ul>
   <li>Overclocked Analyzer now boosts passive stat bonuses and resistances from equipped Mimicry traits during Overload.</li>
+  <li>Power Cell III now respects <strong>Self-Cast Support Abilities</strong>. With the setting enabled, it affects you and nearby allies without a target click. Turn it off to choose an ally manually.</li>
+  <li>Spears no longer receive the Single Weapon or Doublehand damage bonuses intended for one-handed weapons.</li>
 </ul>
 
 <h2>Player List</h2>
@@ -75,6 +77,8 @@ dateCreated: 2026-10-17T06:29:39.000Z
   <li>Hexweave Shawl now equips as a cloak, with an Attack bonus of 8 instead of 11.</li>
   <li>Affected dungeon salvage visors now display as visors instead of a mask and hood.</li>
   <li><strong>Existing affected items update automatically</strong>, including stored items and droid equipment, while keeping their customizations and crafted enhancements. If the correct slot is occupied, the repaired item stays safely in inventory.</li>
+  <li>Existing crafted Arkanian equipment now receives the current equipment adjustments automatically while preserving enhancements.</li>
+  <li>Fixed some equipment stat adjustments being applied more than once during login.</li>
 </ul>
 
 <h2>Quests and Languages</h2>
@@ -92,7 +96,9 @@ dateCreated: 2026-10-17T06:29:39.000Z
 
 <h2>Appearances</h2>
 <ul>
-  <li>Updated the appearances of affected weapons, armor, and helmets so newly obtained copies can be customized in the appearance editor.</li>
+  <li>Updated affected weapons, armor, and helmets to appearances supported by the appearance editor. Existing copies receive the correction when the affected parts still use their original appearance; customized parts are preserved.</li>
+  <li>Restored smoother default body models for male characters using the human body set, with skin-color and clothing-dye customization supported.</li>
+  <li>Fixed missing or distorted lower legs on Miris Aven.</li>
   <li>Affected male human shoulder styles now stay attached and move correctly with robe outfits.</li>
   <li>Corrected Sharene's outfit in Hutlar Outpost.</li>
   <li>Female thigh style 16 now uses the correct dye colors.</li>
@@ -104,6 +110,8 @@ dateCreated: 2026-10-17T06:29:39.000Z
 <h2>World and Housing</h2>
 <ul>
   <li>Corrected Crypt Marauder voices in the Sith Crypt Depths to match their Wookiee appearance.</li>
+  <li>Shuttle pilot droids now use droid voices.</li>
+  <li>Qion Slugs no longer catch clicks in empty space around their bodies, making it easier to select the ground nearby.</li>
   <li>Fixed specialists in the Veles Militia Annex remaining stuck in place during combat.</li>
   <li>Cleared debris blocking a doorway in Smuggler's Moon Station - Abandoned.</li>
   <li>Enemies in the Fight Club Backrooms now spawn in reachable rooms rather than outside the playable area.</li>
