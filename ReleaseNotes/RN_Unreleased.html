@@ -1,8 +1,8 @@
 <!--
 title: Upcoming Release Notes
-description: Upcoming Dragon encounter updates, Player List corrections, battle-theme and stance-animation fixes, and clinic, dungeon-exit, movement, and enemy-spawn fixes.
+description: Upcoming combat and party fixes, safer equipment updates and inventory claims, appearance repairs, music adjustments, world fixes, and DM tools.
 published: true
-date: 2026-10-18T19:55:32.192Z
+date: 2026-10-19T23:04:36.186Z
 tags: swlor, release notes, updates, unreleased
 editor: ckeditor
 dateCreated: 2026-10-17T06:29:39.000Z
@@ -16,30 +16,52 @@ dateCreated: 2026-10-17T06:29:39.000Z
       <tr><th>Status</th><td>Upcoming</td></tr>
       <tr><th>Release Date</th><td>TBD</td></tr>
       <tr><th>NWSync Hash</th><td>TBD</td></tr>
-      <tr><th>Notes Updated</th><td>October 18, 2026</td></tr>
+      <tr><th>Notes Updated</th><td>October 19, 2026</td></tr>
     </tbody>
   </table>
 </figure>
-<p>The next update brings further Great Arkanian Dragon encounter adjustments, corrects Player List party status, fixes personal battle themes and stance animations, and improves clinic registration, dungeon exits, movement, and enemy spawns. The release date and NWSync hash will be added once confirmed.</p>
+<p>The next update brings combat and party fixes, safer equipment updates and inventory claims, appearance repairs, music adjustments, world fixes, and improved DM tools. The release date and NWSync hash will be added once confirmed.</p>
 
 <h2>Great Arkanian Dragon</h2>
 <ul>
   <li>The Great Arkanian Dragon encounter has received further balance adjustments, including a new Unnerving Roar ability and matching ability and status-effect icons.</li>
 </ul>
 
-<h2>Player List</h2>
+<h2>Parties and Player List</h2>
 <ul>
   <li>Fixed characters appearing as <strong>Grouped</strong> in the Player List when they are not in a party.</li>
+  <li>Party membership now stays accurate after refused or expired invitations and after members are removed, keeping party effects and XP sharing in step.</li>
+  <li>Transferring leadership through the Player List now updates the leader indicator for every party member.</li>
 </ul>
 
 <h2>Combat and Animations</h2>
 <ul>
+  <li>Boss encounters have received balance adjustments.</li>
+  <li>Leadership auras no longer repeatedly announce the same buff as allies move in and out of range.</li>
   <li>Stances such as Cyclone, Imbuement, and Conduit now play an activation gesture when used unarmed or with a weapon that cannot show their usual animation. Other affected abilities receive the same correction.</li>
 </ul>
 
 <h2>Music</h2>
 <ul>
   <li>Battle themes selected in the Portable Music Player now play during combat and stop after the fight ends, including fights started with hostile abilities.</li>
+  <li>Reduced excessive song-disc drops when using Treasure Hunter. The perk still improves your chance of finding discs.</li>
+</ul>
+
+<h2>Equipment and Inventory</h2>
+<ul>
+  <li>Bank withdrawals and quest contract claims now check for inventory space first. Items that do not fit stay safely in storage or in the contract for you to claim after making room.</li>
+  <li>Affected crafting and production windows now check for inventory space before returning items. If a closing window holds items that do not fit, make room and reopen the station to recover them.</li>
+  <li>Equipment corrections that make an item larger now move it safely within its bag or into your inventory. Items that cannot fit are kept in overflow storage; free some space and use <strong>/overflow</strong> to retrieve them.</li>
+  <li>Carapace Bracers no longer show a broken Defense property. Existing copies have their obsolete base Poison protection removed while keeping crafted enhancements.</li>
+</ul>
+
+<h2>Appearances and Text</h2>
+<ul>
+  <li>Robes including styles 20, 21, and 236 now move their cloth more naturally instead of clinging to the body.</li>
+  <li>Corrected armor parts stretching or attaching to the wrong places when worn with robe outfits.</li>
+  <li>Fixed incorrect colors and dye areas on affected body and armor parts, including female armor styles. Hand style 193 now follows skin color instead of hair color.</li>
+  <li>The appearance editor now offers armor parts that your character can display. Existing unsupported parts are repaired automatically while preserving other parts and dyes.</li>
+  <li>Fixed garbled punctuation and color formatting in affected item names, NPC descriptions, journals, and other game text. Newly obtained Brawler's Wraps use the corrected name; copies you already own keep their saved name.</li>
 </ul>
 
 <h2>World and Travel</h2>
@@ -48,4 +70,15 @@ dateCreated: 2026-10-17T06:29:39.000Z
   <li>Restored the Medical Registration Terminal at Veles Clinic on Viscara, allowing you to register it as your respawn point.</li>
   <li>Removed invisible barriers blocking movement through parts of Smuggler's Moon Station - Lower Level.</li>
   <li>Red Blades on Smuggler's Moon - Catwalks no longer spawn inside a structure where they cannot be reached.</li>
+  <li>The Fight Club Backrooms now connect through walkable doorways and corridors, replacing the internal stair and lift teleports so enemies can follow between rooms.</li>
+  <li>Pirates in Smuggler's Moon Station - Abandoned no longer spawn inside an unreachable cargo cage.</li>
+  <li>Creatures in Dantooine's Ruined Farmlands no longer spawn on inaccessible mountain and waterfall ledges.</li>
+  <li>Fixed areas of Dathomir - Ruin Base where enemies could neither be attacked nor attack back. The same correction also applies to affected rooms in the Hutlar Droid Foundry and other areas using those floors.</li>
+  <li>The Casino entrance and map marker on Smuggler's Moon - Promenade now correctly read <strong>To Casino</strong>.</li>
+  <li>Removed an invisible seating spot in the Veles Trade Concourse that made characters sit in mid-air.</li>
+</ul>
+
+<h2>DM Tools</h2>
+<ul>
+  <li>Player Search now lets DMs check multiple online characters across searches and pages, then use <strong>Bring Checked Here</strong> to move the group together. <strong>Clear Checks</strong> clears the selection.</li>
 </ul>

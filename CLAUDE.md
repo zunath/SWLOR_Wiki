@@ -1,0 +1,3 @@
+# Shared instructions
+
+@AGENTS.md
