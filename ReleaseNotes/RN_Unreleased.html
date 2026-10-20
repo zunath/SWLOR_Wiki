@@ -1,8 +1,8 @@
 <!--
 title: Upcoming Release Notes
-description: Upcoming combat and party fixes, safer equipment updates and inventory claims, appearance repairs, music adjustments, world fixes, and DM tools.
+description: Upcoming healing and shield balance, slicing puzzles, lightsaber customization, new armor appearances, combat and party fixes, mobile graphics repairs, world updates, and DM tools.
 published: true
-date: 2026-10-19T23:04:36.186Z
+date: 2026-10-20T18:56:30.000Z
 tags: swlor, release notes, updates, unreleased
 editor: ckeditor
 dateCreated: 2026-10-17T06:29:39.000Z
@@ -16,11 +16,11 @@ dateCreated: 2026-10-17T06:29:39.000Z
       <tr><th>Status</th><td>Upcoming</td></tr>
       <tr><th>Release Date</th><td>TBD</td></tr>
       <tr><th>NWSync Hash</th><td>TBD</td></tr>
-      <tr><th>Notes Updated</th><td>October 19, 2026</td></tr>
+      <tr><th>Notes Updated</th><td>October 20, 2026</td></tr>
     </tbody>
   </table>
 </figure>
-<p>The next update brings combat and party fixes, safer equipment updates and inventory claims, appearance repairs, music adjustments, world fixes, and improved DM tools. The release date and NWSync hash will be added once confirmed.</p>
+<p>The next update brings healing and shield balance changes, more varied slicing puzzles, expanded lightsaber customization, new armor appearances, combat and party fixes, mobile graphics repairs, safer inventory handling, music and world updates, and improved DM tools. The release date and NWSync hash will be added once confirmed.</p>
 
 <h2>Great Arkanian Dragon</h2>
 <ul>
@@ -29,6 +29,7 @@ dateCreated: 2026-10-17T06:29:39.000Z
 
 <h2>Parties and Player List</h2>
 <ul>
+  <li>Any party member can now invite an ungrouped player through the Player List.</li>
   <li>Fixed characters appearing as <strong>Grouped</strong> in the Player List when they are not in a party.</li>
   <li>Party membership now stays accurate after refused or expired invitations and after members are removed, keeping party effects and XP sharing in step.</li>
   <li>Transferring leadership through the Player List now updates the leader indicator for every party member.</li>
@@ -36,19 +37,48 @@ dateCreated: 2026-10-17T06:29:39.000Z
 
 <h2>Combat and Animations</h2>
 <ul>
+  <li>With <strong>Self-Cast Support Abilities</strong> or <strong>Cast on Current Enemy</strong> enabled, affected abilities now remain available in the radial and class ability menus and can be assigned to the quickbar.</li>
+  <li><strong>Cast on Current Enemy</strong> now retains your enemy between abilities, so you can use another ability without waiting for the next weapon swing.</li>
+  <li>Overload Barrage now adds gadget damage only to its single-target strike, correcting extra damage on its two area bursts.</li>
   <li>Boss encounters have received balance adjustments.</li>
   <li>Leadership auras no longer repeatedly announce the same buff as allies move in and out of range.</li>
   <li>Stances such as Cyclone, Imbuement, and Conduit now play an activation gesture when used unarmed or with a weapon that cannot show their usual animation. Other affected abilities receive the same correction.</li>
 </ul>
 
+<h2>Healing and Shields</h2>
+<ul>
+  <li>Many ability heals and temporary-HP shields now provide a flat amount plus a smaller percentage of maximum HP. This reduces how much a large HP pool increases their strength, with lower ranks adjusted for leveling characters.</li>
+  <li>Willpower now has a stronger effect on the heals and shields that scale with it. The changes affect Force, First Aid, Leadership, Devices, beast abilities, Katar's Tag In, and Mimicry's Warden Order. Updated descriptions show the new amounts.</li>
+  <li>Heavy Vibroblade's triggered heals and shields retain their percentage-based amounts. Revival abilities also keep percentage-based healing, with the revised Willpower scaling.</li>
+  <li>Anger II's beast shield now lasts the full 30 seconds stated in its description.</li>
+</ul>
+
+<h2>Slicing</h2>
+<ul>
+  <li>Slicing now offers 500 different boards per tier, with varied routes and less spare trace. Higher-tier boards require swapping pieces into place as well as rotating them, so plan your route before spending trace.</li>
+  <li>Each Slicing rank above the target's tier grants 1 extra trace. Lockpicking equipment now contributes correctly; combined Lockpicking and positive Perception grant 1 extra trace per 10 points, up to 2.</li>
+  <li>The slicing help, Player Guide, and perk descriptions explain the revised trace bonuses.</li>
+</ul>
+
+<h2>Lightsabers</h2>
+<ul>
+  <li>The Lightsaber Workbench offers new shoto, crossguard, and pike blade options, additional hilts, and refreshed blade and hilt previews.</li>
+  <li>Choose a <strong>Light Color</strong> independently of the blade, or use <strong>Match Blade</strong>. Lighting defaults to <strong>Dim (5m)</strong>, with <strong>Normal (15m)</strong> available. Newly crafted weapons list their light color and range in the description.</li>
+  <li>Crafted lightsabers and saberstaffs now reliably use the selected models and colors.</li>
+  <li>Training lightsabers and saberstaffs have refreshed models and can be restyled with their supported parts in the Appearance Editor.</li>
+  <li>Removed obsolete tier I lightsaber and saberstaff upgrade kits from the DM item palette. Sabers start at tier I and use kits II through V for upgrades. If you were recently given a nonfunctional tier I kit, ask a DM to exchange it for a tier II kit.</li>
+</ul>
+
 <h2>Music</h2>
 <ul>
+  <li>The apartment jukebox now opens the music picker correctly.</li>
   <li>Battle themes selected in the Portable Music Player now play during combat and stop after the fight ends, including fights started with hostile abilities.</li>
   <li>Reduced excessive song-disc drops when using Treasure Hunter. The perk still improves your chance of finding discs.</li>
 </ul>
 
 <h2>Equipment and Inventory</h2>
 <ul>
+  <li>Fixed HP bonuses from equipment being partly or completely ignored on affected characters. Maximum HP is repaired automatically at login and after equipping or removing HP gear, while preserving active food bonuses.</li>
   <li>Bank withdrawals and quest contract claims now check for inventory space first. Items that do not fit stay safely in storage or in the contract for you to claim after making room.</li>
   <li>Affected crafting and production windows now check for inventory space before returning items. If a closing window holds items that do not fit, make room and reopen the station to recover them.</li>
   <li>Equipment corrections that make an item larger now move it safely within its bag or into your inventory. Items that cannot fit are kept in overflow storage; free some space and use <strong>/overflow</strong> to retrieve them.</li>
@@ -57,6 +87,8 @@ dateCreated: 2026-10-17T06:29:39.000Z
 
 <h2>Appearances and Text</h2>
 <ul>
+  <li>Added Republic Havoc armor appearances and more armor-part choices in the Appearance Editor.</li>
+  <li>Restored robe style 236's original coat shade, correcting its overly pale appearance with the same dyes.</li>
   <li>Robes including styles 20, 21, and 236 now move their cloth more naturally instead of clinging to the body.</li>
   <li>Corrected armor parts stretching or attaching to the wrong places when worn with robe outfits.</li>
   <li>Fixed incorrect colors and dye areas on affected body and armor parts, including female armor styles. Hand style 193 now follows skin color instead of hair color.</li>
@@ -64,8 +96,16 @@ dateCreated: 2026-10-17T06:29:39.000Z
   <li>Fixed garbled punctuation and color formatting in affected item names, NPC descriptions, journals, and other game text. Newly obtained Brawler's Wraps use the corrected name; copies you already own keep their saved name.</li>
 </ul>
 
+<h2>Mobile Client</h2>
+<ul>
+  <li>Fixed a graphics compatibility issue that caused the mobile client's 3D view to appear blank. Combat telegraph overlays are unavailable on mobile; desktop telegraphs are unchanged.</li>
+</ul>
+
 <h2>World and Travel</h2>
 <ul>
+  <li>Scheduled passenger flights now use a dedicated shuttle interior.</li>
+  <li>Enemies in Mon Cala - Medical Sublevel now spawn on clear, reachable floor instead of inside or against walls.</li>
+  <li>Adjusted Droid Foundry enemies' rifle firing speed to match other rifle-wielding enemies.</li>
   <li>The exit from the Sith Fortress Lord's Quarters on Korriban no longer traps characters behind a locked door after a server restart. The dungeon's other key requirements remain unchanged.</li>
   <li>Restored the Medical Registration Terminal at Veles Clinic on Viscara, allowing you to register it as your respawn point.</li>
   <li>Removed invisible barriers blocking movement through parts of Smuggler's Moon Station - Lower Level.</li>
@@ -80,5 +120,6 @@ dateCreated: 2026-10-17T06:29:39.000Z
 
 <h2>DM Tools</h2>
 <ul>
+  <li><strong>/emotegui</strong> and <strong>/emotesgui</strong> now open and toggle the Emotes window correctly while possessing an NPC.</li>
   <li>Player Search now lets DMs check multiple online characters across searches and pages, then use <strong>Bring Checked Here</strong> to move the group together. <strong>Clear Checks</strong> clears the selection.</li>
 </ul>
