@@ -1,8 +1,8 @@
 <!--
 title: Upcoming Release Notes
-description: Upcoming healing and shield balance, slicing puzzles, lightsaber customization, new armor appearances, combat and party fixes, mobile graphics repairs, world updates, and DM tools.
+description: Upcoming Unarmed and Twin Pistol skills with a free rebuild token, healing and shield balance, slicing puzzles, lightsaber customization, refreshed weapon, shield and armor appearances, combat and party fixes, mobile graphics repairs, world updates, and DM tools.
 published: true
-date: 2026-10-20T18:56:30.000Z
+date: 2026-10-21T22:20:13.000Z
 tags: swlor, release notes, updates, unreleased
 editor: ckeditor
 dateCreated: 2026-10-17T06:29:39.000Z
@@ -16,11 +16,24 @@ dateCreated: 2026-10-17T06:29:39.000Z
       <tr><th>Status</th><td>Upcoming</td></tr>
       <tr><th>Release Date</th><td>TBD</td></tr>
       <tr><th>NWSync Hash</th><td>TBD</td></tr>
-      <tr><th>Notes Updated</th><td>October 20, 2026</td></tr>
+      <tr><th>Notes Updated</th><td>October 21, 2026</td></tr>
     </tbody>
   </table>
 </figure>
-<p>The next update brings healing and shield balance changes, more varied slicing puzzles, expanded lightsaber customization, new armor appearances, combat and party fixes, mobile graphics repairs, safer inventory handling, music and world updates, and improved DM tools. The release date and NWSync hash will be added once confirmed.</p>
+<p>The next update adds two new combat skills, Unarmed and Twin Pistol, along with a free rebuild token for existing characters. It also brings healing and shield balance changes, more varied slicing puzzles, expanded lightsaber customization, refreshed weapon, shield and armor appearances, combat and party fixes, mobile graphics repairs, safer inventory handling, music and world updates, and improved DM tools. The release date and NWSync hash will be added once confirmed.</p>
+
+<h2>New Skills: Unarmed and Twin Pistol</h2>
+<ul>
+  <li>Every existing character receives one free rebuild token with this update, so you can try the new skills. New characters still start with their usual token.</li>
+  <li><strong>Unarmed</strong> is a new combat skill for fighting with Power Gloves. Its <strong>Martial Artist</strong> line builds Opening and Finish into flowing combinations, while its <strong>Brawler</strong> line focuses on pressure attacks, heavy strikes and counters. Techniques such as Uppercut, Haymaker and Perfect Form play their own strike animations.</li>
+  <li>Power Gloves are sold in stores, found as loot and crafted through Smithery. One pair of gloves covers both hands, and the Appearance Editor offers 20 glove styles plus Bare Fists.</li>
+  <li>Perfect Form requires Finish against your target before it can be used, so it never spends its recast without the bonus, and your Finish cannot expire during its cast.</li>
+  <li><strong>Twin Pistol</strong> is a new combat skill for fighting with a pistol in each hand. Its <strong>Barrage</strong> line provides sustained paired fire, while its <strong>Crossfire</strong> line rewards movement with Flow that empowers your attacks.</li>
+  <li>Equipping a Twin Pistols item automatically places a matching second pistol in your off hand; unequipping either hand removes the pair. The off-hand pistol always matches your customized pistol, and editing either hand in the Appearance Editor restyles both.</li>
+  <li>Twin Pistols are sold wherever matching pistols are sold.</li>
+  <li>Several perks from both skills, such as stances and Flow, also benefit other weapons when purchased. Some top-tier techniques are earned through quests.</li>
+  <li>Droids can wield Power Gloves and Twin Pistols. New Unarmed and Twin Pistol droid boosts and instruction discs are available, and droid CPUs grant the new skills. Existing droid parts and controllers gain the new skills automatically, and characters trained only in Unarmed or Twin Pistol can activate droids.</li>
+</ul>
 
 <h2>Great Arkanian Dragon</h2>
 <ul>
@@ -43,6 +56,8 @@ dateCreated: 2026-10-17T06:29:39.000Z
   <li>Boss encounters have received balance adjustments.</li>
   <li>Leadership auras no longer repeatedly announce the same buff as allies move in and out of range.</li>
   <li>Stances such as Cyclone, Imbuement, and Conduit now play an activation gesture when used unarmed or with a weapon that cannot show their usual animation. Other affected abilities receive the same correction.</li>
+  <li>Bloodlust's description now explains that HP absorbed by temporary HP does not count toward its stamina refund.</li>
+  <li>Players no longer collide with or bump into each other after dying or flying a ship. Previously this lasted until the next login.</li>
 </ul>
 
 <h2>Healing and Shields</h2>
@@ -80,6 +95,9 @@ dateCreated: 2026-10-17T06:29:39.000Z
 <ul>
   <li>Fixed HP bonuses from equipment being partly or completely ignored on affected characters. Maximum HP is repaired automatically at login and after equipping or removing HP gear, while preserving active food bonuses.</li>
   <li>Bank withdrawals and quest contract claims now check for inventory space first. Items that do not fit stay safely in storage or in the contract for you to claim after making room.</li>
+  <li>Submitting more items than a contract needs now hands over exactly the requested amount and leaves the rest with you.</li>
+  <li>Other players can no longer bump you away from a crafting station, which closed the crafting window and failed the craft.</li>
+  <li>The Dantari Spear and Tribal Shuriken from Dantooine now drop identified, showing their properties and requirements so they can be equipped. The Republic Trooper Uniform sold by the Republic Armory is now identified when purchased.</li>
   <li>Affected crafting and production windows now check for inventory space before returning items. If a closing window holds items that do not fit, make room and reopen the station to recover them.</li>
   <li>Equipment corrections that make an item larger now move it safely within its bag or into your inventory. Items that cannot fit are kept in overflow storage; free some space and use <strong>/overflow</strong> to retrieve them.</li>
   <li>Carapace Bracers no longer show a broken Defense property. Existing copies have their obsolete base Poison protection removed while keeping crafted enhancements.</li>
@@ -88,6 +106,11 @@ dateCreated: 2026-10-17T06:29:39.000Z
 <h2>Appearances and Text</h2>
 <ul>
   <li>Added Republic Havoc armor appearances and more armor-part choices in the Appearance Editor.</li>
+  <li>Refreshed the models of many weapon appearances and 79 shield appearances, with new shield inventory icons. Your items keep their selected appearance.</li>
+  <li>Every armor part offered in the Appearance Editor now displays, with accurate colors and dyes, on every playable species and both genders, including parts that were previously missing or misfitted on some bodies.</li>
+  <li>Helmets that mistakenly showed Darth Revan's mask, such as the Sentinel's Visor, are moved to their intended appearance automatically. Helmets you restyled yourself keep their look.</li>
+  <li>Helmet style 287 shows smooth dye edges again instead of jagged ones.</li>
+  <li>Characters now hold rifles with their support hand under the barrel instead of beside it.</li>
   <li>Restored robe style 236's original coat shade, correcting its overly pale appearance with the same dyes.</li>
   <li>Robes including styles 20, 21, and 236 now move their cloth more naturally instead of clinging to the body.</li>
   <li>Corrected armor parts stretching or attaching to the wrong places when worn with robe outfits.</li>
@@ -104,6 +127,7 @@ dateCreated: 2026-10-17T06:29:39.000Z
 <h2>World and Travel</h2>
 <ul>
   <li>Scheduled passenger flights now use a dedicated shuttle interior.</li>
+  <li>Choosing Respawn now sends you to the default respawn point when you have no registered point or your registered point is no longer usable, instead of reviving you where you died.</li>
   <li>Enemies in Mon Cala - Medical Sublevel now spawn on clear, reachable floor instead of inside or against walls.</li>
   <li>Adjusted Droid Foundry enemies' rifle firing speed to match other rifle-wielding enemies.</li>
   <li>The exit from the Sith Fortress Lord's Quarters on Korriban no longer traps characters behind a locked door after a server restart. The dungeon's other key requirements remain unchanged.</li>
@@ -121,5 +145,9 @@ dateCreated: 2026-10-17T06:29:39.000Z
 <h2>DM Tools</h2>
 <ul>
   <li><strong>/emotegui</strong> and <strong>/emotesgui</strong> now open and toggle the Emotes window correctly while possessing an NPC.</li>
-  <li>Player Search now lets DMs check multiple online characters across searches and pages, then use <strong>Bring Checked Here</strong> to move the group together. <strong>Clear Checks</strong> clears the selection.</li>
+  <li>Player Search now lets DMs select several characters directly by name, keeping the selection across searches and pages, then use <strong>Bring Selected Here</strong> to move the online ones together. <strong>Clear Selection</strong> clears it. Character details now also show AFK status, party information and Player List flags.</li>
+  <li>The Player List gives DMs a row of actions for each player: Jump To, Jump Here, Examine, and Boot, which asks for confirmation.</li>
+  <li>New <strong>Battle Grid</strong> window, opened from Placeable Tools or <strong>/battlegrid</strong>, projects an adjustable square grid over the area. Square size, grid size, height and position can be changed, and the grid stays until removed or the server restarts.</li>
+  <li>The DM Creator and Creature Manager now support personal favorites. Mark entries as favorites, then show only your favorites, with search and paging still available.</li>
+  <li>The Creature Manager now stays open when you change areas.</li>
 </ul>
