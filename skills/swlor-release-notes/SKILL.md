@@ -21,11 +21,11 @@ Locate the real checkouts and read applicable instructions. Common Windows paths
 
 ## Establish what is new
 
-1. Read the current upcoming page, latest dated release, and recent Wiki update PR descriptions. Recover the last reviewed game commit from the previous PR or commit, rather than guessing a deployment cutoff from timestamps.
+1. Read the current upcoming page, latest dated release, and recent Wiki release-note commit messages (older updates recorded this in PR descriptions). Recover the last reviewed game commit from them, rather than guessing a deployment cutoff from timestamps.
 2. Refresh remote refs or query GitHub. Take a specific snapshot of the game's default branch and inspect integrated changes after the coverage boundary. Verify actual merged diffs, not just titles, session summaries, or bot-generated notes. Include direct default-branch commits when their integration is verified.
 3. Compare the old and new pinned asset revisions. Include player-visible icons, models, colors, text, and walkmesh fixes. An asset PR merged to its own master is not enough if the game has not integrated it. A pointer-only change with an identical tree adds no release-note entry.
 4. Consolidate overlapping fixes into their final behavior. Omit duplicates, reverted changes, tests, tooling, and staff diagnostic reports with no meaningful player-facing outcome. DM gameplay tools can be included under DM Tools.
-5. Record the reviewed game commit, asset revision, included PRs, and relevant omissions in the Wiki PR description. Keep these references out of the public notes. A later update starts from this recorded snapshot.
+5. Record the reviewed game commit, asset revision, included PRs, and relevant omissions in the Wiki commit message body. Keep these references out of the public notes. A later update starts from this recorded snapshot.
 
 Merged does not mean deployed. Open PRs, in-progress sessions, local changes, and unmerged companions are ineligible. Never merge game or asset PRs merely to make their content eligible. If the deployment boundary is uncertain, compare released notes and deployment evidence; do not invent a date, cutoff, or NWSync hash.
 
@@ -81,16 +81,16 @@ When a new upcoming set is requested after publication, RN_Unreleased must be a 
 
 ## Save and verify
 
-A request for a draft, skill, or text first does not authorize posting notes. Respect specific review holds. In an authorized Wiki publishing session, the established user preference is to merge the Wiki PR without requiring their review. The skill itself grants no new permission to publish in a different context.
+A request for a draft, skill, or text first does not authorize posting notes. Respect specific review holds. In an authorized Wiki publishing session, the established user preference is to push the change directly without requiring their review. The skill itself grants no new permission to publish in a different context.
 
-Use a focused branch from the current Wiki default branch and a PR for the requested changes. Follow applicable repository checks, preserve unrelated edits, and merge the exact validated head when authorized. Attach the PR to the chat when that capability is available. Do not edit the game to perform a Wiki-only update.
+Do not open a Wiki PR. Commit the validated change in a separate worktree based on the freshly fetched Wiki default branch, then push that commit directly to the default branch. If the push is rejected because the branch moved, rebase onto the new tip, re-check the result, and push again; never force-push. Preserve unrelated edits and other checkouts. Do not edit the game to perform a Wiki-only update.
 
 Validate the affected HTML, unique IDs, links, metadata, dates, status, index placement, coverage, and disclosure limits. Run `git diff --check`. Compare released pages to ensure routine upcoming edits did not change them. For a release publication, verify the collected sections carried over. Prose-only work needs document and publication checks, not game builds or in-game tests.
 
-A merged PR does not prove the live Wiki updated. Confirm the merge, then read the live page and index. Check the new entries and intended status/category. For publication, verify the exact date and hash on the dated page.
+A successful push does not prove the live Wiki updated. Confirm the commit is on the remote default branch, then read the live page and index. Check the new entries and intended status/category. For publication, verify the exact date and hash on the dated page.
 
 If content is stale, the signed-in administration page `/a/storage` offers **Force Sync**. Inspect the current UI and use only that normal action. Do not change storage configuration or use Add Untracked Changes, Import Everything, or Purge Local Repository. Allow the asynchronous operation to finish; inspect its outcome before retrying. Preserve the authenticated session and return the tab to the notes. Do not sign out.
 
-If a browser tab fails to render or interact, use the available browser's documented recovery and a fresh tab when appropriate; do not assume a timeout means the action succeeded. If sign-in needs user participation or live verification is blocked, report what is complete and the concrete blocker. Do not claim live success from the merge alone.
+If a browser tab fails to render or interact, use the available browser's documented recovery and a fresh tab when appropriate; do not assume a timeout means the action succeeded. If sign-in needs user participation or live verification is blocked, report what is complete and the concrete blocker. Do not claim live success from the push alone.
 
-Finish with a concise link and the main added topics. Save and include screenshot evidence when the browser tooling requires it. Keep sensitive details out of public commits and PR text as well as player notes.
+Finish with a concise link and the main added topics. Save and include screenshot evidence when the browser tooling requires it. Keep sensitive details out of public commit messages as well as player notes.
