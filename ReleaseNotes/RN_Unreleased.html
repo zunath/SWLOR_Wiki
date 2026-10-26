@@ -2,7 +2,7 @@
 title: Upcoming Release Notes
 description: Upcoming Unarmed and Twin Pistol skills with a free rebuild token, skill rank limits, healing and shield balance, slicing, lightsabers, refreshed appearances, combat and party fixes, mobile repairs, world updates, and DM tools.
 published: true
-date: 2026-10-22T21:00:00.000Z
+date: 2026-10-26T15:00:00.000Z
 tags: swlor, release notes, updates, unreleased
 editor: ckeditor
 dateCreated: 2026-10-17T06:29:39.000Z
@@ -16,7 +16,7 @@ dateCreated: 2026-10-17T06:29:39.000Z
       <tr><th>Status</th><td>Upcoming</td></tr>
       <tr><th>Release Date</th><td>TBD</td></tr>
       <tr><th>NWSync Hash</th><td>TBD</td></tr>
-      <tr><th>Notes Updated</th><td>October 22, 2026</td></tr>
+      <tr><th>Notes Updated</th><td>October 26, 2026</td></tr>
     </tbody>
   </table>
 </figure>
@@ -26,7 +26,7 @@ dateCreated: 2026-10-17T06:29:39.000Z
 <ul>
   <li>Every existing character receives one free rebuild token with this update, so you can try the new skills. New characters still start with their usual token.</li>
   <li><strong>Unarmed</strong> is a new combat skill for fighting with Power Gloves. Its <strong>Martial Artist</strong> line builds Opening and Finish into flowing combinations, while its <strong>Brawler</strong> line focuses on pressure attacks, heavy strikes and counters. Techniques such as Uppercut, Haymaker and Perfect Form play their own strike animations.</li>
-  <li>Power Gloves are sold in stores, found as loot and crafted through Smithery. One pair of gloves covers both hands, and the Appearance Editor offers 20 glove styles plus Bare Fists.</li>
+  <li>Power Gloves are sold in stores, found as loot and crafted through Smithery. One pair of gloves covers both hands, and the Appearance Editor offers 20 glove styles plus Bare Fists. The left glove now appears correctly mirrored, the pair dual-wields like Katars, and your right arm swings naturally while you walk or run.</li>
   <li>Perfect Form requires Finish against your target before it can be used, so it never spends its recast without the bonus, and your Finish cannot expire during its cast. Spending Finish gives it a large damage bonus.</li>
   <li><strong>Twin Pistol</strong> is a new combat skill for fighting with a pistol in each hand. Its <strong>Barrage</strong> line provides sustained paired fire, while its <strong>Crossfire</strong> line rewards movement with Flow that empowers your attacks. Blaster Slide and Pistol Rush build Flow, which Grapple Shot, Final Salvo, and other skills' hostile weapon abilities spend. Blaster Slide turns aside when the way straight back is blocked. Each Twin Pistol ability has its own animation, and moving abilities use their own travel motion.</li>
   <li>Equipping a Twin Pistols item automatically places a matching second pistol in your off hand; unequipping either hand removes the pair. The off-hand pistol always matches your customized pistol, and editing either hand in the Appearance Editor restyles both.</li>
@@ -49,6 +49,7 @@ dateCreated: 2026-10-17T06:29:39.000Z
 
 <h2>Parties and Player List</h2>
 <ul>
+  <li>HoloCom calls now run from the Player List, with <strong>Call</strong>, <strong>Answer</strong>, <strong>Decline</strong> and <strong>End/Cancel Call</strong> buttons. The HoloCom conversation menu and Character Sheet button are gone, and <strong>/answer</strong> and <strong>/decline</strong> let you respond without opening the list.</li>
   <li>Any party member can now invite an ungrouped player through the Player List.</li>
   <li>Fixed characters appearing as <strong>Grouped</strong> in the Player List when they are not in a party.</li>
   <li>Party membership now stays accurate after refused or expired invitations and after members are removed, keeping party effects and XP sharing in step.</li>
@@ -59,8 +60,15 @@ dateCreated: 2026-10-17T06:29:39.000Z
 <ul>
   <li>With <strong>Self-Cast Support Abilities</strong> or <strong>Cast on Current Enemy</strong> enabled, affected abilities now remain available in the radial and class ability menus and can be assigned to the quickbar.</li>
   <li><strong>Cast on Current Enemy</strong> now retains your enemy between abilities, so you can use another ability without waiting for the next weapon swing.</li>
+  <li>Corrected the Peerless Bounty Hunter description, which had been copied from the Krayt Dragon.</li>
   <li>Overload Barrage now adds gadget damage only to its single-target strike, correcting extra damage on its two area bursts.</li>
   <li>Boss encounters have received balance adjustments.</li>
+  <li>Stealth is now time-limited, since stealthed characters no longer regain stamina. Other players within 5 meters are much more likely to spot you, and a natural 20 on their Detection roll always sees you. Ghost Protocol's timer no longer ends later stealth.</li>
+  <li>Enemies' area abilities, such as a mynock's screeches, now fire at a lone player, but still ignore stealthed players who have not been detected.</li>
+  <li>Saber Ward now deals its converted Force damage on ordinary weapon hits, not only on abilities.</li>
+  <li>Static Burst, Arc Pulse, Ion Burst, Final Suppression and Warden Mark now show and play a visible, audible area burst.</li>
+  <li>Saved animations no longer carry over from a previous session, which could leave a character stuck in a repeating swing, emote or run pose after a restart.</li>
+  <li>HoloCom holograms no longer draw enemies into combat.</li>
   <li>Leadership auras no longer repeatedly announce the same buff as allies move in and out of range.</li>
   <li>Stances such as Cyclone, Imbuement, and Conduit now play an activation gesture when used unarmed or with a weapon that cannot show their usual animation. Other affected abilities receive the same correction.</li>
   <li>Tempest Stance, Vigor Stance, and Shadowflow now stay active until you turn them off or switch stances, instead of ending after a short time.</li>
@@ -74,12 +82,14 @@ dateCreated: 2026-10-17T06:29:39.000Z
   <li>Many ability heals and temporary-HP shields now provide a flat amount plus a smaller percentage of maximum HP. This reduces how much a large HP pool increases their strength, with lower ranks adjusted for leveling characters.</li>
   <li>Willpower now has a stronger effect on the heals and shields that scale with it. The changes affect Force, First Aid, Leadership, Devices, beast abilities, Katar's Tag In, and Mimicry's Warden Order. Updated descriptions show the new amounts.</li>
   <li>Heavy Vibroblade's triggered heals and shields retain their percentage-based amounts. Revival abilities also keep percentage-based healing, with the revised Willpower scaling.</li>
+  <li>Treasure Hunter no longer applies its rare drop bonus twice on kills.</li>
   <li>Anger II's beast shield now lasts the full 30 seconds stated in its description.</li>
 </ul>
 
 <h2>Slicing</h2>
 <ul>
   <li>Slicing now offers 500 different boards per tier, with varied routes and less spare trace. Higher-tier boards require swapping pieces into place as well as rotating them, so plan your route before spending trace.</li>
+  <li>Slicing rewards now include a ladder of tool types: each tier can award tools from every lower tier as well, so higher-tier rewards are no longer a single repeated tool.</li>
   <li>Each Slicing rank above the target's tier grants 1 extra trace. Lockpicking equipment now contributes correctly; combined Lockpicking and positive Perception grant 1 extra trace per 10 points, up to 2.</li>
   <li>The slicing help, Player Guide, and perk descriptions explain the revised trace bonuses.</li>
 </ul>
@@ -87,8 +97,8 @@ dateCreated: 2026-10-17T06:29:39.000Z
 <h2>Lightsabers</h2>
 <ul>
   <li>The Lightsaber Workbench offers new shoto, crossguard, and pike blade options, additional hilts, and refreshed blade and hilt previews.</li>
-  <li>Choose a <strong>Light Color</strong> independently of the blade, or use <strong>Match Blade</strong>. Lighting defaults to <strong>Dim (5m)</strong>, with <strong>Normal (15m)</strong> available. Newly crafted weapons list their light color and range in the description.</li>
-  <li>Crafted lightsabers and saberstaffs now reliably use the selected models and colors.</li>
+  <li>Choose a <strong>Light Color</strong> independently of the blade, or use <strong>Match Blade</strong>. Lighting defaults to <strong>Dim (5m)</strong>, with <strong>Low (10m)</strong> available. Newly crafted weapons list their light color and range in the description.</li>
+  <li>Crafted lightsabers and saberstaffs now reliably use the selected models and colors. A Weapon Submission Token's damage bonus and damage type now carry onto the saber you craft.</li>
   <li>Training lightsabers and saberstaffs have refreshed models and can be restyled with their supported parts in the Appearance Editor.</li>
   <li>Removed obsolete tier I lightsaber and saberstaff upgrade kits from the DM item palette. Sabers start at tier I and use kits II through V for upgrades. If you were recently given a nonfunctional tier I kit, ask a DM to exchange it for a tier II kit.</li>
 </ul>
@@ -105,6 +115,7 @@ dateCreated: 2026-10-17T06:29:39.000Z
   <li>Fixed HP bonuses from equipment being partly or completely ignored on affected characters. Maximum HP is repaired automatically at login and after equipping or removing HP gear, while preserving active food bonuses.</li>
   <li>Bank withdrawals and quest contract claims now check for inventory space first. Items that do not fit stay safely in storage or in the contract for you to claim after making room.</li>
   <li>Submitting more items than a contract needs now hands over exactly the requested amount and leaves the rest with you.</li>
+  <li>Equipping and unequipping gear no longer causes stored stats to drift, and affected characters are repaired automatically.</li>
   <li>Other players can no longer bump you away from a crafting station, which closed the crafting window and failed the craft.</li>
   <li>The Dantari Spear and Tribal Shuriken from Dantooine now drop identified, showing their properties and requirements so they can be equipped. The Republic Trooper Uniform sold by the Republic Armory is now identified when purchased.</li>
   <li>Affected crafting and production windows now check for inventory space before returning items. If a closing window holds items that do not fit, make room and reopen the station to recover them.</li>
@@ -124,6 +135,7 @@ dateCreated: 2026-10-17T06:29:39.000Z
   <li>Robes including styles 20, 21, and 236 now move their cloth more naturally instead of clinging to the body.</li>
   <li>The long coat skirts on chest styles 154 and 269 now hang from the hips instead of splitting apart with each step.</li>
   <li>Corrected armor parts stretching or attaching to the wrong places when worn with robe outfits.</li>
+  <li>Robes now drape their cloth naturally during emotes.</li>
   <li>Fixed incorrect colors and dye areas on affected body and armor parts, including female armor styles. Hand style 193 now follows skin color instead of hair color.</li>
   <li>The appearance editor now offers armor parts that your character can display. Existing unsupported parts are repaired automatically while preserving other parts and dyes.</li>
   <li>Fixed garbled punctuation and color formatting in affected item names, NPC descriptions, journals, and other game text. Newly obtained Brawler's Wraps use the corrected name; copies you already own keep their saved name.</li>
@@ -147,6 +159,7 @@ dateCreated: 2026-10-17T06:29:39.000Z
   <li>Removed invisible barriers blocking movement through parts of Smuggler's Moon Station - Lower Level.</li>
   <li>Red Blades on Smuggler's Moon - Catwalks no longer spawn inside a structure where they cannot be reached.</li>
   <li>The Fight Club Backrooms now connect through walkable doorways and corridors, replacing the internal stair and lift teleports so enemies can follow between rooms.</li>
+  <li>Randomly spawned resource nodes now keep their distance from each other, so they no longer block narrow paths such as the Korriban Ravine.</li>
   <li>Pirates in Smuggler's Moon Station - Abandoned no longer spawn inside an unreachable cargo cage.</li>
   <li>Creatures in Dantooine's Ruined Farmlands no longer spawn on inaccessible mountain and waterfall ledges.</li>
   <li>Fixed areas of Dathomir - Ruin Base where enemies could neither be attacked nor attack back. The same correction also applies to affected rooms in the Hutlar Droid Foundry and other areas using those floors.</li>
@@ -161,5 +174,6 @@ dateCreated: 2026-10-17T06:29:39.000Z
   <li>The Player List gives DMs a row of actions for each player: Jump To, Jump Here, Examine, and Boot, which asks for confirmation.</li>
   <li>New <strong>Battle Grid</strong> window, opened from Placeable Tools or <strong>/battlegrid</strong>, projects an adjustable square grid over the area. Square size, grid size, height and position can be changed, and the grid stays until removed or the server restarts.</li>
   <li>The DM Creator and Creature Manager now support personal favorites. Mark entries as favorites, then show only your favorites, with search and paging still available.</li>
+  <li>DM Talk and Whisper no longer go to a familiar after a refused possession attempt.</li>
   <li>The Creature Manager now stays open when you change areas.</li>
 </ul>
