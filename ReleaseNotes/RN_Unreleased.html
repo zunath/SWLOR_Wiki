@@ -2,7 +2,7 @@
 title: Upcoming Release Notes
 description: Upcoming Unarmed and Twin Pistol skills with a free rebuild token, skill rank limits, healing and shield balance, slicing, lightsabers, refreshed appearances, combat and party fixes, mobile repairs, world updates, and DM tools.
 published: true
-date: 2026-10-27T21:00:00.000Z
+date: 2026-10-28T21:00:00.000Z
 tags: swlor, release notes, updates, unreleased
 editor: ckeditor
 dateCreated: 2026-10-17T06:29:39.000Z
@@ -16,7 +16,7 @@ dateCreated: 2026-10-17T06:29:39.000Z
       <tr><th>Status</th><td>Upcoming</td></tr>
       <tr><th>Release Date</th><td>TBD</td></tr>
       <tr><th>NWSync Hash</th><td>TBD</td></tr>
-      <tr><th>Notes Updated</th><td>October 27, 2026</td></tr>
+      <tr><th>Notes Updated</th><td>October 28, 2026</td></tr>
     </tbody>
   </table>
 </figure>
@@ -56,7 +56,7 @@ dateCreated: 2026-10-17T06:29:39.000Z
 
 <h2>Parties and Player List</h2>
 <ul>
-  <li>HoloCom calls now run from the Player List, with <strong>Call</strong>, <strong>Answer</strong>, <strong>Decline</strong> and <strong>End/Cancel Call</strong> buttons. The HoloCom conversation menu and Character Sheet button are gone, and <strong>/answer</strong> and <strong>/decline</strong> let you respond without opening the list.</li>
+  <li>HoloCom calls now run from the Player List, with <strong>Call</strong>, <strong>Answer</strong>, <strong>Decline</strong> and <strong>End/Cancel Call</strong> buttons. The HoloCom conversation menu and Character Sheet button are gone, and <strong>/answer</strong> and <strong>/decline</strong> let you respond without opening the list. Messages relayed during a call use the caller's emote style.</li>
   <li>Any party member can now invite an ungrouped player through the Player List.</li>
   <li>Fixed characters appearing as <strong>Grouped</strong> in the Player List when they are not in a party.</li>
   <li>Party membership now stays accurate after refused or expired invitations and after members are removed, keeping party effects and XP sharing in step.</li>
@@ -74,6 +74,8 @@ dateCreated: 2026-10-17T06:29:39.000Z
   <li>Enemies' area abilities, such as a mynock's screeches, now fire at a lone player, but still ignore stealthed players who have not been detected.</li>
   <li>Enemies that never used some of their abilities now use their full set, such as the Blood Frenzy Butcher's Rending Carve, Stim Canister and Blood Frenzy Flurry. About 80 enemies were affected.</li>
   <li>Inner Circle Surge now plays an audible lightning strike on every target it damages, including chain arcs.</li>
+  <li>Lightsaber technique adjustments: Imbuement Stance spends its Force Points only when the auto-attack lands. Sundering Sweep spreads Sunder to 1, 2 or 3 enemies by rank. Shattering Strike applies a stronger Sunder. Immovable Stance gives more Mobility Resistance with a smaller Attack penalty.</li>
+  <li>Enemy droids can now be affected by Trauma effects such as Sunder, but enemy machines can no longer be made to bleed.</li>
   <li>Saber Ward now deals its converted Force damage on ordinary weapon hits, not only on abilities.</li>
   <li>Static Burst, Arc Pulse, Ion Burst, Final Suppression and Warden Mark now show and play a visible, audible area burst.</li>
   <li>Saved animations no longer carry over from a previous session, which could leave a character stuck in a repeating swing, emote or run pose after a restart.</li>
@@ -123,6 +125,7 @@ dateCreated: 2026-10-17T06:29:39.000Z
 <h2>Equipment and Inventory</h2>
 <ul>
   <li>Fixed HP bonuses from equipment being partly or completely ignored on affected characters. Maximum HP is repaired automatically at login and after equipping or removing HP gear, while preserving active food bonuses.</li>
+  <li>The bank window now shows 20 items per page, so deposits past the first 50 no longer vanish from the list. Your items were always kept.</li>
   <li>Bank withdrawals and quest contract claims now check for inventory space first. Items that do not fit stay safely in storage or in the contract for you to claim after making room.</li>
   <li>Submitting more items than a contract needs now hands over exactly the requested amount and leaves the rest with you.</li>
   <li>Equipping and unequipping gear no longer causes stored stats to drift, and affected characters are repaired automatically.</li>
@@ -136,7 +139,7 @@ dateCreated: 2026-10-17T06:29:39.000Z
 
 <h2>Appearances and Text</h2>
 <ul>
-  <li>The Appearance Editor is redesigned around pictures. A body map shows the part worn in each slot, the colors column shows palette codes for each swatch, and the part browser shows 96x96 pictures from the front, back or an angle, with pages and a Part # field to jump to a number. The part grid adapts to the window size.</li>
+  <li>The Appearance Editor is redesigned around pictures. A body map shows the part worn in each slot, the colors column shows palette codes for each swatch, and the part browser shows 96x96 pictures from the front, back or an angle, with pages and a Part # field to jump to a number. The part grid adapts to the window size, and the window can be resized freely. Weapon and shield parts have pictures too, Copy to Left and Copy to Right sit under the body map's arms, and the part color rows say which part they edit.</li>
   <li>Added Republic Havoc armor appearances and more armor-part choices in the Appearance Editor.</li>
   <li>Refreshed the models of many weapon appearances and 79 shield appearances, with new shield inventory icons. Your items keep their selected appearance.</li>
   <li>Every armor part offered in the Appearance Editor now displays, with accurate colors and dyes, on every playable species and both genders, including parts that were previously missing or misfitted on some bodies.</li>
@@ -176,7 +179,7 @@ dateCreated: 2026-10-17T06:29:39.000Z
   <li>The Fight Club Backrooms now connect through walkable doorways and corridors, replacing the internal stair and lift teleports so enemies can follow between rooms.</li>
   <li>Randomly spawned resource nodes now keep their distance from each other, so they no longer block narrow paths such as the Korriban Ravine.</li>
   <li>The target dummies on the Veles Militia Annex range now face the shooting side, so they are visible from the open range.</li>
-  <li>Capstone humanoid enemies that used a droid voice now use the same voice as their matching variants.</li>
+  <li>Capstone humanoid enemies that used a droid voice, and Tempest Bloom enemies that used creature sounds, now use proper humanoid voices.</li>
   <li>Pirates in Smuggler's Moon Station - Abandoned no longer spawn inside an unreachable cargo cage.</li>
   <li>Creatures in Dantooine's Ruined Farmlands no longer spawn on inaccessible mountain and waterfall ledges.</li>
   <li>Fixed areas of Dathomir - Ruin Base where enemies could neither be attacked nor attack back. The same correction also applies to affected rooms in the Hutlar Droid Foundry and other areas using those floors.</li>
