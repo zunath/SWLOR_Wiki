@@ -2,11 +2,15 @@
 title: Incubation
 description: Incubation Guide for new Bioengineers
 published: true
-date: 2026-08-15T18:52:24.987Z
+date: 2026-10-30T11:13:53.328Z
 tags: crafting, beasts, beast mastery, incubation, mutations, enzymes, dna
 editor: markdown
 dateCreated: 2026-08-15T18:48:33.524Z
 ---
+
+# WARNING
+This guide was written prior to the October 2026 Combat Upgrade which changed requirements for certain beast Incubations. Please be aware this guide may be out of date!
+
 
 # Incubation Basics
 There are several things you will need before you can even start the process of breeding beasts.
