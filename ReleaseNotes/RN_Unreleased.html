@@ -36,6 +36,7 @@ dateCreated: 2026-10-17T06:29:39.000Z
   <li>Each crafting skill has its own minigame in place of the old shared crafting window, and each has a Help page with exact action previews: the <strong>Plasma Forge</strong> (Smithery), <strong>Circuit</strong> (Engineering), <strong>Fabricator</strong> (Fabrication), <strong>Kitchen</strong> (Agriculture cooking) and <strong>Reaction</strong> (Espionage).</li>
   <li><strong>Quick Craft</strong> makes up to 10 of a recipe at once, at recipe level + 5 or lower, once you have crafted it successfully by hand.</li>
   <li>Enhancements transfer to a crafted piece by quality threshold: 50%, 85% and 100%. Food duration scales with quality. A broken piece keeps the 65% loss roll and pays 15% XP.</li>
+  <li>Recipes above level 25 or 30 in the Plasma Forge, Circuit and Fabricator are harder, tuned against fully modded top-tier gear, so gear matters more. Fabrication Control now raises Research Test chance and Craftsmanship adds trials. The Researcher and Chef perk lines are reduced so perks no longer replace gear.</li>
   <li>Guild hand-ins now give skill XP.</li>
   <li>Crafting stations in the Veles shops, the Korriban landing, the Jedi Temple and the Mandalorian base are placed so you can use them.</li>
   <li>New station models and crafting animations are included: forge, spy bench, galley, refinery, research terminal, engineering bench and fabricator, and crafting animations for robes.</li>
@@ -89,6 +90,7 @@ dateCreated: 2026-10-17T06:29:39.000Z
   <li>The blank vibroblade top and the legacy full-blade middle parts are available again in the Appearance Editor, so weapons that use them can be edited.</li>
   <li>Descriptions of First Aid and Force heals and temporary HP now say that Willpower multiplies the amount, from 0.625x at 10 Willpower or less up to 1.25x at 26, instead of listing "plus WIL scaling". Healing itself is unchanged.</li>
   <li>Neck 152's glasses now take dyes, with separate frame, lens and collar colors.</li>
+  <li>The Appearance Editor no longer offers armor part styles that draw nothing: styles 1 and 2 where None is offered, and shoulder and belt styles that show nothing. Armor already using them keeps working.</li>
 </ul>
 <h2>Fixes</h2>
 <ul>
@@ -106,6 +108,13 @@ dateCreated: 2026-10-17T06:29:39.000Z
   <li>Enemies now notice a player who leaves stealth beside them, instead of ignoring you until you leave their range and return. Cloud Mind no longer works on players who are not in stealth.</li>
   <li>Saber skills are removed from droid CPUs and the droid assembly window, since droids cannot use lightsabers. Existing parts keep working, and the four saber boost recipes are retired.</li>
   <li>The kloo horn is held at the mouth while playing, and held horns now fit each body better. The Player Guide lists the playable instruments and which songs can be performed; the song picker stays disabled with a tooltip when only one song is available.</li>
+  <li>Standing up from the HNN Office benches no longer drops you into the black void, and five capstone guards (Tempest Bloom Stable Promoters in the Fight Club Backrooms and a Saber Cyclone Trial Examiner Droid in the Jedi Trial Halls) no longer stand out of reach in the void.</li>
+  <li>The black filler tiles around bunker, service duct and similar rooms no longer count as walkable floor, so you cannot walk into the void around them.</li>
+  <li>Ship modules that act on your own ship, such as the hypermatter injector and repairers, now work when an enemy beyond their range is selected, and Asteroids count as no target. Laser Cannon Battery no longer checks your selected target, and Turbolaser now needs a target.</li>
+  <li>Ship explosions now kill the crew aboard instead of players who already left, and logging out takes you off the ship's crew list.</li>
+  <li>Clicking a chat portrait to send a tell no longer refuses most nearby players: a doubtful tell shows who it reaches and a second click confirms it. Logins also take the connection slot that has been free longest instead of reusing one right away.</li>
+  <li>Clicking Send Tell in the Player List no longer leaves the window unresponsive until you relog. Window layout changes now wait until the press that triggered them ends.</li>
+  <li>Your Performance hotbar is kept until the restored hotbar is confirmed, so it is no longer lost if recovery is interrupted.</li>
   <li>Droids no longer drop their rifle and fight unarmed when you are hit and give a command at the same moment.</li>
   <li>Rain that starts while you are in an area now begins at full strength instead of staying a faint drizzle until you leave and return.</li>
   <li>The flights terminals on the Smuggler's Moon landing pads are now named for Smuggler's Moon instead of Viscara.</li>
